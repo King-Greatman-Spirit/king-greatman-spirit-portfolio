@@ -101,7 +101,7 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 |--------|
 | ![](static/img/preview/footer.png) |
 
-
+---
 
 ## 📦 Installation & Setup
 
