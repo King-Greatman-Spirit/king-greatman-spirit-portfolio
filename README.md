@@ -89,19 +89,28 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 
 | Home | About | Services |
 |------|-------|----------|
-| ![](KingGreatmanSpirit/static/img/preview/home.png) | ![](KingGreatmanSpirit/static/img/preview/about.png) | ![](KingGreatmanSpirit/static/img/preview/services.png) |
+| ![](static/img/preview/home.png) | ![](static/img/preview/about.png) | ![](static/img/preview/services.png) |
 
 | Service Detail | Portfolio | Portfolio Detail |
 |----------------|-----------|------------------|
-| ![](KingGreatmanSpirit/static/img/preview/service-detail.png) | ![](KingGreatmanSpirit/static/img/preview/portfolio.png) | ![](KingGreatmanSpirit/static/img/preview/portfolio-detail.png) |
+| ![](static/img/preview/service-detail.png) | ![](static/img/preview/portfolio.png) | ![](static/img/preview/portfolio-detail.png) |
 
 | Resume | Contact | Sidebar |
 |--------|---------|---------|
-| ![](KingGreatmanSpirit/static/img/preview/resume.png) | ![](KingGreatmanSpirit/static/img/preview/contact.png) | ![](KingGreatmanSpirit/static/img/preview/sidebar.png) |
+| ![](static/img/preview/resume.png) | ![](static/img/preview/contact.png) | ![](static/img/preview/sidebar.png) |
 
 | Footer |
 |--------|
-| ![](KingGreatmanSpirit/static/img/preview/footer.png) |
+| ![](static/img/preview/footer.png) |
+
+---
+
+### ✅ Notes
+
+* Ensure all images are located in `static/img/preview/` relative to your **repository root**.
+* Keep image filenames **exactly matching** your Markdown paths (case-sensitive on GitHub).
+* Tables help maintain a neat layout, and GitHub automatically resizes the images to fit.
+* You can add more screenshots in the same structure if needed.
 
 ---
 
