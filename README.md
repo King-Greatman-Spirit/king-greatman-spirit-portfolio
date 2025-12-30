@@ -85,6 +85,8 @@ Perfect for:
 
 Below are selected screenshots showcasing the UI, structure, and features of the **King GREATMAN SPIRIT (KGS)** portfolio.
 
+> A visual overview of the key pages and components of the King GREATMAN SPIRIT (KGS) portfolio application.
+
 | Home | About | Services |
 |------|-------|----------|
 | ![](static/img/preview/home.png) | ![](static/img/preview/about.png) | ![](static/img/preview/services.png) |
