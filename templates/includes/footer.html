@@ -1,0 +1,71 @@
+{% load static %}
+
+<footer id="footer" class="footer bg-light pt-5 pb-4">
+  <div class="container">
+
+    <!-- BRAND -->
+    <div class="text-center mb-4">
+      <h3 class="fw-bold mb-1" style="font-family: 'Poppins', sans-serif;">King Greatman Spirit</h3>
+      <p class="mb-1 fw-bold" style="font-family: 'Roboto', sans-serif;">
+        Software Engineer • AI & Machine Learning Specialist • Data Analyst
+      </p>
+      <p style="font-family: 'Roboto', sans-serif; color: #194e42;">
+        Building scalable software, intelligent systems, and data-driven 
+        solutions that help businesses grow and win.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links">
+      <a href="{% url 'home' %}#hero">Home</a>
+      <a href="{% url 'home' %}#about">About</a>
+      <a href="{% url 'home' %}#resume">Resume</a>
+      <a href="{% url 'home' %}#portfolio">Portfolio</a>
+      <a href="{% url 'home' %}#services">Services</a>
+      <a href="{% url 'home' %}#contact">Contact</a>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="footer-social">
+      <a href="https://wa.me/2349014155705" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/greatman-pydev" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/King-Greatman-Spirit" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.twitter.com/greatestmaneva" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.facebook.com/FAMOUSGREATMAN" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/king_greatman_spirit/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@king_greatman_spirit" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://t.me/greatestmaneva" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="#" aria-label="Threads"><i class="fab fa-threads"></i></a>
+      <a href="https://www.youtube.com/@greatestmaneva" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="text-center fw-bold small text-muted">
+      © <span id="year"></span> <strong>King Greatman Spirit</strong>. All Rights Reserved.  
+    </div>
+  </div>
+</footer>
+
+<style>
+  .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  .social-icon:hover {
+    color: #fff;
+    background: #007bff;
+    transform: translateY(-3px);
+  }
+</style>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+

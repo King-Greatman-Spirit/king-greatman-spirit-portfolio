@@ -1,0 +1,61 @@
+{% load static %}
+
+{% comment %}{% url 'admin_dashboard' as admin_dashboard %} {% endcomment %}
+
+
+{% url 'company_dashboard' as c_dashboard %}
+<!-- {% url 'update_company' updated_company.id as u_company %} -->
+
+{% url 'business_overview' as BO %}
+<!-- {% url 'update_business_overview' updated_overview.id as UBO %} -->
+
+{% url 'staff_dashboard' as SD %}
+{% url 'update_staff' updated_staff.id as US %}
+
+{% url 'service_dashboard' as ServeD %}
+{% url 'update_service' updated_service.id as UServe %}
+
+{% comment %} {% url 'project_dashboard' as PD %}
+{% url 'update_project' updated_project.id as UP %}
+
+{% url 'project_image_dashboard' as PID %}
+{% url 'update_project_image' updated_project_image.id as UPI %} 
+
+{% url 'faqcategory_dashboard' as c_dash %}
+{% url 'update_faqcategory' updated_faqcategory.id as u_category %}
+
+{% url 'faqquestion_dashboard' as q_dash %}
+{% url 'update_faqquestion' updated_faqquestion.id as u_question %}
+{% url 'admin_service_applications' as ASA %}
+{% url 'update_admin_service_app' updated_asa.id as UASA %} {% endcomment %}
+
+{% url 'testimonial_dashboard' as TestD %}
+{% url 'update_testimonial' update_testimonial.id as UTest %}
+
+{% url 'industry_dashboard' as ID %}
+{% url 'update_industry' updated_industry.id as UI %}
+
+{% url 'industry_process_dashboard' as IPD %}
+{% url 'update_industry_process' updated_ip.id as UIP %}
+
+
+<div class="col-md-3 col-sm-3 col-xs-12 bmargin">
+  <h5 class="padd_bot2">Sidebar Categories</h5>
+          <ul class="category-links orange-2">
+            {% comment %}<li class="{% if request.path == admin_dashboard %} cbp-filter-item-active {% endif %} cbp-filter-item"> <a href="{% url 'admin_dashboard' %}">Admin Profile</a></li>{% endcomment %}
+              <li class="{% if request.path == c_dashboard %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'company_dashboard' %}">Company</a></li>
+              <li class="{% if request.path == BO %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'business_overview' %}"> Business Overview</a></li>
+              <li class="{% if request.path == SD or request.path == US %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'staff_dashboard' %}"> Staff</a></li>
+              <li class="{% if request.path == ServeD or request.path == UServe %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'service_dashboard' %}"> Services</a></li>
+              <li class="{% if request.path == SPD or request.path == USP %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'service_process_dashboard' %}"> Service processes</a></li>
+              {% comment %} <li class="{% if request.path == PD or request.path == UP %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'project_dashboard' %}"> Projects</a></li>
+              <li class="{% if request.path == PID or request.path == UPI %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'project_image_dashboard' %}"> Projects Images</a></li> {% endcomment %}
+              {% comment %}<li class="{% if request.path == c_dash or request.path == u_category %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'faqcategory_dashboard' %}">Faq Category</a></li>
+              <li class="{% if request.path == q_dash or request.path == u_question %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'faqquestion_dashboard' %}">Faq Question</a></li> {% endcomment %}
+              
+              <li class="{% if request.path == TestD or request.path == UTest %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'testimonial_dashboard' %}"> Testimonials</a></li>
+              <li class="{% if request.path == ID or request.path == UI %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'industry_dashboard' %}"> industries</a></li>
+              <li class="{% if request.path == IPD or request.path == UIP %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'industry_process_dashboard' %}"> industry processes</a></li>
+          </ul>
+  </div>
+ <!--end section-->

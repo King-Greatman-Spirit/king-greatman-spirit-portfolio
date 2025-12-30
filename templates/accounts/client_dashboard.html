@@ -1,0 +1,84 @@
+{% extends 'base_dashboard.html' %}
+
+{% block content %}
+{% url 'client_dashboard' as client_dashboard %}
+
+  <!-- <section>
+    <div class="header-inner two">
+      <div class="inner text-center">
+        <h4 class="title text-white uppercase">We Are Hasta</h4>
+        <h5 class="text-white uppercase">Get Many More Features</h5>
+      </div>
+      <div class="overlay bg-opacity-5"></div>
+      <img src="http://placehold.it/1920x800" alt="" class="img-responsive"/> </div>
+  </section> -->
+  <!-- end header inner -->
+  <div class="clearfix"></div> 
+
+  <section>
+    <div class="pagenation-holder">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>User Dashboard</h3>
+          </div>
+          <div class="col-md-6 text-right">
+            <div class="pagenation_links"><a href="index.html">Home</a><i> / </i> <a href="index.html">Portfolio</a> <i> / </i> Portfolio Two Column</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end section-->
+  <div class="clearfix"></div>
+
+  {% include 'includes/alerts.html' %}
+  
+  <section class="sec-padding">
+    <div class="container">
+    <div class="row">
+    
+    {% include 'includes/dashboard_navbar.html' %}
+    
+    <div class="col-md-9 col-sm-9 col-xs-12 bmargin">
+        <div class="text-box padding-3 border">
+            <div class=" bmargin">
+
+            <h3>Update Client Details</h3>
+
+            <p>Please update your details; note that if you wish to change your password; logout and click forget password.</p>
+            <br/>
+            <br/>
+
+            <form method="POST" action="{% url 'client_dashboard' %}">
+              {% csrf_token %}
+              <div class="form-group col col-md-6">
+                <label for="{{ form.first_name.id_for_label }}">First Name</label>
+                {{ form.first_name }}
+              </div>
+              <div class="form-group col col-md-6">
+                <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+                {{ form.last_name }}
+              </div>
+              <div class="form-group col col-md-6">
+                <label for="{{ form.email.id_for_label }}">Email Address</label>
+                {{ form.email }}
+              </div>
+              <div class="form-group col col-md-6">
+                <label for="{{ form.phone_number.id_for_label }}">Phone Number</label>
+                {{ form.phone_number }}
+              </div>
+              <div class="form-group col col-md-12">
+               <button type="submit" class="btn btn-primary">Update</button>
+             </div>
+            </form>
+          </div>
+          <!-- end .smart-forms section -->
+      </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}

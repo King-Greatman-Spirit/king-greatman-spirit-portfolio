@@ -1,0 +1,10 @@
+asgiref
+Django
+django-smart-selects
+Pillow
+pytz
+six
+sqlparse
+python-decouple
+gunicorn
+psycopg2-binary

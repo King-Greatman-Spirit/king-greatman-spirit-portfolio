@@ -1,0 +1,81 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="sec-padding" style="background-color: #ffffff;">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6 col-centered">
+    <div class="text-box padding-3 border">
+
+    <div class="bmargin">
+
+        <h3>Admin Registration Form</h3>
+        {% include 'includes/alerts.html' %}
+          <form method="POST" action="{% url 'admin_register' %}" id="account">
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label for="{{ form.first_name.id_for_label }}">First Name</label>
+              {{ form.first_name }}
+            </div>
+            <div class="form-group">
+              <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+              {{ form.last_name }}
+            </div>
+
+            <div class="form-group">
+              <label for="{{ form.email.id_for_label }}">Email Address</label>
+              {{ form.email }}
+            </div>
+            <div class="form-group">
+              <label for="{{ form.phone_number.id_for_label }}">Phone Number</label>
+              {{ form.phone_number }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.password.id_for_label }}">Create a password</label>
+                <div>
+                    {{ form.password }}
+                    <div class="input-group-append">
+                        <span class="input-group-text toggle-password" data-target="id_password">
+                          <span class="eye">
+                              <i class="fa fa-eye"></i>
+                          </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="form-group">
+                <label for="{{ form.confirm_password.id_for_label }}">Confirm your password</label>
+                <div>
+                    {{ form.confirm_password }}
+                    <div class="input-group-append">
+                        <span class="input-group-text toggle-password" data-target="id_confirm_password">
+                          <span class="eye">
+                              <i class="fa fa-eye"></i>
+                          </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="button btn-primary btn-lg" style="color: #fff;">
+                Create Account
+              </button>
+            </div><!-- end .form-footer section -->
+          </form>
+
+      </div></div></div>
+
+    </div>
+    <!--end item-->
+
+  </div>
+</section>
+  <!--end item -->
+  <div class="clearfix"></div>
+  {% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">{{ project.title }}</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">{{ project.title }}</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section portdetails-section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+
+            <div class="swiper-wrapper align-items-center">
+              {% for image in project.project_images.all %}
+                <div class="swiper-slide">
+                  <img src="{{ image.image.url }}" 
+                   alt="{{ image.name }}" 
+                   width="616" height="462"
+                  >
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Project information</h3>
+            <ul>
+              <li>
+                <strong>Category</strong>: 
+                <a href="{% url 'home' %}#portfolio"
+                  class="fw-bold"
+                  target="_blank" rel="noopener"
+                >
+                  {{ project.service.name }}
+                </a>
+              </li>
+              <li><strong>Client</strong>: {{ project.client }}</li>
+              <li><strong>Industry</strong>: {{ project.industry }}</li>
+              <li>
+                <strong>Project date</strong>:
+                {% if project.completion_date %}
+                  {{ project.completion_date|date:"F Y" }}
+                {% else %}
+                  March 2024
+                {% endif %}
+              </li>
+              {% if project.project_url and "Software" in project.service.name %}
+                <li>
+                  <strong>Project URL</strong>:
+                  <a href="{{ project.project_url }}"
+                    class="porttest"
+                    target="_blank" rel="noopener"
+                  >
+                    View Live Project
+                  </a>
+                </li>
+              {% else %}
+                <li>
+                  <strong>Engagement Type</strong>:
+                  {% if "Data Analysis" in project.service.name or "Business Intelligence" in project.service.name %}
+                    Business Intelligence & Decision Support
+                  {% elif "Artificial Intelligence" in project.service.name or "Machine Learning" in project.service.name %}
+                    Machine Learning Model & Analytics Solution
+                  {% else %}
+                    Internal Digital Solution
+                  {% endif %}
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>{{ project.title }}</h2>
+            <p>
+              {{ project.project_scope }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- /Portfolio Details Section -->
+
+</main>
+
+{% endblock %}

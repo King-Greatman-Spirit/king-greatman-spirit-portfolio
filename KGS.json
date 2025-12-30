@@ -1,0 +1,6042 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "8och26gx3aamg3px8ec2ny079dxcyrav",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vSuOW:Tq178U6bDCxVnPhIul_smhB3U-_USpcONqYfLi4ZKck",
+    "expire_date": "2025-12-23T09:52:32.629Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bmggk43mo15qu1hkfljdbg1a11wdspef",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vUljA:c35T1-LfH6F2-SDyLy9909VoGO2iDvfcQCW_aznxP3I",
+    "expire_date": "2025-12-28T13:01:32.200Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lhh74cggnt0eqz28zo1twxv9xamyzoiy",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vTLT2:gEIm3DYxWWOy-rkLyMinIqFR-QXzevAJf3MAP9w-BGA",
+    "expire_date": "2025-12-24T14:47:00.970Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m1gxpof91v8th0nracah6jh92coi5t5o",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vSuXD:dAUSRNji7-Z60Nl4BBgpCwI4gnhpSRnFL3GIkK1DXvc",
+    "expire_date": "2025-12-23T10:01:31.528Z"
+  }
+},
+{
+  "model": "about.about",
+  "pk": 1,
+  "fields": {
+    "name": "King Greatman Spirit",
+    "intro_text": "I am committed to delivering excellence, clarity, and results—transforming ideas into scalable digital products that create lasting impact.",
+    "title": "Software Engineer, Artificial Intelligence & Machine Learning Specialist, Data Analyst, Full-Stack Developer, Cloud & Automation Expert",
+    "description": "I design and develop innovative solutions across Web Development, Data Science, Machine Learning, API Engineering, and Automation. With strong command of Python, Django, Node.js, React, SQL, TensorFlow, PyTorch, Power BI, and Cloud technologies, I help individuals and businesses accelerate growth, enhance efficiency, and unlock data-powered intelligence.",
+    "birthday": "12 April 1995",
+    "website": "www.kinggreatmanspirit.com",
+    "phone1": "+234 (901) 415 5705",
+    "phone2": null,
+    "city": "Port Harcourt",
+    "age": 30,
+    "degree": "BSc in Computer Science",
+    "email": "spiritpydev@gmail.com",
+    "freelance": "Available Worldwide",
+    "outro_text": "I am a results-driven Software Engineer and AI Specialist passionate about building intelligent, scalable, and human-centered digital solutions. From full-stack development to machine learning, I transform complex ideas into clean, powerful, real-world applications that elevate business performance and user experience.",
+    "profile_image": "about_images/profile_Pics_0ftCJpW.jpg",
+    "cover_image": "about_images/Cover_P.jpg",
+    "about_image": "about_images/aB_Pics.jpg",
+    "created_date": "2025-12-09T11:36:17.853Z",
+    "modified_date": "2025-12-23T09:01:15.680Z"
+  }
+},
+{
+  "model": "about.statistic",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "label": "Thrilled Clients",
+    "description": "Transforming ideas into real-world solutions",
+    "value": 55,
+    "icon": "bi bi-emoji-smile",
+    "created_date": "2025-12-10T15:45:12.307Z",
+    "modified_date": "2025-12-10T15:51:16.880Z"
+  }
+},
+{
+  "model": "about.statistic",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "label": "Successful Projects",
+    "description": "From AI & ML to full-stack development",
+    "value": 125,
+    "icon": "bi bi-journal-richtext",
+    "created_date": "2025-12-10T15:46:07.419Z",
+    "modified_date": "2025-12-10T15:51:38.173Z"
+  }
+},
+{
+  "model": "about.statistic",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "label": "Hours of Support",
+    "description": "Guiding clients & learners every step",
+    "value": 7800,
+    "icon": "bi bi-headset",
+    "created_date": "2025-12-10T15:50:03.116Z",
+    "modified_date": "2025-12-10T15:50:56.081Z"
+  }
+},
+{
+  "model": "about.statistic",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "label": "Expert Collaborators",
+    "description": "Passionate team driving excellence",
+    "value": 32,
+    "icon": "bi bi-people",
+    "created_date": "2025-12-10T15:52:14.035Z",
+    "modified_date": "2025-12-10T15:52:14.035Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "name": "Python",
+    "percentage": 98,
+    "created_date": "2025-12-12T10:18:55.388Z",
+    "modified_date": "2025-12-12T10:18:55.388Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "name": "Machine Learning",
+    "percentage": 95,
+    "created_date": "2025-12-12T10:19:02.758Z",
+    "modified_date": "2025-12-12T10:19:02.758Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "name": "Deep Learning",
+    "percentage": 90,
+    "created_date": "2025-12-12T10:19:15.790Z",
+    "modified_date": "2025-12-12T10:19:15.790Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "name": "NLP",
+    "percentage": 92,
+    "created_date": "2025-12-12T10:20:00.810Z",
+    "modified_date": "2025-12-12T10:20:00.810Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "name": "Data Analysis",
+    "percentage": 94,
+    "created_date": "2025-12-12T10:20:18.777Z",
+    "modified_date": "2025-12-12T10:20:18.777Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "name": "Predictive Analytics",
+    "percentage": 90,
+    "created_date": "2025-12-12T10:21:21.756Z",
+    "modified_date": "2025-12-12T10:21:21.756Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "name": "TensorFlow / PyTorch",
+    "percentage": 85,
+    "created_date": "2025-12-12T12:31:13.656Z",
+    "modified_date": "2025-12-12T12:31:13.656Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 8,
+  "fields": {
+    "about": 1,
+    "name": "Django / DRF",
+    "percentage": 93,
+    "created_date": "2025-12-12T12:31:27.555Z",
+    "modified_date": "2025-12-12T12:31:27.555Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 9,
+  "fields": {
+    "about": 1,
+    "name": "PHP / Laravel",
+    "percentage": 87,
+    "created_date": "2025-12-12T12:31:39.245Z",
+    "modified_date": "2025-12-12T12:31:39.245Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 10,
+  "fields": {
+    "about": 1,
+    "name": "Node.js / TypeScript",
+    "percentage": 85,
+    "created_date": "2025-12-12T12:31:54.469Z",
+    "modified_date": "2025-12-12T12:31:54.469Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 11,
+  "fields": {
+    "about": 1,
+    "name": "React / JavaScript",
+    "percentage": 88,
+    "created_date": "2025-12-12T12:32:09.076Z",
+    "modified_date": "2025-12-12T12:32:09.076Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 12,
+  "fields": {
+    "about": 1,
+    "name": "SQL (MySQL / PostgreSQL)",
+    "percentage": 90,
+    "created_date": "2025-12-12T12:32:22.584Z",
+    "modified_date": "2025-12-12T12:32:22.584Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 13,
+  "fields": {
+    "about": 1,
+    "name": "Power BI / Tableau",
+    "percentage": 92,
+    "created_date": "2025-12-12T12:32:51.450Z",
+    "modified_date": "2025-12-12T12:32:51.450Z"
+  }
+},
+{
+  "model": "about.skill",
+  "pk": 14,
+  "fields": {
+    "about": 1,
+    "name": "Firebase / DevOps (Git, Docker)",
+    "percentage": 88,
+    "created_date": "2025-12-12T12:33:08.244Z",
+    "modified_date": "2025-12-12T12:33:08.244Z"
+  }
+},
+{
+  "model": "resume.summary",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "full_name": "GREATMAN JUSTUS UNYE-AWAJI",
+    "intro_text": "A highly versatile and results-driven Software Engineer, AI & Machine Learning Specialist, and Data Analyst with proven experience designing, developing, and deploying scalable web applications, intelligent systems, and data-driven solutions. Adept at building robust backend architectures, modern front-end interfaces, and AI-powered platforms that enhance operational efficiency, improve decision-making, and deliver measurable business value across industries.",
+    "description": "I build scalable web applications, intelligent AI systems, and data-driven solutions that help businesses work smarter and faster. I turn complex problems into actionable results using full-stack development, AI/ML, and data analytics.",
+    "address": "Port Harcourt, Rivers State, Nigeria",
+    "phone": "+234 (0) 901 415 5705",
+    "email": "spiritpydev@gmail.com",
+    "created_date": "2025-12-14T13:18:44.695Z",
+    "modified_date": "2025-12-15T17:41:16.665Z"
+  }
+},
+{
+  "model": "resume.education",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "title": "B.Sc. Computer Science (In View)",
+    "year": "2024 - Present",
+    "institution": "University of the People, Pasadena, California",
+    "description": "Pursuing a degree focused on software engineering, algorithms, data structures, and AI applications.",
+    "created_date": "2025-12-14T13:44:38.910Z",
+    "modified_date": "2025-12-15T14:09:28.142Z"
+  }
+},
+{
+  "model": "resume.education",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "title": "ND Computer Science",
+    "year": "2017 - 2020",
+    "institution": "Captain Elechi Amadi Polytechnic, Port Harcourt, Nigeria",
+    "description": "Completed core programming, databases, and system analysis coursework, building foundations for software and AI development.",
+    "created_date": "2025-12-14T13:50:58.318Z",
+    "modified_date": "2025-12-15T14:10:16.416Z"
+  }
+},
+{
+  "model": "resume.experience",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "title": "Python Developer & Data Analyst",
+    "year": "April 2021 – April 2024",
+    "company": "Webstacka IT Company  —",
+    "city": "Port Harcourt, Nigeria",
+    "desc_one": "Built scalable backend systems and RESTful APIs with Python, Django, PostgreSQL, and MySQL.",
+    "desc_two": "Automated ETL pipelines and performed data analysis to support business decisions.",
+    "desc_three": "Developed dashboards and applied statistical methods to optimize product performance. Managed deployments using Docker, Gunicorn, and Nginx.",
+    "created_date": "2025-12-15T14:14:29.268Z",
+    "modified_date": "2025-12-15T14:21:46.970Z"
+  }
+},
+{
+  "model": "resume.experience",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "title": "Full Stack | Data Analyst | AI Engineer",
+    "year": "Feb 2022 – Present",
+    "company": "Freelancer  —",
+    "city": "Remote",
+    "desc_one": "Delivered analytics and BI solutions with Python, SQL, Power BI, and Tableau.",
+    "desc_two": "Built Machine Learning and LLM-powered applications, improving business efficiency by 30%.",
+    "desc_three": "Trained professionals and students in Data Analysis, Machine Learning, and AI.",
+    "created_date": "2025-12-15T14:17:16.042Z",
+    "modified_date": "2025-12-15T14:21:25.378Z"
+  }
+},
+{
+  "model": "resume.experience",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "title": "Software Engineer",
+    "year": "Oct 2024 – Present",
+    "company": "B.G. Technical Limited —",
+    "city": "Port Harcourt, Nigeria",
+    "desc_one": "Developed high-performance web applications using Python, PHP, Node.js, React, and Bootstrap.",
+    "desc_two": "Integrated Firebase for real-time tracking systems, reducing latency by 20%.",
+    "desc_three": "Built dynamic, responsive user interfaces, improving operational efficiency by 30%. Ensured code quality and maintainability using Git, Docker, and testing.",
+    "created_date": "2025-12-15T14:18:45.559Z",
+    "modified_date": "2025-12-15T14:21:19.754Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "OUN Developers Corporate Website",
+    "slug": "oun-developers-corporate-website",
+    "project_scope": "Designed and developed a high-end corporate website for an architecture and construction firm, focused on attracting premium clients and strategic partners. The solution emphasized clean visual hierarchy, fast performance, and clear service positioning to strengthen brand credibility, support business negotiations, and present the company as a reliable industry leader. The platform was optimized for responsiveness, search visibility, and professional storytelling to convert visitors into qualified leads.",
+    "client": "OUN Developers",
+    "industry": "Architecture & Construction",
+    "project_url": "https://oundevelopers.com",
+    "completion_date": "2024-09-09T12:00:00Z",
+    "created_date": "2025-12-24T17:36:33.076Z",
+    "modified_date": "2025-12-26T09:21:03.393Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Kupon Oil & Gas Corporate Platform",
+    "slug": "kupon-oil-gas-corporate-platform",
+    "project_scope": "Delivered an enterprise-grade corporate website tailored for the energy and oil services sector. The project focused on presenting Kupon Oil & Gas Limited’s capabilities, values, and operational strength with clarity and authority. Emphasis was placed on credibility, structured content, and executive-level presentation to support stakeholder confidence, partnerships, and contract negotiations within a highly regulated industry.",
+    "client": "Kupon Oil & Gas Limited",
+    "industry": "Energy & Oil Services",
+    "project_url": "https://kupongroup.org",
+    "completion_date": "2025-02-03T12:00:00Z",
+    "created_date": "2025-12-24T17:40:51.857Z",
+    "modified_date": "2025-12-26T09:20:28.179Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "GalaxyPL Business Website",
+    "slug": "galaxypl-business-website",
+    "project_scope": "Designed and deployed a responsive business website that enhances brand visibility, customer trust, and engagement. The solution focused on usability, performance optimization, and clear value communication—ensuring potential clients quickly understand services and benefits. The platform supports lead generation and positions the company as a dependable professional services provider.",
+    "client": "GalaxyPL",
+    "industry": "Logistics & Professional Services",
+    "project_url": "https://galaxypl.com",
+    "completion_date": "2024-12-09T12:00:00Z",
+    "created_date": "2025-12-24T17:45:05.387Z",
+    "modified_date": "2025-12-26T09:19:41.828Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Pipeline Pigs and Accessories Limited",
+    "slug": "pipeline-pigs-and-accessories-limited",
+    "project_scope": "Built an industrial-focused website designed to communicate complex pipeline and pigging solutions with clarity and precision. The project emphasized technical credibility, trust, and ease of understanding for decision-makers. Structured layouts and performance-optimized development were used to support lead generation, product visibility, and long-term brand authority within the industrial sector.",
+    "client": "PPA Limited",
+    "industry": "Industrial & Pipeline Solutions",
+    "project_url": "https://www.piggingproducts.com",
+    "completion_date": "2025-11-03T12:00:00Z",
+    "created_date": "2025-12-24T17:51:54.456Z",
+    "modified_date": "2025-12-26T09:21:46.577Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Samben Security Corporate Website",
+    "slug": "samben-security-corporate-website",
+    "project_scope": "Developed a professional corporate website that reflects reliability, safety, and operational excellence. The solution focused on clear service presentation, confidence-driven messaging, and responsive design to build trust with prospective clients. The platform positions Samben Security as a dependable and professional security provider capable of handling critical safety requirements.",
+    "client": "Samben Security",
+    "industry": "Security Services",
+    "project_url": "https://sambensecurity.com",
+    "completion_date": "2025-06-16T12:00:00Z",
+    "created_date": "2025-12-24T17:55:12.132Z",
+    "modified_date": "2025-12-26T09:23:02.927Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Tareon Services Business Website",
+    "slug": "tareon-services-business-website",
+    "project_scope": "Delivered a modern, scalable business website designed to communicate expertise, innovation, and trust. The platform was structured to support business growth, client engagement, and professional credibility. Clean visuals, organized content, and performance-focused development ensure a strong digital presence aligned with enterprise expectations.",
+    "client": "Tareon Services",
+    "industry": "Technical & Professional Services",
+    "project_url": "https://tareonservices.com",
+    "completion_date": "2025-11-01T12:00:00Z",
+    "created_date": "2025-12-24T17:59:05.606Z",
+    "modified_date": "2025-12-26T09:23:39.679Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "B. G. Technical Limited Website",
+    "slug": "b-g-technical-limited-website",
+    "project_scope": "Designed and deployed a functional, scalable website that clearly presents technical and engineering services. The solution focused on clarity, professionalism, and adaptability—transforming business ideas into a structured digital platform that improves visibility, operational credibility, and client confidence.",
+    "client": "BGT Limited",
+    "industry": "Oil & Gas Engineering Services",
+    "project_url": "https://spiritual.pythonanywhere.com",
+    "completion_date": "2025-09-08T06:00:00Z",
+    "created_date": "2025-12-24T18:34:51.295Z",
+    "modified_date": "2025-12-26T09:18:54.116Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 8,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "B.G. Technical Performance Dashboard",
+    "slug": "bg-technical-performance-dashboard",
+    "project_scope": "Developed a comprehensive performance intelligence dashboard designed to support executive decision-making and operational oversight. The solution consolidates profit, output, and departmental performance across markets and time periods, enabling leadership to monitor trends, identify growth opportunities, and assess operational efficiency. Structured dashboards and data models were implemented to transform raw operational data into actionable business insights that support strategic planning and performance optimization.",
+    "client": "B.G. Technical Limited",
+    "industry": "Technical & Engineering Services",
+    "project_url": "Microsoft Excel (Advanced Analytics & Dashboards)",
+    "completion_date": "2025-04-14T06:00:00Z",
+    "created_date": "2025-12-25T19:07:41.367Z",
+    "modified_date": "2025-12-26T09:11:02.911Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 9,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "BGT Management Travel Activity Tracker",
+    "slug": "bgt-management-travel-activity-tracker",
+    "project_scope": "Designed a structured travel activity tracking system to improve visibility, accountability, and planning of management movements throughout the year. The solution provides both monthly and daily-level insights, enabling leadership to analyze travel frequency, optimize scheduling, and support administrative reporting. This system enhances operational coordination while ensuring transparent documentation of management activities.",
+    "client": "B.G. Technical Limited",
+    "industry": "Corporate Operations & Administration",
+    "project_url": "Microsoft Excel",
+    "completion_date": "2025-08-05T12:00:00Z",
+    "created_date": "2025-12-25T19:10:39.468Z",
+    "modified_date": "2025-12-26T09:12:10.966Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 10,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "Webstacka Financial Statistics Dashboard",
+    "slug": "webstacka-financial-statistics-dashboard",
+    "project_scope": "Developed a multi-layered financial analytics solution designed to monitor income streams, operational performance, and project outcomes across regions and time periods. The solution includes interactive dashboards, pivot-based analysis, and geographical performance insights that enable leadership to assess revenue growth, track strategic initiatives, and evaluate project status. This system supports informed financial planning and performance evaluation.",
+    "client": "Webstacka IT Company",
+    "industry": "Technology & Digital Services",
+    "project_url": "Microsoft Excel (Dashboards & Pivot Analytics)",
+    "completion_date": "2023-05-12T12:00:00Z",
+    "created_date": "2025-12-25T19:13:40.457Z",
+    "modified_date": "2025-12-26T09:15:07.607Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 11,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "Royal Pride Tech Business Intelligence Repository",
+    "slug": "royal-pride-tech-business-intelligence-repository",
+    "project_scope": "Built a centralized business intelligence repository delivering interactive dashboards and executive-ready visualizations to support data-driven decision-making. The solution transforms operational data into clear performance insights, highlighting trends, key performance indicators, and strategic opportunities. Power BI dashboards were complemented with presentation-ready summaries to support stakeholder communication, executive reviews, and strategic discussions.",
+    "client": "Royal Pride Technologies",
+    "industry": "Technology & Professional Services",
+    "project_url": "Microsoft Power BI, PowerPoint",
+    "completion_date": "2023-09-07T12:00:00Z",
+    "created_date": "2025-12-25T19:16:18.899Z",
+    "modified_date": "2025-12-26T09:14:20.250Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 12,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "Budget Tracking & Variance Analysis Dashboard",
+    "slug": "budget-tracking-variance-analysis-dashboard",
+    "project_scope": "Developed an integrated financial performance and variance analysis solution that compares planned budgets against actual results across departments and time periods. The system provides executive-level dashboards highlighting sales performance, year-over-year trends, and deviations from financial plans. By consolidating actuals, forecasts, and departmental inputs, the solution enables informed budgeting decisions, financial control, and proactive performance management.",
+    "client": "B.G. Technical Limited",
+    "industry": "Finance, Operations & Project Delivery",
+    "project_url": "Microsoft Excel (Advanced Financial Modeling)",
+    "completion_date": "2025-02-19T12:00:00Z",
+    "created_date": "2025-12-25T19:21:03.678Z",
+    "modified_date": "2025-12-26T09:12:54.770Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 13,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "Employee Vacation Tracking System",
+    "slug": "employee-vacation-tracking-system",
+    "project_scope": "Designed a centralized employee vacation tracking system to support workforce planning, transparency, and compliance. The solution provides daily visibility into leave schedules, ensuring adequate staffing levels while minimizing operational disruption. Structured data entry and reporting enable management to track utilization trends and improve human resource planning efficiency.",
+    "client": "Internal Corporate Use",
+    "industry": "Human Resources & Workforce Management",
+    "project_url": "Microsoft Excel",
+    "completion_date": "2025-07-24T12:00:00Z",
+    "created_date": "2025-12-25T19:22:55.020Z",
+    "modified_date": "2025-12-26T09:13:38.576Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 14,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "title": "Airbnb Market Performance & Revenue Analysis",
+    "slug": "airbnb-market-performance-revenue-analysis",
+    "project_scope": "Conducted an in-depth market and revenue analysis of Airbnb listings using interactive Tableau dashboards. The project provides insights into pricing patterns, revenue trends, geographic performance, and listing distribution across zip codes and property types. The analysis supports market evaluation, investment decision-making, and pricing strategy development within the short-term rental industry.",
+    "client": "Market Research Projec",
+    "industry": "Real Estate & Hospitality",
+    "project_url": "Tableau",
+    "completion_date": "2024-01-17T19:26:19Z",
+    "created_date": "2025-12-25T19:29:37.590Z",
+    "modified_date": "2025-12-26T09:10:25.336Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/11.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T17:36:33.093Z",
+    "modified_date": "2025-12-26T09:21:03.401Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/Second.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T17:36:33.101Z",
+    "modified_date": "2025-12-24T17:36:33.101Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/Third.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T17:36:33.110Z",
+    "modified_date": "2025-12-24T17:36:33.110Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/Fourth.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T17:36:33.120Z",
+    "modified_date": "2025-12-24T17:36:33.120Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/Fifth.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T17:36:33.129Z",
+    "modified_date": "2025-12-24T17:36:33.129Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/Sixth.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T17:36:33.138Z",
+    "modified_date": "2025-12-24T17:36:33.138Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/10.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.874Z",
+    "modified_date": "2025-12-26T09:20:28.186Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 8,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Second_lWbijBu.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.887Z",
+    "modified_date": "2025-12-24T17:40:51.887Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 9,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Third_US0ZLVT.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.897Z",
+    "modified_date": "2025-12-24T17:40:51.897Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 10,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Fourth_o5tnm1W.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.906Z",
+    "modified_date": "2025-12-24T17:40:51.906Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 11,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Fifth_ZoJk7d8.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.913Z",
+    "modified_date": "2025-12-24T17:40:51.913Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 12,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Sixth_f4zuWmy.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.921Z",
+    "modified_date": "2025-12-24T17:40:51.921Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 13,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Seven.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.929Z",
+    "modified_date": "2025-12-24T17:40:51.929Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 14,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/Eight.png",
+    "name": "Eighth",
+    "description": "",
+    "created_date": "2025-12-24T17:40:51.939Z",
+    "modified_date": "2025-12-24T17:40:51.939Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 15,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/9.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.403Z",
+    "modified_date": "2025-12-26T09:19:41.832Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 16,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/Second_QQ08IUW.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.414Z",
+    "modified_date": "2025-12-24T17:45:05.414Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 17,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/Third_59wyRph.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.424Z",
+    "modified_date": "2025-12-24T17:45:05.424Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 18,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/Fourth_oOXXtEa.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.438Z",
+    "modified_date": "2025-12-24T17:45:05.438Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 19,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/Fifth_QU51aGR.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.448Z",
+    "modified_date": "2025-12-24T17:45:05.448Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 20,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/Sixth_Yy5i2v7.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.459Z",
+    "modified_date": "2025-12-24T17:45:05.459Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 21,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/Seven_xhtph41.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-24T17:45:05.471Z",
+    "modified_date": "2025-12-24T17:45:05.471Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 22,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/12.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.471Z",
+    "modified_date": "2025-12-26T09:21:46.584Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 23,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Third_6YFNSB9.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.482Z",
+    "modified_date": "2025-12-24T18:38:18.152Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 24,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Fourth_AqGJRYn.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.494Z",
+    "modified_date": "2025-12-24T18:38:18.155Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 25,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Fifth_oHPg0rK.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.508Z",
+    "modified_date": "2025-12-24T18:37:26.558Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 26,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Sixth_iBbcVy9.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.522Z",
+    "modified_date": "2025-12-24T18:37:26.567Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 27,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Seven_sQoVzUV.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.537Z",
+    "modified_date": "2025-12-24T18:37:26.576Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 28,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Eight_CvCJhTd.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.551Z",
+    "modified_date": "2025-12-24T18:37:26.585Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 29,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/Nine_i9hm62r.png",
+    "name": "Eighth",
+    "description": "",
+    "created_date": "2025-12-24T17:51:54.562Z",
+    "modified_date": "2025-12-24T18:37:26.594Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 31,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/1_VreSafj.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T17:55:12.147Z",
+    "modified_date": "2025-12-26T09:23:02.934Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 32,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/Second_d2qxaB1.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T17:55:12.157Z",
+    "modified_date": "2025-12-24T17:55:12.157Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 33,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/Third_nFF20Iv.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T17:55:12.167Z",
+    "modified_date": "2025-12-24T17:55:12.167Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 34,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/Fourth_htlEU7E.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T17:55:12.176Z",
+    "modified_date": "2025-12-24T17:55:12.176Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 35,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/Fifth_XcBsG5x.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T17:55:12.186Z",
+    "modified_date": "2025-12-24T17:55:12.186Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 36,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/Sixth_t0RV9mC.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T17:55:12.196Z",
+    "modified_date": "2025-12-24T17:55:12.196Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 37,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/1_E9J55gn.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T17:59:05.612Z",
+    "modified_date": "2025-12-26T09:23:39.686Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 38,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/Second_hRQpCNy.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T17:59:05.617Z",
+    "modified_date": "2025-12-24T17:59:05.617Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 39,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/Third_9rYEZPa.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T17:59:05.622Z",
+    "modified_date": "2025-12-24T17:59:05.622Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 40,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/Fourth_8bvEnCV.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T17:59:05.625Z",
+    "modified_date": "2025-12-24T17:59:05.625Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 41,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/Fifth_BYcWLqd.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T17:59:05.628Z",
+    "modified_date": "2025-12-24T17:59:05.628Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 42,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/SIX.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T17:59:05.632Z",
+    "modified_date": "2025-12-24T17:59:05.632Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 43,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/8.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.314Z",
+    "modified_date": "2025-12-26T09:18:54.123Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 44,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Second_4YyrPLo.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.327Z",
+    "modified_date": "2025-12-24T18:34:51.327Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 45,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Third_M6j2fEh.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.339Z",
+    "modified_date": "2025-12-24T18:34:51.339Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 46,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Fourth_NzLWG4m.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.350Z",
+    "modified_date": "2025-12-24T18:34:51.350Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 47,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Fifth_ZZ5Tj0L.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.361Z",
+    "modified_date": "2025-12-24T18:34:51.361Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 48,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Sixth_gXYJUWI.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.370Z",
+    "modified_date": "2025-12-24T18:34:51.370Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 49,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Seven_yWDVhl6.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.381Z",
+    "modified_date": "2025-12-24T18:34:51.381Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 50,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/Eight_BNLrr4J.png",
+    "name": "Eighth",
+    "description": "",
+    "created_date": "2025-12-24T18:34:51.390Z",
+    "modified_date": "2025-12-24T18:34:51.390Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 51,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 8,
+    "image": "photos/project/2.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:07:41.387Z",
+    "modified_date": "2025-12-26T09:11:02.917Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 52,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 8,
+    "image": "photos/project/Second_lsWS7Gl.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:07:41.398Z",
+    "modified_date": "2025-12-25T19:07:41.398Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 53,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 8,
+    "image": "photos/project/Third_qbFiI09.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-25T19:07:41.407Z",
+    "modified_date": "2025-12-25T19:07:41.407Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 54,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 8,
+    "image": "photos/project/Fourth_fOOfnhy.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-25T19:07:41.416Z",
+    "modified_date": "2025-12-25T19:07:41.416Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 55,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 8,
+    "image": "photos/project/Fifth_qoPg1Ji.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-25T19:07:41.423Z",
+    "modified_date": "2025-12-25T19:07:41.424Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 56,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 9,
+    "image": "photos/project/3.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:10:39.478Z",
+    "modified_date": "2025-12-26T09:12:10.974Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 57,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 9,
+    "image": "photos/project/Second_57RgjGp.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:10:39.486Z",
+    "modified_date": "2025-12-25T19:10:39.486Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 58,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/7.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:13:40.469Z",
+    "modified_date": "2025-12-26T09:15:07.613Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 59,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/Second_nLge7aX.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:13:40.476Z",
+    "modified_date": "2025-12-25T19:13:40.476Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 60,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/Third_avsb2TO.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-25T19:13:40.485Z",
+    "modified_date": "2025-12-25T19:13:40.485Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 61,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/Fourth_lRh4dKs.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-25T19:13:40.494Z",
+    "modified_date": "2025-12-25T19:13:40.494Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 62,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/Fifth_KhsPjPP.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-25T19:13:40.502Z",
+    "modified_date": "2025-12-25T19:13:40.502Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 63,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/Sixth_byQOyB5.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-25T19:13:40.510Z",
+    "modified_date": "2025-12-25T19:13:40.510Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 64,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 11,
+    "image": "photos/project/6.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:16:18.907Z",
+    "modified_date": "2025-12-26T09:14:20.259Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 65,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 11,
+    "image": "photos/project/Second_1A4HYpQ.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:16:18.914Z",
+    "modified_date": "2025-12-25T19:16:18.914Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 66,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 11,
+    "image": "photos/project/Third_SJymatI.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-25T19:16:18.919Z",
+    "modified_date": "2025-12-25T19:16:18.919Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 67,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 12,
+    "image": "photos/project/4.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:21:03.689Z",
+    "modified_date": "2025-12-26T09:12:54.776Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 68,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 12,
+    "image": "photos/project/Second_43yuoqV.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:21:03.695Z",
+    "modified_date": "2025-12-25T19:21:03.695Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 69,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 12,
+    "image": "photos/project/Third_NsH6iEs.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-25T19:21:03.704Z",
+    "modified_date": "2025-12-25T19:21:03.704Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 70,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 12,
+    "image": "photos/project/Fourth_9eab82L.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-25T19:21:03.711Z",
+    "modified_date": "2025-12-25T19:21:03.711Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 71,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 12,
+    "image": "photos/project/Fifth_wzZ7QVD.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2025-12-25T19:21:03.720Z",
+    "modified_date": "2025-12-25T19:21:03.720Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 72,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 13,
+    "image": "photos/project/5.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:22:55.030Z",
+    "modified_date": "2025-12-26T09:13:38.584Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 73,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 14,
+    "image": "photos/project/1.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-25T19:29:37.602Z",
+    "modified_date": "2025-12-26T09:10:25.346Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 74,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 14,
+    "image": "photos/project/Second_26wg10A.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:29:37.612Z",
+    "modified_date": "2025-12-25T19:29:37.612Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 75,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 14,
+    "image": "photos/project/Third_n7b4WJj.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-25T19:29:37.619Z",
+    "modified_date": "2025-12-25T19:29:37.619Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 76,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 13,
+    "image": "photos/project/First_jM9GvJK.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-25T19:55:30.495Z",
+    "modified_date": "2025-12-25T19:55:30.496Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 77,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 13,
+    "image": "photos/project/First_fiJuQcU.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-25T19:55:30.506Z",
+    "modified_date": "2025-12-25T19:55:30.506Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 78,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 14,
+    "image": "photos/project/First_ITM935B.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-26T09:10:25.353Z",
+    "modified_date": "2025-12-26T09:10:25.353Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 79,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 8,
+    "image": "photos/project/First_eWzjQK9.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-26T09:11:02.923Z",
+    "modified_date": "2025-12-26T09:11:02.923Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 80,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 9,
+    "image": "photos/project/First_MQw4J9j.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-26T09:12:10.978Z",
+    "modified_date": "2025-12-26T09:12:10.978Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 81,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 12,
+    "image": "photos/project/First_OuvmzOd.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2025-12-26T09:12:54.781Z",
+    "modified_date": "2025-12-26T09:12:54.781Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 82,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 11,
+    "image": "photos/project/First_Ex1BRN1.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-26T09:14:20.267Z",
+    "modified_date": "2025-12-26T09:14:20.267Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 83,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "project": 10,
+    "image": "photos/project/First_iVi6wRu.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-26T09:15:07.617Z",
+    "modified_date": "2025-12-26T09:15:07.617Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 84,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos/project/FIRST_JkOrrCy.png",
+    "name": "Ninth",
+    "description": "",
+    "created_date": "2025-12-26T09:18:54.132Z",
+    "modified_date": "2025-12-26T09:18:54.132Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 85,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 3,
+    "image": "photos/project/FIRST_LliNFLT.png",
+    "name": "Eighth",
+    "description": "",
+    "created_date": "2025-12-26T09:19:41.835Z",
+    "modified_date": "2025-12-26T09:19:41.835Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 86,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 2,
+    "image": "photos/project/FIRST_30XnJwg.png",
+    "name": "Ninth",
+    "description": "",
+    "created_date": "2025-12-26T09:20:28.191Z",
+    "modified_date": "2025-12-26T09:20:28.191Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 87,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 1,
+    "image": "photos/project/FIRST_s3K8Acj.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-26T09:21:03.408Z",
+    "modified_date": "2025-12-26T09:21:03.408Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 88,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 4,
+    "image": "photos/project/FIRST_KHLmXau.png",
+    "name": "Ninth",
+    "description": "",
+    "created_date": "2025-12-26T09:21:46.590Z",
+    "modified_date": "2025-12-26T09:21:46.590Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 89,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 5,
+    "image": "photos/project/FIRST_IbBQzvD.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-26T09:23:02.938Z",
+    "modified_date": "2025-12-26T09:23:02.938Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 90,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 6,
+    "image": "photos/project/FIRST_e4Hvfxb.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2025-12-26T09:23:39.692Z",
+    "modified_date": "2025-12-26T09:23:39.692Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "full_name": "OUN Developers",
+    "message": "Our new website reflects the creativity and forward‑thinking identity of OUN Developers — modern, elegant, and incredibly responsive. The design and development process was seamless, and we’ve received so much positive feedback from clients and partners.",
+    "role": "Managing Director",
+    "company_name": "OUN Developers",
+    "weblink": "https://oundevelopers.com/",
+    "image": "testimonials/OUN_Developers.png",
+    "created_date": "2025-12-15T16:29:35.763Z",
+    "modified_date": "2025-12-26T09:28:19.550Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "full_name": "Kupon Oil & Gas Limited",
+    "message": "King Greatman Spirit brought our digital vision to life with a professional, user‑friendly website that perfectly represents Kupon Oil & Gas Limited. The site helped us strengthen our online presence and communicate our energy solutions clearly to clients and stakeholders.",
+    "role": "Operations Director",
+    "company_name": "Kupon Oil & Gas Limited",
+    "weblink": "https://kupongroup.org/",
+    "image": "testimonials/Kupon_Group.png",
+    "created_date": "2025-12-15T16:30:43.127Z",
+    "modified_date": "2025-12-23T10:35:01.199Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "full_name": "GalaxyPL",
+    "message": "King Greatman Spirit delivered a website that truly captures the essence of GalaxyPL. The development was efficient, and the final result has significantly improved how our customers engage with our brand online. Excellent communication throughout the project.",
+    "role": "CEO",
+    "company_name": "GalaxyPL",
+    "weblink": "https://galaxypl.com/",
+    "image": "testimonials/Galaxy_PL.jpeg",
+    "created_date": "2025-12-15T16:31:38.728Z",
+    "modified_date": "2025-12-23T10:34:48.926Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "full_name": "Pipeline Pigs and Accessories Limited",
+    "message": "Our experience with King Greatman Spirit was exceptional. He designed and developed our site to showcase our products and services in a clean, professional way that resonates with our industrial audience. It’s helped boost credibility and lead generation.",
+    "role": "General Manager",
+    "company_name": "Pipeline Pigs and Accessories Limited (PPA)",
+    "weblink": "https://www.piggingproducts.com/",
+    "image": "testimonials/PPA.jpg",
+    "created_date": "2025-12-15T16:34:29.911Z",
+    "modified_date": "2025-12-23T10:34:16.760Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "full_name": "SamBen Security",
+    "message": "King Greatman Spirit created a strong online presence for SamBen Security that reflects our commitment to safety and professionalism. The site layout and functionality give visitors confidence in our services, and the results speak for themselves.",
+    "role": "Director of Operations",
+    "company_name": "SamBen Security",
+    "weblink": "https://sambensecurity.com/",
+    "image": "testimonials/Samben.png",
+    "created_date": "2025-12-15T16:36:45.413Z",
+    "modified_date": "2025-12-23T10:33:51.799Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "full_name": "Tareon Services",
+    "message": "King Greatman Spirit exceeded expectations on our website. We wanted a design that conveyed innovation and trust, and he delivered just that. The project was handled professionally from start to finish — highly recommended.",
+    "role": "Founder",
+    "company_name": "Tareon Services",
+    "weblink": "https://tareonservices.com/",
+    "image": "testimonials/Tareon.png",
+    "created_date": "2025-12-15T16:40:19.905Z",
+    "modified_date": "2025-12-23T10:33:19.467Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "full_name": "B. G. Technical Limited",
+    "message": "We are grateful to King Greatman Spirit for transforming our ideas into a functional and visually appealing website. The process was smooth, and the final product showcases our technical services with clarity and impact.",
+    "role": "HR",
+    "company_name": "B. G. Technical Limited (BGT)",
+    "weblink": "http://spiritual.pythonanywhere.com/",
+    "image": "testimonials/bgt_logo.png",
+    "created_date": "2025-12-15T16:43:46.352Z",
+    "modified_date": "2025-12-23T10:33:04.581Z"
+  }
+},
+{
+  "model": "service.service",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "name": "Software & Web Development",
+    "acronym": "S&WD",
+    "slug": "software-web-development",
+    "description": "I build secure, scalable, and high-performance software solutions that support business growth—from internal tools to customer-facing platforms. My development approach balances clean architecture, usability, and long-term maintainability.",
+    "icon": "bi-code-slash",
+    "image": "photos/services/wed_dev.png",
+    "created_date": "2025-12-15T14:36:56.716Z",
+    "modified_date": "2025-12-24T19:21:09.450Z"
+  }
+},
+{
+  "model": "service.service",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "name": "Artificial Intelligence & Machine Learning",
+    "acronym": "AI&ML",
+    "slug": "artificial-intelligence-machine-learning",
+    "description": "I design and deploy AI-powered solutions that automate processes, predict outcomes, and unlock intelligence from data—without unnecessary complexity or hype. Every solution is built with business value, scalability, and reliability in mind.",
+    "icon": "bi-robot",
+    "image": "photos/services/ai_ml_main_rO9RaLn.png",
+    "created_date": "2025-12-15T14:37:57.336Z",
+    "modified_date": "2025-12-24T19:21:09.460Z"
+  }
+},
+{
+  "model": "service.service",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "name": "Data Analysis & Business Intelligence",
+    "acronym": "DA&BI",
+    "slug": "data-analysis-business-intelligence",
+    "description": "I transform raw, fragmented data into clear, actionable insights that support smarter decision-making, improved performance, and reduced risk. My focus is not just reporting—but helping you understand what the data means and what to do next.",
+    "icon": "bi-bar-chart",
+    "image": "photos/services/Data_Analysis.png",
+    "created_date": "2025-12-15T14:38:27.144Z",
+    "modified_date": "2025-12-24T19:21:09.468Z"
+  }
+},
+{
+  "model": "service.service",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "name": "Digital Strategy & Consulting",
+    "acronym": "DS&C",
+    "slug": "digital-strategy-consulting",
+    "description": "I help businesses make smarter technology and digital decisions by aligning tools, data, and processes with clearly defined business goals. My consulting approach focuses on clarity, efficiency, and measurable return on investment (ROI)—not guesswork or trends.",
+    "icon": "bi-lightning-charge",
+    "image": "photos/services/Digital_Strategy__Consulting_IgPh9IP.png",
+    "created_date": "2025-12-15T14:38:54.988Z",
+    "modified_date": "2025-12-24T19:21:09.477Z"
+  }
+},
+{
+  "model": "service.service",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "name": "Digital Design",
+    "acronym": "DD",
+    "slug": "digital-design",
+    "description": "I design clean, modern, and conversion-focused digital experiences that combine strong visual identity with intuitive usability—ensuring your brand communicates trust, clarity, and professionalism across all platforms.",
+    "icon": "bi-palette",
+    "image": "photos/services/Digital_Design.png",
+    "created_date": "2025-12-15T15:07:08.456Z",
+    "modified_date": "2025-12-24T19:21:09.487Z"
+  }
+},
+{
+  "model": "service.service",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "name": "Tech Training & Prompt Engineering",
+    "acronym": "TT&PE",
+    "slug": "tech-training-prompt-engineering",
+    "description": "I deliver hands-on tech training and prompt engineering programs that help individuals, teams, and organizations master AI tools, coding skills, and modern digital workflows—so they work faster, smarter, and with confidence.",
+    "icon": "bi-mortarboard",
+    "image": "photos/services/training_tech_main_q4oNCJP.png",
+    "created_date": "2025-12-15T15:09:10.778Z",
+    "modified_date": "2025-12-24T19:21:09.496Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "service": 6,
+    "name": "Needs Assessment & Skill Gap Analysis",
+    "description": "I evaluate your current skill level, business goals, and AI maturity to design training that fits your exact needs.",
+    "image": "",
+    "created_date": "2025-12-23T14:49:20.438Z",
+    "modified_date": "2025-12-23T14:49:20.438Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "service": 6,
+    "name": "Customized Learning Roadmap",
+    "description": "I create a structured training plan—covering AI tools, coding, automation, or prompt engineering—tailored to your role or team.",
+    "image": "",
+    "created_date": "2025-12-23T14:49:20.440Z",
+    "modified_date": "2025-12-23T14:49:20.440Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "service": 6,
+    "name": "Hands-On Training & Live Workshops",
+    "description": "Practical sessions using real business scenarios, AI tools, and coding exercises—no fluff, just applied learning.",
+    "image": "",
+    "created_date": "2025-12-23T14:49:20.440Z",
+    "modified_date": "2025-12-23T14:49:20.440Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "service": 6,
+    "name": "Advanced Prompt Engineering Techniques",
+    "description": "Learn how to design high-impact prompts for ChatGPT, LLMs, automation workflows, and decision-support systems.",
+    "image": "",
+    "created_date": "2025-12-23T14:49:20.441Z",
+    "modified_date": "2025-12-23T14:49:20.441Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "service": 6,
+    "name": "Performance Evaluation & Ongoing Support",
+    "description": "I measure learning outcomes, refine techniques, and provide continued guidance for long-term success.",
+    "image": "",
+    "created_date": "2025-12-23T14:49:20.441Z",
+    "modified_date": "2025-12-23T14:49:20.441Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "service": 5,
+    "name": "Brand & User Discovery",
+    "description": "I take time to understand your brand identity, target audience, and competitive landscape to ensure every design decision aligns with user expectations and business objectives.",
+    "image": "",
+    "created_date": "2025-12-23T15:09:56.871Z",
+    "modified_date": "2025-12-23T15:28:24.402Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "service": 5,
+    "name": "UX Strategy & Information Architecture",
+    "description": "I design clear user flows, page structures, and content hierarchy that guide users naturally and reduce friction throughout their journey.",
+    "image": "",
+    "created_date": "2025-12-23T15:09:56.872Z",
+    "modified_date": "2025-12-23T15:28:24.403Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 8,
+  "fields": {
+    "about": 1,
+    "service": 5,
+    "name": "UI Design & Visual Systems",
+    "description": "I create polished visual systems—typography, color palettes, spacing, and components—that reinforce brand credibility and deliver a consistent experience.",
+    "image": "",
+    "created_date": "2025-12-23T15:09:56.874Z",
+    "modified_date": "2025-12-23T15:28:24.404Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 9,
+  "fields": {
+    "about": 1,
+    "service": 5,
+    "name": "Design Validation & Feedback Iteration",
+    "description": "Designs are refined through structured feedback, usability considerations, and real-world scenarios to ensure clarity, accessibility, and effectiveness.",
+    "image": "",
+    "created_date": "2025-12-23T15:09:56.874Z",
+    "modified_date": "2025-12-23T15:28:24.405Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 10,
+  "fields": {
+    "about": 1,
+    "service": 5,
+    "name": "Design Handoff & Support",
+    "description": "I deliver well-organized, development-ready assets and remain available to support implementation and future enhancements.",
+    "image": "",
+    "created_date": "2025-12-23T15:09:56.875Z",
+    "modified_date": "2025-12-23T15:28:24.405Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 11,
+  "fields": {
+    "about": 1,
+    "service": 4,
+    "name": "Business & Technology Audit",
+    "description": "I conduct a comprehensive review of your operations, systems, data flow, and existing tools to identify gaps and inefficiencies.",
+    "image": "",
+    "created_date": "2025-12-23T15:11:52.825Z",
+    "modified_date": "2025-12-23T15:30:28.855Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 12,
+  "fields": {
+    "about": 1,
+    "service": 4,
+    "name": "Opportunity Identification",
+    "description": "I uncover high-impact opportunities where technology and analytics can reduce cost, increase efficiency, or unlock growth.",
+    "image": "",
+    "created_date": "2025-12-23T15:11:52.827Z",
+    "modified_date": "2025-12-23T15:30:28.856Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 13,
+  "fields": {
+    "about": 1,
+    "service": 4,
+    "name": "Strategic Roadmap Development",
+    "description": "I deliver a clear, actionable roadmap outlining what to improve, when to implement, and how to measure success.",
+    "image": "",
+    "created_date": "2025-12-23T15:11:52.828Z",
+    "modified_date": "2025-12-23T15:30:28.856Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 14,
+  "fields": {
+    "about": 1,
+    "service": 4,
+    "name": "Implementation Guidance",
+    "description": "I work alongside your team during execution to ensure strategy translates into real-world results—not just documentation.",
+    "image": "",
+    "created_date": "2025-12-23T15:11:52.828Z",
+    "modified_date": "2025-12-23T15:30:28.857Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 15,
+  "fields": {
+    "about": 1,
+    "service": 4,
+    "name": "Performance Tracking & Optimization",
+    "description": "I help define success metrics and continuously refine the strategy as your business evolves.",
+    "image": "",
+    "created_date": "2025-12-23T15:11:52.829Z",
+    "modified_date": "2025-12-23T15:30:28.857Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 16,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "name": "Data Discovery & Requirement Gathering",
+    "description": "I work with stakeholders to understand KPIs, data sources, and business objectives that matter most.",
+    "image": "",
+    "created_date": "2025-12-23T15:14:15.569Z",
+    "modified_date": "2025-12-23T15:31:47.186Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 17,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "name": "Data Cleaning & ETL Automation",
+    "description": "I clean, structure, and automate data pipelines to ensure accuracy, consistency, and scalability.",
+    "image": "",
+    "created_date": "2025-12-23T15:14:15.570Z",
+    "modified_date": "2025-12-23T15:31:47.187Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 18,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "name": "Exploratory Data Analysis (EDA)",
+    "description": "I analyze trends, patterns, and anomalies to uncover insights hidden within your data.",
+    "image": "",
+    "created_date": "2025-12-23T15:14:15.571Z",
+    "modified_date": "2025-12-23T15:31:47.187Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 19,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "name": "Dashboard & Report Development",
+    "description": "I build interactive dashboards and reports using Microsoft Excel, Power BI, Tableau, Python, and SQL for real-time insight and clarity.",
+    "image": "",
+    "created_date": "2025-12-23T15:14:15.571Z",
+    "modified_date": "2025-12-23T15:31:47.188Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 20,
+  "fields": {
+    "about": 1,
+    "service": 3,
+    "name": "Insight Interpretation & Business Guidance",
+    "description": "I translate findings into clear explanations and practical, data-backed recommendations for action.",
+    "image": "",
+    "created_date": "2025-12-23T15:14:15.572Z",
+    "modified_date": "2025-12-23T15:31:47.188Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 21,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "name": "Problem Definition & Feasibility Analysis",
+    "description": "I clearly define the business problem and evaluate whether AI is the right solution—ensuring practicality and ROI.",
+    "image": "",
+    "created_date": "2025-12-23T15:15:55.173Z",
+    "modified_date": "2025-12-23T15:32:33.407Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 22,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "name": "Data Preparation & Feature Engineering",
+    "description": "I clean, transform, and structure data to make it suitable for high-performance models.",
+    "image": "",
+    "created_date": "2025-12-23T15:15:55.174Z",
+    "modified_date": "2025-12-23T15:32:33.409Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 23,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "name": "Model Development & Training",
+    "description": "I build predictive, classification, NLP, or recommendation models using proven ML and deep learning techniques.",
+    "image": "",
+    "created_date": "2025-12-23T15:15:55.175Z",
+    "modified_date": "2025-12-23T15:32:33.410Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 24,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "name": "Deployment & Integration",
+    "description": "I integrate models into existing applications, APIs, or workflows for seamless usage.",
+    "image": "",
+    "created_date": "2025-12-23T15:15:55.176Z",
+    "modified_date": "2025-12-23T15:32:33.411Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 25,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "name": "Monitoring & Continuous Improvement",
+    "description": "I monitor model performance and refine systems to maintain accuracy, scalability, and relevance over time.",
+    "image": "",
+    "created_date": "2025-12-23T15:15:55.176Z",
+    "modified_date": "2025-12-23T15:32:33.411Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 26,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "name": "Requirement Analysis & Architecture Design",
+    "description": "I translate business requirements into a clear, scalable technical architecture.",
+    "image": "",
+    "created_date": "2025-12-23T15:17:34.519Z",
+    "modified_date": "2025-12-23T15:34:16.280Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 27,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "name": "Backend & API Development",
+    "description": "I develop robust backend systems and APIs using Python, Django, Node.js, PHP, and modern frameworks.",
+    "image": "",
+    "created_date": "2025-12-23T15:17:34.520Z",
+    "modified_date": "2025-12-23T15:34:16.281Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 28,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "name": "Frontend & User Interface Development",
+    "description": "I build responsive, intuitive interfaces using React, JavaScript, and modern UI frameworks.",
+    "image": "",
+    "created_date": "2025-12-23T15:17:34.520Z",
+    "modified_date": "2025-12-23T15:34:16.281Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 29,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "name": "Testing, Optimization & Security Hardening",
+    "description": "I ensure applications are fast, reliable, secure, and optimized for real-world use.",
+    "image": "",
+    "created_date": "2025-12-23T15:17:34.521Z",
+    "modified_date": "2025-12-23T15:34:16.282Z"
+  }
+},
+{
+  "model": "service.serviceprocess",
+  "pk": 30,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "name": "Deployment, Support & Scaling",
+    "description": "I deploy production-ready systems and provide ongoing support, optimization, and scaling strategies.",
+    "image": "",
+    "created_date": "2025-12-23T15:17:34.521Z",
+    "modified_date": "2025-12-23T15:34:16.282Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 1,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 4,
+    "channel": "Facebook",
+    "message": "I want us to schedule a meeting",
+    "created_date": "2025-12-18T11:29:16.282Z",
+    "modified_date": "2025-12-18T11:29:16.283Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 2,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 6,
+    "channel": "WhatsApp",
+    "message": "Test case",
+    "created_date": "2025-12-18T11:31:26.369Z",
+    "modified_date": "2025-12-18T11:31:26.369Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 3,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 6,
+    "channel": "Instagram",
+    "message": "bjgjjhchgchgc",
+    "created_date": "2025-12-18T11:32:49.568Z",
+    "modified_date": "2025-12-18T11:32:49.568Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 4,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 6,
+    "channel": "Instagram",
+    "message": "bjgjjhchgchgc",
+    "created_date": "2025-12-18T11:33:29.081Z",
+    "modified_date": "2025-12-18T11:33:29.081Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 5,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 1,
+    "channel": "LinkedIn",
+    "message": "nklnhknklnjk",
+    "created_date": "2025-12-18T11:38:35.625Z",
+    "modified_date": "2025-12-18T11:38:35.625Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 6,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 4,
+    "channel": "Instagram",
+    "message": "dfbgjmyhjjy",
+    "created_date": "2025-12-18T11:41:37.494Z",
+    "modified_date": "2025-12-18T11:41:37.494Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 7,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 4,
+    "channel": "Instagram",
+    "message": "gfnghhhgnfhgnhh",
+    "created_date": "2025-12-18T13:08:20.008Z",
+    "modified_date": "2025-12-18T13:08:20.008Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 8,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 2,
+    "channel": "Twitter",
+    "message": ";klhfgdtrjiyuhiuhbjkvhjjhkhuigggui",
+    "created_date": "2025-12-18T13:18:01.620Z",
+    "modified_date": "2025-12-18T13:18:01.620Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 9,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T13:18:10.255Z",
+    "modified_date": "2025-12-18T13:18:10.256Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 10,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T13:18:14.648Z",
+    "modified_date": "2025-12-18T13:18:14.648Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 11,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T13:18:31.534Z",
+    "modified_date": "2025-12-18T13:18:31.534Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 12,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T13:19:28.702Z",
+    "modified_date": "2025-12-18T13:19:28.702Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 13,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 3,
+    "channel": "LinkedIn",
+    "message": "Lets start",
+    "created_date": "2025-12-18T14:40:39.497Z",
+    "modified_date": "2025-12-18T14:40:39.498Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 14,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T14:40:57.224Z",
+    "modified_date": "2025-12-18T14:40:57.224Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 15,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T14:44:25.843Z",
+    "modified_date": "2025-12-18T14:44:25.843Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 16,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 6,
+    "channel": "Twitter",
+    "message": "hgfjyfufuyfufyufy",
+    "created_date": "2025-12-18T15:04:45.928Z",
+    "modified_date": "2025-12-18T15:04:45.928Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 17,
+  "fields": {
+    "full_name": "Unye-awaji Greatman",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "90141155705",
+    "company_name": "Spirit Tech",
+    "service": 6,
+    "channel": "Twitter",
+    "message": "hgfjyfufuyfufyufy",
+    "created_date": "2025-12-18T15:04:49.639Z",
+    "modified_date": "2025-12-18T15:04:49.640Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 18,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:54.650Z",
+    "modified_date": "2025-12-18T15:04:54.650Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 19,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:55.096Z",
+    "modified_date": "2025-12-18T15:04:55.096Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 20,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:56.154Z",
+    "modified_date": "2025-12-18T15:04:56.154Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 21,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:56.633Z",
+    "modified_date": "2025-12-18T15:04:56.633Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 22,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:56.883Z",
+    "modified_date": "2025-12-18T15:04:56.883Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 23,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:56.945Z",
+    "modified_date": "2025-12-18T15:04:56.945Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 24,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:57.174Z",
+    "modified_date": "2025-12-18T15:04:57.175Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 25,
+  "fields": {
+    "full_name": "",
+    "email": "",
+    "phone_number": "",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "message": "",
+    "created_date": "2025-12-18T15:04:57.759Z",
+    "modified_date": "2025-12-18T15:04:57.759Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 26,
+  "fields": {
+    "full_name": "Greatman Justus Unye-Awaji",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "company_name": "Spirit Tech",
+    "service": 4,
+    "channel": "Google",
+    "message": "mhuymmhjhjmj",
+    "created_date": "2025-12-18T15:06:26.192Z",
+    "modified_date": "2025-12-18T15:06:26.192Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 27,
+  "fields": {
+    "full_name": "jk",
+    "email": "spiritpydev@gmail.comkhihi",
+    "phone_number": "90141155705ljmoijoijio",
+    "company_name": "Spirit Tech sex",
+    "service": 1,
+    "channel": "Instagram",
+    "message": "yes ohhhhh",
+    "created_date": "2025-12-18T15:09:57.108Z",
+    "modified_date": "2025-12-18T15:09:57.108Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 28,
+  "fields": {
+    "full_name": "Unye-Awaji Justus Greatman",
+    "email": "spreading4ever@gmail.com",
+    "phone_number": "09014155705",
+    "company_name": "Spirit Tech",
+    "service": 4,
+    "channel": "LinkedIn",
+    "message": "jhgiuguyfuyfytdkgkjuyk",
+    "created_date": "2025-12-18T15:21:26.206Z",
+    "modified_date": "2025-12-18T15:21:26.206Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 29,
+  "fields": {
+    "full_name": "Greatman Justus Unye-Awaji",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "company_name": "Spirit Tech",
+    "service": 2,
+    "channel": "Telegram",
+    "message": "rgrjrorgrgrghihgrighroig",
+    "created_date": "2025-12-18T15:34:04.912Z",
+    "modified_date": "2025-12-18T15:34:04.912Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 30,
+  "fields": {
+    "full_name": "Greatman Justus Unye-Awaji",
+    "email": "spreading4ever@gmail.com",
+    "phone_number": "09014155705",
+    "company_name": "Spirit Tech",
+    "service": 2,
+    "channel": "WhatsApp",
+    "message": "jilhiugyfdhvycg iutyo8iygo98yh98uyrf5t6dkuiyi8u7vf iughujyddx,ylhifhdytek",
+    "created_date": "2025-12-18T15:43:15.102Z",
+    "modified_date": "2025-12-18T15:43:15.102Z"
+  }
+},
+{
+  "model": "contact.socials",
+  "pk": 1,
+  "fields": {
+    "platform": "My Socials",
+    "facebook": "https://www.facebook.com/FAMOUSGREATMAN/",
+    "twitter": "https://x.com/greatestmaneva",
+    "instagram": "https://www.instagram.com/king_greatman_spirit/",
+    "linkedin": "https://www.linkedin.com/in/greatman-pydev/",
+    "github": "https://github.com/King-Greatman-Spirit",
+    "youTube": "https://www.youtube.com/@greatestmaneva",
+    "telegram": "https://t.me/greatestmaneva",
+    "whatsapp": "https://wa.me/2349014155705",
+    "tiktok": "https://www.tiktok.com/@king_greatman_spirit",
+    "threads": "https://www.threads.com/@king_greatman_spirit",
+    "linktree": "https://linktr.ee/greatestmaneva",
+    "pinterest": "https://www.pinterest.com/greatestmaneva/"
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$5GOqKTyYcdsiZMIbhZ6voD$Tj6leZ2dV5kG4HTyN3P+qm2vMvLCdNmW3U0R9gLuI5I=",
+    "last_login": "2025-12-14T13:01:32.193Z",
+    "first_name": "kinggreatman",
+    "last_name": "spirit",
+    "username": "admin",
+    "email": "admin@kinggreatmanspirit.com",
+    "phone_number": "09014155705",
+    "date_joined": "2025-12-09T09:50:34.472Z",
+    "last_joined": "2025-12-09T09:50:34.472Z",
+    "is_active": true,
+    "is_staff": true,
+    "is_admin": true,
+    "is_superadmin": true
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-12-09T09:53:10.586Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "1",
+    "object_repr": "admin@kinggreatmanspirit.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone number\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-12-09T10:33:26.161Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "contact",
+      "socials"
+    ],
+    "object_id": "1",
+    "object_repr": "Social Links",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-12-09T10:36:02.175Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "contact",
+      "socials"
+    ],
+    "object_id": "1",
+    "object_repr": "Social Links",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Pinterest\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-12-09T10:40:15.365Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "contact",
+      "socials"
+    ],
+    "object_id": "1",
+    "object_repr": "Social Links",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Linktree\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-12-09T10:40:36.927Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "contact",
+      "socials"
+    ],
+    "object_id": "1",
+    "object_repr": "My Socials",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Platform\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-12-09T11:36:17.857Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-12-09T14:01:16.085Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-12-09T14:36:45.569Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "contact",
+      "socials"
+    ],
+    "object_id": "1",
+    "object_repr": "My Socials",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Telegram\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-12-09T14:53:16.513Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-12-09T14:54:07.819Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cover image\", \"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-12-09T15:00:31.796Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-12-09T15:11:59.114Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-12-09T15:58:47.946Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-12-09T16:14:00.609Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Intro text\", \"Outro text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-12-09T16:34:36.753Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Website\", \"Degree\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-12-09T16:49:30.120Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Degree\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-12-10T14:54:03.991Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Degree\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-12-10T15:45:12.310Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "1",
+    "object_repr": "Thrilled Clients",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-12-10T15:46:07.423Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "2",
+    "object_repr": "Successful Projects",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-12-10T15:46:14.356Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "2",
+    "object_repr": "Successful Projects",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-12-10T15:46:47.158Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "1",
+    "object_repr": "Thrilled Clients",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-12-10T15:46:58.614Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "2",
+    "object_repr": "Successful Projects",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-12-10T15:47:46.897Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "2",
+    "object_repr": "Successful Projects",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-12-10T15:47:52.251Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "1",
+    "object_repr": "Thrilled Clients",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-12-10T15:50:03.119Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "3",
+    "object_repr": "Hours of Support",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-12-10T15:50:56.085Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "3",
+    "object_repr": "Hours of Support",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-12-10T15:51:16.883Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "1",
+    "object_repr": "Thrilled Clients",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-12-10T15:51:38.176Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "2",
+    "object_repr": "Successful Projects",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-12-10T15:52:14.038Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "statistic"
+    ],
+    "object_id": "4",
+    "object_repr": "Expert Collaborators",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-12-11T08:53:58.966Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Birthday\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-12-11T08:54:14.438Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Age\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-12-12T10:18:55.392Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "1",
+    "object_repr": "Python",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-12-12T10:19:02.761Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "2",
+    "object_repr": "Machine Learning",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-12-12T10:19:15.792Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "3",
+    "object_repr": "Deep Learning",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-12-12T10:20:00.815Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "4",
+    "object_repr": "NLP",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-12-12T10:20:18.779Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "5",
+    "object_repr": "Data Analysis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-12-12T10:21:21.760Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "6",
+    "object_repr": "Predictive Analytics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-12-12T12:31:13.661Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "7",
+    "object_repr": "TensorFlow / PyTorch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-12-12T12:31:27.560Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "8",
+    "object_repr": "Django / DRF",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-12-12T12:31:39.249Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "9",
+    "object_repr": "PHP / Laravel",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-12-12T12:31:54.473Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "10",
+    "object_repr": "Node.js / TypeScript",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-12-12T12:32:09.080Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "11",
+    "object_repr": "React / JavaScript",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-12-12T12:32:22.586Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "12",
+    "object_repr": "SQL (MySQL / PostgreSQL)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-12-12T12:32:51.454Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "13",
+    "object_repr": "Power BI / Tableau",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-12-12T12:33:08.248Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "skill"
+    ],
+    "object_id": "14",
+    "object_repr": "Firebase / DevOps (Git, Docker)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-12-14T13:18:44.700Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "summary"
+    ],
+    "object_id": "1",
+    "object_repr": "Summary Section",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-12-14T13:44:38.914Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "1",
+    "object_repr": "Master of Fine Arts &amp; Graphic Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-12-14T13:50:58.322Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "2",
+    "object_repr": "Bachelor of Fine Arts & Graphic Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-12-14T14:48:53.525Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "1",
+    "object_repr": "Senior graphic design specialist",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-12-14T14:52:11.312Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "2",
+    "object_repr": "Graphic design specialist",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-12-15T11:00:04.887Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "summary"
+    ],
+    "object_id": "1",
+    "object_repr": "Summary Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Intro text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-12-15T11:04:06.749Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "summary"
+    ],
+    "object_id": "1",
+    "object_repr": "Summary Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Full name\", \"Description\", \"Address\", \"Phone\", \"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-12-15T11:11:08.590Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "1",
+    "object_repr": "Bachelor of Science (B.Sc.) – Computer Science (In View)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Year\", \"Institution\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-12-15T11:12:07.805Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "2",
+    "object_repr": "National Diploma (ND) – Computer Science",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Year\", \"Institution\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-12-15T11:20:13.467Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "2",
+    "object_repr": "Freelancer – Data Analyst | Data Scientist | AI Engineer | Instructor",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Year\", \"Company\", \"City\", \"Desc one\", \"Desc two\", \"Desc three\", \"Desc four\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-12-15T11:22:40.526Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "1",
+    "object_repr": "Python Developer & Data Analyst",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Year\", \"Company\", \"Desc one\", \"Desc two\", \"Desc three\", \"Desc four\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-12-15T11:25:20.426Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "3",
+    "object_repr": "Full Stack Web Developer | Instructor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-12-15T11:27:25.422Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "4",
+    "object_repr": "Software Engineer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-12-15T14:06:37.416Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "summary"
+    ],
+    "object_id": "1",
+    "object_repr": "Summary Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-12-15T14:07:45.927Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "summary"
+    ],
+    "object_id": "1",
+    "object_repr": "Summary Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-12-15T14:09:28.146Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "1",
+    "object_repr": "B.Sc. Computer Science (In View)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Institution\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-12-15T14:10:16.419Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "2",
+    "object_repr": "ND Computer Science",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-12-15T14:10:53.741Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "4",
+    "object_repr": "Software Engineer",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-12-15T14:10:53.741Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "3",
+    "object_repr": "Full Stack Web Developer | Instructor",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-12-15T14:10:53.741Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "2",
+    "object_repr": "Freelancer – Data Analyst | Data Scientist | AI Engineer | Instructor",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-12-15T14:10:53.741Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "1",
+    "object_repr": "Python Developer & Data Analyst",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-12-15T14:14:29.273Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "5",
+    "object_repr": "Python Developer & Data Analyst",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-12-15T14:17:16.045Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "6",
+    "object_repr": "Full Stack | Data Analyst | AI Engineer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-12-15T14:17:36.347Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "5",
+    "object_repr": "Python Developer & Data Analyst",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Company\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-12-15T14:18:45.563Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "7",
+    "object_repr": "Software Engineer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-12-15T14:21:19.761Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "7",
+    "object_repr": "Software Engineer",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Desc three\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-12-15T14:21:25.380Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "6",
+    "object_repr": "Full Stack | Data Analyst | AI Engineer",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-12-15T14:21:46.978Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "5",
+    "object_repr": "Python Developer & Data Analyst",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Desc three\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-12-15T14:36:56.722Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Software & Web Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-12-15T14:37:57.340Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "AI & Machine Learning",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-12-15T14:38:27.146Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Data Analysis & Business Intelligence",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-12-15T14:38:54.991Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Digital Strategy & Consulting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-12-15T15:07:08.465Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "UI/UX & Product Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-12-15T15:09:10.782Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Tech Training & Prompt Engineering",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-12-15T16:29:35.770Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "1",
+    "object_repr": "Testimonial by None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-12-15T16:30:08.950Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "1",
+    "object_repr": "Testimonial by OUN Developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Full name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-12-15T16:30:43.133Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "2",
+    "object_repr": "Testimonial by Kupon Oil & Gas Limited",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-12-15T16:31:38.731Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "3",
+    "object_repr": "Testimonial by GalaxyPL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-12-15T16:34:29.915Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "4",
+    "object_repr": "Testimonial by Pipeline Pigs and Accessories Limited",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-12-15T16:34:38.855Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "1",
+    "object_repr": "Testimonial by OUN Developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-12-15T16:34:45.341Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "2",
+    "object_repr": "Testimonial by Kupon Oil & Gas Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-12-15T16:34:52.574Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "3",
+    "object_repr": "Testimonial by GalaxyPL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-12-15T16:34:56.928Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "4",
+    "object_repr": "Testimonial by Pipeline Pigs and Accessories Limited",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-12-15T16:36:45.415Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "5",
+    "object_repr": "Testimonial by SamBen Security",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-12-15T16:40:19.909Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "6",
+    "object_repr": "Testimonial by Tareon Services",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-12-15T16:43:46.358Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "7",
+    "object_repr": "Testimonial by B. G. Technical Limited",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-12-15T17:00:52.387Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "7",
+    "object_repr": "Testimonial by B. G. Technical Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Company name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-12-15T17:03:03.071Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "7",
+    "object_repr": "Testimonial by B. G. Technical Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-12-15T17:14:42.170Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-12-15T17:41:16.671Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "summary"
+    ],
+    "object_id": "1",
+    "object_repr": "Summary Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Full name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-12-22T16:43:06.343Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Digital Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-12-22T17:04:42.781Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Tech Training & Prompt Engineering",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-12-22T17:04:55.106Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Digital Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-12-22T17:05:26.356Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Digital Strategy & Consulting",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-12-22T17:05:39.719Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Data Analysis & Business Intelligence",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-12-22T17:06:28.260Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Software & Web Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-12-22T17:07:48.415Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "AI & Machine Learning",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-12-22T17:12:11.393Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "AI & Machine Learning",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-12-22T17:16:23.415Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Tech Training & Prompt Engineering",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-12-22T17:20:39.181Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-12-23T00:35:25.180Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Tech Training & Prompt Engineering",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-12-23T00:36:06.129Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Software & Web Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-12-23T00:54:48.708Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile image\", \"Cover image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-12-23T01:10:50.146Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-12-23T01:31:53.770Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cover image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-12-23T01:34:41.665Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile image\", \"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-12-23T01:36:31.958Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile image\", \"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-12-23T01:38:22.654Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-12-23T02:05:28.773Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-12-23T08:55:51.226Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-12-23T09:01:15.689Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "about",
+      "about"
+    ],
+    "object_id": "1",
+    "object_repr": "About Section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"About image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-12-23T10:33:04.585Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "7",
+    "object_repr": "Testimonial by B. G. Technical Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-12-23T10:33:19.470Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "6",
+    "object_repr": "Testimonial by Tareon Services",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-12-23T10:33:51.803Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "5",
+    "object_repr": "Testimonial by SamBen Security",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-12-23T10:34:16.763Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "4",
+    "object_repr": "Testimonial by Pipeline Pigs and Accessories Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-12-23T10:34:48.928Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "3",
+    "object_repr": "Testimonial by GalaxyPL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-12-23T10:35:01.204Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "2",
+    "object_repr": "Testimonial by Kupon Oil & Gas Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-12-23T10:35:14.656Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "1",
+    "object_repr": "Testimonial by OUN Developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Weblink\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-12-23T14:30:22.941Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Tech Training & Prompt Engineering",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-12-23T14:30:37.060Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Digital Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-12-23T14:30:46.347Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Digital Strategy & Consulting",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-12-23T14:33:01.989Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Digital Strategy & Consulting",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-12-23T14:33:21.045Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Data Analysis & Business Intelligence",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-12-23T14:33:31.249Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "AI & Machine Learning",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-12-23T14:34:10.372Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Software & Web Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-12-23T14:49:20.442Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Tech Training & Prompt Engineering",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Needs Assessment & Skill Gap Analysis\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Customized Learning Roadmap\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Hands-On Training & Live Workshops\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Advanced Prompt Engineering Techniques\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Performance Evaluation & Ongoing Support\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-12-23T15:09:56.875Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Digital Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Brand & User Discovery\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"UX Strategy & Information Architecture\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"UI Design & Visual Systems\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Design Validation & Feedback Iteration\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Design Handoff & Support\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-12-23T15:11:52.830Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Digital Strategy & Consulting",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Business & Technology Audit\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Opportunity Identification\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Strategic Roadmap Development\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Implementation Guidance\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Performance Tracking & Optimization\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-12-23T15:14:15.573Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Data Analysis & Business Intelligence",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Data Discovery & Requirement Gathering\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Data Cleaning & ETL Automation\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Exploratory Data Analysis (EDA)\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Dashboard & Report Development\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Insight Interpretation & Business Guidance\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-12-23T15:15:55.177Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "AI & Machine Learning",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Problem Definition & Feasibility Analysis\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Data Preparation & Feature Engineering\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Model Development & Training\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Deployment & Integration\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Monitoring & Continuous Improvement\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-12-23T15:17:34.522Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Software & Web Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Requirement Analysis & Architecture Design\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Backend & API Development\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Frontend & User Interface Development\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Testing, Optimization & Security\"}}, {\"added\": {\"name\": \"Service Process\", \"object\": \"Deployment, Support & Scaling\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-12-23T15:28:24.406Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Digital Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Brand & User Discovery\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"UX Strategy & Information Architecture\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"UI Design & Visual Systems\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Design Validation & Feedback Iteration\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Design Handoff & Support\", \"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-12-23T15:30:28.858Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Digital Strategy & Consulting",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Business & Technology Audit\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Opportunity Identification\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Strategic Roadmap Development\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Implementation Guidance\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Performance Tracking & Optimization\", \"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-12-23T15:31:47.189Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Data Analysis & Business Intelligence",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Data Discovery & Requirement Gathering\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Data Cleaning & ETL Automation\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Exploratory Data Analysis (EDA)\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Dashboard & Report Development\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Insight Interpretation & Business Guidance\", \"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-12-23T15:32:33.413Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "AI & Machine Learning",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Problem Definition & Feasibility Analysis\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Data Preparation & Feature Engineering\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Model Development & Training\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Deployment & Integration\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Monitoring & Continuous Improvement\", \"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-12-23T15:34:16.283Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Software & Web Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Requirement Analysis & Architecture Design\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Backend & API Development\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Frontend & User Interface Development\", \"fields\": [\"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Testing, Optimization & Security Hardening\", \"fields\": [\"Name\", \"Description\"]}}, {\"changed\": {\"name\": \"Service Process\", \"object\": \"Deployment, Support & Scaling\", \"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-12-23T15:42:47.664Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "service",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "Artificial Intelligence & Machine Learning",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-12-24T17:36:33.138Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "1",
+    "object_repr": "OUN Developers Corporate Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-12-24T17:40:51.939Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "2",
+    "object_repr": "Kupon Oil & Gas Corporate Platform",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-12-24T17:45:05.472Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "3",
+    "object_repr": "GalaxyPL Business Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-12-24T17:51:54.573Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "4",
+    "object_repr": "Pipeline Pigs and Accessories Limited",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-12-24T17:55:12.197Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "5",
+    "object_repr": "Samben Security Corporate Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-12-24T17:59:05.633Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "6",
+    "object_repr": "Tareon Services Business Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-12-24T18:34:51.390Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "7",
+    "object_repr": "B. G. Technical Limited Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-12-24T18:37:26.597Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "4",
+    "object_repr": "Pipeline Pigs and Accessories Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"deleted\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-12-24T18:38:18.156Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "4",
+    "object_repr": "Pipeline Pigs and Accessories Limited",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-12-25T19:07:41.425Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "8",
+    "object_repr": "B.G. Technical Performance Dashboard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-12-25T19:10:39.487Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "9",
+    "object_repr": "BGT Management Travel Activity Tracker",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"BGT Management Travel Activity Tracker Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"BGT Management Travel Activity Tracker Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-12-25T19:13:40.512Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "10",
+    "object_repr": "Webstacka Financial Statistics Dashboard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-12-25T19:16:18.921Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "11",
+    "object_repr": "Royal Pride Tech Business Intelligence Repository",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Royal Pride Tech Business Intelligence Repository Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Royal Pride Tech Business Intelligence Repository Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Royal Pride Tech Business Intelligence Repository Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-12-25T19:21:03.722Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "12",
+    "object_repr": "Budget Tracking & Variance Analysis Dashboard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-12-25T19:22:55.032Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "13",
+    "object_repr": "Employee Vacation Tracking System",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Employee Vacation Tracking System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-12-25T19:29:37.621Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "14",
+    "object_repr": "Airbnb Market Performance & Revenue Analysis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Airbnb Market Performance & Revenue Analysis Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Airbnb Market Performance & Revenue Analysis Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Airbnb Market Performance & Revenue Analysis Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-12-25T19:55:30.507Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "13",
+    "object_repr": "Employee Vacation Tracking System",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Employee Vacation Tracking System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Employee Vacation Tracking System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-12-26T09:10:25.355Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "14",
+    "object_repr": "Airbnb Market Performance & Revenue Analysis",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Airbnb Market Performance & Revenue Analysis Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Airbnb Market Performance & Revenue Analysis Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-12-26T09:11:02.924Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "8",
+    "object_repr": "B.G. Technical Performance Dashboard",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"B.G. Technical Performance Dashboard Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2025-12-26T09:12:10.980Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "9",
+    "object_repr": "BGT Management Travel Activity Tracker",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"BGT Management Travel Activity Tracker Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"BGT Management Travel Activity Tracker Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2025-12-26T09:12:54.782Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "12",
+    "object_repr": "Budget Tracking & Variance Analysis Dashboard",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Budget Tracking & Variance Analysis Dashboard Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2025-12-26T09:13:38.586Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "13",
+    "object_repr": "Employee Vacation Tracking System",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project images\", \"object\": \"Employee Vacation Tracking System Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-12-26T09:14:20.269Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "11",
+    "object_repr": "Royal Pride Tech Business Intelligence Repository",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Royal Pride Tech Business Intelligence Repository Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Royal Pride Tech Business Intelligence Repository Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-12-26T09:15:07.617Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "10",
+    "object_repr": "Webstacka Financial Statistics Dashboard",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Webstacka Financial Statistics Dashboard Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-12-26T09:18:54.133Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "7",
+    "object_repr": "B. G. Technical Limited Website",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"B. G. Technical Limited Website Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2025-12-26T09:19:41.835Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "3",
+    "object_repr": "GalaxyPL Business Website",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"GalaxyPL Business Website Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2025-12-26T09:20:28.192Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "2",
+    "object_repr": "Kupon Oil & Gas Corporate Platform",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Kupon Oil & Gas Corporate Platform Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2025-12-26T09:21:03.408Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "1",
+    "object_repr": "OUN Developers Corporate Website",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"OUN Developers Corporate Website Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2025-12-26T09:21:46.591Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "4",
+    "object_repr": "Pipeline Pigs and Accessories Limited",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Pipeline Pigs and Accessories Limited Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2025-12-26T09:23:02.939Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "5",
+    "object_repr": "Samben Security Corporate Website",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Samben Security Corporate Website Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2025-12-26T09:23:39.693Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "6",
+    "object_repr": "Tareon Services Business Website",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Tareon Services Business Website Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2025-12-26T09:28:19.553Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "testimonial"
+    ],
+    "object_id": "1",
+    "object_repr": "Testimonial by OUN Developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+  }
+}
+]

@@ -1,0 +1,72 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+
+{% block content %}
+<section class="sec-padding" style="background-color: #ffffff;">
+    {% if request.GET.command == 'verification' %}
+        <div class="container mx-auto alert alert-info text-center" style="max-width: 1030px; margin-top: 100px; margin-bottom: 100px; font-size: 18px;">
+            Thanks for registering with us. We have sent a verification email to your email address {{ request.GET.email }}, please verify it.
+            <br><br>
+            Already verified? <a class="btn btn-primary" href="{% url 'admin_login' %}">Login</a>
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-centered">
+                    <div class="text-box padding-4 border">
+                        <div class="smart-forms smart-container wrap-3" style="background-color: #ffffff;">
+                            <h4 class="uppercase">Admin Login Form</h4>
+
+                            <form method="post" action="{% url 'admin_login' %}" id="contact">
+                                {% csrf_token %}
+
+                                {% include 'includes/alerts.html' %}
+
+                                <div class="section">
+                                    <label class="field prepend-icon">
+                                        <input type="text" name="email" id="email" class="gui-input" placeholder="Enter Email">
+                                        <span class="field-icon"><i class="fa fa-envelope" style="color: #dccb97;"></i></span>
+                                    </label>
+                                </div>
+
+                                <div class="section">
+                                    <label class="field prepend-icon">
+                                        <div>
+                                            <input type="password" style="padding-left: 36px;" name="password" id="password" class="gui-input" placeholder="Enter password">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text toggle-password" data-target="password">
+                                                    <span class="eye">
+                                                        <i class="fa fa-eye"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="field-icon"><i class="fa fa-lock" style="color: #dccb97;"></i></span>
+                                    </label>
+                                </div>
+
+                                <div class="container section">
+                                    <div class="row">
+                                        <a href="{% url 'admin_forgot_password' %}" style="float: left;">Forgot password?</a>
+                                        <label class="switch" style="float: right;">
+                                            <input type="checkbox" name="remember" id="remember" checked>
+                                            <span class="switch-label" for="remember" data-on="YES" data-off="NO"></span>
+                                            <span> Remember me?</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="section form-footer">
+                                    <button type="submit" class="button btn-primary">Sign in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</section>
+
+<div class="clearfix"></div>
+{% endblock %}

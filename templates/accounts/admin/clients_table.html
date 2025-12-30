@@ -1,0 +1,90 @@
+{% extends 'base_dashboard.html' %}
+{% block content %}
+{% load static %}
+{% url 'client_dashboard' as client_dashboard %}
+
+<div class="clearfix"></div>
+
+<section>
+  <div class="pagination-holder">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Admin Dashboard</h3>
+        </div>
+        <div class="col-md-6 text-right">
+          <div class="pagination_links">
+            <a href="index.html">Home</a><i> / </i>
+            <a href="index.html">Portfolio</a> <i> / </i> Portfolio Two Column
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
+<div class="clearfix"></div>
+
+<section class="sec-padding">
+  <div class="container">
+    <div class="row">
+      {% include 'includes/admin_dash_navbar.html' %}
+      <div class="col-md-9 col-sm-9 col-xs-12 bmargin">
+      {% if request.path == CT %}
+        <div class="text-box padding-3 border">
+          <div class="bmargin">
+            <h3>Clients Table</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.
+              Praesent mattis commodo augue. Aliquam ornare hendrerit consectetuer adipiscing
+              elit. Suspendisse et justo. augue.
+            </p>
+            <br />
+            <div class="cd__main table-wrapper">
+              <!-- Your table -->
+              <table class="table table-striped" id="example" style="width:100%">
+                <thead>
+                  <tr>
+                    <th data-label="Name">Name</th>
+                    <th data-label="Email">Email</th>
+                    <th data-label="Phone Number">Phone Number</th>
+                    <th data-label="Subservice">Subservice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% if users_data %}
+                    {% for user in users_data %}
+                      <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone_number }}</td>
+                        <td>{{ user.subservice_abbr }}</td>
+                      </tr>
+                    {% endfor %}
+                  {% else %}
+                    <tr>
+                      <td colspan="4">
+                        <h3 class="empty-table-message centre">No Records Found for Clients Table</h3>
+                      </td>
+                    </tr>
+                  {% endif %}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Subservice</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

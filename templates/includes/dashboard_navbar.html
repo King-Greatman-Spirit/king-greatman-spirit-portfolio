@@ -1,0 +1,44 @@
+{% load static %}
+
+{% url 'client_dashboard' as client_dashboard %}
+
+
+<!-- {% url 'business_overview' as BO %}
+{% url 'update_business_overview' updated_overview.company_id as UBO %}
+
+{% url 'staff_dashboard' as SD %}
+{% url 'update_staff' updated_staff.id as US %}
+
+{% url 'service_dashboard' as ServeD %}
+{% url 'update_service' updated_service.id as UServe %}
+
+{% url 'service_process_dashboard' as SPD %}
+{% url 'update_service_process' updated_sp.id as USP %}
+
+{% comment %} {% url 'project_dashboard' as PD %}
+{% url 'update_project' updated_project.id as UP %}
+
+{% url 'project_image_dashboard' as PID %}
+{% url 'update_project_image' updated_project_image.id as UPI %} {% endcomment %}
+
+{% url 'faqcategory_dashboard' as c_dash %}
+{% url 'update_faqcategory' updated_faqcategory.id as u_category %}
+
+{% url 'faqquestion_dashboard' as q_dash %}
+{% url 'update_faqquestion' updated_faqquestion.id as u_question %} -->
+
+<div class="col-md-3 col-sm-3 col-xs-12 bmargin">
+  <h5 class="padd_bot2">Categories</h5>
+          <ul class="category-links orange-2">
+            <li class="{% if request.path == client_dashboard %} cbp-filter-item-active {% endif %} cbp-filter-item"> <a href="{% url 'client_dashboard' %}">Client Profile</a></li>
+             <!-- <li class="{% if request.path == BO or request.path == UBO %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'business_overview' %}"> Business Overview</a></li>
+              <li class="{% if request.path == SD or request.path == US %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'staff_dashboard' %}"> Staff</a></li>
+              <li class="{% if request.path == ServeD or request.path == UServe %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'service_dashboard' %}"> Services</a></li>
+              <li class="{% if request.path == SPD or request.path == USP %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'service_process_dashboard' %}"> Service processes</a></li>
+              {% comment %} <li class="{% if request.path == PD or request.path == UP %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'project_dashboard' %}"> Projects</a></li>
+              <li class="{% if request.path == PID or request.path == UPI %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'project_image_dashboard' %}"> Projects Images</a></li> {% endcomment %}
+              <li class="{% if request.path == c_dash or request.path == u_category %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'faqcategory_dashboard' %}">Faq Category</a></li>
+              <li class="{% if request.path == q_dash or request.path == u_question %} cbp-filter-item-active {% endif %} cbp-filter-item"><a href="{% url 'faqquestion_dashboard' %}">Faq Question</a></li> -->
+          </ul>
+  </div>
+ <!-- end section -->

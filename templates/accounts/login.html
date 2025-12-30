@@ -1,0 +1,81 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+
+{% block content %}
+
+
+ <section class="sec-padding">
+
+  {% if request.GET.command == 'verification' %}
+  	<div class="container mx-auto alert alert-info text-center" style="max-width: 1030px; margin-top: 100px; margin-bottom: 100px; font-size: 18px;">
+  		Thanks for registering with us. We have been sent a verification email to your email address {{ request.GET.email }}, please verify it.
+  		<br><br>
+  		Already verified <a class= "btn btn-primary" href="{% url 'login' %}">Login</a>
+  	</div> <!-- card .// -->
+  {% else %}
+
+  <div class="container">
+   <div class="row">
+   <div class="col-md-6 col-centered">
+   <div class="text-box padding-4 border">
+   <div class="smart-forms smart-container wrap-3">
+      	<h4 class="uppercase">Login Form</h4>
+          <form method="post" action="{% url 'login' %}" id="contact">
+            {% csrf_token %}
+          	<div>
+                  <div class="spacer-b30">
+                  	<div class="tagline"><span>Sign in  With </span></div><!-- .tagline -->
+                  </div>
+
+              	<div class="section">
+                  <a href="#" class="button btn-social googleplus span-left"> <span><i class="fa fa-google-plus"></i></span> Google+ </a>
+              	</div><!-- end section -->
+
+                  <div class="spacer-t30 spacer-b30">
+                  	<div class="tagline"><span> OR  Login </span></div><!-- .tagline -->
+                    {% include 'includes/alerts.html' %}
+                  </div>
+
+                  <div class="section">
+                      <label class="field prepend-icon">
+                          <input type="text" name="email" id="email" class="gui-input" placeholder="Enter Email">
+                          <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                      </label>
+                  </div><!-- end section -->
+
+              	<div class="section">
+                  	<label class="field prepend-icon">
+                      	<input type="password" name="password" id="password" class="gui-input" placeholder="Enter password">
+                          <span class="field-icon"><i class="fa fa-lock"></i></span>
+                      </label>
+                  </div><!-- end section -->
+
+              	<div class="container section">
+                  <div class="row">
+                    <a href="{% url 'forgotPassword' %}" style="float: left;">Forgot password?</a>
+                    <label class="switch" style="float: right;">
+                        <input type="checkbox" name="remember" id="remember" checked>
+                        <span class="switch-label" for="remember" data-on="YES" data-off="NO"></span>
+                        <span> Remember me?</span>
+                    </label>
+                  </div>
+
+                  </div><!-- end section -->
+
+              </div><!-- end .form-body section -->
+              <div class="section form-footer">
+              	<button type="submit" class="button btn-primary">Sign in</button>
+              </div><!-- end .form-footer section -->
+          </form>
+
+      </div></div></div>
+
+   </div>
+   <!--end item-->
+
+  </div>
+  </section>
+  <!--end item -->
+  <div class="clearfix"></div>
+ {% endif %}
+  {% endblock %}
