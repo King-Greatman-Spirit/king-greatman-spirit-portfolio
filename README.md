@@ -89,19 +89,19 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 
 | Home | About | Services |
 |------|-------|----------|
-| ![](static/img/preview/home.png) | ![](static/img/preview/about.png) | ![](static/img/preview/services.png) |
+| ![](KingGreatmanSpirit/static/img/preview/home.png) | ![](KingGreatmanSpirit/static/img/preview/about.png) | ![](KingGreatmanSpirit/static/img/preview/services.png) |
 
 | Service Detail | Portfolio | Portfolio Detail |
 |----------------|-----------|------------------|
-| ![](static/img/preview/service-detail.png) | ![](static/img/preview/portfolio.png) | ![](static/img/preview/portfolio-detail.png) |
+| ![](KingGreatmanSpirit/static/img/preview/service-detail.png) | ![](KingGreatmanSpirit/static/img/preview/portfolio.png) | ![](KingGreatmanSpirit/static/img/preview/portfolio-detail.png) |
 
 | Resume | Contact | Sidebar |
 |--------|---------|---------|
-| ![](static/img/preview/resume.png) | ![](static/img/preview/contact.png) | ![](static/img/preview/sidebar.png) |
+| ![](KingGreatmanSpirit/static/img/preview/resume.png) | ![](KingGreatmanSpirit/static/img/preview/contact.png) | ![](KingGreatmanSpirit/static/img/preview/sidebar.png) |
 
 | Footer |
 |--------|
-| ![](static/img/preview/footer.png) |
+| ![](KingGreatmanSpirit/static/img/preview/footer.png) |
 
 ---
 
