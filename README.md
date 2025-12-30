@@ -93,15 +93,15 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 
 | Service Detail | Portfolio | Portfolio Detail |
 |----------------|-----------|------------------|
-| ![](KingGreatmanSpirit/static/img/preview/service-detail.png) | ![](KingGreatmanSpirit/static/img/preview/portfolio.png) | ![](KingGreatmanSpirit/static/img/preview/portfolio-detail.png) |
+| ![](preview/service-detail.png) | ![](preview/portfolio.png) | ![](preview/portfolio-detail.png) |
 
 | Resume | Contact | Sidebar |
 |--------|---------|---------|
-| ![](KingGreatmanSpirit/static/img/preview/resume.png) | ![](KingGreatmanSpirit/static/img/preview/contact.png) | ![](KingGreatmanSpirit/static/img/preview/sidebar.png) |
+| ![](preview/resume.png) | ![](preview/contact.png) | ![](preview/sidebar.png) |
 
 | Footer |
 |--------|
-| ![](KingGreatmanSpirit/static/img/preview/footer.png) |
+| ![](preview/footer.png) |
 
 ---
 
