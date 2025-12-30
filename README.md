@@ -89,7 +89,7 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 
 | Home | About | Services |
 |------|-------|----------|
-| ![](KingGreatmanSpirit/static/img/preview/home.png) | ![](KingGreatmanSpirit/static/img/preview/about.png) | ![](KingGreatmanSpirit/static/img/preview/services.png) |
+| ![](preview/home.png) | ![](preview/about.png) | ![](preview/services.png) |
 
 | Service Detail | Portfolio | Portfolio Detail |
 |----------------|-----------|------------------|
