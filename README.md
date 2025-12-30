@@ -107,7 +107,7 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 
 ### ✅ Notes
 
-* Ensure all images are located in `static/img/preview/` relative to your **repository root**.
+* Ensure all images are located in `preview/` relative to your **repository root**.
 * Keep image filenames **exactly matching** your Markdown paths (case-sensitive on GitHub).
 * Tables help maintain a neat layout, and GitHub automatically resizes the images to fit.
 * You can add more screenshots in the same structure if needed.
