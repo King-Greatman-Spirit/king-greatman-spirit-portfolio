@@ -11,7 +11,9 @@
     <img src="{{ about_links.cover_image.url }}" alt="{{ about_links.name }} Picture" data-aos="fade-in" class="">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <h2>{{ about_links.name }}</h2>
+      <h2 style="color: #fff !important;">
+        {{ about_links.name }}
+      </h2>
       <p>
           I'm a
           <span style="color: #ffd801;" class="typed" data-typed-items="{{ about_links.title }}"></span>
@@ -118,7 +120,9 @@
                   class="purecounter"></span>
 
             <p><strong>{{ stat.label }}</strong> 
-              <span>{{ stat.description }}</span>
+              <span style="color: #ffd801 !important;">
+                {{ stat.description }}
+              </span>
             </p>
           </div>
         </div>
