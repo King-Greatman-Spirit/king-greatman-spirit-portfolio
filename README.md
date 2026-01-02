@@ -184,23 +184,27 @@ This project is licensed under the **MIT License** — free to use, modify, and 
 
 ---
 
-## ⭐ Should You Make This Project Public?
-
-**Yes — 100%.**
-Making this repository public will:
-
-✅ Attract recruiters
-✅ Improve GitHub profile strength
-✅ Increase visibility & credibility
-✅ Allow others to learn from your architecture
-✅ Build open-source reputation
-
-You’ve built this cleanly and professionally — it **deserves to be public**.
-
----
-
 > **“Your online presence is your digital signature — make it timeless.”**
 > **King GREATMAN SPIRIT (KGS)**
 > *Digital Creator • Data Analyst • AI & Software Engineer*
 
+---
+
+## 🌐 Connect with Me
+
+Stay in touch or follow my work on social media and professional networks:
+
+| Platform          | Link                                                                    |
+| ----------------- | ----------------------------------------------------------------------- |
+| **Facebook**      | [FAMOUSGREATMAN](https://www.facebook.com/FAMOUSGREATMAN)               |
+| **X (Twitter)**   | [@greatestmaneva](https://www.twitter.com/greatestmaneva)               |
+| **Instagram**     | [king_greatman_spirit](https://www.instagram.com/king_greatman_spirit/) |
+| **TikTok**        | [@king_greatman_spirit](https://www.tiktok.com/@king_greatman_spirit)   |
+| **Telegram**      | [t.me/greatestmaneva](https://t.me/greatestmaneva)                      |
+| **YouTube**       | [greatestmaneva](https://www.youtube.com/@greatestmaneva)               |
+| **LinkedIn**      | [Greatman Justus](https://www.linkedin.com/in/greatman-pydev)           |
+| **WhatsApp Chat** | [Click to Chat](https://wa.me/2349014155705)                            |
+| **Linktree**      | [Linktree Profile](https://linktr.ee/greatestmaneva)                    |
+
+---
 
