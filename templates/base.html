@@ -4,28 +4,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Personal Portfolio{% endif %}</title>
+  <title>{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}</title>
 
-  <!-- Primary SEO Meta Tags -->
-  <meta name="title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Personal Portfolio{% endif %}">
-  <meta name="description" content="Explore the personal portfolio of King GREATMAN SPIRIT – a creative coder, tech innovator, and digital strategist. Discover projects, services, testimonials, and connect globally.">
-  <meta name="keywords" content="King GREATMAN SPIRIT, personal portfolio, projects, creative coder, tech innovator, web developer, digital strategist, services, testimonials, global contact, Django portfolio, software projects, coding portfolio">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph / Facebook -->
+  <!-- ==================== SEO META TAGS ==================== -->
+  <meta name="title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}">
+  <meta name="description" content="
+      Discover the personal portfolio of King GREATMAN SPIRIT – an innovative coder, AI & ML specialist,
+      and digital strategist. Explore software projects, web development work, machine learning models,
+      services, testimonials, and global collaborations.
+  ">
+  <meta name="author" content="King GREATMAN SPIRIT | Developed by King Greatman Spirit">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="keywords" content="
+      King GREATMAN SPIRIT, personal portfolio, AI & ML specialist, data analyst, software engineer,
+      web developer, creative coder, digital strategist, Django portfolio, Python projects, Power BI dashboards,
+      machine learning projects, predictive analytics, project showcase, testimonials, global contact
+  ">
+
+  <meta http-equiv="Content-Language" content="en">
+  <link rel="canonical" href="https://kinggreatmanspirit.com">
+
+  <!-- ==================== HREFLANG ==================== -->
+  <link rel="alternate" hreflang="en" href="https://kinggreatmanspirit.com">
+  <link rel="alternate" hreflang="en-GB" href="https://kinggreatmanspirit.com/en-gb">
+  <link rel="alternate" hreflang="en-US" href="https://kinggreatmanspirit.com/en-us">
+
+  <!-- ==================== OPEN GRAPH (FACEBOOK / LINKEDIN) ==================== -->
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}">
+  <meta property="og:description" content="
+      Explore King GREATMAN SPIRIT's portfolio showcasing innovative software projects, AI & ML solutions,
+      web development, and data-driven insights. Collaborate and connect globally with a tech innovator.
+  ">
+  <meta property="og:image" content="{% static 'img/preview/home.png' %}">
+  <meta property="og:url" content="https://kinggreatmanspirit.com">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/">
-  <meta property="og:title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Personal Portfolio{% endif %}">
-  <meta property="og:description" content="Explore the personal portfolio of King GREATMAN SPIRIT – a creative coder, tech innovator, and digital strategist. Discover projects, services, testimonials, and connect globally.">
-  <meta property="og:image" content="{% static 'images/logo/og-image.png' %}">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://yourdomain.com/">
-  <meta property="twitter:title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Personal Portfolio{% endif %}">
-  <meta property="twitter:description" content="Explore the personal portfolio of King GREATMAN SPIRIT – a creative coder, tech innovator, and digital strategist. Discover projects, services, testimonials, and connect globally.">
-  <meta property="twitter:image" content="{% static 'images/logo/og-image.png' %}">
+  <!-- ==================== TWITTER CARD ==================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}">
+  <meta name="twitter:description" content="
+      Discover King GREATMAN SPIRIT’s personal portfolio – innovative coding projects, AI & ML models,
+      web development, and data-driven solutions. Connect, collaborate, and explore expertise globally.
+  ">
+  <meta name="twitter:image" content="{% static 'img/preview/home.png' %}">
+  <meta name="twitter:url" content="https://kinggreatmanspirit.com">
+
+  <meta property="twitter:image" content="{% static 'img/preview/home.png' %}">
 
   <!-- ==================== FAVICON & APP ICONS ==================== -->
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo/favicon-32x32.png' %}">

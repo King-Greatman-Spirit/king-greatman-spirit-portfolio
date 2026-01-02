@@ -89,19 +89,19 @@ Below are selected screenshots showcasing the UI, structure, and features of the
 
 | Home | About | Services |
 |------|-------|----------|
-| ![](preview/home.png) | ![](preview/about.png) | ![](preview/services.png) |
+| ![Home](preview/home.png) | ![About](preview/about.png) | ![Services](preview/services.png) |
 
 | Service Detail | Portfolio | Portfolio Detail |
 |----------------|-----------|------------------|
-| ![](preview/service-detail.png) | ![](preview/portfolio.png) | ![](preview/portfolio-detail.png) |
+| ![Service-Details](preview/service-detail.png) | ![Portfolio](preview/portfolio.png) | ![Portfolio-Details](preview/portfolio-detail.png) |
 
 | Resume | Contact | Sidebar |
 |--------|---------|---------|
-| ![](preview/resume.png) | ![](preview/contact.png) | ![](preview/sidebar.png) |
+| ![ Resume](preview/resume.png) | ![Contact](preview/contact.png) | ![Sidebar](preview/sidebar.png) |
 
 | Footer |
 |--------|
-| ![](preview/footer.png) |
+| ![Footer](preview/footer.png) |
 
 ---
 
