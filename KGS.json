@@ -1,6 +1,14 @@
 [
 {
   "model": "sessions.session",
+  "pk": "3i28bmxq82b28ep8w3wifuapcm5bpese",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1va9HP:46kQ1L3YrR3m7T6j7WxkWAJ7iiPv8_r7eWj-I7AhFRU",
+    "expire_date": "2026-01-12T09:11:07.424Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "8och26gx3aamg3px8ec2ny079dxcyrav",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vSuOW:Tq178U6bDCxVnPhIul_smhB3U-_USpcONqYfLi4ZKck",
@@ -29,6 +37,14 @@
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vSuXD:dAUSRNji7-Z60Nl4BBgpCwI4gnhpSRnFL3GIkK1DXvc",
     "expire_date": "2025-12-23T10:01:31.528Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "updhm018r1vm3gkgq4u229kfs4vcz5t7",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vchve:4WOA-UldvFApS6TrczT38XiZBLsm2yp0u-LpQg0FAE0",
+    "expire_date": "2026-01-19T10:35:14.399Z"
   }
 },
 {
@@ -587,6 +603,193 @@
     "completion_date": "2024-01-17T19:26:19Z",
     "created_date": "2025-12-25T19:29:37.590Z",
     "modified_date": "2025-12-26T09:10:25.336Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 15,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "House Price Prediction System",
+    "slug": "house-price-prediction-system",
+    "project_scope": "Designed and implemented a machine learning–driven predictive system to estimate residential property values using socio-economic and geographic indicators from the California Housing Dataset. The project involved comprehensive data preprocessing, correlation analysis, and feature evaluation to identify key price drivers, including median income, population density, and housing age. An advanced gradient-boosting regression model was trained and evaluated to deliver accurate price predictions, demonstrating strong generalization performance across unseen data sets. The solution highlights how predictive modelling can support real estate valuation, investment analysis, and strategic housing decisions.",
+    "client": "Market Research Project",
+    "industry": "Real Estate & Housing Analytics",
+    "project_url": null,
+    "completion_date": "2024-11-20T04:51:26Z",
+    "created_date": "2025-12-27T04:53:00.436Z",
+    "modified_date": "2025-12-27T07:34:19.510Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 16,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Fake News Detection & Classification System",
+    "slug": "fake-news-detection-classification-system",
+    "project_scope": "Developed an end-to-end machine learning solution for detecting misinformation in digital news content using natural language processing techniques. The project involved large-scale text preprocessing, feature extraction through vectorization, and supervised classification to distinguish between legitimate and fake news articles. The system achieved high predictive accuracy by transforming unstructured textual data into meaningful numerical representations. This project demonstrates the application of AI to combat misinformation, enhance content credibility, and support responsible digital communication.",
+    "client": "Research & Social Impact Project",
+    "industry": "Media, Information Systems & Digital Trust",
+    "project_url": null,
+    "completion_date": "2024-12-12T04:54:16Z",
+    "created_date": "2025-12-27T04:55:27.683Z",
+    "modified_date": "2025-12-27T07:13:05.564Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 17,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Diabetes Risk Prediction Model",
+    "slug": "diabetes-risk-prediction-model",
+    "project_scope": "Built a predictive healthcare model to assess diabetes risk based on clinical and demographic indicators. The project focused on data standardization, supervised classification, and rigorous model evaluation to ensure reliable predictions. By leveraging machine learning classification techniques, the solution supports early risk identification and highlights how AI can assist preventive healthcare strategies. The project emphasizes interpretability, accuracy, and practical relevance in medical decision-support systems.",
+    "client": "Healthcare Analytics Project",
+    "industry": "Healthcare & Medical Analytics",
+    "project_url": null,
+    "completion_date": "2025-01-17T12:00:00Z",
+    "created_date": "2025-12-27T04:58:03.854Z",
+    "modified_date": "2025-12-27T07:10:45.009Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 18,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Rock vs Mine Signal Classification System",
+    "slug": "rock-vs-mine-signal-classification-system",
+    "project_scope": "Implemented a supervised learning classification system to distinguish between sonar signals reflected from rocks and mines. The project involved structured data analysis, model training, and performance evaluation within a cloud-based computational environment to ensure scalability and efficiency. This solution demonstrates the application of machine learning to pattern recognition problems, highlighting its relevance in defense analytics, signal intelligence, and real-time decision systems.",
+    "client": "Defense & Signal Processing Study Project",
+    "industry": "Defense Analytics & Signal Intelligence",
+    "project_url": null,
+    "completion_date": "2025-01-07T06:00:00Z",
+    "created_date": "2025-12-27T05:00:45.409Z",
+    "modified_date": "2025-12-27T07:35:50.420Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 19,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Applied Random Forest Regression Analysis",
+    "slug": "applied-random-forest-regression-analysis",
+    "project_scope": "Developed a regression-based machine learning model to predict task and completion durations using ensemble learning techniques. The project focused on understanding algorithmic behavior, feature importance, and performance evaluation through regression metrics. By applying Random Forest Regression, the solution captures non-linear relationships within the data and demonstrates how ensemble methods improve prediction accuracy and robustness across complex datasets.",
+    "client": "Experimental Data Science Project",
+    "industry": "Gaming Analytics & Predictive Modeling",
+    "project_url": null,
+    "completion_date": "2025-01-24T05:02:33Z",
+    "created_date": "2025-12-27T05:04:25.896Z",
+    "modified_date": "2025-12-27T07:30:51.531Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 20,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Grocery Sales Forecasting System",
+    "slug": "grocery-sales-forecasting-system",
+    "project_scope": "Designed a predictive analytics solution to forecast grocery sales and uncover demand trends within a retail environment. The project involved data cleaning, aggregation of transactional records, exploratory analysis, and time-based sales modeling. Predictive insights generated from the model support inventory planning, operational efficiency, and strategic retail decision-making. This project highlights the value of machine learning in optimizing sales performance and reducing uncertainty in competitive retail markets.",
+    "client": "European Retail Analytics Project",
+    "industry": "Retail, Supply Chain & Sales Analytics",
+    "project_url": null,
+    "completion_date": "2025-03-08T18:00:00Z",
+    "created_date": "2025-12-27T05:06:30.600Z",
+    "modified_date": "2025-12-27T07:23:04.828Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 22,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Heart Disease Prediction & Classification Analysis",
+    "slug": "heart-disease-prediction-classification-analysis",
+    "project_scope": "Developed a binary classification model to predict the presence of heart disease using structured clinical data. The project included exploratory analysis, class distribution assessment, supervised model training, and evaluation using accuracy and ROC–AUC metrics. Emphasis was placed on interpretability and diagnostic reliability, making the solution suitable as a baseline clinical decision-support model. The project demonstrates how machine learning can enhance early detection and healthcare analytics.",
+    "client": "Medical Data Analytics Project",
+    "industry": "Healthcare & Clinical Decision Support",
+    "project_url": null,
+    "completion_date": "2025-04-03T12:00:00Z",
+    "created_date": "2025-12-27T05:11:56.322Z",
+    "modified_date": "2025-12-27T07:15:25.357Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 23,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Wine Quality Classification System",
+    "slug": "wine-quality-classification-system",
+    "project_scope": "Implemented a multi-class classification model to predict wine quality scores based on physicochemical attributes. The project involved feature analysis, class distribution evaluation, and supervised learning to assess how chemical properties influence quality perception. The model provides interpretable insights into feature impact while highlighting challenges related to class imbalance. This project showcases the application of machine learning in quality control, product evaluation, and data-driven decision-making within the food and beverage industry.",
+    "client": "Food & Beverage Analytics Project",
+    "industry": "Food Science & Quality Analytics",
+    "project_url": null,
+    "completion_date": "2025-04-16T05:14:41Z",
+    "created_date": "2025-12-27T05:29:45.261Z",
+    "modified_date": "2025-12-27T07:21:28.340Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 24,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "title": "Housing Price Intelligence Using Decision Trees",
+    "slug": "housing-price-intelligence-using-decision-trees",
+    "project_scope": "A data-driven framework was designed to convert real estate datasets into reliable housing price insights using Decision Tree learning techniques. The implementation involved structuring multi-source data, identifying influential market variables, and training a transparent predictive model capable of explaining price behavior across different locations. By emphasizing interpretability and practical application, the solution equips decision-makers with clarity around value drivers, enabling smarter property evaluation, investment planning, and real estate market assessment.",
+    "client": "Market & Data Analytics Initiative",
+    "industry": "Real Estate & Location-Based Analytics",
+    "project_url": null,
+    "completion_date": "2025-06-16T07:07:46Z",
+    "created_date": "2025-12-27T07:08:45.023Z",
+    "modified_date": "2025-12-27T07:08:45.023Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 25,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Savvy Chemicals Limited Corporate Website",
+    "slug": "savvy-chemicals-limited-corporate-website",
+    "project_scope": "Designed and developed a modern, responsive website for a leading industrial and specialty chemicals company. The platform showcases products, team, and services, emphasizing professionalism, credibility, and industrial partnerships. Features include interactive product listings, admin-managed dashboards, and contact systems to strengthen client engagement and industrial collaborations. Built with PHP, MySQL, JavaScript, jQuery, Bootstrap, and secure backend architecture.",
+    "client": "Savvy Chemicals Limited",
+    "industry": "Industrial & Specialty Chemicals",
+    "project_url": "https://www.savvychemicalsltd.com/",
+    "completion_date": "2025-12-22T10:57:27Z",
+    "created_date": "2026-01-05T10:59:25.292Z",
+    "modified_date": "2026-01-05T10:59:25.292Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 26,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "KGS Personal Portfolio Website",
+    "slug": "kgs-personal-portfolio-website",
+    "project_scope": "Developed a dynamic, SEO-optimized personal portfolio platform using Django, Bootstrap, and PostgreSQL. The site highlights projects, services, testimonials, and professional connections, with fully responsive design, admin-driven content management, and integrated social media links. Purpose-built to impress recruiters, convert clients, and showcase technical and design expertise, serving as a central hub for personal branding and professional growth.",
+    "client": "King GREATMAN SPIRIT Portfolio",
+    "industry": "Personal Branding / Portfolio",
+    "project_url": "https://www.kinggreatmanspirit.com/",
+    "completion_date": "2025-12-08T11:01:40Z",
+    "created_date": "2026-01-05T11:05:54.813Z",
+    "modified_date": "2026-01-05T11:05:54.813Z"
   }
 },
 {
@@ -1836,6 +2039,664 @@
   }
 },
 {
+  "model": "portfolio.projectimages",
+  "pk": 91,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 15,
+    "image": "photos/project/1_O5cyqvE.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T04:53:00.449Z",
+    "modified_date": "2025-12-27T07:34:19.529Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 92,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 15,
+    "image": "photos/project/Second_JQyOiZP.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T04:53:00.454Z",
+    "modified_date": "2025-12-27T04:53:00.454Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 93,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 15,
+    "image": "photos/project/Third_2Y2dACe.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T04:53:00.463Z",
+    "modified_date": "2025-12-27T04:53:00.463Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 94,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 16,
+    "image": "photos/project/1_H3C3lsg.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T04:55:27.691Z",
+    "modified_date": "2025-12-27T07:13:05.573Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 95,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 16,
+    "image": "photos/project/Second_NfCcBv7.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T04:55:27.696Z",
+    "modified_date": "2025-12-27T04:55:27.696Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 96,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 16,
+    "image": "photos/project/Third_oXoRC69.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T04:55:27.700Z",
+    "modified_date": "2025-12-27T04:55:27.700Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 97,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 17,
+    "image": "photos/project/1_j7ZWvx2.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T04:58:03.861Z",
+    "modified_date": "2025-12-27T07:10:45.018Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 98,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 17,
+    "image": "photos/project/Second_9tKPGoc.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T04:58:03.866Z",
+    "modified_date": "2025-12-27T04:58:03.866Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 99,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 18,
+    "image": "photos/project/1_BPi9Po8.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T05:00:45.414Z",
+    "modified_date": "2025-12-27T07:35:50.431Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 100,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 18,
+    "image": "photos/project/Second_a3yQhPq.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T05:00:45.418Z",
+    "modified_date": "2025-12-27T05:00:45.418Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 101,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 19,
+    "image": "photos/project/1_fB9ywA3.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T05:04:25.902Z",
+    "modified_date": "2025-12-27T07:30:51.537Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 102,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 19,
+    "image": "photos/project/Second_F17JGoH.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T05:04:25.907Z",
+    "modified_date": "2025-12-27T05:04:25.907Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 103,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 20,
+    "image": "photos/project/1_j0IOadU.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T05:06:30.608Z",
+    "modified_date": "2025-12-27T07:23:04.834Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 104,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 20,
+    "image": "photos/project/Second_Wo3yoQg.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T05:06:30.612Z",
+    "modified_date": "2025-12-27T05:06:30.612Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 108,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 22,
+    "image": "photos/project/1_OoVTKzp.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T05:11:56.328Z",
+    "modified_date": "2025-12-27T07:15:25.364Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 109,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 22,
+    "image": "photos/project/Second_qIyFbDE.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T05:11:56.331Z",
+    "modified_date": "2025-12-27T05:11:56.331Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 110,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 23,
+    "image": "photos/project/1_59ZlKqG.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T05:29:45.267Z",
+    "modified_date": "2025-12-27T07:21:28.348Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 111,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 23,
+    "image": "photos/project/Second_RjxTVld.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T05:29:45.272Z",
+    "modified_date": "2025-12-27T05:29:45.272Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 112,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 24,
+    "image": "photos/project/1_3yXmCh5.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2025-12-27T07:08:45.033Z",
+    "modified_date": "2025-12-27T07:08:45.033Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 113,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 24,
+    "image": "photos/project/First_OeFVTWh.jpg",
+    "name": "Second",
+    "description": "",
+    "created_date": "2025-12-27T07:08:45.039Z",
+    "modified_date": "2025-12-27T07:08:45.039Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 114,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 24,
+    "image": "photos/project/Second_LoLCwXS.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:08:45.044Z",
+    "modified_date": "2025-12-27T07:08:45.044Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 115,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 17,
+    "image": "photos/project/First_OaZYvwI.jpg",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:10:45.023Z",
+    "modified_date": "2025-12-27T07:10:45.023Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 116,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 16,
+    "image": "photos/project/First_LFfGUGd.jpg",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-27T07:13:05.579Z",
+    "modified_date": "2025-12-27T07:13:05.579Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 117,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 22,
+    "image": "photos/project/First_LmO9Gnt.jpg",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:15:25.370Z",
+    "modified_date": "2025-12-27T07:15:25.370Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 119,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 23,
+    "image": "photos/project/First_caP7aEy.jpg",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:21:28.355Z",
+    "modified_date": "2025-12-27T07:21:28.355Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 120,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 20,
+    "image": "photos/project/First_njP1JJO.jpg",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:23:04.840Z",
+    "modified_date": "2025-12-27T07:23:04.840Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 121,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 19,
+    "image": "photos/project/First_gHpaYCG.jpg",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:30:51.541Z",
+    "modified_date": "2025-12-27T07:30:51.541Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 122,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 15,
+    "image": "photos/project/First_MyStLFy.jpg",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2025-12-27T07:34:19.543Z",
+    "modified_date": "2025-12-27T07:34:19.543Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 123,
+  "fields": {
+    "about": 1,
+    "service": 2,
+    "project": 18,
+    "image": "photos/project/First_eTspOnT.jpg",
+    "name": "Third",
+    "description": "",
+    "created_date": "2025-12-27T07:35:50.439Z",
+    "modified_date": "2025-12-27T07:35:50.439Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 124,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/1_NmveWic.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.328Z",
+    "modified_date": "2026-01-05T10:59:25.328Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 125,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/home.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.345Z",
+    "modified_date": "2026-01-05T10:59:25.345Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 126,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/header.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.361Z",
+    "modified_date": "2026-01-05T10:59:25.361Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 127,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/about.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.376Z",
+    "modified_date": "2026-01-05T10:59:25.377Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 128,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/products.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.389Z",
+    "modified_date": "2026-01-05T10:59:25.389Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 129,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/contact.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.404Z",
+    "modified_date": "2026-01-05T10:59:25.404Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 130,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 25,
+    "image": "photos/project/footer.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2026-01-05T10:59:25.416Z",
+    "modified_date": "2026-01-05T10:59:25.416Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 131,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/2_BujOo7d.png",
+    "name": "First",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.832Z",
+    "modified_date": "2026-01-05T11:05:54.832Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 132,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/home_oNH3bkJ.png",
+    "name": "Second",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.849Z",
+    "modified_date": "2026-01-05T11:05:54.849Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 133,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/about_wC43F8M.png",
+    "name": "Third",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.861Z",
+    "modified_date": "2026-01-05T11:05:54.861Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 134,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/resume.png",
+    "name": "Fourth",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.873Z",
+    "modified_date": "2026-01-05T11:05:54.873Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 135,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/services.png",
+    "name": "Fifth",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.888Z",
+    "modified_date": "2026-01-05T11:05:54.888Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 136,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/service-detail.png",
+    "name": "Sixth",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.905Z",
+    "modified_date": "2026-01-05T11:05:54.905Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 137,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/sidebar.png",
+    "name": "Seventh",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.924Z",
+    "modified_date": "2026-01-05T11:05:54.924Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 138,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/portfolio.png",
+    "name": "Eighth",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.940Z",
+    "modified_date": "2026-01-05T11:05:54.940Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 139,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/portfolio-detail.png",
+    "name": "Ninth",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.958Z",
+    "modified_date": "2026-01-05T11:05:54.959Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 140,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/contact_svpC095.png",
+    "name": "Tenth",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.973Z",
+    "modified_date": "2026-01-05T11:05:54.973Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 141,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos/project/footer_M6BNDCa.png",
+    "name": "Eleventh",
+    "description": "",
+    "created_date": "2026-01-05T11:05:54.988Z",
+    "modified_date": "2026-01-05T11:05:54.988Z"
+  }
+},
+{
   "model": "portfolio.testimonial",
   "pk": 1,
   "fields": {
@@ -2893,7 +3754,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$1000000$5GOqKTyYcdsiZMIbhZ6voD$Tj6leZ2dV5kG4HTyN3P+qm2vMvLCdNmW3U0R9gLuI5I=",
-    "last_login": "2025-12-14T13:01:32.193Z",
+    "last_login": "2026-01-05T10:35:14.390Z",
     "first_name": "kinggreatman",
     "last_name": "spirit",
     "username": "admin",
@@ -6037,6 +6898,420 @@
     "object_repr": "Testimonial by OUN Developers",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2025-12-27T04:53:00.464Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "15",
+    "object_repr": "House Price Prediction System",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"House Price Prediction System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"House Price Prediction System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"House Price Prediction System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2025-12-27T04:55:27.701Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "16",
+    "object_repr": "Fake News Detection & Classification System",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Fake News Detection & Classification System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Fake News Detection & Classification System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Fake News Detection & Classification System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2025-12-27T04:58:03.867Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "17",
+    "object_repr": "Diabetes Risk Prediction Model",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Diabetes Risk Prediction Model Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Diabetes Risk Prediction Model Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2025-12-27T05:00:45.418Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "18",
+    "object_repr": "Rock vs Mine Signal Classification System",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Rock vs Mine Signal Classification System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Rock vs Mine Signal Classification System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2025-12-27T05:04:25.908Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "19",
+    "object_repr": "Applied Random Forest Regression Analysis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Applied Random Forest Regression Analysis Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Applied Random Forest Regression Analysis Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2025-12-27T05:06:30.613Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "20",
+    "object_repr": "Grocery Sales Forecasting System",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Grocery Sales Forecasting System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Grocery Sales Forecasting System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2025-12-27T05:08:57.626Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "21",
+    "object_repr": "Decision Tree–Based Housing Price Prediction",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Decision Tree\\u2013Based Housing Price Prediction Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Decision Tree\\u2013Based Housing Price Prediction Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Decision Tree\\u2013Based Housing Price Prediction Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2025-12-27T05:11:56.331Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "22",
+    "object_repr": "Heart Disease Prediction & Classification Analysis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Heart Disease Prediction & Classification Analysis Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Heart Disease Prediction & Classification Analysis Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2025-12-27T05:29:45.273Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "23",
+    "object_repr": "Wine Quality Classification System",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Wine Quality Classification System Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Wine Quality Classification System Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2025-12-27T07:06:27.040Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "21",
+    "object_repr": "Decision Tree–Based Housing Price Prediction",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2025-12-27T07:08:45.045Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "24",
+    "object_repr": "Housing Price Intelligence Using Decision Trees",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Housing Price Intelligence Using Decision Trees Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Housing Price Intelligence Using Decision Trees Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Housing Price Intelligence Using Decision Trees Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2025-12-27T07:10:45.024Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "17",
+    "object_repr": "Diabetes Risk Prediction Model",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Diabetes Risk Prediction Model Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Diabetes Risk Prediction Model Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2025-12-27T07:13:05.580Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "16",
+    "object_repr": "Fake News Detection & Classification System",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Fake News Detection & Classification System Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Fake News Detection & Classification System Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2025-12-27T07:15:25.371Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "22",
+    "object_repr": "Heart Disease Prediction & Classification Analysis",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Heart Disease Prediction & Classification Analysis Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Heart Disease Prediction & Classification Analysis Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2025-12-27T07:19:59.901Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "21",
+    "object_repr": "Decision Tree–Based Housing Price Prediction",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Decision Tree\\u2013Based Housing Price Prediction Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Decision Tree\\u2013Based Housing Price Prediction Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2025-12-27T07:21:28.356Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "23",
+    "object_repr": "Wine Quality Classification System",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Wine Quality Classification System Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Wine Quality Classification System Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2025-12-27T07:23:04.841Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "20",
+    "object_repr": "Grocery Sales Forecasting System",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Grocery Sales Forecasting System Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Grocery Sales Forecasting System Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2025-12-27T07:30:51.542Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "19",
+    "object_repr": "Applied Random Forest Regression Analysis",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Applied Random Forest Regression Analysis Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Applied Random Forest Regression Analysis Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2025-12-27T07:34:19.545Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "15",
+    "object_repr": "House Price Prediction System",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"House Price Prediction System Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"House Price Prediction System Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2025-12-27T07:35:50.441Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "18",
+    "object_repr": "Rock vs Mine Signal Classification System",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project images\", \"object\": \"Rock vs Mine Signal Classification System Image\"}}, {\"changed\": {\"name\": \"project images\", \"object\": \"Rock vs Mine Signal Classification System Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2026-01-05T10:36:12.791Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "21",
+    "object_repr": "Decision Tree–Based Housing Price Prediction",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2026-01-05T10:59:25.417Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "25",
+    "object_repr": "Savvy Chemicals Limited Corporate Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"Savvy Chemicals Limited Corporate Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2026-01-05T11:05:54.989Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "26",
+    "object_repr": "KGS Personal Portfolio Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}]"
   }
 }
 ]
