@@ -9,6 +9,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "88dwts0lm0wy5njjl3makuzq4z1aik4e",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vkmKF:YGJvo7UXfbD1QHdW7_SwavH2_N85EVwe4yBn_VeUj_k",
+    "expire_date": "2026-02-10T16:53:59.445Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "8och26gx3aamg3px8ec2ny079dxcyrav",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfWsFEKUwxmENMlRpPaAlkQNqbb2QripXCwBRcTmKKhR4DCaUmkFrFdn7A-LYOCk:1vSuOW:Tq178U6bDCxVnPhIul_smhB3U-_USpcONqYfLi4ZKck",
@@ -298,12 +306,12 @@
   "pk": 1,
   "fields": {
     "about": 1,
-    "title": "B.Sc. Computer Science (In View)",
+    "title": "B.Sc. Computer Science",
     "year": "2024 - Present",
     "institution": "University of the People, Pasadena, California",
     "description": "Pursuing a degree focused on software engineering, algorithms, data structures, and AI applications.",
     "created_date": "2025-12-14T13:44:38.910Z",
-    "modified_date": "2025-12-15T14:09:28.142Z"
+    "modified_date": "2026-01-27T16:57:40.462Z"
   }
 },
 {
@@ -311,12 +319,25 @@
   "pk": 2,
   "fields": {
     "about": 1,
-    "title": "ND Computer Science",
-    "year": "2017 - 2020",
+    "title": "HND Computer Science",
+    "year": "2017 - 2022",
     "institution": "Captain Elechi Amadi Polytechnic, Port Harcourt, Nigeria",
     "description": "Completed core programming, databases, and system analysis coursework, building foundations for software and AI development.",
     "created_date": "2025-12-14T13:50:58.318Z",
-    "modified_date": "2025-12-15T14:10:16.416Z"
+    "modified_date": "2026-01-27T16:55:04.709Z"
+  }
+},
+{
+  "model": "resume.education",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "title": "Freelancer — Data Scientist | Instructor",
+    "year": "(February 2024 – Present)",
+    "institution": "Delivered AI/ML solutions including predictive models, NLP apps, and deep learning systems.   Implemented LLM-powered applications using OpenAI GPT & Hugging Face models.",
+    "description": "Built AI-driven automation solutions, improving business efficiency by 30%. \r\n Conducted AI/ML consulting and training for clients and teams.",
+    "created_date": "2026-01-27T17:08:01.972Z",
+    "modified_date": "2026-01-27T17:08:47.628Z"
   }
 },
 {
@@ -340,15 +361,15 @@
   "pk": 6,
   "fields": {
     "about": 1,
-    "title": "Full Stack | Data Analyst | AI Engineer",
-    "year": "Feb 2022 – Present",
-    "company": "Freelancer  —",
-    "city": "Remote",
-    "desc_one": "Delivered analytics and BI solutions with Python, SQL, Power BI, and Tableau.",
-    "desc_two": "Built Machine Learning and LLM-powered applications, improving business efficiency by 30%.",
-    "desc_three": "Trained professionals and students in Data Analysis, Machine Learning, and AI.",
+    "title": "Full-Stack Web Developer | Instructor",
+    "year": "May 2024 – Sept 2024",
+    "company": "FlowCode Tech Hub",
+    "city": "Port Harcourt, Nigeria",
+    "desc_one": "Delivered hands-on training programs in HTML, CSS, JavaScript, PHP, Python, and \r\nMySQL, equipping students with job-ready full-stack skills.",
+    "desc_two": "Mentored learners through real-world projects, covering application design, \r\ndevelopment, deployment, and debugging.",
+    "desc_three": "Managed relational databases and optimized SQL queries, improving database \r\nperformance by up to 30%",
     "created_date": "2025-12-15T14:17:16.042Z",
-    "modified_date": "2025-12-15T14:21:25.378Z"
+    "modified_date": "2026-01-27T17:02:15.902Z"
   }
 },
 {
@@ -3754,7 +3775,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$1000000$5GOqKTyYcdsiZMIbhZ6voD$Tj6leZ2dV5kG4HTyN3P+qm2vMvLCdNmW3U0R9gLuI5I=",
-    "last_login": "2026-01-05T10:35:14.390Z",
+    "last_login": "2026-01-27T16:53:59.433Z",
     "first_name": "kinggreatman",
     "last_name": "spirit",
     "username": "admin",
@@ -7312,6 +7333,96 @@
     "object_repr": "KGS Personal Portfolio Website",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}, {\"added\": {\"name\": \"project images\", \"object\": \"KGS Personal Portfolio Website Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2026-01-27T16:55:04.715Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "2",
+    "object_repr": "HND Computer Science",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Year\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2026-01-27T16:57:40.468Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "1",
+    "object_repr": "B.Sc. Computer Science",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2026-01-27T17:02:15.904Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "experience"
+    ],
+    "object_id": "6",
+    "object_repr": "Full-Stack Web Developer | Instructor",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Year\", \"Company\", \"City\", \"Desc one\", \"Desc two\", \"Desc three\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2026-01-27T17:08:01.975Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "3",
+    "object_repr": "Freelancer — Data Scientist | Instructor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2026-01-27T17:08:47.631Z",
+    "user": [
+      "admin@kinggreatmanspirit.com"
+    ],
+    "content_type": [
+      "resume",
+      "education"
+    ],
+    "object_id": "3",
+    "object_repr": "Freelancer — Data Scientist | Instructor",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Year\"]}}]"
   }
 }
 ]
