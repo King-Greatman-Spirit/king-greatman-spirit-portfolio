@@ -11,10 +11,16 @@
   if (preloader) {
     const TAGLINES = [
       "Building digital experiences",
-      "Crafting brilliance…",
+      "King Greatman Spirit — crafting brilliance",
+      "Software Engineer • AI & ML Specialist • Data Analyst",
       "Turning ideas into reality",
+      "King Greatman Spirit — innovations that inspire",
+      "AI • Data • Code • Design",
       "Preparing your journey…",
+      "King Greatman Spirit — your global tech partner",
+      "Welcome to the spirit of innovation",
       "Almost there — stay tuned",
+      "Let's build something extraordinary",
       "Loading the magic",
     ];
     const taglineEl = document.getElementById("preloader-tagline");
