@@ -28,13 +28,17 @@
         taglineEl.classList.remove("switching");
       }, 450);
     };
+    const loadStart = Date.now();
     const tagTimer = setInterval(rotateTagline, 1800);
 
     window.addEventListener("load", () => {
       clearInterval(tagTimer);
-      preloader.style.opacity = "0";
-      preloader.style.visibility = "hidden";
-      setTimeout(() => preloader.remove(), 600);
+      const remaining = Math.max(0, 3000 - (Date.now() - loadStart));
+      setTimeout(() => {
+        preloader.style.opacity = "0";
+        preloader.style.visibility = "hidden";
+        setTimeout(() => preloader.remove(), 600);
+      }, remaining);
     });
   }
 
