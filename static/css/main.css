@@ -2985,7 +2985,7 @@ PAYMENT RESULT PAGES
 }
 
 /*--------------------------------------------------------------
-# SERVICE DETAIL — ANIMATED HERO PANEL
+# SERVICE DETAIL ï¿½ ANIMATED HERO PANEL
 --------------------------------------------------------------*/
 .service-hero {
   border-radius: 18px;
@@ -3205,6 +3205,226 @@ PAYMENT RESULT PAGES
   50% { transform: translateY(-5px); }
 }
 
+/* Per-service theme stage */
+.sh-stage {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 150px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-hero[data-theme="data"] .sh-stage { border-color: rgba(45, 212, 191, 0.4); }
+.service-hero[data-theme="web"] .sh-stage { border-color: rgba(34, 211, 238, 0.4); }
+.service-hero[data-theme="ai"] .sh-stage { border-color: rgba(167, 139, 250, 0.45); }
+.service-hero[data-theme="strategy"] .sh-stage { border-color: rgba(255, 216, 1, 0.45); }
+.service-hero[data-theme="design"] .sh-stage { border-color: rgba(251, 113, 133, 0.45); }
+.service-hero[data-theme="training"] .sh-stage { border-color: rgba(45, 212, 191, 0.45); }
+
+.sh-stage-data {
+  gap: 12px;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+}
+.sh-stage-data .service-hero-chart,
+.sh-stage-data .service-hero-line {
+  flex: 1;
+  width: auto;
+  height: 100%;
+}
+
+.sh-stage-label {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.sh-stage-label b { color: var(--gold); }
+
+/* web â€” typing code editor */
+.sh-code {
+  width: 100%;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.82rem;
+  line-height: 2;
+}
+.sh-code span {
+  display: block;
+  opacity: 0;
+  transform: translateX(-8px);
+  animation: shCodeIn 0.6s ease forwards;
+  animation-delay: var(--cd);
+}
+.sh-code .c1 { color: #c792ea; }
+.sh-code .c2 { color: var(--gold); }
+.sh-code .c3 { color: var(--emerald); }
+.sh-code-caret {
+  display: inline-block;
+  width: 9px;
+  height: 14px;
+  margin-left: 4px;
+  vertical-align: -2px;
+  background: var(--gold);
+  animation: shCaret 0.8s steps(1) infinite;
+}
+@keyframes shCodeIn {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ai â€” neural network */
+.sh-neural { width: 100%; height: 100%; }
+.sh-neural-links line {
+  stroke: rgba(255, 216, 1, 0.28);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 6;
+  animation: shNeuralFlow 2.6s linear infinite;
+}
+@keyframes shNeuralFlow { to { stroke-dashoffset: -20; } }
+.sh-neurons circle {
+  fill: #0d1526;
+  stroke: var(--gold);
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: shNeuron 2.2s ease-in-out infinite;
+  animation-delay: var(--nd, 0s);
+}
+@keyframes shNeuron {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+
+/* strategy â€” target crosshair */
+.sh-target {
+  position: relative;
+  width: 118px;
+  height: 118px;
+}
+.sh-target-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255, 216, 1, 0.3);
+  animation: shSpin 8s linear infinite;
+}
+.sh-target-ring.r2 {
+  inset: 17px;
+  border-style: solid;
+  border-color: rgba(255, 216, 1, 0.45);
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+.sh-target-ring.r3 {
+  inset: 34px;
+  border-style: dotted;
+  animation-duration: 4s;
+}
+.sh-target-cross {
+  position: absolute;
+  inset: 6px;
+  background:
+    linear-gradient(rgba(255, 216, 1, 0.35), rgba(255, 216, 1, 0.35)) center / 100% 1px no-repeat,
+    linear-gradient(rgba(255, 216, 1, 0.35), rgba(255, 216, 1, 0.35)) center / 1px 100% no-repeat;
+  animation: shSpin 10s linear infinite reverse;
+}
+.sh-target-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  box-shadow: 0 0 18px rgba(255, 216, 1, 0.8);
+  animation: shCorePulse 1.8s ease-in-out infinite;
+}
+@keyframes shSpin { to { transform: rotate(360deg); } }
+@keyframes shCorePulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.4); }
+}
+
+/* design â€” color palette */
+.sh-palette { display: flex; gap: 14px; align-items: center; }
+.sh-swatch {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--sc);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--sc) 55%, transparent);
+  animation: shSwatch 2.4s ease-in-out infinite;
+  animation-delay: var(--sd, 0s);
+}
+@keyframes shSwatch {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.12); }
+}
+
+/* training â€” module progress */
+.sh-training {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.sh-train-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  position: relative;
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: shStepIn 0.7s ease forwards;
+  animation-delay: var(--sd, 0s);
+}
+.sh-train-step::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(255, 216, 1, 0.8);
+  animation: shCoreDotPulse 1.6s ease-in-out infinite;
+}
+.sh-train-step::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 14px;
+  bottom: -9px;
+  width: 1px;
+  background: linear-gradient(rgba(255, 216, 1, 0.4), transparent);
+}
+.sh-train-step:last-child::after { display: none; }
+.sh-train-step i { color: var(--emerald); font-size: 0.9rem; }
+@keyframes shStepIn { to { opacity: 1; transform: translateX(0); } }
+@keyframes shCoreDotPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.6); }
+}
+
+@media (max-width: 400px) {
+  .sh-palette { gap: 10px; }
+  .sh-swatch { width: 30px; height: 30px; }
+}
+
 /* Service title + steps */
 .service-title {
   font-size: 1.55rem;
@@ -3273,7 +3493,7 @@ PAYMENT RESULT PAGES
 }
 
 /*--------------------------------------------------------------
-# PAYMENT PAGE — CURRENCY STRIP
+# PAYMENT PAGE ï¿½ CURRENCY STRIP
 --------------------------------------------------------------*/
 .pay-currencies {
   display: flex;
@@ -3314,7 +3534,7 @@ PAYMENT RESULT PAGES
 .pc.crypto b { color: #f0b90b; }
 
 /*--------------------------------------------------------------
-# PORTFOLIO DETAIL — QUICK LINKS PANEL
+# PORTFOLIO DETAIL ï¿½ QUICK LINKS PANEL
 --------------------------------------------------------------*/
 .portfolio-quicklinks {
   margin-top: 20px;

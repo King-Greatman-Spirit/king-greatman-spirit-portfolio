@@ -119,7 +119,7 @@
 
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
 
-          <div class="service-hero">
+          <div class="service-hero" data-theme="{% if service.id == 1 %}web{% elif service.id == 2 %}ai{% elif service.id == 3 %}data{% elif service.id == 4 %}strategy{% elif service.id == 5 %}design{% else %}training{% endif %}">
             <div class="service-hero-chrome">
               <span class="sh-dot red"></span>
               <span class="sh-dot amber"></span>
@@ -137,23 +137,92 @@
               </div>
 
               <div class="service-hero-grid">
-                <div class="service-hero-chart">
-                  <span class="sh-bar" style="--h: 42%; --d: 0s"></span>
-                  <span class="sh-bar" style="--h: 68%; --d: 0.1s"></span>
-                  <span class="sh-bar" style="--h: 52%; --d: 0.2s"></span>
-                  <span class="sh-bar" style="--h: 86%; --d: 0.3s"></span>
-                  <span class="sh-bar" style="--h: 64%; --d: 0.4s"></span>
-                  <span class="sh-bar" style="--h: 96%; --d: 0.5s"></span>
-                  <span class="sh-bar" style="--h: 74%; --d: 0.6s"></span>
-                  <span class="sh-bar" style="--h: 100%; --d: 0.7s"></span>
-                </div>
 
-                <div class="service-hero-line">
-                  <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
-                    <polyline class="sh-line-grid" points="0,80 40,66 80,72 120,48 160,56 200,30 240,20" />
-                    <polyline class="sh-line-draw" points="0,80 40,66 80,72 120,48 160,56 200,30 240,20" />
-                    <circle class="sh-line-dot" cx="240" cy="20" r="4" />
+                <div class="sh-stage">
+                  {% if service.id == 1 %}
+                  <div class="sh-code">
+                    <span style="--cd: 0s"><b class="c1">const</b> build <b class="c2">=</b> () <b class="c2">=&gt;</b> {</span>
+                    <span style="--cd: 0.45s">&nbsp;&nbsp;stack<span class="c2">:</span> <b class="c3">"Django + React"</b>,</span>
+                    <span style="--cd: 0.9s">&nbsp;&nbsp;ship<span class="c2">:</span> <b class="c3">"CI/CD pipeline"</b>,</span>
+                    <span style="--cd: 1.35s">&nbsp;&nbsp;quality<span class="c2">:</span> <b class="c3">"Lighthouse 100"</b>,</span>
+                    <span style="--cd: 1.8s">}<b class="c2">;</b><span class="sh-code-caret"></span></span>
+                  </div>
+                  {% elif service.id == 2 %}
+                  <svg class="sh-neural" viewBox="0 0 260 120" preserveAspectRatio="none" aria-hidden="true">
+                    <g class="sh-neural-links">
+                      <line x1="25" y1="30" x2="115" y2="22" />
+                      <line x1="25" y1="30" x2="115" y2="55" />
+                      <line x1="25" y1="30" x2="115" y2="88" />
+                      <line x1="25" y1="60" x2="115" y2="22" />
+                      <line x1="25" y1="60" x2="115" y2="55" />
+                      <line x1="25" y1="60" x2="115" y2="88" />
+                      <line x1="25" y1="90" x2="115" y2="22" />
+                      <line x1="25" y1="90" x2="115" y2="55" />
+                      <line x1="25" y1="90" x2="115" y2="88" />
+                      <line x1="115" y1="22" x2="200" y2="40" />
+                      <line x1="115" y1="55" x2="200" y2="40" />
+                      <line x1="115" y1="88" x2="200" y2="40" />
+                      <line x1="200" y1="40" x2="240" y2="60" />
+                    </g>
+                    <g class="sh-neurons">
+                      <circle cx="25" cy="30" r="7" style="--nd: 0s" />
+                      <circle cx="25" cy="60" r="7" style="--nd: 0.15s" />
+                      <circle cx="25" cy="90" r="7" style="--nd: 0.3s" />
+                      <circle cx="115" cy="22" r="7" style="--nd: 0.1s" />
+                      <circle cx="115" cy="55" r="7" style="--nd: 0.25s" />
+                      <circle cx="115" cy="88" r="7" style="--nd: 0.4s" />
+                      <circle cx="200" cy="40" r="7" style="--nd: 0.2s" />
+                      <circle cx="240" cy="60" r="8" style="--nd: 0.5s" />
+                    </g>
                   </svg>
+                  <span class="sh-stage-label">neural inference <b>94.2%</b></span>
+                  {% elif service.id == 3 %}
+                  <div class="sh-stage-data">
+                    <div class="service-hero-chart">
+                      <span class="sh-bar" style="--h: 42%; --d: 0s"></span>
+                      <span class="sh-bar" style="--h: 68%; --d: 0.1s"></span>
+                      <span class="sh-bar" style="--h: 52%; --d: 0.2s"></span>
+                      <span class="sh-bar" style="--h: 86%; --d: 0.3s"></span>
+                      <span class="sh-bar" style="--h: 64%; --d: 0.4s"></span>
+                      <span class="sh-bar" style="--h: 96%; --d: 0.5s"></span>
+                      <span class="sh-bar" style="--h: 74%; --d: 0.6s"></span>
+                      <span class="sh-bar" style="--h: 100%; --d: 0.7s"></span>
+                    </div>
+                    <div class="service-hero-line">
+                      <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+                        <polyline class="sh-line-grid" points="0,80 40,66 80,72 120,48 160,56 200,30 240,20" />
+                        <polyline class="sh-line-draw" points="0,80 40,66 80,72 120,48 160,56 200,30 240,20" />
+                        <circle class="sh-line-dot" cx="240" cy="20" r="4" />
+                      </svg>
+                    </div>
+                  </div>
+                  {% elif service.id == 4 %}
+                  <div class="sh-target">
+                    <span class="sh-target-ring r1"></span>
+                    <span class="sh-target-ring r2"></span>
+                    <span class="sh-target-ring r3"></span>
+                    <span class="sh-target-cross"></span>
+                    <span class="sh-target-core"></span>
+                  </div>
+                  <span class="sh-stage-label">ROI roadmap <b>3x growth</b></span>
+                  {% elif service.id == 5 %}
+                  <div class="sh-palette">
+                    <span class="sh-swatch" style="--sc: #ffd801; --sd: 0s"></span>
+                    <span class="sh-swatch" style="--sc: #2dd4bf; --sd: 0.15s"></span>
+                    <span class="sh-swatch" style="--sc: #a78bfa; --sd: 0.3s"></span>
+                    <span class="sh-swatch" style="--sc: #22d3ee; --sd: 0.45s"></span>
+                    <span class="sh-swatch" style="--sc: #fb7185; --sd: 0.6s"></span>
+                    <span class="sh-swatch" style="--sc: #ff9f1c; --sd: 0.75s"></span>
+                  </div>
+                  <span class="sh-stage-label">brand system <b>ready</b></span>
+                  {% else %}
+                  <div class="sh-training">
+                    <span class="sh-train-step" style="--sd: 0s"><i class="bi bi-book"></i> Foundations</span>
+                    <span class="sh-train-step" style="--sd: 0.5s"><i class="bi bi-code-slash"></i> Build real projects</span>
+                    <span class="sh-train-step" style="--sd: 1s"><i class="bi bi-graph-up-arrow"></i> Ship your portfolio</span>
+                    <span class="sh-train-step" style="--sd: 1.5s"><i class="bi bi-award"></i> Certified outcomes</span>
+                  </div>
+                  {% endif %}
                 </div>
 
                 <div class="service-hero-term">
@@ -191,9 +260,31 @@
                 </div>
 
                 <div class="service-hero-kpis">
-                  <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-patch-check"></i> On-time delivery</span>
-                  <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-stopwatch"></i> 24h response</span>
-                  <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-globe-americas"></i> Worldwide</span>
+                  {% if service.id == 1 %}
+                    <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-speedometer2"></i> 0.4s load time</span>
+                    <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-stars"></i> Lighthouse 100</span>
+                    <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-phone"></i> Fully responsive</span>
+                  {% elif service.id == 2 %}
+                    <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-cpu"></i> 94.2% accuracy</span>
+                    <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-lightning-charge"></i> 24/7 inference</span>
+                    <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-diagram-3"></i> RAG pipelines</span>
+                  {% elif service.id == 3 %}
+                    <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-database"></i> 1M+ rows / day</span>
+                    <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-check-circle"></i> 98% data accuracy</span>
+                    <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-bar-chart"></i> Live dashboards</span>
+                  {% elif service.id == 4 %}
+                    <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-bullseye"></i> 3x ROI roadmap</span>
+                    <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-compass"></i> KPI alignment</span>
+                    <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-briefcase"></i> C-level ready</span>
+                  {% elif service.id == 5 %}
+                    <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-palette"></i> Full brand system</span>
+                    <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-tags"></i> Design tokens</span>
+                    <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-wrench-adjustable"></i> Dev handoff</span>
+                  {% else %}
+                    <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-journal-code"></i> 12 modules</span>
+                    <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-person-check"></i> 1:1 mentorship</span>
+                    <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-award"></i> Certified outcomes</span>
+                  {% endif %}
                 </div>
               </div>
             </div>
