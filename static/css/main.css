@@ -3767,3 +3767,71 @@ PORTRAIT VARIETY — spiritual.png placements
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
+
+/* =============================================================
+SPIRIT PHOTO BANNER
+--------------------------------------------------------------*/
+.spirit-photo { padding: 30px 0 60px; }
+.spirit-banner {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 216, 1, 0.3);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+}
+.spirit-banner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: spiritZoom 18s ease-in-out infinite alternate;
+}
+@keyframes spiritZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.spirit-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 17, 32, 0.92) 0%, rgba(10, 17, 32, 0.55) 55%, rgba(10, 17, 32, 0.2) 100%);
+}
+.spirit-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  padding: 44px 38px;
+}
+.spirit-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--emerald);
+  margin-bottom: 10px;
+}
+.spirit-kicker i { color: var(--gold); }
+.spirit-copy h2 {
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--heading);
+  margin-bottom: 12px;
+}
+.spirit-copy p {
+  color: #c6cfe2;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+@media (max-width: 576px) {
+  .spirit-banner { min-height: 320px; }
+  .spirit-copy { padding: 30px 24px; }
+  .spirit-copy h2 { font-size: 1.5rem; }
+}
