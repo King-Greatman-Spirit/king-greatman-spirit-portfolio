@@ -3778,7 +3778,7 @@ SPIRIT PHOTO BANNER
   overflow: hidden;
   border: 1px solid rgba(255, 216, 1, 0.3);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  min-height: 380px;
+  min-height: 560px;
   display: flex;
   align-items: center;
 }
@@ -3831,7 +3831,7 @@ SPIRIT PHOTO BANNER
   margin-bottom: 22px;
 }
 @media (max-width: 576px) {
-  .spirit-banner { min-height: 320px; }
+  .spirit-banner { min-height: 440px; }
   .spirit-copy { padding: 30px 24px; }
   .spirit-copy h2 { font-size: 1.5rem; }
 }
