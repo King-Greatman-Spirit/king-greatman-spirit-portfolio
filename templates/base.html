@@ -4,55 +4,70 @@
 <html lang="en">
 
 <head>
-  <title>{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}</title>
+  <title>{% block title %}{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}{% endblock %}</title>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1120">
 
   <!-- ==================== SEO META TAGS ==================== -->
-  <meta name="title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}">
-  <meta name="description" content="
-      Discover the personal portfolio of King GREATMAN SPIRIT – an innovative coder, AI & ML specialist,
-      and digital strategist. Explore software projects, web development work, machine learning models,
-      services, testimonials, and global collaborations.
-  ">
+  <meta name="title" content="{% block meta_title %}{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}{% endblock %}">
+  <meta name="description" content="{% block meta_description %}Discover the personal portfolio of King GREATMAN SPIRIT – an innovative software engineer, AI & ML specialist, data analyst, and digital strategist. Explore software projects, web development, machine learning models, services, testimonials, and global collaborations.{% endblock %}">
   <meta name="author" content="King GREATMAN SPIRIT | Developed by King Greatman Spirit">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="keywords" content="
       King GREATMAN SPIRIT, personal portfolio, AI & ML specialist, data analyst, software engineer,
       web developer, creative coder, digital strategist, Django portfolio, Python projects, Power BI dashboards,
-      machine learning projects, predictive analytics, project showcase, testimonials, global contact
+      machine learning projects, predictive analytics, project showcase, testimonials, global contact,
+      software developer Nigeria, hire software engineer, freelance AI engineer, machine learning consultant
   ">
 
   <meta http-equiv="Content-Language" content="en">
-  <link rel="canonical" href="https://kinggreatmanspirit.com">
+  <meta name="geo.region" content="NG-RI">
+  <meta name="geo.placename" content="Port Harcourt">
+  <link rel="canonical" href="https://kinggreatmanspirit.com{% block canonical %}{% if request.path == '/' %}/{% else %}{{ request.path }}{% endif %}{% endblock %}">
+
+  <!-- ==================== GOOGLE SEARCH CONSOLE VERIFICATION ==================== -->
+  {% if GOOGLE_SITE_VERIFICATION %}
+  <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}">
+  {% endif %}
+
+  <!-- ==================== GOOGLE ANALYTICS 4 ==================== -->
+  {% if GA4_MEASUREMENT_ID %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA4_MEASUREMENT_ID }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ GA4_MEASUREMENT_ID }}');
+  </script>
+  {% endif %}
 
   <!-- ==================== HREFLANG ==================== -->
   <link rel="alternate" hreflang="en" href="https://kinggreatmanspirit.com">
   <link rel="alternate" hreflang="en-GB" href="https://kinggreatmanspirit.com/en-gb">
   <link rel="alternate" hreflang="en-US" href="https://kinggreatmanspirit.com/en-us">
 
-  <!-- ==================== OPEN GRAPH (FACEBOOK / LINKEDIN) ==================== -->
-  <meta property="og:title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}">
-  <meta property="og:description" content="
-      Explore King GREATMAN SPIRIT's portfolio showcasing innovative software projects, AI & ML solutions,
-      web development, and data-driven insights. Collaborate and connect globally with a tech innovator.
-  ">
-  <meta property="og:image" content="{% static 'img/preview/home.png' %}">
-  <meta property="og:url" content="https://kinggreatmanspirit.com">
+  <!-- ==================== OPEN GRAPH (FACEBOOK / LINKEDIN / WHATSAPP) ==================== -->
+  <meta property="og:site_name" content="King Greatman Spirit">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="{% block og_title %}{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Explore King GREATMAN SPIRIT's portfolio showcasing innovative software projects, AI & ML solutions, web development, and data-driven insights. Collaborate and connect globally with a top-tier tech innovator.{% endblock %}">
+  <meta property="og:image" content="{% block og_image %}https://kinggreatmanspirit.com{% static 'img/preview/home.png' %}{% endblock %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="King Greatman Spirit — Software Engineer & AI Specialist Portfolio">
+  <meta property="og:url" content="{% block og_url %}https://kinggreatmanspirit.com{% endblock %}">
 
   <!-- ==================== TWITTER CARD ==================== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}">
-  <meta name="twitter:description" content="
-      Discover King GREATMAN SPIRIT’s personal portfolio – innovative coding projects, AI & ML models,
-      web development, and data-driven solutions. Connect, collaborate, and explore expertise globally.
-  ">
-  <meta name="twitter:image" content="{% static 'img/preview/home.png' %}">
-  <meta name="twitter:url" content="https://kinggreatmanspirit.com">
-
-  <meta property="twitter:image" content="{% static 'img/preview/home.png' %}">
+  <meta name="twitter:site" content="@greatestmaneva">
+  <meta name="twitter:creator" content="@greatestmaneva">
+  <meta name="twitter:title" content="{% block twitter_title %}{% if title %}{{ title }}{% else %}King GREATMAN SPIRIT | Creative Portfolio & Tech Innovations{% endif %}{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}Discover King GREATMAN SPIRIT's personal portfolio – innovative coding projects, AI & ML models, web development, and data-driven solutions. Connect, collaborate, and explore expertise globally.{% endblock %}">
+  <meta name="twitter:image" content="{% block twitter_image %}https://kinggreatmanspirit.com{% static 'img/preview/home.png' %}{% endblock %}">
 
   <!-- ==================== FAVICON & APP ICONS ==================== -->
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo/favicon-32x32.png' %}">
@@ -66,12 +81,15 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/fontawesome/Font-Awesome-6.x/css/all.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
@@ -79,31 +97,62 @@
   <!-- Main CSS File -->
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <!-- ==================== STRUCTURED DATA (JSON-LD) ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://kinggreatmanspirit.com/#website",
+        "url": "https://kinggreatmanspirit.com",
+        "name": "King Greatman Spirit",
+        "description": "Personal portfolio of King Greatman Spirit — Software Engineer, AI & Machine Learning Specialist, and Data Analyst. Web development, AI/ML solutions, data analytics, and digital strategy.",
+        "publisher": { "@id": "https://kinggreatmanspirit.com/#person" },
+        "inLanguage": "en"
+      },
+      {% if about_links %}
+      {
+        "@type": "Person",
+        "@id": "https://kinggreatmanspirit.com/#person",
+        "name": "{{ about_links.name }}",
+        "url": "https://kinggreatmanspirit.com",
+        "image": "https://kinggreatmanspirit.com{{ about_links.profile_image.url }}",
+        "jobTitle": "Software Engineer, AI & Machine Learning Specialist, Data Analyst",
+        "description": "{{ about_links.intro_text }}",
+        "email": "mailto:{{ about_links.email }}",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NG"
+        },
+        "knowsAbout": [
+          {% for skill in about_skills %}"{{ skill.name }}"{% if not forloop.last %},{% endif %}{% endfor %}
+        ],
+        "sameAs": [
+          {% if socials_links.linkedin %}"{{ socials_links.linkedin }}"{% if socials_links.github or socials_links.twitter or socials_links.facebook or socials_links.instagram or socials_links.youTube or socials_links.tiktok or socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.github %}"{{ socials_links.github }}"{% if socials_links.twitter or socials_links.facebook or socials_links.instagram or socials_links.youTube or socials_links.tiktok or socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.twitter %}"{{ socials_links.twitter }}"{% if socials_links.facebook or socials_links.instagram or socials_links.youTube or socials_links.tiktok or socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.facebook %}"{{ socials_links.facebook }}"{% if socials_links.instagram or socials_links.youTube or socials_links.tiktok or socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.instagram %}"{{ socials_links.instagram }}"{% if socials_links.youTube or socials_links.tiktok or socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.youTube %}"{{ socials_links.youTube }}"{% if socials_links.tiktok or socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.tiktok %}"{{ socials_links.tiktok }}"{% if socials_links.telegram or socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.telegram %}"{{ socials_links.telegram }}"{% if socials_links.threads or socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.threads %}"{{ socials_links.threads }}"{% if socials_links.linktree %},{% endif %}{% endif %}
+          {% if socials_links.linktree %}"{{ socials_links.linktree }}"{% endif %}
+        ]
+      }
+      {% endif %}
+    ]
+  }
+  </script>
 
-
-  <style>
-    .field input,
-    .field textarea,
-    .field select {
-      opacity: 1 !important;
-      position: relative !important;
-      height: auto !important;
-      visibility: visible !important;
-    }
-
-  </style>
+  {% block jsonld %}{% endblock %}
 </head>
 
 <body class="index-page">
-<!-- <body class="service-details-page"> -->
-<!-- <body class="portfolio-details-page"> -->
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
 
   <!-- navbar -->
   {% include 'includes/navbar.html' %}
@@ -115,17 +164,62 @@
   <!-- footer -->
   {% include 'includes/footer.html' %}
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
+  <!-- Scroll Top — laptop / coding screen -->
+  <a href="#" id="scroll-top" class="scroll-top" aria-label="Back to top">
+    <span class="scroll-top-laptop">
+      <span class="scroll-top-screen">
+        <i class="bi bi-arrow-up"></i>
+        <span class="scroll-top-glint"></span>
+      </span>
+      <span class="scroll-top-base"></span>
+    </span>
+    <span class="scroll-top-tip">Click to scroll up</span>
   </a>
 
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2349014155705?text=Hello%20King%20Greatman%20Spirit%2C%20I%27d%20love%20to%20discuss%20a%20project%20with%20you."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with King Greatman Spirit on WhatsApp" data-track="whatsapp_float">
+    <span class="wa-ping"></span>
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with me on WhatsApp</span>
+  </a>
+
+  <!-- Referral Toast -->
+  <div class="referral-toast" id="referralToast" role="status" aria-live="polite">
+    <div class="referral-toast-inner">
+      <div class="referral-toast-icon"><i class="bi bi-gift"></i></div>
+      <div class="referral-toast-body">
+        <strong id="referralToastTitle">Referral Link Copied!</strong>
+        <span id="referralToastText">Share it and earn a reward for every project closed.</span>
+      </div>
+      <button type="button" class="referral-toast-close" aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+    </div>
+  </div>
+
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-avatar-wrap">
+        <div class="preloader-ring"></div>
+        <div class="preloader-avatar">
+          {% if about_links.profile_image %}
+            <img src="{{ about_links.profile_image.url }}" alt="King Greatman Spirit">
+          {% else %}
+            <span>KGS</span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="preloader-logo">KGS</div>
+      <p class="preloader-tagline"><span id="preloader-tagline">Building digital experiences</span></p>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- KGS AI Chatbot -->
+  {% include 'includes/chatbot.html' %}
 
   <!-- Vendor JS Files -->
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <!-- <script src="{% static 'vendor/php-email-form/validate.js' %}"></script> -->
   <script src="{% static 'vendor/aos/aos.js' %}"></script>
   <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
   <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
@@ -137,6 +231,7 @@
 
   <!-- Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/chatbot.js' %}"></script>
 
 </body>
 

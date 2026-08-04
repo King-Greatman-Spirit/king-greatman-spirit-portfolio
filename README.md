@@ -1,37 +1,53 @@
-# 🌟 King GREATMAN SPIRIT (KGS) — Personal Portfolio Website
+# 👑 King GREATMAN SPIRIT (KGS) — Premium Portfolio & Business Platform
 
-**King GREATMAN SPIRIT (KGS)** is a modern, scalable, and SEO-optimized **personal portfolio web application** built with **Django**.
-It serves as a digital identity hub, showcasing **projects, skills, services, testimonials, and professional connections** — designed for **recruiters, clients, collaborators, and tech enthusiasts worldwide**.
+> **Software Engineer • AI & ML Specialist • Data Analyst** — A world-class personal brand platform built with **Django**, engineered to convert visitors into clients.
 
-This project reflects **clean architecture, strong branding, and real-world production practices**.
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://python.org)
+[![Django](https://img.shields.io/badge/Django-5.2-092E20?logo=django&logoColor=white)](https://djangoproject.com)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![AI Assistant](https://img.shields.io/badge/AI%20Chatbot-Intent--Engine-FFD801?style=flat)](https://kinggreatmanspirit.com)
+[![WhatsApp Alerts](https://img.shields.io/badge/WhatsApp%2FSMS-Alerts-25D366?logo=whatsapp&logoColor=white)](https://wa.me/2349014155705)
+[![SEO](https://img.shields.io/badge/SEO-%2B%20GA4%20%2F%20GSC-4285F4?logo=google&logoColor=white)](#)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## 🔥 Key Highlights
+## ✨ Why This Platform Stands Out
 
-* 🚀 **Fully Dynamic Portfolio System**
-  Manage projects, images, categories, and descriptions from Django Admin.
+The **King GREATMAN SPIRIT (KGS)** platform is a complete digital business engine — not just a portfolio. It combines a **premium dark-navy / gold / emerald** brand identity with a full owner-side command center:
 
-* 🧠 **Professional Services Showcase**
-  Clearly present service offerings with structured layouts and branding.
+* 🗂️ **Fully Dynamic Portfolio** — Projects, skills, services, testimonials, education & experience managed from Django Admin or the custom dashboard.
+* 🤖 **KGS AI Chat Assistant** — Intent-matching assistant with live replies, typing indicator, quick-action chips, and a deep link to live human support (`/#chat`).
+* 🎧 **"Talk to King Directly" Live Support** — Visitors request live help from inside the chatbot; the owner gets an **instant WhatsApp / SMS alert** (Twilio) with an **email fallback**, and every ticket lands in the dashboard.
+* 🔒 **Owner Dashboard (`/dashboard/`)** — Login, live overview with stats & 6-month chart, profile & socials editor, generic CRUD for all site content, leads, newsletter subscribers (with CSV export), payments and ticket management.
+* 💳 **Global Secure Payments** — Deposit or pay via **Flutterwave, Paystack & Binance Pay** — cards, bank transfer, USSD, mobile money and crypto, **in any currency — USD, NGN, GBP, EUR, JPY & major world currencies** — with an instant branded receipt in the visitor's inbox.
+* ✉️ **Branded Email System** — Newsletter confirmation, contact notifications, payment receipts and ticket alerts — all with **inline-attached profile images, cover banners and favicon socials**.
+* 📈 **Conversion Tracking** — Google Site Verification (GSC) + GA4 event tracking for every key action: chat opened, ticket sent, payment started, WhatsApp clicked.
+* 🌍 **World-Class SEO** — Semantic HTML, JSON-LD structured data, sitemap.xml, robots.txt, canonical URLs and Open Graph tags.
 
-* 💬 **Client Testimonials**
-  Display real feedback to build trust and credibility.
+---
 
-* 🌍 **Global Contact System**
-  International-ready contact form with structured validation.
+## 🖼️ Application Preview
 
-* 🌐 **Rich Social Media Integration**
-  Seamlessly connects GitHub, LinkedIn, WhatsApp, Instagram, X (Twitter), Facebook, TikTok, YouTube, Threads, Telegram, and more.
+### Public Website
 
-* 📈 **SEO-Optimized Architecture**
-  Clean URLs, meta tags, semantic HTML, and performance-focused design.
+| Home | About | Services |
+|------|-------|----------|
+| ![Home](preview/home.png) | ![About](preview/about.png) | ![Services](preview/services.png) |
 
-* 📱 **Fully Responsive UI**
-  Optimized for mobile, tablet, and desktop devices.
+| Portfolio | Resume | Contact |
+|-----------|--------|---------|
+| ![Portfolio](preview/portfolio.png) | ![Resume](preview/resume.png) | ![Contact](preview/contact.png) |
 
-* ⚙️ **Admin-Driven Content Management**
-  Update content without touching code.
+### AI Assistant & Owner Dashboard
+
+| KGS AI Chat Assistant | Dashboard — Login | Dashboard — Overview |
+|----------------------|-------------------|----------------------|
+| ![AI Chatbot](preview/chatbot.png) | ![Dashboard Login](preview/dashboard-login.png) | ![Dashboard Home](preview/dashboard-home.png) |
+
+| Dashboard — Tickets | Dashboard — Payments | Footer |
+|---------------------|----------------------|--------|
+| ![Dashboard Tickets](preview/dashboard-tickets.png) | ![Dashboard Payments](preview/dashboard-payments.png) | ![Footer](preview/footer.png) |
 
 ---
 
@@ -39,152 +55,121 @@ This project reflects **clean architecture, strong branding, and real-world prod
 
 **Backend**
 
-* Django (Python)
+* Django 5.2 (Python) · Django REST Framework-ready patterns
+* SQLite (dev) → PostgreSQL (production)
+* Twilio (WhatsApp + SMS alerts) · SMTP email (business inbox ready)
 
 **Frontend**
 
-* Bootstrap 5
-* HTML5, CSS3
-* JavaScript (ES6)
+* Bootstrap 5 · HTML5 · CSS3 · JavaScript (ES6)
+* AOS animations · Typed.js · Swiper · Isotope · GLightbox
+* Bootstrap Icons · Google Fonts
 
-**Database**
+**Payments & Analytics**
 
-* SQLite (Development)
-* PostgreSQL (Production-ready)
-
-**UI & Enhancements**
-
-* Font Awesome
-* Bootstrap Icons
-* Owl Carousel
-* Master Slider
-* Smart Selects
+* Flutterwave · Paystack · Binance Pay
+* GA4 (gtag.js) · Google Search Console
 
 ---
 
-## 🎯 Purpose & Vision
+## 🚀 Getting Started
 
-This project is more than a website — it is a **personal brand platform**.
-
-It is built to:
-
-* Impress recruiters and hiring managers
-* Convert visitors into clients
-* Showcase real technical depth and design thinking
-* Grow alongside professional experience
-
-Perfect for:
-
-* Developers & Data Professionals
-* Freelancers & Consultants
-* Personal Branding & Online Presence
-
----
-
-## 🖼️ Application Preview
-
-Below are selected screenshots showcasing the UI, structure, and features of the **King GREATMAN SPIRIT (KGS)** portfolio.
-
-> A visual overview of the key pages and components of the King GREATMAN SPIRIT (KGS) portfolio application.
-
-| Home | About | Services |
-|------|-------|----------|
-| ![Home](preview/home.png) | ![About](preview/about.png) | ![Services](preview/services.png) |
-
-| Service Detail | Portfolio | Portfolio Detail |
-|----------------|-----------|------------------|
-| ![Service-Details](preview/service-detail.png) | ![Portfolio](preview/portfolio.png) | ![Portfolio-Details](preview/portfolio-detail.png) |
-
-| Resume | Contact | Sidebar |
-|--------|---------|---------|
-| ![ Resume](preview/resume.png) | ![Contact](preview/contact.png) | ![Sidebar](preview/sidebar.png) |
-
-| Footer |
-|--------|
-| ![Footer](preview/footer.png) |
-
----
-
-### ✅ Notes
-
-* Ensure all images are located in `preview/` relative to your **repository root**.
-* Keep image filenames **exactly matching** your Markdown paths (case-sensitive on GitHub).
-* Tables help maintain a neat layout, and GitHub automatically resizes the images to fit.
-* You can add more screenshots in the same structure if needed.
-
----
-
-## 📦 Installation & Setup
-
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone & Prepare
 
 ```bash
 git clone https://github.com/King-Greatman-Spirit/king-greatman-spirit-portfolio.git
 cd king-greatman-spirit-portfolio
-```
 
-### 2️⃣ Create & Activate Virtual Environment
-
-```bash
 python -m venv venv
-source venv/bin/activate   # macOS/Linux
-venv\Scripts\activate      # Windows
-```
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # macOS/Linux
 
-### 3️⃣ Install Dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### 4️⃣ Apply Migrations
-
-```bash
 python manage.py migrate
+python manage.py createsuperuser
 ```
 
-### 5️⃣ Run Development Server
+### 2️⃣ Configure Environment (`.env`)
+
+| Variable | Purpose | Required |
+|---|---|---|
+| `SECRET_KEY` | Django secret | ✅ |
+| `DEBUG` | `True` in dev, `False` in prod | ✅ |
+| `SITE_URL` | Canonical site URL (used in emails/SEO) | ✅ |
+| `GOOGLE_SITE_VERIFICATION` | GSC verification meta tag | Optional |
+| `GA4_MEASUREMENT_ID` | Google Analytics 4 property (e.g. `G-XXXXXXX`) | Optional |
+| `EMAIL_HOST_USER` / `EMAIL_HOST_PASSWORD` | SMTP sender (Gmail app password or business inbox) | ✅ |
+| `TWILIO_ACCOUNT_SID` / `TWILIO_AUTH_TOKEN` | WhatsApp/SMS alerts for live-support tickets | Optional |
+| `TWILIO_WHATSAPP_FROM` | e.g. `whatsapp:+14155238886` | Optional |
+| `SUPPORT_NOTIFY_WHATSAPP_TO` / `SUPPORT_NOTIFY_PHONE` / `SUPPORT_NOTIFY_EMAIL` | Where ticket alerts are sent | Optional |
+| `PAYSTACK_PUBLIC_KEY` / `PAYSTACK_SECRET_KEY` | Paystack payments | Optional |
+| `FLW_PUBLIC_KEY` / `FLW_SECRET_KEY` | Flutterwave payments | Optional |
+| `BINANCE_API_KEY` / `BINANCE_SECRET_KEY` | Binance Pay (crypto) | Optional |
+
+### 3️⃣ Run
 
 ```bash
 python manage.py runserver
 ```
 
-Access the app at:
+* Public site → `http://127.0.0.1:8000/`
+* Owner dashboard → `http://127.0.0.1:8000/dashboard/login/`
+* Django admin → `http://127.0.0.1:8000/admin/`
 
-```
-http://127.0.0.1:8000/
-```
+---
+
+## 🧭 Owner Dashboard Tour
+
+| Page | What you can do |
+|---|---|
+| **Overview** | Live stats, 6-month chart, recent leads / payments / tickets / subscribers |
+| **Profile** | Edit bio + all socials with image previews |
+| **Content CRUD** | Stats, skills, summaries, education, experience, projects, images, services, processes, testimonials |
+| **Contacts** | Search leads, one-click WhatsApp / email reply |
+| **Newsletter** | Browse, unsubscribe, delete, **export CSV** |
+| **Payments** | Track deposits & payments, update status, delete |
+| **Tickets** | Live-support requests from the chatbot — statuses, WhatsApp reply, delete |
+
+---
+
+## 🤖 AI Chatbot Highlights
+
+* Floating photo launcher with typing indicator, teaser bubble & notification badge
+* Intent engine: services, pricing, payment, portfolio, contact, resume, training & more
+* **Live-support handoff** — visitor fills a quick form → owner alerted via WhatsApp/SMS/email
+* Branded pill links (WhatsApp / email / portfolio / payments)
+* Deep-link: `https://kinggreatmanspirit.com/#chat` opens the chat instantly
 
 ---
 
 ## 🌍 Deployment
 
-The project is production-ready and can be deployed on:
+Production-ready for **Render · Railway · PythonAnywhere · VPS (Nginx + Gunicorn) · Docker**.
 
-* Render
-* Railway
-* PythonAnywhere
-* VPS (Nginx + Gunicorn)
-* Docker-based environments
+```bash
+python manage.py collectstatic
+gunicorn KingGreatmanSpirit.wsgi:application --bind 0.0.0.0:8000
+```
 
 ---
 
 ## 🔐 Security & Best Practices
 
-* Environment-based configuration
-* Secure Django settings structure
-* Admin-only content management
-* Ready for production hardening
+* Environment-based configuration — no secrets in code
+* Staff-only dashboard access, POST-only public endpoints
+* Escaped / sanitized chatbot rendering (XSS-safe link allowlist)
+* Honeypot fields + server-side validation on all forms
+* Production hardening ready (HTTPS, secure cookies, PostgreSQL)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — free to use, modify, and distribute.
+**MIT License** — free to use, modify, and distribute.
 
 ---
 
-> **“Your online presence is your digital signature — make it timeless.”**
+> **"Your online presence is your digital signature — make it timeless."**
 > **King GREATMAN SPIRIT (KGS)**
 > *Digital Creator • Data Analyst • AI & Software Engineer*
 
@@ -192,19 +177,13 @@ This project is licensed under the **MIT License** — free to use, modify, and 
 
 ## 🌐 Connect with Me
 
-Stay in touch or follow my work on social media and professional networks:
-
-| Platform          | Link                                                                    |
-| ----------------- | ----------------------------------------------------------------------- |
-| **Facebook**      | [FAMOUSGREATMAN](https://www.facebook.com/FAMOUSGREATMAN)               |
-| **X (Twitter)**   | [@greatestmaneva](https://www.twitter.com/greatestmaneva)               |
-| **Instagram**     | [king_greatman_spirit](https://www.instagram.com/king_greatman_spirit/) |
-| **TikTok**        | [@king_greatman_spirit](https://www.tiktok.com/@king_greatman_spirit)   |
-| **Telegram**      | [t.me/greatestmaneva](https://t.me/greatestmaneva)                      |
-| **YouTube**       | [greatestmaneva](https://www.youtube.com/@greatestmaneva)               |
-| **LinkedIn**      | [Greatman Justus](https://www.linkedin.com/in/greatman-pydev)           |
-| **WhatsApp Chat** | [Click to Chat](https://wa.me/2349014155705)                            |
-| **Linktree**      | [Linktree Profile](https://linktr.ee/greatestmaneva)                    |
-
----
-
+| Platform | Link |
+|---|---|
+| **Website** | [kinggreatmanspirit.com](https://kinggreatmanspirit.com) |
+| **Email** | [hello@kinggreatmanspirit.com](mailto:hello@kinggreatmanspirit.com) |
+| **WhatsApp Chat** | [Click to Chat](https://wa.me/2349014155705) |
+| **LinkedIn** | [Greatman Justus](https://www.linkedin.com/in/greatman-pydev) |
+| **X (Twitter)** | [@greatestmaneva](https://www.twitter.com/greatestmaneva) |
+| **Instagram** | [king_greatman_spirit](https://www.instagram.com/king_greatman_spirit/) |
+| **GitHub** | [King-Greatman-Spirit](https://github.com/King-Greatman-Spirit) |
+| **Linktree** | [Linktree Profile](https://linktr.ee/greatestmaneva) |

@@ -1,0 +1,178 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% load dashboard_extras %}
+{% block heading %}<i class="bi bi-speedometer2"></i> Overview{% endblock %}
+{% block content %}
+
+<!-- ================= STATS ================= -->
+<div class="dash-stats">
+  <div class="dash-stat">
+    <div class="dash-stat-icon gold"><i class="bi bi-envelope-paper"></i></div>
+    <div class="dash-stat-value">{{ stats.leads }} <small>+{{ stats.leads_week }} this week</small></div>
+    <div class="dash-stat-label">Contact leads</div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-stat-icon red"><i class="bi bi-headset"></i></div>
+    <div class="dash-stat-value">{{ stats.tickets_new }}</div>
+    <div class="dash-stat-label">New support tickets</div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-stat-icon emerald"><i class="bi bi-megaphone"></i></div>
+    <div class="dash-stat-value">{{ stats.subscribers }}</div>
+    <div class="dash-stat-label">Active newsletter fans</div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-stat-icon emerald"><i class="bi bi-cash-stack"></i></div>
+    <div class="dash-stat-value">₦{{ stats.paid_total|kgs_money }}</div>
+    <div class="dash-stat-label">{{ stats.paid_count }} paid &middot; {{ stats.pending_payments }} pending</div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-stat-icon blue"><i class="bi bi-folder2-open"></i></div>
+    <div class="dash-stat-value">{{ stats.projects }}</div>
+    <div class="dash-stat-label">Projects on showcase</div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-stat-icon blue"><i class="bi bi-stars"></i></div>
+    <div class="dash-stat-value">{{ stats.services }}</div>
+    <div class="dash-stat-label">Services offered</div>
+  </div>
+</div>
+
+<!-- ================= CHART + TICKETS ================= -->
+<div class="dash-grid">
+  <div class="dash-card">
+    <div class="dash-card-head">
+      <i class="bi bi-bar-chart"></i>
+      <h3>Leads &mdash; last 6 months</h3>
+    </div>
+    <div class="dash-chart">
+      {% for m in months %}
+      <div class="dash-chart-col">
+        <div class="dash-chart-count">{{ m.count }}</div>
+        <div class="dash-chart-bar" style="height: {{ m.pct }}%;"></div>
+        <div class="dash-chart-label">{{ m.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="dash-card">
+    <div class="dash-card-head">
+      <i class="bi bi-headset"></i>
+      <h3>Latest support tickets</h3>
+      <a class="dash-card-action" href="{% url 'dashboard:tickets_list' %}">View all &rarr;</a>
+    </div>
+    {% if recent_tickets %}
+    <div class="dash-table-wrap">
+      <table class="dash-table">
+        <thead>
+          <tr><th>From</th><th>Topic</th><th>Status</th><th>When</th></tr>
+        </thead>
+        <tbody>
+          {% for t in recent_tickets %}
+          <tr>
+            <td class="dash-cell-title">{{ t.full_name }}</td>
+            <td class="dash-cell-sub">{{ t.topic|default:"General" }}</td>
+            <td><span class="dash-badge {{ t.status|status_cls }}">{{ t.get_status_display }}</span></td>
+            <td class="dash-cell-sub dash-nowrap">{{ t.created_date|date:"d M, H:i" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="dash-empty"><i class="bi bi-emoji-smile"></i>No tickets yet &mdash; the chatbot will alert you the moment someone wants live help.</div>
+    {% endif %}
+  </div>
+
+  <div class="dash-card full">
+    <div class="dash-card-head">
+      <i class="bi bi-envelope-paper"></i>
+      <h3>Recent leads</h3>
+      <a class="dash-card-action" href="{% url 'dashboard:contacts_list' %}">View all &rarr;</a>
+    </div>
+    {% if recent_leads %}
+    <div class="dash-table-wrap">
+      <table class="dash-table">
+        <thead>
+          <tr><th>Name</th><th>Email / Phone</th><th>Service</th><th>Channel</th><th>When</th><th></th></tr>
+        </thead>
+        <tbody>
+          {% for c in recent_leads %}
+          <tr>
+            <td class="dash-cell-title">{{ c.full_name }}</td>
+            <td class="dash-cell-sub">{{ c.email|default:c.phone_number }}</td>
+            <td class="dash-cell-sub">{{ c.service.name|default:"—" }}</td>
+            <td class="dash-cell-sub">{{ c.channel|default:"Direct" }}</td>
+            <td class="dash-cell-sub dash-nowrap">{{ c.created_date|date:"d M, H:i" }}</td>
+            <td>
+              <div class="dash-row-actions">
+                {% if c.phone_number %}
+                <a class="dash-action whatsapp" href="https://wa.me/{{ c.phone_number|cut:'+'|cut:' '|cut:'('|cut:')'|cut:'-' }}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+                {% endif %}
+                <a class="dash-action" href="{% url 'dashboard:contacts_list' %}?q={{ c.email|urlencode }}"><i class="bi bi-search"></i></a>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="dash-empty"><i class="bi bi-inbox"></i>No leads yet.</div>
+    {% endif %}
+  </div>
+
+  <div class="dash-card">
+    <div class="dash-card-head">
+      <i class="bi bi-credit-card"></i>
+      <h3>Recent payments</h3>
+      <a class="dash-card-action" href="{% url 'dashboard:payments_list' %}">View all &rarr;</a>
+    </div>
+    {% if recent_payments %}
+    <div class="dash-table-wrap">
+      <table class="dash-table">
+        <thead><tr><th>Ref</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          {% for p in recent_payments %}
+          <tr>
+            <td class="dash-cell-title">{{ p.reference }}</td>
+            <td class="dash-cell-sub">{{ p.currency }} {{ p.amount|kgs_money }}</td>
+            <td><span class="dash-badge {{ p.status|status_cls }}">{{ p.get_status_display }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="dash-empty"><i class="bi bi-cash-coin"></i>No payments yet.</div>
+    {% endif %}
+  </div>
+
+  <div class="dash-card">
+    <div class="dash-card-head">
+      <i class="bi bi-megaphone"></i>
+      <h3>Latest subscribers</h3>
+      <a class="dash-card-action" href="{% url 'dashboard:newsletter_list' %}">View all &rarr;</a>
+    </div>
+    {% if recent_subscribers %}
+    <div class="dash-table-wrap">
+      <table class="dash-table">
+        <thead><tr><th>Email</th><th>Status</th><th>When</th></tr></thead>
+        <tbody>
+          {% for s in recent_subscribers %}
+          <tr>
+            <td class="dash-cell-title">{{ s.email }}</td>
+            <td><span class="dash-badge {{ s.is_active|status_cls }}">{% if s.is_active %}Active{% else %}Paused{% endif %}</span></td>
+            <td class="dash-cell-sub dash-nowrap">{{ s.subscribed_at|date:"d M, H:i" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="dash-empty"><i class="bi bi-people"></i>No subscribers yet.</div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

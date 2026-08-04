@@ -46,6 +46,12 @@ class ContactMessage(models.Model):
         related_name='leads'
     )
     channel = models.CharField(max_length=100, choices=CHANNEL_CHOICES, default=0)
+    referral = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+        help_text="Referral source — e.g. LinkedIn, WhatsApp, or the name of the person who referred them."
+    )
     message = models.TextField(max_length=500)
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
@@ -68,6 +74,8 @@ class Socials(models.Model):
     tiktok = models.URLField(blank=True, null=True)
     threads = models.URLField(blank=True, null=True)
     linktree = models.URLField(blank=True, null=True)
+    medium = models.URLField(blank=True, null=True)
+    substack = models.URLField(blank=True, null=True)
     pinterest = models.URLField(blank=True, null=True)
 
     def __str__(self):
@@ -76,3 +84,19 @@ class Socials(models.Model):
     class Meta:
         verbose_name = 'socials'
         verbose_name_plural = 'socials'
+
+
+# Newsletter subscribers
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(max_length=100, unique=True)
+    is_active = models.BooleanField(default=True)
+    source = models.CharField(max_length=100, blank=True, null=True)
+    subscribed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Newsletter Subscriber"
+        verbose_name_plural = "Newsletter Subscribers"
+        ordering = ("-subscribed_at",)
+
+    def __str__(self):
+        return self.email

@@ -1,0 +1,67 @@
+{% extends 'emails/base_email.html' %}
+
+{% block subject %}Payment Received &mdash; Thank You! &#127881; King Greatman Spirit{% endblock %}
+
+{% block content %}
+
+  <h2 style="margin:0 0 16px 0; font-size:20px; color:#ffd801; font-weight:800;">
+    Payment confirmed &mdash; thank you! &#128176;&#10004;
+  </h2>
+
+  <p style="margin:0 0 18px 0;">
+    Hello <strong style="color:#ffffff;">{{ payment.full_name|default:"there" }}</strong>,
+  </p>
+
+  <p style="margin:0 0 18px 0;">
+    We've successfully received your payment of
+    <strong style="color:#2dd4bf; font-size:18px;">{{ payment.currency }} {{ payment.amount }}</strong>
+    via <strong style="color:#ffffff;">{{ payment.get_method_display }}</strong>.
+    Your project is now officially in the pipeline &mdash; here's your receipt:
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid rgba(255,255,255,0.08); border-radius:14px; overflow:hidden;">
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Reference</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:13px; color:#ffd801; font-weight:700;">{{ payment.reference }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Amount paid</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff; font-weight:700;">{{ payment.currency }} {{ payment.amount }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Service / Purpose</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff;">{{ payment.service.name|default:payment.description|default:"General payment" }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Status</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#2dd4bf; font-weight:800;">&#10003; PAID</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Date</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff;">{{ payment.paid_date|date:"F j, Y, g:i a"|default:"—" }}</td>
+    </tr>
+  </table>
+
+  <p style="margin:22px 0 18px 0;">
+    <strong style="color:#ffd801;">What happens next?</strong> You'll hear from me within
+    <strong style="color:#ffffff;">24 hours</strong> with your project kickoff plan. Need to reach me first?
+    Reply to this email or message me on WhatsApp.
+  </p>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td style="border-radius:999px; background:linear-gradient(90deg,#ffd801,#ff9f1c);">
+        <a href="https://wa.me/2349014155705" style="display:inline-block; padding:12px 26px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#0a1120;">
+          &#128172; Chat on WhatsApp
+        </a>
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}
+
+{% block footer_extra %}
+  <p style="margin:10px 0 0 0; font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#5b667e;">
+    Please keep this receipt for your records. For any questions, contact {{ about_links.email|default:"hello@kinggreatmanspirit.com" }}.
+  </p>
+{% endblock %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.defaults import page_not_found
 from service.models import Service
 from portfolio.models import Project, ProjectImages, Testimonial
 from contact.models import ContactMessage, CHANNEL_CHOICES
@@ -20,6 +21,14 @@ def home(request):
         'testimonials': testimonials,
         'contacts': contacts,
         'channel_choices': CHANNEL_CHOICES,
+        'client_sites': [
+            {'name': 'PLAN-NG', 'domain': 'plan-ng.com'},
+            {'name': 'Zhehus Group', 'domain': 'zhehusgroup.com'},
+            {'name': 'Daikoo Energy', 'domain': 'daikooenergy.com'},
+        ],
     }
     
     return render(request, 'home.html', context)
+
+def custom_404(request, exception):
+    return page_not_found(request, exception, template_name='404.html')

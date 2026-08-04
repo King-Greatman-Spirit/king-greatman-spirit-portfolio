@@ -1,0 +1,60 @@
+{% extends 'emails/base_email.html' %}
+
+{% block subject %}We've received your message &mdash; King Greatman Spirit{% endblock %}
+
+{% block content %}
+
+  <h2 style="margin:0 0 16px 0; font-size:20px; color:#ffd801; font-weight:800;">
+    Message received successfully &#10004;
+  </h2>
+
+  <p style="margin:0 0 18px 0;">
+    Hello <strong style="color:#ffffff;">{{ contact.full_name }}</strong>,
+  </p>
+
+  <p style="margin:0 0 18px 0;">
+    Thank you for reaching out to <strong style="color:#ffd801;">King Greatman Spirit</strong>.
+    Your message has landed safely in my inbox and is already being reviewed with the
+    care and attention it deserves.
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td style="border-left:4px solid #2dd4bf; background-color:#0d1526; border-radius:12px; padding:16px 18px;">
+        <p style="margin:0 0 6px 0; font-size:11px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">
+          Your message
+        </p>
+        <p style="margin:0; color:#e6eaf3; font-size:14px; line-height:1.7; font-style:italic;">
+          &ldquo;{{ contact.message }}&rdquo;
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <p style="margin:22px 0 8px 0;">
+    I focus on delivering <strong style="color:#2dd4bf;">clear, strategic, and value-driven
+    solutions</strong> &mdash; software, AI systems, and data insights that move businesses forward.
+  </p>
+
+  <p style="margin:0 0 22px 0;">
+    Expect my reply within <strong style="color:#ffffff;">24 hours</strong>. If your request is urgent,
+    message me directly on WhatsApp at <a href="https://wa.me/2349014155705" style="color:#25d366; text-decoration:none; font-weight:700;">+234 901 415 5705</a>.
+  </p>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
+    <tr>
+      <td style="border-radius:999px; background:linear-gradient(90deg,#2dd4bf,#10b981);">
+        <a href="https://wa.me/2349014155705" style="display:inline-block; padding:12px 26px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#03231d;">
+          &#128172; Chat on WhatsApp Now
+        </a>
+      </td>
+      <td style="width:10px;"></td>
+      <td style="border-radius:999px; border:1px solid #ffd801;">
+        <a href="https://kinggreatmanspirit.com" style="display:inline-block; padding:12px 26px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#ffd801;">
+          &#127760; Explore My Website
+        </a>
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}

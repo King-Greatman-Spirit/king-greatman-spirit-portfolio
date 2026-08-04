@@ -1,11 +1,21 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.core.mail import EmailMessage
-from datetime import datetime
-from decouple import config
-from django.conf import settings
 
-from .models import ContactMessage, Socials, CHANNEL_CHOICES
+from .models import ContactMessage, Socials, NewsletterSubscriber, CHANNEL_CHOICES
+from .validation import (
+    autocorrect_email,
+    autocorrect_message,
+    autocorrect_name,
+    autocorrect_phone,
+    validate_contact_payload,
+    validate_subscribe_email,
+)
+from .emails import (
+    BASE_URL,
+    send_contact_notification,
+    send_contact_confirmation,
+    send_newsletter_confirmation,
+)
 from service.models import Service
 
 
@@ -17,144 +27,54 @@ def contact(request):
     if request.method == "POST":
         data = request.POST
 
+        # Honeypot — bots fill hidden fields, humans don't. Silently drop.
+        if data.get("website"):
+            return redirect("contact")
+
+        full_name = autocorrect_name(data.get("full_name"))
+        email = autocorrect_email(data.get("email"))
+        phone = autocorrect_phone(data.get("phone_number"))
+        message = autocorrect_message(data.get("message"))
+
+        errors = validate_contact_payload(full_name, email, phone, message)
+        if errors:
+            for err in errors:
+                messages.error(request, err)
+            context = {
+                "title": title,
+                "socials": socials,
+                "services": services,
+                "channel_choices": CHANNEL_CHOICES,
+                "form_data": {
+                    "full_name": full_name,
+                    "email": email,
+                    "phone_number": phone,
+                    "company_name": (data.get("company_name") or "").strip(),
+                    "service": data.get("service") or "",
+                    "channel": data.get("channel") or "",
+                    "message": message,
+                },
+            }
+            return render(request, "home.html", context)
+
         contact = ContactMessage.objects.create(
-            full_name=data.get("full_name"),
-            email=data.get("email"),
-            phone_number=data.get("phone_number"),
-            company_name=data.get("company_name"),
+            full_name=full_name,
+            email=email,
+            phone_number=phone or None,
+            company_name=(data.get("company_name") or "").strip(),
             service_id=data.get("service") or None,
-            channel=data.get("channel"),
-            message=data.get("message"),
+            channel=data.get("channel") or "",
+            referral=data.get("referral") or "Direct",
+            message=message,
         )
 
-        current_time = datetime.now().strftime("%A, %B %d, %Y at %I:%M %p")
-
-        # ================= ADMIN EMAIL (HTML) =================
-        try:
-            admin_html = f"""
-            <html>
-            <body style="font-family: Arial, sans-serif; background:#f4f6f8; padding:20px;">
-                <div style="max-width:650px; margin:auto; background:#ffffff; padding:25px; border-radius:8px;">
-                    <h2 style="color:#0d6efd;">📩 New Contact Form Submission</h2>
-                    <p><strong>Received:</strong> {current_time}</p>
-
-                    <table width="100%" cellpadding="8" cellspacing="0" style="border-collapse:collapse;">
-                        <tr><td><strong>Name:</strong></td><td>{contact.full_name}</td></tr>
-                        <tr><td><strong>Email:</strong></td><td>{contact.email}</td></tr>
-                        <tr><td><strong>Phone:</strong></td><td>{contact.phone_number or 'N/A'}</td></tr>
-                        <tr><td><strong>Company:</strong></td><td>{contact.company_name or 'N/A'}</td></tr>
-                        <tr><td><strong>Service:</strong></td><td>{contact.service or 'N/A'}</td></tr>
-                        <tr><td><strong>Channel:</strong></td><td>{contact.channel}</td></tr>
-                    </table>
-
-                    <hr style="margin:20px 0;">
-
-                    <h3>Message</h3>
-                    <div style="background:#f8f9fa; padding:15px; border-left:4px solid #0d6efd;">
-                        {contact.message}
-                    </div>
-
-                    <p style="margin-top:20px; font-size:13px; color:#6c757d;">
-                        Reply directly to this email to respond to the client.
-                    </p>
-                </div>
-            </body>
-            </html>
-            """
-
-            admin_email = EmailMessage(
-                subject="📩 New Lead | King Greatman Spirit Website",
-                body=admin_html,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[settings.EMAIL_HOST_USER],
-                reply_to=[contact.email],
-            )
-            admin_email.content_subtype = "html"
-            admin_email.send(fail_silently=False)
-
-        except Exception as e:
-            print("Admin email failed:", e)
-
-        # ================= AUTO-REPLY TO USER (HTML) =================
-        try:
-            user_html = f"""
-            <html>
-            <body style="font-family:'Segoe UI', Arial, sans-serif; background:#f4f6f8; padding:30px;">
-                <div style="max-width:600px; margin:auto; background:#ffffff; border-radius:10px; overflow:hidden;">
-                    
-                    <div style="background:linear-gradient(135deg,#0d6efd,#6610f2); color:#fff; padding:25px; text-align:center;">
-                        <h2 style="margin:0;">Message Received Successfully ✅</h2>
-                    </div>
-
-                    <div style="padding:30px; color:#333; line-height:1.6;">
-                        <p>Hello <strong>{contact.full_name}</strong>,</p>
-
-                        <p>
-                            Thank you for contacting <strong>King Greatman Spirit</strong>.
-                            Your message has been received and is currently under review.
-                        </p>
-
-                        <div style="background:#f1f5ff; padding:15px; border-left:4px solid #0d6efd; margin:20px 0;">
-                            “{contact.message}”
-                        </div>
-
-                        <p>
-                            I focus on delivering <strong>clear, strategic, and value-driven solutions</strong>.
-                            If clarification is needed, I’ll reach out shortly.
-                        </p>
-
-                        <a href="https://www.linkedin.com/in/greatman-pydev"
-                        style="display:inline-block; margin-top:20px; padding:12px 22px;
-                        background:#0d6efd; color:#ffffff; text-decoration:none; border-radius:6px;">
-                        View My Professional Profile
-                        </a>
-                    </div>
-
-                    <div style="background:#f8f9fa; padding:22px; text-align:center; font-size:13px; line-height:1.8;">
-                        <strong style="font-size:14px;">King Greatman Spirit</strong><br>
-                        Software Engineering • AI & Machine Learning Specialist • Data Analyst<br><br>
-
-                        <span style="color:#6c757d;">🌐 Connect with me:</span><br>
-
-                        <a href="https://www.linkedin.com/in/greatman-pydev">LinkedIn</a> |
-                        <a href="https://github.com/King-Greatman-Spirit">GitHub</a> |
-                        <a href="https://wa.me/2349014155705">WhatsApp</a> |
-                        <a href="https://www.facebook.com/FAMOUSGREATMAN">Facebook</a> |
-                        <a href="https://www.twitter.com/greatestmaneva">X (Twitter)</a> |
-                        <a href="https://www.instagram.com/king_greatman_spirit/">Instagram</a><br>
-
-                        <a href="https://t.me/greatestmaneva">Telegram</a> |
-                        <a href="https://www.youtube.com/@greatestmaneva">YouTube</a> |
-                        <a href="https://www.tiktok.com/@king_greatman_spirit">TikTok</a> |
-                        <a href="https://www.threads.net/@king_greatman_spirit">Threads</a>
-
-                        <br><br>
-
-                        <span style="color:#6c757d;">
-                            📱 Direct WhatsApp: <strong>+234 901-415-5705</strong>
-                        </span>
-                    </div>
-                </div>
-            </body>
-            </html>
-            """
-
-            user_email = EmailMessage(
-                subject="✅ We’ve received your message — King Greatman Spirit",
-                body=user_html,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[contact.email],
-            )
-            user_email.content_subtype = "html"
-            user_email.send(fail_silently=False)
-
-        except Exception as e:
-            print("Auto-reply email failed:", e)
+        send_contact_notification(contact)
+        send_contact_confirmation(contact)
 
         messages.success(
             request,
-            "Thank you for reaching out to King Greatman Spirit. Your message has been " \
-            "received successfully and is currently under review. We will respond shortly " \
+            "Thank you for reaching out to King Greatman Spirit. Your message has been "
+            "received successfully and is currently under review. We will respond shortly "
             "with a tailored and value-driven response."
         )
 
@@ -167,3 +87,111 @@ def contact(request):
         "channel_choices": CHANNEL_CHOICES,
     }
     return render(request, "home.html", context)
+
+
+def subscribe(request):
+    """Newsletter signup — validates strictly, saves and sends a confirmation email."""
+    if request.method == "POST":
+        data = request.POST
+
+        # Honeypot — pretend success to bot scripts.
+        if data.get("website"):
+            messages.success(
+                request,
+                "You're subscribed! 🎉 Check your inbox for a welcome email — see you in the Inner Circle."
+            )
+            return redirect(data.get("next") or "home")
+
+        email = autocorrect_email(data.get("email"))
+        source = (data.get("source") or "Website").strip()[:100]
+
+        error = validate_subscribe_email(email)
+        if error:
+            messages.error(request, error)
+            next_url = data.get("next") or request.META.get("HTTP_REFERER") or "home"
+            if not next_url.startswith("/"):
+                next_url = "home"
+            return redirect(next_url)
+
+        subscriber, created = NewsletterSubscriber.objects.get_or_create(
+            email=email,
+            defaults={"is_active": True, "source": source},
+        )
+        if not created and not subscriber.is_active:
+            subscriber.is_active = True
+            subscriber.save()
+
+        unsubscribe_url = BASE_URL + "/newsletter/unsubscribe/" + subscriber.email + "/"
+        send_newsletter_confirmation(subscriber, unsubscribe_url)
+
+        messages.success(
+            request,
+            "You're subscribed! 🎉 Check your inbox for a welcome email — see you in the Inner Circle."
+        )
+
+        next_url = data.get("next") or request.META.get("HTTP_REFERER") or "home"
+        if not next_url.startswith("/"):
+            next_url = "home"
+        return redirect(next_url)
+
+    return redirect("home")
+
+
+def unsubscribe(request, email):
+    """Deactivate a newsletter subscription (linked from the confirmation email)."""
+    subscriber = NewsletterSubscriber.objects.filter(email=email.lower()).first()
+    if subscriber:
+        subscriber.is_active = False
+        subscriber.save()
+    return render(request, "newsletter/unsubscribed.html", {"email": email})
+
+
+def email_preview(request, name):
+    """DEBUG-only browser preview of the HTML emails (images load locally)."""
+    from django.conf import settings
+    from django.http import Http404, HttpResponse
+    from django.utils import timezone
+    from django.template.loader import render_to_string
+
+    if not settings.DEBUG:
+        raise Http404
+
+    from .emails import preview_context
+    from payments.models import PaymentRequest
+    from service.models import Service
+
+    base = request.build_absolute_uri("/").rstrip("/")
+    ctx = preview_context(base_url=base)
+    templates = {
+        "newsletter": ("emails/newsletter_confirmation_email.html", {
+            "subscriber": NewsletterSubscriber(email="your@email.com"),
+            "unsubscribe_url": base + "/newsletter/unsubscribe/your@email.com/",
+        }),
+        "contact-confirmation": ("emails/contact_confirmation_email.html", {
+            "contact": ContactMessage(full_name="John Doe", email="john@example.com", message="Hi King! I need a modern website for my clothing brand and maybe a mobile app later."),
+        }),
+        "contact-notification": ("emails/contact_notification_email.html", {
+            "contact": ContactMessage(
+                full_name="John Doe", email="john@example.com", phone_number="+234 901 415 5705",
+                company_name="John's Fashion", channel="WhatsApp", referral="Direct",
+                service=Service.objects.first(),
+                message="Hi King! I need a modern website for my clothing brand and maybe a mobile app later.",
+            ),
+            "received_time": timezone.now(),
+        }),
+        "payment-receipt": ("emails/payment_receipt_email.html", {
+            "payment": PaymentRequest(
+                full_name="John Doe", email="john@example.com", reference="KGS-PREVIEW0000001",
+                amount=500000, currency="NGN", method="flutterwave",
+                service=Service.objects.first(), description="Business website deposit",
+                status="paid", paid_date=timezone.now(),
+            ),
+        }),
+    }
+    if name not in templates:
+        raise Http404
+
+    template, extra = templates[name]
+    ctx.update(extra)
+    html = render_to_string(template, ctx)
+    return HttpResponse(html, content_type="text/html; charset=utf-8")

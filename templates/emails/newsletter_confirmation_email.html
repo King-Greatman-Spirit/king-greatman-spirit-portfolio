@@ -1,0 +1,89 @@
+{% extends 'emails/base_email.html' %}
+
+{% block subject %}Welcome to the Inner Circle! &#127881; King Greatman Spirit{% endblock %}
+
+{% block content %}
+
+  <h2 style="margin:0 0 16px 0; font-size:20px; color:#ffd801; font-weight:800;">
+    You're in! Subscription confirmed &#127881;
+  </h2>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:22px;">
+    <tr>
+      <td width="120" valign="top" style="padding-right:16px;">
+        {% if profile_src %}
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding:3px; border-radius:14px; background:linear-gradient(135deg,#ffd801,#2dd4bf);">
+              <img src="{{ profile_src }}" alt="King Greatman Spirit" width="104" height="104"
+                   style="display:block; width:104px; height:104px; border-radius:12px; border:2px solid #0a1224; object-fit:cover;">
+            </td>
+          </tr>
+        </table>
+        {% endif %}
+      </td>
+      <td valign="top">
+        <p style="margin:0 0 10px 0;">
+          Hello <strong style="color:#ffffff;">{{ subscriber.email }}</strong>,
+        </p>
+        <p style="margin:0 0 10px 0;">
+          Thank you for subscribing to the <strong style="color:#ffd801;">King Greatman Spirit</strong> newsletter.
+          You've just unlocked a front-row seat to:
+        </p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding:3px 0;"><span style="color:#2dd4bf; font-weight:800;">&#10003;</span>&nbsp; Exclusive tech insights, AI breakthroughs &amp; data trends</td>
+          </tr>
+          <tr>
+            <td style="padding:3px 0;"><span style="color:#2dd4bf; font-weight:800;">&#10003;</span>&nbsp; Behind-the-scenes of real software &amp; AI projects</td>
+          </tr>
+          <tr>
+            <td style="padding:3px 0;"><span style="color:#2dd4bf; font-weight:800;">&#10003;</span>&nbsp; Special offers, discounts &amp; priority access</td>
+          </tr>
+          <tr>
+            <td style="padding:3px 0;"><span style="color:#2dd4bf; font-weight:800;">&#10003;</span>&nbsp; Practical guides to grow your career and business</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <p style="margin:0 0 18px 0;">
+    I'll get back to you with value you can actually use &mdash; no spam, ever.
+    Meanwhile, I'm <strong style="color:#2dd4bf;">available for projects worldwide</strong>, so if you have an
+    idea brewing, don't wait:
+  </p>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
+    <tr>
+      <td style="border-radius:999px; background:linear-gradient(90deg,#ffd801,#ff9f1c);">
+        <a href="https://kinggreatmanspirit.com/#contact" style="display:inline-block; padding:12px 26px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#0a1224;">
+          &#128172; Let's Work Together
+        </a>
+      </td>
+      <td style="width:10px;"></td>
+      <td style="border-radius:999px; border:1px solid #2dd4bf;">
+        <a href="{{ socials_links.linktree|default:'https://linktr.ee/greatestmaneva' }}" style="display:inline-block; padding:12px 26px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#2dd4bf;">
+          &#128279; See All My Links
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  {% if socials_links.medium or socials_links.substack %}
+  <p style="margin:22px 0 0 0; color:#97a2bd; font-size:13px;">
+    Want more? Follow me on
+    {% if socials_links.medium %}<a href="{{ socials_links.medium }}" style="color:#ffffff; text-decoration:none; font-weight:700;">Medium</a>{% endif %}
+    {% if socials_links.medium and socials_links.substack %} &amp; {% endif %}
+    {% if socials_links.substack %}<a href="{{ socials_links.substack }}" style="color:#ffffff; text-decoration:none; font-weight:700;">Substack</a>{% endif %}
+    for long-form deep dives, and all my social handles are one tap away above. &#128075;
+  </p>
+  {% endif %}
+
+{% endblock %}
+
+{% block footer_extra %}
+  <p style="margin:10px 0 0 0; font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#5b667e;">
+    Don't want updates anymore? <a href="{{ unsubscribe_url }}" style="color:#97a2bd; text-decoration:underline;">Unsubscribe here</a> &mdash; no hard feelings.
+  </p>
+{% endblock %}

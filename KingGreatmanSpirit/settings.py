@@ -33,6 +33,15 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Read CSRF trusted origins from .env and split them into a list
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', cast=Csv())
 
+# Canonical site URL used in emails, sitemaps and notifications
+SITE_URL = config('SITE_URL', default='https://kinggreatmanspirit.com').rstrip('/')
+
+# Google Search Console site verification token (paste from GSC)
+GOOGLE_SITE_VERIFICATION = config('GOOGLE_SITE_VERIFICATION', default='')
+
+# Google Analytics 4 measurement id (e.g. G-XXXXXXXXXX)
+GA4_MEASUREMENT_ID = config('GA4_MEASUREMENT_ID', default='')
+
 
 # Application definition
 
@@ -43,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
 
     # Django Apps
     'smart_selects',
@@ -52,6 +62,8 @@ INSTALLED_APPS = [
     'service',
     'contact',
     'accounts',
+    'payments',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +94,8 @@ TEMPLATES = [
                 'portfolio.context_processors.portfolio_links',
                 'contact.context_processors.socials_links',
                 'service.context_processors.menu_links',
+                'dashboard.context_processors.dashboard_globals',
+                'KingGreatmanSpirit.context_processors.site_config',
             ],
         },
     },
@@ -191,8 +205,39 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SMTP configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_PORT = config('EMAIL_PORT', default=587)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True 
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='King Greatman Spirit <kinggreatmanspirit@gmail.com>')
+
+# =============================================================
+# PAYMENT GATEWAYS
+# Flutterwave:  https://dashboard.flutterwave.com
+# Paystack:     https://dashboard.paystack.com
+# Binance Pay:  https://merchant.binance.com
+# Leave keys empty to run in "manual verification" mode.
+# =============================================================
+FLUTTERWAVE_PUBLIC_KEY = config('FLUTTERWAVE_PUBLIC_KEY', default='')
+FLUTTERWAVE_SECRET_KEY = config('FLUTTERWAVE_SECRET_KEY', default='')
+FLUTTERWAVE_WEBHOOK_SECRET = config('FLUTTERWAVE_WEBHOOK_SECRET', default='')
+
+PAYSTACK_PUBLIC_KEY = config('PAYSTACK_PUBLIC_KEY', default='')
+PAYSTACK_SECRET_KEY = config('PAYSTACK_SECRET_KEY', default='')
+
+BINANCE_API_KEY = config('BINANCE_API_KEY', default='')
+BINANCE_PRIVATE_KEY = config('BINANCE_PRIVATE_KEY', default='')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# =============================================================
+# LIVE SUPPORT ALERTS (support tickets -> WhatsApp + SMS)
+# Get free credentials at https://www.twilio.com
+# Leave empty to fall back to email notifications.
+# =============================================================
+TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID', default='')
+TWILIO_AUTH_TOKEN = config('TWILIO_AUTH_TOKEN', default='')
+TWILIO_WHATSAPP_FROM = config('TWILIO_WHATSAPP_FROM', default='whatsapp:+14155238886')
+TWILIO_SMS_FROM = config('TWILIO_SMS_FROM', default='')
+SUPPORT_NOTIFY_WHATSAPP_TO = config('SUPPORT_NOTIFY_WHATSAPP_TO', default='whatsapp:+2349014155705')
+SUPPORT_NOTIFY_PHONE = config('SUPPORT_NOTIFY_PHONE', default='+2349014155705')
+SUPPORT_NOTIFY_EMAIL = config('SUPPORT_NOTIFY_EMAIL', default='spiritpydev@gmail.com')

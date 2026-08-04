@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Login — King Greatman Spirit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/logo/favicon-16x16.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/logo/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/logo/android-chrome-192x192.png' %}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{% static 'img/logo/android-chrome-512x512.png' %}">
+  <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}">
+</head>
+<body class="dash-body">
+
+  <div class="dash-login">
+    <div class="dash-login-card">
+      <div class="dash-login-avatar">
+        {% if about_links.profile_image %}
+        <img src="{{ about_links.profile_image.url }}" alt="King Greatman Spirit">
+        {% else %}
+        <img src="{% static 'img/logo/android-chrome-512x512.png' %}" alt="KGS">
+        {% endif %}
+      </div>
+      <h1 class="dash-login-brand">KING <span>GREATMAN</span> SPIRIT</h1>
+      <p class="dash-login-sub"><i class="bi bi-lock-fill"></i> &nbsp;OWNER DASHBOARD &mdash; SIGN IN</p>
+
+      {% if form.non_field_errors %}
+      <ul class="dash-errors">
+        {% for err in form.non_field_errors %}<li>{{ err }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="dash-field">
+          <label for="id_email">Email address</label>
+          <i class="bi bi-envelope dash-input-icon"></i>
+          {{ form.email }}
+          {% if form.email.errors %}<ul class="dash-errors"><li>{{ form.email.errors.0 }}</li></ul>{% endif %}
+        </div>
+        <div class="dash-field">
+          <label for="id_password">Password</label>
+          <i class="bi bi-key dash-input-icon"></i>
+          {{ form.password }}
+          {% if form.password.errors %}<ul class="dash-errors"><li>{{ form.password.errors.0 }}</li></ul>{% endif %}
+        </div>
+        <button type="submit" class="dash-btn dash-btn-gold">
+          <i class="bi bi-box-arrow-in-right"></i> Sign In to Dashboard
+        </button>
+      </form>
+
+      <p class="dash-login-lock">
+        <i class="bi bi-shield-lock"></i> Protected area &mdash; only the site owner has access.
+      </p>
+    </div>
+  </div>
+
+  <script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+
+</body>
+</html>

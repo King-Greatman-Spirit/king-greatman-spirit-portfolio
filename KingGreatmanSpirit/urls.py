@@ -3,6 +3,17 @@ from django.urls import path, include
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
+from .sitemaps import StaticViewSitemap, ProjectSitemap, ServiceSitemap
+
+sitemaps = {
+    "static": StaticViewSitemap,
+    "projects": ProjectSitemap,
+    "services": ServiceSitemap,
+}
+
+handler404 = "KingGreatmanSpirit.views.custom_404"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,6 +25,12 @@ urlpatterns = [
     path('portfolio/', include('portfolio.urls')),
     path('service/', include('service.urls')),
     path('contact/', include('contact.urls')),
+    path('payment/', include('payments.urls')),
+    path('dashboard/', include('dashboard.urls')),
+
+    # SEO
+    path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain'), name='robots_txt'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 if settings.DEBUG:

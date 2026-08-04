@@ -1,0 +1,77 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block content %}
+
+<div class="dash-grid">
+
+  <!-- ============ ABOUT ============ -->
+  <div class="dash-card full">
+    <div class="dash-card-head">
+      <i class="bi bi-person-badge"></i>
+      <h3>My Profile &mdash; everything here feeds the website instantly</h3>
+    </div>
+
+    {% if about_form.non_field_errors %}
+    <ul class="dash-errors">{% for err in about_form.non_field_errors %}<li>{{ err }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="save_about" value="1">
+      <div class="dash-form-grid">
+        {% for field in about_form %}
+        <div class="dash-field {% if field.name in long_fields %}full{% endif %}">
+          <label for="{{ field.id_for_label }}">{{ field.label|title }}</label>
+          {% if field.field.widget.input_type == "file" %}
+            <input type="file" name="{{ field.html_name }}" id="{{ field.id_for_label }}" data-preview="preview-{{ field.html_name }}">
+            {% if field.value %}
+            <div class="dash-image-preview" id="preview-{{ field.html_name }}">
+              <img src="{{ field.value.url }}" alt="">
+            </div>
+            {% else %}
+            <div class="dash-image-preview" id="preview-{{ field.html_name }}"></div>
+            {% endif %}
+          {% else %}
+            {{ field }}
+          {% endif %}
+          {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
+          {% if field.errors %}<ul class="dash-errors"><li>{{ field.errors.0 }}</li></ul>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="dash-form-actions">
+        <button type="submit" class="dash-btn dash-btn-gold"><i class="bi bi-check-lg"></i> Save Profile</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ============ SOCIALS ============ -->
+  <div class="dash-card full">
+    <div class="dash-card-head">
+      <i class="bi bi-share"></i>
+      <h3>Social Links &mdash; used on the website AND in every email</h3>
+    </div>
+
+    {% if socials_form.non_field_errors %}
+    <ul class="dash-errors">{% for err in socials_form.non_field_errors %}<li>{{ err }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    <form method="post" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="save_socials" value="1">
+      <div class="dash-form-grid">
+        {% for field in socials_form %}
+        <div class="dash-field">
+          <label for="{{ field.id_for_label }}">{{ field.label|title }}</label>
+          {{ field }}
+          {% if field.errors %}<ul class="dash-errors"><li>{{ field.errors.0 }}</li></ul>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="dash-form-actions">
+        <button type="submit" class="dash-btn dash-btn-gold"><i class="bi bi-check-lg"></i> Save Social Links</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

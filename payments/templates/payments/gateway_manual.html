@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Manual Payment | King Greatman Spirit{% endblock %}
+{% block meta_title %}Manual Payment | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/pay/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="gateway-box text-center" data-aos="fade-up">
+
+            <div class="gateway-icon"><i class="bi bi-envelope-heart"></i></div>
+
+            <h1 style="font-size: 1.5rem; margin: 18px 0 8px;">
+              Almost there!
+            </h1>
+
+            <p style="color: var(--muted);">
+              <strong style="color: var(--gold);">{{ payment.get_method_display }}</strong> is being
+              activated on this account. Your request is saved with reference
+              <code style="color: var(--gold);">{{ payment.reference }}</code> for
+              <strong style="color: #fff;">{{ payment.currency }} {{ payment.amount }}</strong>.
+            </p>
+
+            <p style="color: var(--muted);">
+              Message me on WhatsApp with your reference to complete payment instantly:
+            </p>
+
+            <a href="https://wa.me/2349014155705?text=Hi!%20I%20want%20to%20complete%20payment%20{{ payment.reference }}"
+               class="btn-emerald" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp"></i> Complete on WhatsApp
+            </a>
+
+            <a href="{% url 'payments:payment_page' %}" class="btn-outline" style="margin-left: 10px;">
+              <i class="bi bi-arrow-left"></i> Back
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

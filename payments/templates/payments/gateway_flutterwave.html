@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Secure Checkout | King Greatman Spirit{% endblock %}
+{% block meta_title %}Secure Checkout | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/pay/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="gateway-box text-center" data-aos="fade-up">
+
+            <div class="gateway-spinner"><i class="bi bi-arrow-repeat"></i></div>
+
+            <h1 style="font-size: 1.5rem; margin: 18px 0 8px;">
+              Opening secure payment…
+            </h1>
+
+            <p style="color: var(--muted);">
+              Please don't close this page while the secure {{ payment.get_method_display }} window opens.
+            </p>
+
+            <div class="gateway-ref">
+              Reference: <code style="color: var(--gold);">{{ payment.reference }}</code>
+            </div>
+
+            <div class="gateway-amount">
+              {{ payment.currency }} {{ payment.amount }}
+            </div>
+
+            <a href="{% url 'payments:payment_page' %}" class="btn-outline" style="margin-top: 18px;">
+              <i class="bi bi-arrow-left"></i> Cancel &amp; go back
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+<script>
+  (function () {
+    const config = {
+      public_key: "{{ public_key|escapejs }}",
+      tx_ref: "{{ payment.reference|escapejs }}",
+      amount: {{ payment.amount }},
+      currency: "{{ payment.currency|escapejs }}",
+      payment_options: "card,banktransfer,ussd,mobilemoneyrw,account",
+      customer: {
+        email: "{{ payment.email|escapejs }}",
+        name: "{{ payment.full_name|escapejs }}",
+        phonenumber: "{{ payment.phone_number|escapejs }}"
+      },
+      customizations: {
+        title: "King Greatman Spirit",
+        description: "{{ payment.description|default:'Payment for services'|escapejs }}",
+        logo: "https://kinggreatmanspirit.com{% static 'img/logo/apple-touch-icon.png' %}"
+      },
+      callback: function (data) {
+        if (data && (data.status === "completed" || data.status === "successful")) {
+          window.location.href = "{% url 'payments:verify_flutterwave' payment.reference %}";
+        }
+      },
+      onclose: function () {
+        window.location.href = "{% url 'payments:payment_failed' payment.reference %}";
+      }
+    };
+    window.FlutterwaveCheckout(config);
+  })();
+</script>
+
+{% endblock %}

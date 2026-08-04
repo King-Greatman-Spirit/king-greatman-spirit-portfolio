@@ -1,0 +1,48 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block content %}
+
+<div class="dash-card">
+  {% if form.non_field_errors %}
+  <ul class="dash-errors">
+    {% for err in form.non_field_errors %}<li>{{ err }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  <form method="post" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    <div class="dash-form-grid">
+      {% for field in form %}
+      {% if field.name != "about" %}
+      <div class="dash-field {% if field.name in long_fields %}full{% endif %}">
+        <label for="{{ field.id_for_label }}">{{ field.label|default:field.name|title }}</label>
+        {% if field.field.widget.input_type == "file" %}
+          <input type="file" name="{{ field.html_name }}" id="{{ field.id_for_label }}" data-preview="preview-{{ field.html_name }}" {% if field.value %}class="has-value"{% endif %}>
+          {% if field.value %}
+          <div class="dash-image-preview" id="preview-{{ field.html_name }}">
+            <img src="{{ field.value.url }}" alt="">
+          </div>
+          {% else %}
+          <div class="dash-image-preview" id="preview-{{ field.html_name }}"></div>
+          {% endif %}
+        {% else %}
+          {{ field }}
+        {% endif %}
+        {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
+        {% if field.errors %}<ul class="dash-errors"><li>{{ field.errors.0 }}</li></ul>{% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="dash-form-actions">
+      <button type="submit" class="dash-btn dash-btn-gold"><i class="bi bi-check-lg"></i> Save Changes</button>
+      <a href="{% url 'dashboard:crud_list' key=key %}" class="dash-btn dash-btn-outline">Cancel</a>
+      <div class="spacer"></div>
+      {% if instance %}
+      <span class="dash-total-pill">Created {{ instance.created_date|date:"d M Y"|default:"—" }}</span>
+      {% endif %}
+    </div>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'emails/base_email.html' %}
+
+{% block subject %}New Lead: {{ contact.full_name|default:"Visitor" }} &mdash; {{ contact.email }}{% endblock %}
+
+{% block content %}
+
+  <h2 style="margin:0 0 6px 0; font-size:20px; color:#ffd801; font-weight:800;">
+    &#127881; New Contact Form Submission
+  </h2>
+  <p style="margin:0 0 20px 0; color:#97a2bd; font-size:12px;">
+    Received {{ received_time }}
+  </p>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid rgba(255,255,255,0.08); border-radius:14px; overflow:hidden;">
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Full name</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff; font-weight:700;">{{ contact.full_name|default:"&mdash;" }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Email</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#2dd4bf;">
+        <a href="mailto:{{ contact.email }}" style="color:#2dd4bf; text-decoration:none;">{{ contact.email }}</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Phone</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff;">{{ contact.phone_number|default:"&mdash;" }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Company</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff;">{{ contact.company_name|default:"&mdash;" }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Service required</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffffff;">{{ contact.service.name|default:"Not specified" }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Found us via</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffd801;">{{ contact.channel|default:"&mdash;" }}</td>
+    </tr>
+    <tr>
+      <td style="background-color:#0d1526; padding:14px 18px; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Referral</td>
+      <td style="background-color:#101a2e; padding:14px 18px; font-size:14px; color:#ffd801;">{{ contact.referral|default:"Direct" }}</td>
+    </tr>
+  </table>
+
+  <p style="margin:22px 0 6px 0; font-size:12px; color:#97a2bd; letter-spacing:1px; text-transform:uppercase;">Message</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td style="border-left:4px solid #ffd801; background-color:#0d1526; border-radius:12px; padding:16px 18px;">
+        <p style="margin:0; color:#e6eaf3; font-size:14px; line-height:1.7;">{{ contact.message }}</p>
+      </td>
+    </tr>
+  </table>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;">
+    <tr>
+      <td style="border-radius:999px; background:linear-gradient(90deg,#ffd801,#ff9f1c);">
+        <a href="https://wa.me/2349014155705" style="display:inline-block; padding:12px 24px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#0a1120;">
+          &#128172; Reply on WhatsApp
+        </a>
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}
+
+{% block footer_extra %}
+  <p style="margin:10px 0 0 0; font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#5b667e;">
+    Reply to this email to respond directly to the client.
+  </p>
+{% endblock %}

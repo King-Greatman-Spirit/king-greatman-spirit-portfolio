@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment Successful 🎉 | King Greatman Spirit{% endblock %}
+{% block meta_title %}Payment Successful | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/success/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 80vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="pay-result text-center" data-aos="fade-up">
+
+            <div class="pay-result-check"><i class="bi bi-check-lg"></i></div>
+
+            <h1 style="font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 22px 0 10px;">
+              Payment Successful! 🎉
+            </h1>
+
+            <p style="color: var(--muted); max-width: 520px; margin: 0 auto 24px;">
+              Thank you, <strong style="color: #fff;">{{ payment.full_name }}</strong>! Your payment of
+              <strong style="color: var(--emerald); font-size: 1.3rem;">{{ payment.currency }} {{ payment.amount }}</strong>
+              via {{ payment.get_method_display }} was received. A receipt is on its way to
+              <strong style="color: var(--gold);">{{ payment.email }}</strong>.
+            </p>
+
+            <div class="pay-receipt">
+              <div class="pr-row"><span>Reference</span><code>{{ payment.reference }}</code></div>
+              <div class="pr-row"><span>Amount</span><strong>{{ payment.currency }} {{ payment.amount }}</strong></div>
+              <div class="pr-row"><span>Method</span>{{ payment.get_method_display }}</div>
+              <div class="pr-row"><span>Status</span><strong style="color: var(--emerald);">✓ PAID</strong></div>
+            </div>
+
+            <p style="color: var(--muted); margin-top: 22px; font-size: 0.95rem;">
+              <strong style="color: #fff;">What's next?</strong> I'll reach out within 24 hours with your
+              project kickoff plan. For anything urgent — <a href="https://wa.me/2349014155705" style="color: var(--emerald);">WhatsApp me</a>.
+            </p>
+
+            <div class="hero-cta" style="justify-content: center; margin-top: 26px;">
+              <a href="{% url 'home' %}" class="btn-gold"><i class="bi bi-house"></i> Back to Home</a>
+              <a href="{% url 'payments:payment_page' %}" class="btn-outline"><i class="bi bi-plus-lg"></i> Make Another Payment</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

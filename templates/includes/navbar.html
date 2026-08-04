@@ -2,69 +2,76 @@
 
 {% url 'home' as home %}
 
-<header id="header" class="header dark-background d-flex flex-column">
-  <i class="header-toggle d-xl-none bi bi-list"></i>
+<header id="header" class="header d-flex flex-column">
+  <i class="header-toggle bi bi-list"></i>
 
-  <div class="profile-img">
-    <img src="{{ about_links.profile_image.url }}" alt="{{ about_links.name }} Image" class="img-fluid rounded-circle">
+  <div class="profile-img text-center">
+    <img src="{{ about_links.profile_image.url }}" alt="{{ about_links.name }} Image">
   </div>
 
-  <a href="https://linktr.ee/greatestmaneva" 
-        target="_blank" rel="noopener noreferrer" 
-        class="logo d-flex align-items-center justify-content-center">
-    <!-- Uncomment the line below if you also wish to use an image logo -->
-    <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
+  <a href="https://linktr.ee/greatestmaneva"
+     target="_blank" rel="noopener noreferrer"
+     class="logo">
     <h1 class="sitename">{{ about_links.name }}</h1>
   </a>
 
   <div class="social-links text-center">
-      <a href="{{ socials_links.twitter }}" class="twitter" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-twitter-x"></i>
-      </a>
-      <a href="{{ socials_links.facebook }}" class="facebook" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-facebook"></i>
-      </a>
-      <a href="{{ socials_links.instagram }}" class="instagram" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-instagram"></i>
-      </a>
-      <a href="{{ socials_links.linkedin }}" class="linkedin" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-linkedin"></i>
-      </a>
-      <a href="{{ socials_links.github }}" class="github" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-github"></i>
-      </a>
+    <a href="{{ socials_links.twitter }}" class="twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+      <i class="bi bi-twitter-x"></i>
+    </a>
+    <a href="{{ socials_links.facebook }}" class="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a href="{{ socials_links.instagram }}" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="{{ socials_links.linkedin }}" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="{{ socials_links.github }}" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <i class="bi bi-github"></i>
+    </a>
   </div>
 
   <div class="links-social text-center">
-      <a href="{{ socials_links.youTube }}" class="youtube" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-youtube"></i>
-      </a>
-      <a href="{{ socials_links.threads }}" class="threads" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-threads"></i>
-      </a>
-      <a href="{{ socials_links.tiktok }}" class="tiktok" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-tiktok"></i>
-      </a>
-      <a href="{{ socials_links.whatsapp }}" class="whatsapp" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-whatsapp"></i>
-      </a>
-      <a href="{{ socials_links.telegram }}" class="telegram" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-telegram"></i>
-      </a>
-      <!-- <a href="{{ socials_links.pinterest }}" class="pinterest" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-pinterest"></i>
-      </a> -->
+    <a href="{{ socials_links.youTube }}" class="youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <i class="bi bi-youtube"></i>
+    </a>
+    <a href="{{ socials_links.tiktok }}" class="tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <i class="bi bi-tiktok"></i>
+    </a>
+    <a href="{{ socials_links.whatsapp }}" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="{{ socials_links.telegram }}" class="telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+      <i class="bi bi-telegram"></i>
+    </a>
+    <a href="{{ socials_links.threads }}" class="threads" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+      <i class="bi bi-threads"></i>
+    </a>
   </div>
 
   <nav id="navmenu" class="navmenu">
     <ul>
       <li><a href="{% url 'home' %}#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-      <li><a href="{% url 'home' %}#about"><i class="bi bi-person navicon"></i> About</a></li>
-      <li><a href="{% url 'home' %}#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-      <li><a href="{% url 'home' %}#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-      <li><a href="{% url 'home' %}#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-      <li><a href="{% url 'home' %}#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      <li><a href="{% url 'home' %}#about"><i class="bi bi-person navicon"></i>About</a></li>
+      <li><a href="{% url 'home' %}#skills"><i class="bi bi-stars navicon"></i>Skills</a></li>
+      <li><a href="{% url 'home' %}#resume"><i class="bi bi-file-earmark-text navicon"></i>Resume</a></li>
+      <li><a href="{% url 'home' %}#portfolio"><i class="bi bi-images navicon"></i>Portfolio</a></li>
+      <li><a href="{% url 'home' %}#services"><i class="bi bi-hdd-stack navicon"></i>Services</a></li>
+      <li><a href="{% url 'home' %}#testimonials"><i class="bi bi-chat-quote navicon"></i>Testimonials</a></li>
+      <li><a href="{% url 'payments:payment_page' %}" data-track="pay_now_nav"><i class="bi bi-credit-card-2-front navicon"></i>Pay Now</a></li>
+      <li><a href="{% url 'home' %}#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
     </ul>
   </nav>
+
+  <div class="sidebar-cta">
+    <a href="{% url 'payments:payment_page' %}" class="btn-emerald w-100" style="margin-bottom: 10px;" data-track="pay_securely_sidebar">
+      <i class="bi bi-lock-fill"></i> Pay Securely
+    </a>
+    <a href="{% url 'home' %}#contact" class="btn-gold w-100" data-track="hire_me_sidebar">
+      <i class="bi bi-rocket-takeoff"></i> Hire Me
+    </a>
+  </div>
 
 </header>

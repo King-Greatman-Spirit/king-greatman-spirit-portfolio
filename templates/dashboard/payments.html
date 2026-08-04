@@ -1,0 +1,62 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% load dashboard_extras %}
+{% block content %}
+
+<div class="dash-toolbar">
+  <div class="dash-filters">
+    <a href="{% url 'dashboard:payments_list' %}" class="dash-filter-chip {% if not status %}active{% endif %}">All</a>
+    <a href="{% url 'dashboard:payments_list' %}?status=pending" class="dash-filter-chip {% if status == 'pending' %}active{% endif %}">Pending</a>
+    <a href="{% url 'dashboard:payments_list' %}?status=paid" class="dash-filter-chip {% if status == 'paid' %}active{% endif %}">Paid</a>
+    <a href="{% url 'dashboard:payments_list' %}?status=failed" class="dash-filter-chip {% if status == 'failed' %}active{% endif %}">Failed</a>
+  </div>
+  <div class="dash-total-pill"><strong>{{ total }}</strong> payments</div>
+</div>
+
+{% if objects %}
+<div class="dash-card">
+  <div class="dash-table-wrap">
+    <table class="dash-table">
+      <thead>
+        <tr><th>Reference</th><th>Payer</th><th>Amount</th><th>Method</th><th>Status</th><th>Paid</th><th style="text-align:right;">Actions</th></tr>
+      </thead>
+      <tbody>
+        {% for p in objects %}
+        <tr>
+          <td class="dash-cell-title">{{ p.reference }}</td>
+          <td>
+            <div class="dash-cell-title">{{ p.full_name }}</div>
+            <div class="dash-cell-sub">{{ p.email }}</div>
+          </td>
+          <td class="dash-cell-title">{{ p.currency }} {{ p.amount|kgs_money }}</td>
+          <td class="dash-cell-sub">{{ p.get_method_display|truncatechars:24 }}</td>
+          <td><span class="dash-badge {{ p.status|status_cls }}">{{ p.get_status_display }}</span></td>
+          <td class="dash-cell-sub dash-nowrap">{{ p.paid_date|date:"d M y, H:i"|default:"—" }}</td>
+          <td>
+            <div class="dash-row-actions">
+              <form method="post" action="{% url 'dashboard:payment_status' pk=p.id %}">
+                {% csrf_token %}
+                <select name="status" onchange="this.form.submit()" style="background:var(--dash-card-2); color:var(--dash-text); border:1px solid var(--dash-border); border-radius:8px; padding:6px 8px; font-size:0.74rem;">
+                  <option value="pending" {% if p.status == 'pending' %}selected{% endif %}>Pending</option>
+                  <option value="paid" {% if p.status == 'paid' %}selected{% endif %}>Paid</option>
+                  <option value="failed" {% if p.status == 'failed' %}selected{% endif %}>Failed</option>
+                </select>
+              </form>
+              <form method="post" action="{% url 'dashboard:payment_delete' pk=p.id %}" data-confirm="Delete payment record {{ p.reference }}?">
+                {% csrf_token %}
+                <button type="submit" class="dash-action danger"><i class="bi bi-trash"></i></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% else %}
+<div class="dash-card">
+  <div class="dash-empty"><i class="bi bi-cash-coin"></i>No payments in this view.</div>
+</div>
+{% endif %}
+
+{% endblock %}

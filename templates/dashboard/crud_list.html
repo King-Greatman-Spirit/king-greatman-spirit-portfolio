@@ -1,0 +1,73 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% load dashboard_extras %}
+{% block content %}
+
+<div class="dash-toolbar">
+  <form class="dash-search" method="get">
+    <i class="bi bi-search"></i>
+    <input type="text" name="q" value="{{ query }}" placeholder="Search {{ page_title|lower }}…">
+  </form>
+  <div class="dash-total-pill"><strong>{{ total }}</strong> records</div>
+  <div class="dash-topbar-spacer"></div>
+  <a href="{% url 'dashboard:crud_add' key=key %}" class="dash-btn dash-btn-gold dash-btn-sm">
+    <i class="bi bi-plus-lg"></i> Add {{ spec.title|slice:":-1" }}
+  </a>
+</div>
+
+<div class="dash-card">
+  {% if objects %}
+  <div class="dash-table-wrap">
+    <table class="dash-table">
+      <thead>
+        <tr>
+          {% for attr, label, kind in spec.cols %}<th>{{ label }}</th>{% endfor %}
+          <th style="text-align:right;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in objects %}
+        <tr>
+          {% for attr, label, kind in spec.cols %}
+          {% with val=obj|get_attr:attr %}
+          <td>
+            {% if kind == "img" %}
+              {% if val %}
+              <img class="thumb" src="{{ val.url }}" alt="">
+              {% else %}
+              <span class="thumb blank"><i class="bi bi-image"></i></span>
+              {% endif %}
+            {% elif kind == "fk" %}
+              <span class="dash-cell-sub">{{ val|default:"—" }}</span>
+            {% elif kind == "date" %}
+              <span class="dash-cell-title">{{ val|date:"d M Y"|default:"—" }}</span>
+            {% elif kind == "number" %}
+              <span class="dash-cell-title">{{ val|default:"—" }}</span>
+            {% else %}
+              <span class="dash-cell-title">{{ val|default:"—" }}</span>
+            {% endif %}
+          </td>
+          {% endwith %}
+          {% endfor %}
+          <td>
+            <div class="dash-row-actions">
+              <a class="dash-action" href="{% url 'dashboard:crud_edit' key=key pk=obj.id %}"><i class="bi bi-pencil"></i> Edit</a>
+              <form method="post" action="{% url 'dashboard:crud_delete' key=key pk=obj.id %}" data-confirm="Delete this record permanently?">
+                {% csrf_token %}
+                <button type="submit" class="dash-action danger"><i class="bi bi-trash"></i></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="dash-empty">
+    <i class="bi bi-inbox"></i>
+    No {{ page_title|lower }} yet. Click <strong>Add {{ spec.title|slice:":-1" }}</strong> to create your first one.
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}

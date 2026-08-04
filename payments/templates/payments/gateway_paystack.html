@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Secure Checkout | King Greatman Spirit{% endblock %}
+{% block meta_title %}Secure Checkout | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/pay/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="gateway-box text-center" data-aos="fade-up">
+
+            <div class="gateway-spinner"><i class="bi bi-arrow-repeat"></i></div>
+
+            <h1 style="font-size: 1.5rem; margin: 18px 0 8px;">
+              Opening Paystack popup…
+            </h1>
+
+            <p style="color: var(--muted);">
+              If the popup doesn't open, allow popups for this site and try again.
+            </p>
+
+            <div class="gateway-ref">
+              Reference: <code style="color: var(--gold);">{{ payment.reference }}</code>
+            </div>
+
+            <div class="gateway-amount">
+              {{ payment.currency }} {{ payment.amount }}
+            </div>
+
+            <a href="{% url 'payments:payment_page' %}" class="btn-outline" style="margin-top: 18px;">
+              <i class="bi bi-arrow-left"></i> Cancel &amp; go back
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+  (function () {
+    const handler = PaystackPop.setup({
+      key: "{{ public_key|escapejs }}",
+      email: "{{ payment.email|escapejs }}",
+      amount: {{ payment.amount }} * 100,
+      currency: "{{ payment.currency|escapejs }}",
+      ref: "{{ payment.reference|escapejs }}",
+      metadata: {
+        custom_fields: [
+          { display_name: "Full Name", variable_name: "full_name", value: "{{ payment.full_name|escapejs }}" }
+        ]
+      },
+      callback: function (response) {
+        window.location.href = "{% url 'payments:verify_paystack' payment.reference %}";
+      },
+      onClose: function () {
+        window.location.href = "{% url 'payments:payment_failed' payment.reference %}";
+      }
+    });
+    handler.openIframe();
+  })();
+</script>
+
+{% endblock %}

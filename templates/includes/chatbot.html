@@ -1,0 +1,68 @@
+{% load static %}
+
+<!-- ==================== KGS AI CHATBOT ==================== -->
+<div id="kgs-chatbot" class="kgs-chatbot" data-name="{{ about_links.name }}" data-ticket-url="{% url 'dashboard:ticket_create' %}">
+
+  <!-- Launcher -->
+  <button id="kgs-chat-launcher" class="kgs-chat-launcher" aria-label="Open AI chat assistant" aria-expanded="false">
+    <span class="kgs-launcher-ping"></span>
+    <span class="kgs-launcher-avatar">
+      <img src="{{ about_links.profile_image.url }}" alt="{{ about_links.name }} — AI Assistant">
+      <span class="kgs-online-dot"></span>
+    </span>
+    <span id="kgs-chat-badge" class="kgs-chat-badge">1</span>
+  </button>
+
+  <!-- Teaser bubble -->
+  <div id="kgs-chat-teaser" class="kgs-chat-teaser">
+    <p>👋 Need a website, mobile app, or AI system? Ask me anything — I'm KGS's AI assistant!</p>
+    <button id="kgs-teaser-close" aria-label="Dismiss">&times;</button>
+  </div>
+
+  <!-- Panel -->
+  <div id="kgs-chat-panel" class="kgs-chat-panel" role="dialog" aria-label="Chat with King Greatman Spirit AI assistant">
+    {% csrf_token %}
+    <div class="kgs-chat-header">
+      <div class="kgs-chat-avatar">
+        <img src="{{ about_links.profile_image.url }}" alt="{{ about_links.name }}">
+        <span class="kgs-online-dot"></span>
+      </div>
+      <div class="kgs-chat-head-info">
+        <strong>King Greatman Spirit</strong>
+        <span><i class="bi bi-robot"></i> AI Assistant &bull; Online &bull; Replies instantly</span>
+      </div>
+      <button id="kgs-chat-close" class="kgs-chat-close" aria-label="Close chat"><i class="bi bi-x-lg"></i></button>
+    </div>
+
+    <div id="kgs-chat-messages" class="kgs-chat-messages" aria-live="polite"></div>
+
+    <div id="kgs-chat-chips" class="kgs-chat-chips"></div>
+
+    <!-- Live support ticket form (shown on demand) -->
+    <div id="kgs-ticket" class="kgs-ticket" hidden>
+      <div class="kgs-ticket-head">
+        <i class="bi bi-headset"></i> Talk to King directly
+      </div>
+      <p class="kgs-ticket-hint">He'll get an instant WhatsApp / SMS alert and message you back right away.</p>
+      <input type="text" id="kgs-ticket-name" placeholder="Your name *" maxlength="60" autocomplete="name">
+      <input type="text" id="kgs-ticket-contact" placeholder="Email or phone number *" maxlength="100" autocomplete="tel">
+      <textarea id="kgs-ticket-message" placeholder="How can King help you? (max 500 characters) *" maxlength="500" rows="3"></textarea>
+      <p id="kgs-ticket-error" class="kgs-ticket-error"></p>
+      <div class="kgs-ticket-actions">
+        <button id="kgs-ticket-send" type="button" class="kgs-ticket-send">
+          <i class="bi bi-headset"></i> Request Live Support
+        </button>
+        <button id="kgs-ticket-cancel" type="button" class="kgs-ticket-cancel">Back</button>
+      </div>
+    </div>
+
+    <div class="kgs-chat-input-wrap">
+      <input type="text" id="kgs-chat-input" placeholder="Type your question…" autocomplete="off" aria-label="Type your message">
+      <button id="kgs-chat-send" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+    </div>
+    <p class="kgs-chat-foot">
+      Powered by KGS AI &bull; <a href="{{ socials_links.linktree|default:'https://linktr.ee/greatestmaneva' }}" target="_blank" rel="noopener noreferrer">Follow me</a>
+    </p>
+  </div>
+
+</div>

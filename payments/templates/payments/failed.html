@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment Not Completed | King Greatman Spirit{% endblock %}
+{% block meta_title %}Payment Not Completed | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/failed/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 80vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="pay-result text-center" data-aos="fade-up">
+
+            <div class="pay-result-x"><i class="bi bi-x-lg"></i></div>
+
+            <h1 style="font-size: 1.7rem; margin: 22px 0 10px;">
+              Payment wasn't completed
+            </h1>
+
+            <p style="color: var(--muted);">
+              No charge was made. You can safely try again, or pay another way — or message me on
+              WhatsApp and I'll help you complete it in minutes.
+            </p>
+
+            <div class="hero-cta" style="justify-content: center; margin-top: 24px;">
+              <a href="{% url 'payments:payment_page' %}" class="btn-gold">
+                <i class="bi bi-arrow-repeat"></i> Try Again
+              </a>
+              <a href="https://wa.me/2349014155705" class="btn-emerald" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i> WhatsApp Me
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

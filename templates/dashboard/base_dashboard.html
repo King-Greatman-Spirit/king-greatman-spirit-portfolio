@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% if page_title %}{{ page_title }} — KGS Dashboard{% else %}KGS Dashboard{% endif %}{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/logo/favicon-16x16.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/logo/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/logo/android-chrome-192x192.png' %}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{% static 'img/logo/android-chrome-512x512.png' %}">
+  <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}">
+</head>
+<body class="dash-body">
+
+<div class="dash-layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-brand">
+      <div class="dash-brand-avatar">
+        {% if about_links.profile_image %}
+        <img src="{{ about_links.profile_image.url }}" alt="{{ about_links.name }}">
+        {% else %}
+        <img src="{% static 'img/logo/android-chrome-512x512.png' %}" alt="KGS">
+        {% endif %}
+      </div>
+      <div>
+        <div class="dash-brand-name">KING <span>GREATMAN</span> SPIRIT</div>
+        <div class="dash-brand-role">Owner Dashboard</div>
+      </div>
+    </div>
+
+    <nav class="dash-nav">
+      <a href="{% url 'dashboard:home' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+        <i class="bi bi-speedometer2"></i> Overview
+      </a>
+
+      <div class="dash-nav-group">Profile &amp; Settings</div>
+      <a href="{% url 'dashboard:profile' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
+        <i class="bi bi-person-badge"></i> My Profile
+      </a>
+      <a href="{% url 'dashboard:password' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'password' %}active{% endif %}">
+        <i class="bi bi-key"></i> Change Password
+      </a>
+
+      <div class="dash-nav-group">Website Content</div>
+      <a href="{% url 'dashboard:crud_list' key='stats' %}" class="dash-nav-link {% if key == 'stats' %}active{% endif %}">
+        <i class="bi bi-graph-up-arrow"></i> Statistics
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='skills' %}" class="dash-nav-link {% if key == 'skills' %}active{% endif %}">
+        <i class="bi bi-patch-check"></i> Skills
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='summaries' %}" class="dash-nav-link {% if key == 'summaries' %}active{% endif %}">
+        <i class="bi bi-person-vcard"></i> Resume Summary
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='educations' %}" class="dash-nav-link {% if key == 'educations' %}active{% endif %}">
+        <i class="bi bi-mortarboard"></i> Education
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='experiences' %}" class="dash-nav-link {% if key == 'experiences' %}active{% endif %}">
+        <i class="bi bi-briefcase"></i> Experience
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='projects' %}" class="dash-nav-link {% if key == 'projects' %}active{% endif %}">
+        <i class="bi bi-folder2-open"></i> Projects
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='project_images' %}" class="dash-nav-link {% if key == 'project_images' %}active{% endif %}">
+        <i class="bi bi-images"></i> Project Images
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='services' %}" class="dash-nav-link {% if key == 'services' %}active{% endif %}">
+        <i class="bi bi-stars"></i> Services
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='service_processes' %}" class="dash-nav-link {% if key == 'service_processes' %}active{% endif %}">
+        <i class="bi bi-diagram-3"></i> Service Process
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='testimonials' %}" class="dash-nav-link {% if key == 'testimonials' %}active{% endif %}">
+        <i class="bi bi-chat-quote"></i> Testimonials
+      </a>
+
+      <div class="dash-nav-group">Leads &amp; Support</div>
+      <a href="{% url 'dashboard:contacts_list' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'contacts_list' %}active{% endif %}">
+        <i class="bi bi-envelope-paper"></i> Contact Messages
+      </a>
+      <a href="{% url 'dashboard:tickets_list' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'tickets_list' %}active{% endif %}">
+        <i class="bi bi-headset"></i> Support Tickets
+        {% if tickets_new_count %}<span class="dash-nav-badge red">{{ tickets_new_count }}</span>{% endif %}
+      </a>
+
+      <div class="dash-nav-group">Audience &amp; Money</div>
+      <a href="{% url 'dashboard:newsletter_list' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'newsletter_list' %}active{% endif %}">
+        <i class="bi bi-megaphone"></i> Newsletter
+      </a>
+      <a href="{% url 'dashboard:payments_list' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'payments_list' %}active{% endif %}">
+        <i class="bi bi-credit-card"></i> Payments
+      </a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <a href="/" target="_blank" rel="noopener"><i class="bi bi-globe"></i> View Website</a>
+      <a href="/admin/" target="_blank" rel="noopener"><i class="bi bi-sliders"></i> Django Admin</a>
+      <a href="{% url 'dashboard:logout' %}" class="dash-logout-link"><i class="bi bi-box-arrow-right"></i> Log Out</a>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-hamburger" type="button" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
+      <h1><i class="bi {{ icon|default:'bi-speedometer2' }}"></i> {% block heading %}{{ page_title }}{% endblock %}</h1>
+      <div class="dash-topbar-spacer"></div>
+      <a href="/" class="dash-view-site" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> View Website</a>
+      <div class="dash-user-chip">
+        {% if about_links.profile_image %}
+        <img src="{{ about_links.profile_image.url }}" alt="Owner">
+        {% endif %}
+        <div>
+          <strong>{{ request.user.first_name|default:request.user.email }}</strong>
+          <span>Owner &middot; {{ request.user.email }}</span>
+        </div>
+      </div>
+    </div>
+
+    {% block content %}{% endblock %}
+  </main>
+</div>
+
+<div class="dash-messages" id="dashMessages">
+  {% if messages %}
+    {% for message in messages %}
+    <div class="dash-msg {{ message.tags|default:'info' }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

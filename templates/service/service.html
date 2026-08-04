@@ -1,8 +1,65 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+{% block title %}{{ service.name }} | King Greatman Spirit{% endblock %}
+{% block meta_title %}{{ service.name }} | King Greatman Spirit{% endblock %}
+{% block meta_description %}{{ service.name }} — professional {{ service.name|lower }} services by King Greatman Spirit. Tailored, value-driven solutions delivered worldwide.{% endblock %}
+{% block og_title %}{{ service.name }} | King Greatman Spirit{% endblock %}
+{% block og_description %}{{ service.name }} — professional {{ service.name|lower }} services by King Greatman Spirit. Tailored, value-driven solutions delivered worldwide.{% endblock %}
+{% block og_url %}https://kinggreatmanspirit.com{{ service.service_url }}{% endblock %}
+{% block twitter_title %}{{ service.name }} | King Greatman Spirit{% endblock %}
+{% block twitter_description %}{{ service.name }} — professional services by King Greatman Spirit.{% endblock %}
+{% block canonical %}{{ service.service_url }}{% endblock %}
 
+{% block jsonld %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://kinggreatmanspirit.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://kinggreatmanspirit.com/#services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ service.name }}",
+      "item": "https://kinggreatmanspirit.com{{ service.service_url }}"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ service.name }}",
+  "url": "https://kinggreatmanspirit.com{{ service.service_url }}",
+  "serviceType": "{{ service.name }}",
+  "description": "{{ service.description }}.",
+  "provider": {
+    "@type": "Person",
+    "@id": "https://kinggreatmanspirit.com/#person",
+    "name": "King Greatman Spirit"
+  },
+  "areaServed": "Worldwide"
+}
+</script>
+
+{% endblock %}
+
+{% block content %}
 
 <main class="main">
 
@@ -12,7 +69,8 @@
       <h1 class="mb-2 mb-lg-0">{{ service.name }}</h1>
       <nav class="breadcrumbs">
         <ol>
-          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}"><i class="bi bi-house"></i> Home</a></li>
+          <li><a href="{% url 'home' %}#services">Services</a></li>
           <li class="current">{{ service.name }}</li>
         </ol>
       </nav>
@@ -27,38 +85,134 @@
 
       <div class="row gy-4">
 
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="{{ service.aos_delay }}">
-          {% for service in services %}
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="services-list">
-            <a href="{{ service.service_url }}" class="active">
-              {{ service.name }}
+            {% for s in services %}
+            <a href="{{ s.service_url }}" {% if s.id == service.id %}class="active"{% endif %}>
+              <i class="bi bi-chevron-right"></i> {{ s.name }}
             </a>
+            {% endfor %}
           </div>
-          {% endfor %}
 
-          <!-- <h4>{{ service.name }}</h4>
-          <p>{{ service.description }}.</p> -->
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="200">
+            <h2>Ready to start?</h2>
+            <p>
+              Let's bring your project to life with a tailored, value-driven solution.
+            </p>
+            <div class="resume-actions">
+              <a href="{% url 'home' %}#contact" class="btn-gold">
+                <i class="bi bi-chat-dots"></i> Get in Touch
+              </a>
+            </div>
+            <div class="portfolio-share">
+              <strong><i class="bi bi-share"></i> Share this service</strong>
+              <div class="share-btns">
+                <button type="button" class="share-btn whatsapp-share" aria-label="Share on WhatsApp"><i class="bi bi-whatsapp"></i></button>
+                <button type="button" class="share-btn facebook-share" aria-label="Share on Facebook"><i class="bi bi-facebook"></i></button>
+                <button type="button" class="share-btn twitter-share" aria-label="Share on X"><i class="bi bi-twitter-x"></i></button>
+                <button type="button" class="share-btn linkedin-share" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></button>
+                <button type="button" class="share-btn copy-link" aria-label="Copy link"><i class="bi bi-link-45deg"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
 
-        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="{{ service.aos_delay }}">
-          <img src="{{ service.image.url }}" alt="{{ service.name }}" class="img-fluid services-img">
-          <h3>{{ service.name }}</h3>
+          <div class="service-hero">
+            <div class="service-hero-chrome">
+              <span class="sh-dot red"></span>
+              <span class="sh-dot amber"></span>
+              <span class="sh-dot green"></span>
+              <span class="sh-address">kinggreatmanspirit.com{{ service.service_url }}</span>
+            </div>
+
+            <div class="service-hero-body">
+              <div class="service-hero-brand">
+                <span class="service-hero-icon"><i class="bi {{ service.icon }}"></i></span>
+                <div>
+                  <small>{{ service.acronym }} &bull; Service Brief</small>
+                  <h3>{{ service.name }}</h3>
+                </div>
+              </div>
+
+              <div class="service-hero-grid">
+                <div class="service-hero-chart">
+                  <span class="sh-bar" style="--h: 42%; --d: 0s"></span>
+                  <span class="sh-bar" style="--h: 68%; --d: 0.1s"></span>
+                  <span class="sh-bar" style="--h: 52%; --d: 0.2s"></span>
+                  <span class="sh-bar" style="--h: 86%; --d: 0.3s"></span>
+                  <span class="sh-bar" style="--h: 64%; --d: 0.4s"></span>
+                  <span class="sh-bar" style="--h: 96%; --d: 0.5s"></span>
+                  <span class="sh-bar" style="--h: 74%; --d: 0.6s"></span>
+                  <span class="sh-bar" style="--h: 100%; --d: 0.7s"></span>
+                </div>
+
+                <div class="service-hero-line">
+                  <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+                    <polyline class="sh-line-grid" points="0,80 40,66 80,72 120,48 160,56 200,30 240,20" />
+                    <polyline class="sh-line-draw" points="0,80 40,66 80,72 120,48 160,56 200,30 240,20" />
+                    <circle class="sh-line-dot" cx="240" cy="20" r="4" />
+                  </svg>
+                </div>
+
+                <div class="service-hero-term">
+                  {% if service.id == 1 %}
+                    <span data-term="$ git init client-project"></span>
+                    <span data-term="> scaffolding Django + React..."></span>
+                    <span data-term="✓ API endpoints live"></span>
+                    <span data-term="✓ Deployed → client.com"></span>
+                  {% elif service.id == 2 %}
+                    <span data-term="> loading neural weights..."></span>
+                    <span data-term="✓ model accuracy 94.2%"></span>
+                    <span data-term="> deploying inference API..."></span>
+                    <span data-term="✓ AI pipeline live — 24/7"></span>
+                  {% elif service.id == 3 %}
+                    <span data-term="> connecting data sources..."></span>
+                    <span data-term="✓ ETL pipeline synced"></span>
+                    <span data-term="> building dashboard..."></span>
+                    <span data-term="✓ 3 new KPIs unlocked"></span>
+                  {% elif service.id == 4 %}
+                    <span data-term="> auditing your stack..."></span>
+                    <span data-term="✓ ROI roadmap drafted"></span>
+                    <span data-term="> aligning tools + goals..."></span>
+                    <span data-term="✓ strategy delivered"></span>
+                  {% elif service.id == 5 %}
+                    <span data-term="> setting design tokens..."></span>
+                    <span data-term="✓ brand system ready"></span>
+                    <span data-term="> prototyping screens..."></span>
+                    <span data-term="✓ clean handoff to dev"></span>
+                  {% else %}
+                    <span data-term="> preparing curriculum..."></span>
+                    <span data-term="✓ 12 modules + projects"></span>
+                    <span data-term="> enrolling your team..."></span>
+                    <span data-term="✓ mentorship starts Monday"></span>
+                  {% endif %}
+                </div>
+
+                <div class="service-hero-kpis">
+                  <span class="sh-kpi" style="--fd: 0s"><i class="bi bi-patch-check"></i> On-time delivery</span>
+                  <span class="sh-kpi" style="--fd: 0.4s"><i class="bi bi-stopwatch"></i> 24h response</span>
+                  <span class="sh-kpi" style="--fd: 0.8s"><i class="bi bi-globe-americas"></i> Worldwide</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="service-title">{{ service.name }}</h3>
           <p>{{ service.description }}.</p>
 
-          {% for process in service_processes %}
-          <ul>
-            <li>
-              <span>
-                <h5 class="serv-details">
-                  <i class="bi bi-check-circle"></i> 
-                  {{ process.name }}:
-                </h5>
-                {{ process.description }}
-              </span>
-            </li>
-          </ul>
-          {% endfor %}
+          <div class="service-steps">
+            {% for process in service_processes %}
+            <div class="service-step" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+              <span class="service-step-num">{{ forloop.counter }}</span>
+              <div class="service-step-body">
+                <h5 class="serv-details">{{ process.name }}:</h5>
+                <p>{{ process.description }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
 
       </div>

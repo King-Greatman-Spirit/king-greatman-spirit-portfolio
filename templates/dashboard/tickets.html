@@ -1,0 +1,69 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% load dashboard_extras %}
+{% block content %}
+
+<div class="dash-toolbar">
+  <div class="dash-filters">
+    <a href="{% url 'dashboard:tickets_list' %}" class="dash-filter-chip {% if not status %}active{% endif %}">All</a>
+    <a href="{% url 'dashboard:tickets_list' %}?status=new" class="dash-filter-chip {% if status == 'new' %}active{% endif %}">New</a>
+    <a href="{% url 'dashboard:tickets_list' %}?status=contacted" class="dash-filter-chip {% if status == 'contacted' %}active{% endif %}">Contacted</a>
+    <a href="{% url 'dashboard:tickets_list' %}?status=resolved" class="dash-filter-chip {% if status == 'resolved' %}active{% endif %}">Resolved</a>
+  </div>
+  <div class="dash-total-pill"><strong>{{ total }}</strong> tickets</div>
+</div>
+
+{% if objects %}
+<div class="dash-card">
+  <div class="dash-table-wrap">
+    <table class="dash-table">
+      <thead>
+        <tr><th>From</th><th>Contact</th><th>Topic</th><th>Message</th><th>Channel</th><th>Status</th><th>When</th><th style="text-align:right;">Actions</th></tr>
+      </thead>
+      <tbody>
+        {% for t in objects %}
+        <tr>
+          <td class="dash-cell-title">{{ t.full_name }}</td>
+          <td>
+            <div class="dash-cell-title">{{ t.phone_number|default:"—" }}</div>
+            <div class="dash-cell-sub">{{ t.email|default:"" }}</div>
+          </td>
+          <td class="dash-cell-sub">{{ t.topic|default:"General" }}</td>
+          <td class="dash-cell-sub" style="max-width:240px;">{{ t.message|truncatechars:70 }}</td>
+          <td><span class="dash-badge badge-info">{{ t.get_channel_display }}</span></td>
+          <td><span class="dash-badge {{ t.status|status_cls }}">{{ t.get_status_display }}</span></td>
+          <td class="dash-cell-sub dash-nowrap">{{ t.created_date|date:"d M y, H:i" }}</td>
+          <td>
+            <div class="dash-row-actions">
+              {% if t.phone_number %}
+              <a class="dash-action whatsapp" href="https://wa.me/{{ t.phone_number|cut:'+'|cut:' '|cut:'('|cut:')'|cut:'-' }}" target="_blank" rel="noopener" title="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+              {% endif %}
+              {% if t.email %}
+              <a class="dash-action" href="mailto:{{ t.email }}" title="Send email"><i class="bi bi-envelope"></i></a>
+              {% endif %}
+              <form method="post" action="{% url 'dashboard:ticket_status' pk=t.id %}">
+                {% csrf_token %}
+                <select name="status" onchange="this.form.submit()" style="background:var(--dash-card-2); color:var(--dash-text); border:1px solid var(--dash-border); border-radius:8px; padding:6px 8px; font-size:0.74rem;">
+                  <option value="new" {% if t.status == 'new' %}selected{% endif %}>New</option>
+                  <option value="contacted" {% if t.status == 'contacted' %}selected{% endif %}>Contacted</option>
+                  <option value="resolved" {% if t.status == 'resolved' %}selected{% endif %}>Resolved</option>
+                </select>
+              </form>
+              <form method="post" action="{% url 'dashboard:ticket_delete' pk=t.id %}" data-confirm="Delete this ticket?">
+                {% csrf_token %}
+                <button type="submit" class="dash-action danger"><i class="bi bi-trash"></i></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% else %}
+<div class="dash-card">
+  <div class="dash-empty"><i class="bi bi-headset"></i>No tickets in this view. When a visitor asks for live help in the chatbot, their ticket lands here and you get an instant WhatsApp / SMS alert.</div>
+</div>
+{% endif %}
+
+{% endblock %}

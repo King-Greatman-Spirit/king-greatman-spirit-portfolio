@@ -1,0 +1,61 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% load dashboard_extras %}
+{% block content %}
+
+<div class="dash-toolbar">
+  <form class="dash-search" method="get">
+    <i class="bi bi-search"></i>
+    <input type="text" name="q" value="{{ query }}" placeholder="Search leads by name, email, phone, message…">
+  </form>
+  <div class="dash-total-pill"><strong>{{ total }}</strong> messages</div>
+</div>
+
+{% if objects %}
+<div class="dash-card">
+  <div class="dash-table-wrap">
+    <table class="dash-table">
+      <thead>
+        <tr>
+          <th>Lead</th><th>Contact</th><th>Service</th><th>Found us via</th><th>Referral</th><th>Message</th><th>When</th><th style="text-align:right;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in objects %}
+        <tr>
+          <td class="dash-cell-title">{{ c.full_name|default:"—" }}</td>
+          <td>
+            <div class="dash-cell-title">{{ c.email|default:"—" }}</div>
+            <div class="dash-cell-sub">{{ c.phone_number|default:"" }}</div>
+          </td>
+          <td class="dash-cell-sub">{{ c.service.name|default:"—" }}</td>
+          <td><span class="dash-badge badge-info">{{ c.channel|default:"Direct" }}</span></td>
+          <td class="dash-cell-sub">{{ c.referral|default:"—" }}</td>
+          <td class="dash-cell-sub" style="max-width:260px;">{{ c.message|truncatechars:80 }}</td>
+          <td class="dash-cell-sub dash-nowrap">{{ c.created_date|date:"d M y, H:i" }}</td>
+          <td>
+            <div class="dash-row-actions">
+              {% if c.phone_number %}
+              <a class="dash-action whatsapp" href="https://wa.me/{{ c.phone_number|cut:'+'|cut:' '|cut:'('|cut:')'|cut:'-' }}" target="_blank" rel="noopener" title="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+              {% endif %}
+              {% if c.email %}
+              <a class="dash-action" href="mailto:{{ c.email }}" title="Send email"><i class="bi bi-envelope"></i></a>
+              {% endif %}
+              <form method="post" action="{% url 'dashboard:contact_delete' pk=c.id %}" data-confirm="Delete this lead permanently?">
+                {% csrf_token %}
+                <button type="submit" class="dash-action danger" title="Delete"><i class="bi bi-trash"></i></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% else %}
+<div class="dash-card">
+  <div class="dash-empty"><i class="bi bi-inbox"></i>No messages found.</div>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment Received — Verifying | King Greatman Spirit{% endblock %}
+{% block meta_title %}Payment Received — Verifying | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/pending/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 80vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="pay-result text-center" data-aos="fade-up">
+
+            <div class="pay-result-clock"><i class="bi bi-hourglass-split"></i></div>
+
+            <h1 style="font-size: 1.7rem; margin: 22px 0 10px;">
+              Payment received — verifying…
+            </h1>
+
+            <p style="color: var(--muted);">
+              Your payment of <strong style="color: var(--gold);">{{ payment.currency }} {{ payment.amount }}</strong>
+              (reference <code style="color: var(--gold);">{{ payment.reference }}</code>) was received and is
+              being verified by the gateway. You'll get your receipt by email as soon as it clears.
+            </p>
+
+            <a href="{% url 'payments:payment_page' %}" class="btn-outline">
+              <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

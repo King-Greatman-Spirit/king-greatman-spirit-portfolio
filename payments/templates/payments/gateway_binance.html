@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Binance Pay — Crypto Checkout | King Greatman Spirit{% endblock %}
+{% block meta_title %}Binance Pay — Crypto Checkout | King Greatman Spirit{% endblock %}
+{% block canonical %}/payment/pay/{{ payment.reference }}/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+  <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="gateway-box text-center" data-aos="fade-up">
+
+            <div class="gateway-logo bn"><i class="bi bi-currency-bitcoin"></i> Binance Pay</div>
+
+            <h1 style="font-size: 1.5rem; margin: 18px 0 8px;">
+              Scan to pay with crypto
+            </h1>
+
+            <p style="color: var(--muted);">
+              Open your Binance app, tap <strong style="color: var(--gold);">Scan to Pay</strong>,
+              and scan the QR code below.
+            </p>
+
+            <div class="gateway-ref">
+              Reference: <code style="color: var(--gold);">{{ payment.reference }}</code>
+            </div>
+
+            <div class="gateway-amount">
+              {{ payment.currency }} {{ payment.amount }}
+            </div>
+
+            <div id="binance-qr-area" style="margin: 24px 0;">
+              <div class="binance-loading"><i class="bi bi-arrow-repeat"></i> Creating your payment QR…</div>
+            </div>
+
+            <p class="pay-hint" style="font-size: 0.85rem; color: var(--muted);">
+              Waiting for confirmation… once paid, we'll verify and email your receipt.
+            </p>
+
+            <a href="{% url 'payments:payment_page' %}" class="btn-outline">
+              <i class="bi bi-arrow-left"></i> Cancel &amp; go back
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function () {
+    fetch("{% url 'payments:binance_order' payment.reference %}")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        const area = document.getElementById("binance-qr-area");
+        if (data && data.ok) {
+          area.innerHTML = '<img src="' + data.qr + '" alt="Binance Pay QR code" style="max-width: 240px; border-radius: 16px; background: #fff; padding: 12px;">';
+        } else {
+          area.innerHTML = '<div style="border:1px dashed var(--border-strong); border-radius:14px; padding:18px; color: var(--muted); font-size: 0.9rem;">' +
+            (data && data.error ? 'Binance Pay: ' + data.error : 'Binance Pay is not configured yet.') +
+            '<br><br>Message me on <a href="https://wa.me/2349014155705" style="color: var(--gold);">WhatsApp</a> to complete a crypto payment manually.</div>';
+        }
+      })
+      .catch(function () {
+        document.getElementById("binance-qr-area").innerHTML =
+          '<div style="border:1px dashed var(--border-strong); border-radius:14px; padding:18px; color: var(--muted); font-size: 0.9rem;">Could not reach the Binance Pay API.<br><br>Message me on <a href="https://wa.me/2349014155705" style="color: var(--gold);">WhatsApp</a> to complete a crypto payment manually.</div>';
+      });
+  })();
+</script>
+
+{% endblock %}

@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pay Now — Secure Payments | King Greatman Spirit{% endblock %}
+{% block meta_title %}Pay Now — Secure Payments | King Greatman Spirit{% endblock %}
+{% block meta_description %}Pay for services securely with Flutterwave, Paystack, or Binance Pay. King Greatman Spirit accepts cards, bank transfer, USSD, mobile money and crypto from clients worldwide.{% endblock %}
+{% block canonical %}/payment/{% endblock %}
+{% block og_url %}https://kinggreatmanspirit.com/payment/{% endblock %}
+
+{% block content %}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Pay Now</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}"><i class="bi bi-house"></i> Home</a></li>
+          <li class="current">Payments</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="pay-intro text-center" data-aos="fade-up">
+            <div class="pay-shield"><i class="bi bi-shield-lock"></i></div>
+            <h2 style="font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 10px;">
+              Secure &amp; Worldwide — <span style="background: var(--gradient-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Pay Any Way You Like</span>
+            </h2>
+            <p style="color: var(--muted); max-width: 620px; margin: 0 auto;">
+              Cards, bank transfer, USSD, mobile money, or crypto — I accept payments from every corner
+              of the world through Flutterwave, Paystack and Binance Pay.
+            </p>
+
+            <div class="pay-currencies" data-aos="fade-up" data-aos-delay="50">
+              <span>We accept:</span>
+              <span class="pc"><b>₦</b> NGN</span>
+              <span class="pc"><b>$</b> USD</span>
+              <span class="pc"><b>£</b> GBP</span>
+              <span class="pc"><b>€</b> EUR</span>
+              <span class="pc"><b>¥</b> JPY</span>
+              <span class="pc"><b>C$</b> CAD</span>
+              <span class="pc"><b>A$</b> AUD</span>
+              <span class="pc"><b>GH₵</b> GHS</span>
+              <span class="pc"><b>KSh</b> KES</span>
+              <span class="pc"><b>R</b> ZAR</span>
+              <span class="pc crypto"><b>₿</b> USDT</span>
+            </div>
+          </div>
+
+          <div class="pay-card" data-aos="fade-up" data-aos-delay="100">
+            {% include 'includes/alerts.html' %}
+
+            <form method="post" action="{% url 'payments:payment_page' %}" novalidate>
+              {% csrf_token %}
+
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="pay-name" class="pb-2">Full Name *</label>
+                  <input type="text" name="full_name" id="pay-name" class="form-control" placeholder="Your full name" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pay-email" class="pb-2">Email Address *</label>
+                  <input type="email" name="email" id="pay-email" class="form-control" placeholder="Where we send your receipt" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pay-phone" class="pb-2">Phone / WhatsApp</label>
+                  <input type="text" name="phone_number" id="pay-phone" class="form-control" placeholder="Optional but helpful">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pay-service" class="pb-2">Service</label>
+                  <select name="service" id="pay-service" class="form-select">
+                    <option value="">Select a service (optional)</option>
+                    {% for service in services %}
+                      <option value="{{ service.id }}">{{ service.name }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="pay-desc" class="pb-2">What are you paying for?</label>
+                  <input type="text" name="description" id="pay-desc" class="form-control" placeholder="e.g. Landing page deposit, AI dashboard, retainer, donation…">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pay-amount" class="pb-2">Amount *</label>
+                  <input type="number" name="amount" id="pay-amount" class="form-control" placeholder="0.00" min="1" step="0.01" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pay-currency" class="pb-2">Currency</label>
+                  <select name="currency" id="pay-currency" class="form-select">
+                    {% for code, label in currencies %}
+                      <option value="{{ code }}">{{ label }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="pb-2">Payment Method *</label>
+                  <div class="pay-methods">
+                    <label class="pay-method">
+                      <input type="radio" name="method" value="flutterwave" required>
+                      <span class="pay-method-box fw">
+                        <span class="pm-logo">FW</span>
+                        <span class="pm-info">
+                          <strong>Flutterwave</strong>
+                          <small>Cards, Bank Transfer, USSD, Mobile Money</small>
+                        </span>
+                      </span>
+                    </label>
+
+                    <label class="pay-method">
+                      <input type="radio" name="method" value="paystack" required>
+                      <span class="pay-method-box ps">
+                        <span class="pm-logo">PS</span>
+                        <span class="pm-info">
+                          <strong>Paystack</strong>
+                          <small>Cards, Bank Transfer, USSD</small>
+                        </span>
+                      </span>
+                    </label>
+
+                    <label class="pay-method">
+                      <input type="radio" name="method" value="binance" required>
+                      <span class="pay-method-box bn">
+                        <span class="pm-logo">BN</span>
+                        <span class="pm-info">
+                          <strong>Binance Pay</strong>
+                          <small>Crypto — USDT &amp; more</small>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                  <p class="pay-hint" id="pay-hint" style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">
+                    Payments are encrypted and verified by the gateway. All major world currencies supported.
+                  </p>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="pay-submit">
+                    <i class="bi bi-lock-fill"></i> Pay Securely Now
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="pay-trust" data-aos="fade-up" data-aos-delay="150">
+            <div class="trust-item"><i class="bi bi-shield-check"></i> 256-bit encrypted</div>
+            <div class="trust-item"><i class="bi bi-globe"></i> Accepted worldwide</div>
+            <div class="trust-item"><i class="bi bi-clock-history"></i> Instant confirmation</div>
+            <div class="trust-item"><i class="bi bi-receipt"></i> Receipt by email</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+{% endblock %}

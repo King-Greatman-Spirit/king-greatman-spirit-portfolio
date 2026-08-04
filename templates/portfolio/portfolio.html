@@ -1,6 +1,67 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}{{ project.title }} | King Greatman Spirit{% endblock %}
+{% block meta_title %}{{ project.title }} | King Greatman Spirit{% endblock %}
+{% block meta_description %}{{ project.title }} — {{ project.service.name }} project by King Greatman Spirit. Explore the scope, client, industry, and outcomes of this delivered work.{% endblock %}
+{% block og_title %}{{ project.title }} | King Greatman Spirit{% endblock %}
+{% block og_description %}{{ project.title }} — {{ project.service.name }} project by King Greatman Spirit. Explore the scope, client, industry, and outcomes of this delivered work.{% endblock %}
+{% block og_url %}https://kinggreatmanspirit.com{{ project.portfolio_url }}{% endblock %}
+{% block twitter_title %}{{ project.title }} | King Greatman Spirit{% endblock %}
+{% block twitter_description %}{{ project.title }} — {{ project.service.name }} project by King Greatman Spirit.{% endblock %}
+{% block canonical %}{{ project.portfolio_url }}{% endblock %}
+
+{% block jsonld %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://kinggreatmanspirit.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Portfolio",
+      "item": "https://kinggreatmanspirit.com/#portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ project.title }}",
+      "item": "https://kinggreatmanspirit.com{{ project.portfolio_url }}"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ project.title }}",
+  "url": "https://kinggreatmanspirit.com{{ project.portfolio_url }}",
+  "about": "{{ project.service.name }}",
+  "author": {
+    "@type": "Person",
+    "@id": "https://kinggreatmanspirit.com/#person",
+    "name": "King Greatman Spirit"
+  },
+  {% if project.project_url %}
+  "sameAs": "{{ project.project_url }}",
+  {% endif %}
+  "description": "{{ project.project_scope }}"{% if project.completion_date %},
+  "dateCreated": "{{ project.completion_date|date:"c" }}"{% endif %}
+}
+</script>
+
+{% endblock %}
+
 {% block content %}
 
 <main class="main">
@@ -11,15 +72,17 @@
       <h1 class="mb-2 mb-lg-0">{{ project.title }}</h1>
       <nav class="breadcrumbs">
         <ol>
-          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}"><i class="bi bi-house"></i> Home</a></li>
+          <li><a href="{% url 'home' %}#portfolio">Portfolio</a></li>
           <li class="current">{{ project.title }}</li>
         </ol>
       </nav>
     </div>
-  </div><!-- End Page Title -->
+  </div>
+  <!-- End Page Title -->
 
   <!-- Portfolio Details Section -->
-  <section id="portfolio-details" class="portfolio-details section portdetails-section">
+  <section id="portfolio-details" class="portfolio-details section">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -32,10 +95,8 @@
               {
                 "loop": true,
                 "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
+                "autoplay": { "delay": 5000 },
+                "slidesPerView": 1,
                 "pagination": {
                   "el": ".swiper-pagination",
                   "type": "bullets",
@@ -47,10 +108,9 @@
             <div class="swiper-wrapper align-items-center">
               {% for image in project.project_images.all %}
                 <div class="swiper-slide">
-                  <img src="{{ image.image.url }}" 
-                   alt="{{ image.name }}" 
-                   width="616" height="462"
-                  >
+                  <img src="{{ image.image.url }}"
+                    alt="{% if image.name %}{{ image.name }}{% else %}{{ project.title }}{% endif %}"
+                    loading="lazy">
                 </div>
               {% endfor %}
             </div>
@@ -60,56 +120,57 @@
 
         <div class="col-lg-4">
           <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-            <h3>Project information</h3>
+            <h3><i class="bi bi-info-circle"></i> Project Information</h3>
             <ul>
               <li>
-                <strong>Category</strong>: 
-                <a href="{% url 'home' %}#portfolio"
-                  class="fw-bold"
-                  target="_blank" rel="noopener"
-                >
+                <strong>Category</strong>
+                <a href="{% url 'home' %}#portfolio" class="fw-bold">
                   {{ project.service.name }}
                 </a>
               </li>
-              <li><strong>Client</strong>: {{ project.client }}</li>
-              <li><strong>Industry</strong>: {{ project.industry }}</li>
+              {% if project.client %}
+              <li><strong>Client</strong> {{ project.client }}</li>
+              {% endif %}
+              {% if project.industry %}
+              <li><strong>Industry</strong> {{ project.industry }}</li>
+              {% endif %}
               <li>
-                <strong>Project date</strong>:
+                <strong>Project date</strong>
                 {% if project.completion_date %}
                   {{ project.completion_date|date:"F Y" }}
                 {% else %}
-                  March 2024
+                  Completed Project
                 {% endif %}
               </li>
-              {% if project.project_url and "Software" in project.service.name %}
+              {% if project.project_url %}
                 <li>
-                  <strong>Project URL</strong>:
+                  <strong>Project URL</strong>
                   <a href="{{ project.project_url }}"
                     class="porttest"
-                    target="_blank" rel="noopener"
-                  >
-                    View Live Project
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> View Live Project
                   </a>
-                </li>
-              {% else %}
-                <li>
-                  <strong>Engagement Type</strong>:
-                  {% if "Data Analysis" in project.service.name or "Business Intelligence" in project.service.name %}
-                    Business Intelligence & Decision Support
-                  {% elif "Artificial Intelligence" in project.service.name or "Machine Learning" in project.service.name %}
-                    Machine Learning Model & Analytics Solution
-                  {% else %}
-                    Internal Digital Solution
-                  {% endif %}
                 </li>
               {% endif %}
             </ul>
+
+            <div class="portfolio-share">
+              <strong><i class="bi bi-share"></i> Share this project</strong>
+              <div class="share-btns">
+                <button type="button" class="share-btn whatsapp-share" aria-label="Share on WhatsApp"><i class="bi bi-whatsapp"></i></button>
+                <button type="button" class="share-btn facebook-share" aria-label="Share on Facebook"><i class="bi bi-facebook"></i></button>
+                <button type="button" class="share-btn twitter-share" aria-label="Share on X"><i class="bi bi-twitter-x"></i></button>
+                <button type="button" class="share-btn linkedin-share" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></button>
+                <button type="button" class="share-btn copy-link" aria-label="Copy link"><i class="bi bi-link-45deg"></i></button>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="col-lg-8">
           <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
             <h2>{{ project.title }}</h2>
-            <p>
-              {{ project.project_scope }}
-            </p>
+            <p>{{ project.project_scope }}</p>
           </div>
         </div>
 
