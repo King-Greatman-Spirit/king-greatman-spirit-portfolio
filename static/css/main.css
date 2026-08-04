@@ -3715,3 +3715,55 @@ PAYMENT RESULT PAGES
   color: var(--emerald);
   box-shadow: 0 6px 16px rgba(45, 212, 191, 0.2);
 }
+
+/* =============================================================
+PORTRAIT VARIETY — spiritual.png placements
+--------------------------------------------------------------*/
+.resume-head-avatar {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 16px rgba(255, 216, 1, 0.4);
+  vertical-align: middle;
+  margin-right: 10px;
+  animation: shCoreDotPulse 2.6s ease-in-out infinite;
+}
+.contact-portrait {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 216, 1, 0.06), rgba(45, 212, 191, 0.06));
+  border: 1px solid rgba(255, 216, 1, 0.3);
+  margin-bottom: 18px;
+}
+.contact-portrait img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 18px rgba(255, 216, 1, 0.45);
+  animation: cpHover 3.5s ease-in-out infinite;
+}
+.contact-portrait h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--heading);
+}
+.contact-portrait p {
+  margin: 3px 0 0;
+  font-size: 0.8rem;
+  color: var(--emerald);
+}
+.contact-portrait p i { color: var(--gold); }
+@keyframes cpHover {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
