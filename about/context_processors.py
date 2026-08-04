@@ -15,6 +15,14 @@ def spiritual_image_url():
     return about.about_image.url if about and about.about_image else ''
 
 
+def portrait_image_url():
+    """URL of the King Greatman Spirit portrait if present, else the spiritual image."""
+    path = Path(settings.MEDIA_ROOT) / 'about_images' / 'king-greatman-spirit.png'
+    if path.exists():
+        return f"{settings.MEDIA_URL}about_images/king-greatman-spirit.png"
+    return spiritual_image_url()
+
+
 def about_links(request):
     about = About.objects.first()  # single About instance or None
     skills = about.skills.all() if about else []
@@ -31,4 +39,5 @@ def about_links(request):
         'educations': educations,   # Education queryset
         'experiences': experiences, # Experience queryset
         'spiritual_image': spiritual_image_url(),
+        'portrait_image': portrait_image_url(),
     }

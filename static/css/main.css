@@ -3835,3 +3835,138 @@ SPIRIT PHOTO BANNER
   .spirit-copy { padding: 30px 24px; }
   .spirit-copy h2 { font-size: 1.5rem; }
 }
+
+/* =============================================================
+FAQ SECTION — STYLISH ALIVE ACCORDION
+--------------------------------------------------------------*/
+.faq-section { position: relative; overflow: hidden; }
+.faq-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  pointer-events: none;
+  animation: faqBlobFloat 9s ease-in-out infinite alternate;
+}
+.faq-blob.one { width: 340px; height: 340px; background: rgba(255, 216, 1, 0.35); top: -120px; left: -100px; }
+.faq-blob.two { width: 300px; height: 300px; background: rgba(45, 212, 191, 0.3); bottom: -110px; right: -90px; animation-delay: 2.5s; }
+@keyframes faqBlobFloat {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(30px, 24px) scale(1.12); }
+}
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.faq-accordion .accordion-item {
+  position: relative;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 216, 1, 0.02));
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: faqIn 0.6s ease backwards;
+  animation-delay: calc(var(--fd, 0) * 1s);
+}
+.faq-accordion .accordion-item:nth-child(1) { --fd: 0.05; }
+.faq-accordion .accordion-item:nth-child(2) { --fd: 0.12; }
+.faq-accordion .accordion-item:nth-child(3) { --fd: 0.19; }
+.faq-accordion .accordion-item:nth-child(4) { --fd: 0.26; }
+.faq-accordion .accordion-item:nth-child(5) { --fd: 0.33; }
+.faq-accordion .accordion-item:nth-child(6) { --fd: 0.4; }
+@keyframes faqIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.faq-accordion .accordion-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 216, 1, 0.25);
+}
+.faq-accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+  border-color: rgba(255, 216, 1, 0.6);
+  background: linear-gradient(160deg, rgba(255, 216, 1, 0.08), rgba(45, 212, 191, 0.05));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(255, 216, 1, 0.12);
+}
+.faq-accordion .accordion-header { margin: 0; }
+.faq-accordion .accordion-button {
+  background: transparent;
+  color: var(--heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 18px 20px;
+  box-shadow: none;
+  gap: 12px;
+}
+.faq-accordion .accordion-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 216, 1, 0.08), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.faq-accordion .accordion-button:not(.collapsed)::before { opacity: 1; }
+.faq-accordion .accordion-button i {
+  color: var(--gold);
+  font-size: 1.15rem;
+  transition: transform 0.4s ease;
+}
+.faq-accordion .accordion-button:not(.collapsed) i {
+  transform: rotate(-12deg) scale(1.25);
+}
+.faq-accordion .accordion-button::after {
+  content: "+";
+  background-image: none;
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--gold);
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: 2px;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  content: "\00d7";
+  color: var(--emerald);
+  transform: rotate(180deg);
+}
+.faq-accordion .accordion-button:focus { box-shadow: none; }
+.faq-accordion .accordion-button:hover::after { color: var(--emerald); }
+.faq-accordion .accordion-body {
+  position: relative;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  padding: 14px 20px 18px 50px;
+  border-top: 1px dashed rgba(255, 216, 1, 0.18);
+}
+.faq-accordion .accordion-body::before {
+  content: "\f478";
+  font-family: "bootstrap-icons";
+  color: var(--emerald);
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* =============================================================
+KING PORTRAIT BANNER (variant)
+--------------------------------------------------------------*/
+.spirit-banner.king { min-height: 620px; }
+.spirit-banner.king > img { object-position: center 22%; animation: spiritZoom 22s ease-in-out infinite alternate; }
+.spirit-banner.king .spirit-overlay {
+  background: linear-gradient(270deg, rgba(10, 17, 32, 0.92) 0%, rgba(10, 17, 32, 0.55) 55%, rgba(10, 17, 32, 0.2) 100%);
+}
+.spirit-banner.king .spirit-copy { margin-left: auto; text-align: right; }
+.spirit-banner.king .spirit-copy p { margin-left: auto; }
+@media (max-width: 576px) {
+  .spirit-banner.king { min-height: 480px; }
+}
