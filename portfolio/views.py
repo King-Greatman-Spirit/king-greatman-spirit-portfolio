@@ -10,9 +10,26 @@ def project_detail(request, project_slug):
     project_images = project.project_images.all()
     title = f"Project: {project.title}"
 
+    related_projects = (
+        Project.objects
+        .filter(service=project.service)
+        .exclude(pk=project.pk)
+        .select_related('service')
+        .prefetch_related('project_images')[:4]
+    )
+
+    category_links = (
+        Service.objects
+        .annotate(project_count=Count("project"))
+        .filter(project_count__gt=0)
+        .order_by("-project_count")
+    )
+
     context = {
         'project': project,
         'project_images': project_images,
+        'related_projects': related_projects,
+        'category_links': category_links,
         'title': title,
     }
     return render(request, 'portfolio/portfolio.html', context)
@@ -28,7 +45,7 @@ def service_projects(request, service_slug):
     )
 
     portfolio_services = Service.objects.annotate(
-        project_count=Count("project_set")
+        project_count=Count("project")
     ).filter(project_count__gt=0)
 
     services = Service.objects.all()
@@ -54,7 +71,7 @@ def all_projects(request):
     )
 
     portfolio_services = Service.objects.annotate(
-        project_count=Count("project_set")
+        project_count=Count("project")
     ).filter(project_count__gt=0)
 
     context = {

@@ -3312,3 +3312,172 @@ PAYMENT RESULT PAGES
   background: linear-gradient(135deg, rgba(240, 185, 11, 0.12), rgba(255, 216, 1, 0.06));
 }
 .pc.crypto b { color: #f0b90b; }
+
+/*--------------------------------------------------------------
+# PORTFOLIO DETAIL — QUICK LINKS PANEL
+--------------------------------------------------------------*/
+.portfolio-quicklinks {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(255, 216, 1, 0.05), rgba(45, 212, 191, 0.05));
+  border: 1px solid var(--border);
+}
+.quicklinks-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--heading);
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border-strong);
+}
+.quicklinks-title i { color: var(--gold); }
+.quicklinks-section { margin-bottom: 14px; }
+.quicklinks-section:last-child { margin-bottom: 0; }
+.quicklinks-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--emerald);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0 0 10px;
+}
+.quicklinks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.quicklink-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.28s ease;
+}
+.quicklink-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(255, 216, 1, 0.55);
+  background: var(--card-hover);
+  color: var(--gold);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+.quicklink-thumb {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 42px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+.quicklink-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.quicklink-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.quicklink-meta strong {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.25s ease;
+}
+.quicklink-card:hover .quicklink-meta strong { color: var(--gold); }
+.quicklink-meta small {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 1px;
+}
+.quicklink-arrow {
+  color: var(--gold);
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.28s ease;
+}
+.quicklink-card:hover .quicklink-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+.quicklinks-empty {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  background: rgba(45, 212, 191, 0.06);
+  border: 1px dashed rgba(45, 212, 191, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.quicklinks-empty i { color: var(--emerald); }
+.quicklinks-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.quicklink-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.quicklink-chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 216, 1, 0.2);
+}
+.chip-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold), #ff9f1c);
+  color: #141000;
+  font-size: 0.66rem;
+  font-weight: 800;
+}
+.quicklink-chip.all {
+  border-style: dashed;
+  border-color: rgba(45, 212, 191, 0.5);
+  color: var(--emerald);
+}
+.quicklink-chip.all:hover {
+  background: rgba(45, 212, 191, 0.1);
+  border-color: var(--emerald);
+  color: var(--emerald);
+  box-shadow: 0 6px 16px rgba(45, 212, 191, 0.2);
+}

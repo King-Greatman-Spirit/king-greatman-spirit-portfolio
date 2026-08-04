@@ -164,6 +164,62 @@
                 <button type="button" class="share-btn copy-link" aria-label="Copy link"><i class="bi bi-link-45deg"></i></button>
               </div>
             </div>
+
+            <div class="portfolio-quicklinks" data-aos="fade-up" data-aos-delay="250">
+              <h3 class="quicklinks-title">
+                <i class="bi bi-stars"></i> Quick Links — Explore More
+              </h3>
+
+              <div class="quicklinks-section">
+                <p class="quicklinks-head">
+                  <i class="bi bi-folder2-open"></i> More in {{ project.service.name }}
+                </p>
+                {% if related_projects %}
+                  <div class="quicklinks-grid">
+                    {% for p in related_projects %}
+                      <a href="{% url 'portfolio:project_detail' p.slug %}" class="quicklink-card" title="{{ p.title }}">
+                        <span class="quicklink-thumb">
+                          {% if p.project_images.all %}
+                            <img src="{{ p.project_images.all.0.image.url }}" alt="{{ p.title }}" loading="lazy">
+                          {% else %}
+                            <i class="bi bi-image"></i>
+                          {% endif %}
+                        </span>
+                        <span class="quicklink-meta">
+                          <strong>{{ p.title }}</strong>
+                          <small><i class="bi bi-folder"></i> {{ p.service.acronym|default:p.service.name }}</small>
+                        </span>
+                        <i class="bi bi-arrow-right-short quicklink-arrow"></i>
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  <p class="quicklinks-empty">
+                    <i class="bi bi-check2-circle"></i>
+                    You're looking at the only project in this category — explore the others below!
+                  </p>
+                {% endif %}
+              </div>
+
+              <div class="quicklinks-section">
+                <p class="quicklinks-head">
+                  <i class="bi bi-collection"></i> Browse other categories
+                </p>
+                <div class="quicklinks-chips">
+                  {% for cat in category_links %}
+                    {% if cat.id != project.service.id %}
+                      <a href="{% url 'portfolio:service_projects' cat.slug %}" class="quicklink-chip">
+                        {{ cat.name }}
+                        <span class="chip-count">{{ cat.project_count }}</span>
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                  <a href="{% url 'portfolio:all_projects' %}" class="quicklink-chip all">
+                    <i class="bi bi-grid-3x3-gap"></i> View all projects
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
