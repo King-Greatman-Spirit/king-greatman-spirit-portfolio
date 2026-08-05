@@ -17,3 +17,5 @@ python manage.py collectstatic --noinput
 systemctl restart kinggreatmanspirit
 
 systemctl reload nginx
+
+chown -R www-data:www-data /var/www/kinggreatmanspirit
