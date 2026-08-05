@@ -1,2 +1,19 @@
 #ffd801 - Vivid Yellow
 #194e42 - Deep Teal
+
+Future Deployment Workflow
+cd /var/www/kinggreatmanspirit
+
+source venv/bin/activate
+
+git pull
+
+pip install -r requirements.txt
+
+python manage.py migrate
+
+python manage.py collectstatic --noinput
+
+systemctl restart kinggreatmanspirit
+
+systemctl reload nginx
