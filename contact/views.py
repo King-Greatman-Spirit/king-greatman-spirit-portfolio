@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.contrib import messages
 
 from .models import ContactMessage, Socials, NewsletterSubscriber, CHANNEL_CHOICES
@@ -54,6 +55,7 @@ def contact(request):
                     "channel": data.get("channel") or "",
                     "message": message,
                 },
+                "autoscroll_contact": True,
             }
             return render(request, "home.html", context)
 
@@ -78,7 +80,7 @@ def contact(request):
             "with a tailored and value-driven response."
         )
 
-        return redirect("contact")
+        return redirect(reverse("contact") + "#contact")
 
     context = {
         "title": title,

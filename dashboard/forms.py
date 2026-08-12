@@ -1,7 +1,8 @@
 from django import forms
 from django.db import models
 from about.models import About, Statistic, Skill
-from resume.models import Summary, Education, Experience
+# Certification model - imported so the dashboard CRUD can manage credentials.
+from resume.models import Summary, Education, Experience, Certification, Achievement
 from portfolio.models import Project, ProjectImages, Testimonial
 from service.models import Service, ServiceProcess
 from contact.models import Socials
@@ -186,6 +187,26 @@ def crud_specs():
             "cols": [("title", "Title", "text"), ("year", "Year", "text"), ("institution", "Institution", "text")],
             "search": ["title", "institution"],
             "order": "-year",
+        },
+        # Credentials grid - add/edit/delete certifications from the dashboard.
+        "certifications": {
+            "title": "Certifications",
+            "icon": "bi-award",
+            "model": Certification,
+            "fields": ["about", "title", "issuer", "year"],
+            "cols": [("title", "Credential", "text"), ("issuer", "Issuer", "text"), ("year", "Year", "text")],
+            "search": ["title", "issuer"],
+            "order": "-year",
+        },
+        # Impact milestone cards - add/edit/delete achievements from the dashboard.
+        "achievements": {
+            "title": "Achievements",
+            "icon": "bi-trophy",
+            "model": Achievement,
+            "fields": ["about", "label", "description", "icon"],
+            "cols": [("label", "Achievement", "text"), ("icon", "Icon", "code")],
+            "search": ["label", "description"],
+            "order": "label",
         },
         "experiences": {
             "title": "Experience",

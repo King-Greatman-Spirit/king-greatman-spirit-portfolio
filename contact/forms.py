@@ -24,7 +24,7 @@ class ContactMessageForm(forms.ModelForm):
         placeholders = {
             'full_name': 'Enter Full Name',
             'email': 'Enter Email Address',
-            'phone_number': 'Enter Phone Number',
+            'phone_number': 'Enter Phone/WhatsApp Number',
             'company_name': 'Enter Company Name',
             'service': 'Select Service You Are Interested In',
             'channel': 'Select How You Heard About Us',

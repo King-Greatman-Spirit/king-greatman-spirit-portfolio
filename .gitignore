@@ -31,6 +31,10 @@ Thumbs.db
 # Logs
 *.log
 
+# Legacy deploy bundle (superseded by Dockerfile + docker-compose.yml)
+KGS_Deploy_Bundle/
+KGS_Deploy_Bundle.zip
+
 # IDEs
 .vscode/
 .idea/

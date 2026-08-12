@@ -36,3 +36,10 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+else:
+    # Production container (DEBUG=False, gunicorn): serve uploaded media
+    # directly through Django + Whitenoise. Small-site, single-server setup.
+    from django.views.static import serve as media_serve
+    urlpatterns += [
+        path('media/<path:path>', media_serve, {'document_root': settings.MEDIA_ROOT}),
+    ]

@@ -132,6 +132,7 @@
                       </span>
                     </label>
 
+                    {% if binance_enabled %}
                     <label class="pay-method">
                       <input type="radio" name="method" value="binance" required>
                       <span class="pay-method-box bn">
@@ -142,6 +143,7 @@
                         </span>
                       </span>
                     </label>
+                    {% endif %}
                   </div>
                   <p class="pay-hint" id="pay-hint" style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">
                     Payments are encrypted and verified by the gateway. All major world currencies supported.

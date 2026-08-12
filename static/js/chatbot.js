@@ -24,7 +24,7 @@
 
   const LINKS = {
     whatsapp: "https://wa.me/2349014155705",
-    email: "mailto:hello@kinggreatmanspirit.com",
+    email: "mailto:spiritpydev@gmail.com",
     pay: "/payment/",
     portfolio: "/#portfolio",
     contact: "/#contact",
@@ -383,7 +383,7 @@
       reply: () => {
         return [
           "Honest answer? You get big-agency quality without the big-agency price tag 🏆",
-          "💎 When you work with King directly:\n• You talk to the actual engineer — not a sales team\n• Fixed quotes, honest pricing, no hidden fees\n• One specialist across code, design, data AND strategy — no hand-offs, no lost context\n• 125+ projects shipped, 5+ years, clients worldwide",
+          "💎 When you work with King directly:\n• You talk to the actual engineer — not a sales team\n• Fixed quotes, honest pricing, no hidden fees\n• One specialist across code, design, data AND strategy — no hand-offs, no lost context\n• 9+ production apps shipped, 5+ years, clients worldwide",
           "That's why clients stay and refer others. Want to see what he'd build for you? The first quote is free. 😉",
         ];
       },
@@ -481,7 +481,7 @@
       reply: () => {
         return [
           "Happy to set that up! 📅 The first consultation is free.",
-          "Choose your channel:\n💬 WhatsApp: <a href='https://wa.me/2349014155705' target='_blank'>wa.me/2349014155705</a>\n✉️ Email: hello@kinggreatmanspirit.com\n🖥️ Zoom / Google Meet — King sends the link",
+          "Choose your channel:\n💬 WhatsApp: <a href='https://wa.me/2349014155705' target='_blank'>wa.me/2349014155705</a>\n✉️ Email: spiritpydev@gmail.com\n🖥️ Zoom / Google Meet — King sends the link",
           "Tell him your best time and he'll confirm within 24 hours. What would you like to talk about?",
         ];
       },
@@ -510,7 +510,7 @@
         return [
           "I'm as real as it gets — a digital twin of King Greatman Spirit 🤖👑",
           "Fun fact: King built this very website himself — Django, the works — and he built ME to answer for him at any hour.",
-          "So behind every answer is a real engineer who's shipped 125+ projects. And he's only one tap away if you want the human touch. 😉",
+          "So behind every answer is a real engineer who's shipped 9+ production apps. And he's only one tap away if you want the human touch. 😉",
         ];
       },
       chips: [{ label: "🎧 Talk to King directly", action: "ticket" }, "What services do you offer?", "View my portfolio"],
@@ -679,7 +679,7 @@
       match: ["portfolio", "projects", "previous work", "past work", "examples", "show me", "your work", "samples", "case study", "what have you built", "project showcase", "best project"],
       reply: () => {
         return [
-          "I'd love to show off! 🏆 We've delivered 125+ projects across software, AI, data and design — for clients in health, finance, e-commerce, education, real estate and more.",
+          "I'd love to show off! 🏆 I've delivered 9+ production web applications and 30+ projects across software, AI, data and design — for clients in engineering, energy, logistics, security, health, finance, e-commerce and more.",
           "Explore the full showcase here 👉 <a href='/#portfolio' target='_blank'>View my portfolio</a>",
           "My favourites: a Landmark AI Virtual Assistant, corporate websites, e-commerce platforms, and Power BI dashboards that changed how businesses decide. 😎",
         ];
@@ -709,7 +709,7 @@
       reply: () => {
         return [
           "You can reach King directly — he replies within 24 hours (often faster!) 💬",
-          "💬 WhatsApp: <a href='https://wa.me/2349014155705' target='_blank'>Chat on WhatsApp</a>\n✉️ Email: hello@kinggreatmanspirit.com\n📍 Base: Nigeria — serving clients worldwide",
+          "💬 WhatsApp: <a href='https://wa.me/2349014155705' target='_blank'>Chat on WhatsApp</a>\n✉️ Email: spiritpydev@gmail.com\n📍 Base: Nigeria — serving clients worldwide",
           "Or tap below to send him a LIVE alert right now — he gets an instant WhatsApp & SMS notification and messages you back immediately. 🎧",
         ];
       },
@@ -737,7 +737,7 @@
       reply: () => {
         return [
           "I'm the digital twin of King Greatman Spirit 👑💻 — a Software Engineer, AI & ML Specialist, Data Analyst, Full-Stack Developer, and Cloud & Automation Expert.",
-          "5+ years of building, 125+ projects delivered, clients in Nigeria and around the world. My toolkit: Python, Django, React, Node.js, TensorFlow, Power BI, Docker, Cloud & DevOps.",
+          "5+ years of building, 9+ production apps delivered, clients in Nigeria and around the world. My toolkit: Python, Django, React, Node.js, TensorFlow, Power BI, Docker, Cloud & DevOps.",
           "Grab my full CV here 👉 <a href='/media/resume/Greatman_Justus_Unye-Awaji_Software_Engineer_Resume.pdf' target='_blank'>Download CV</a>",
           "Enough about me — what can we build for you? 😎",
         ];
@@ -899,7 +899,7 @@
   const fallback = () => {
     return [
       "Hmm, I'm not 100% sure about that one 🤔 — but I'm pretty sure King can answer it!",
-      "You can:\n🎧 Tap 'Talk to King directly' below for an instant live alert\n💬 <a href='https://wa.me/2349014155705' target='_blank'>Chat with King on WhatsApp</a>\n✉️ <a href='mailto:hello@kinggreatmanspirit.com'>Email him</a>",
+      "You can:\n🎧 Tap 'Talk to King directly' below for an instant live alert\n💬 <a href='https://wa.me/2349014155705' target='_blank'>Chat with King on WhatsApp</a>\n✉️ <a href='mailto:spiritpydev@gmail.com'>Email him</a>",
       "Meanwhile — I can tell you about services, pricing, payments, or the portfolio. Try me! 😄",
     ];
   };

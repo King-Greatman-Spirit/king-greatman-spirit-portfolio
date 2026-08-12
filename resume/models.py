@@ -43,6 +43,50 @@ class Education(models.Model):
         return self.title or "Education"
 
 
+# ------------------------------------------------------------------
+# Certification
+# A credential the owner has earned (e.g. "Django Masters").
+# Displayed as a badge grid in the Resume section of the home page.
+# ------------------------------------------------------------------
+class Certification(models.Model):
+    # Each certification belongs to the single About profile (row 1).
+    about = models.ForeignKey(About, on_delete=models.CASCADE, related_name="certifications")
+    # Name of the credential, e.g. "Web Development (Python)".
+    title = models.CharField(max_length=200, blank=True, null=True)
+    # Organisation that issued the credential, e.g. "Django Masters".
+    issuer = models.CharField(max_length=200, blank=True, null=True)
+    # Year earned (optional - hidden in the UI when blank).
+    year = models.CharField(max_length=50, blank=True, null=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        # Used in Django admin dropdowns; falls back if title is blank.
+        return self.title or "Certification"
+
+
+# ------------------------------------------------------------------
+# Achievement
+# A measurable milestone / impact statement (e.g. "9+ Production Apps").
+# Displayed as icon cards in the Achievements section of the home page.
+# ------------------------------------------------------------------
+class Achievement(models.Model):
+    # Each achievement belongs to the single About profile (row 1).
+    about = models.ForeignKey(About, on_delete=models.CASCADE, related_name="achievements")
+    # Short headline, e.g. "30% Faster Backends".
+    label = models.CharField(max_length=200, blank=True, null=True)
+    # One or two sentences of proof / context under the headline.
+    description = models.CharField(max_length=300, blank=True, null=True)
+    # Bootstrap Icons class name, e.g. "bi bi-trophy".
+    icon = models.CharField(max_length=100, help_text="Example: bi bi-trophy", blank=True, null=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        # Used in Django admin dropdowns; falls back if label is blank.
+        return self.label or "Achievement"
+
+
 class Experience(models.Model):
     about = models.ForeignKey(About, on_delete=models.CASCADE, related_name="experiences")
     title = models.CharField(max_length=200, blank=True, null=True)

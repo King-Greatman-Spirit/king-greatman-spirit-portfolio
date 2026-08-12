@@ -4,76 +4,76 @@
   "pk": 1,
   "fields": {
     "name": "King Greatman Spirit",
-    "intro_text": "",
-    "title": "Software Engineer, AI & ML Specialist, Data Analyst",
+    "intro_text": "Software Engineer with 5+ years of experience designing, developing, and deploying scalable web applications using Python, Django, React, PHP, JavaScript, PostgreSQL, and Docker. I build production-grade platforms for engineering, energy, logistics, security, and corporate clients - with AI-assisted delivery that ships faster without cutting corners.",
+    "title": "Software Engineer, Python/Django Full-Stack Engineer, AI & ML Engineer, Data Analyst & BI Specialist, Technical Instructor",
     "description": "",
     "birthday": null,
     "website": "https://kinggreatmanspirit.com",
-    "phone1": "",
+    "phone1": "+234 (901) 415 5705",
     "phone2": null,
     "city": "Nigeria",
     "age": null,
     "degree": "",
-    "email": "hello@kinggreatmanspirit.com",
+    "email": "spiritpydev@gmail.com",
     "freelance": "Available for select projects worldwide",
-    "outro_text": "",
+    "outro_text": "9+ production web applications delivered and maintained on Linux VPS infrastructure - architected REST APIs, role-based admin dashboards, and optimized backends that respond up to 30% faster.",
     "profile_image": "about_images/newww.jpeg",
     "cover_image": "about_images/Cover_P.jpg",
     "about_image": "about_images/yeah.jpg",
     "created_date": "2025-12-09T11:36:17.853Z",
-    "modified_date": "2026-08-04T17:39:35.407Z"
+    "modified_date": "2026-08-10T10:19:05.519Z"
   }
 },
 {
   "model": "about.statistic",
-  "pk": 1,
+  "pk": 5,
   "fields": {
     "about": 1,
-    "label": "Thrilled Clients",
-    "description": "Transforming ideas into real-world solutions",
-    "value": 55,
-    "icon": "bi bi-emoji-smile",
-    "created_date": "2025-12-10T15:45:12.307Z",
-    "modified_date": "2025-12-10T15:51:16.880Z"
+    "label": "Years of Experience",
+    "description": "Hands-on engineering",
+    "value": 5,
+    "icon": "bi bi-calendar-check",
+    "created_date": "2026-08-10T08:16:17.851Z",
+    "modified_date": "2026-08-10T08:16:17.851Z"
   }
 },
 {
   "model": "about.statistic",
-  "pk": 2,
+  "pk": 6,
   "fields": {
     "about": 1,
-    "label": "Successful Projects",
-    "description": "From AI & ML to full-stack development",
-    "value": 125,
-    "icon": "bi bi-journal-richtext",
-    "created_date": "2025-12-10T15:46:07.419Z",
-    "modified_date": "2025-12-10T15:51:38.173Z"
+    "label": "Production Apps",
+    "description": "Designed, built & deployed",
+    "value": 9,
+    "icon": "bi bi-journal-code",
+    "created_date": "2026-08-10T08:16:17.860Z",
+    "modified_date": "2026-08-10T08:16:17.861Z"
   }
 },
 {
   "model": "about.statistic",
-  "pk": 3,
+  "pk": 7,
   "fields": {
     "about": 1,
-    "label": "Hours of Support",
-    "description": "Guiding clients & learners every step",
-    "value": 7800,
-    "icon": "bi bi-headset",
-    "created_date": "2025-12-10T15:50:03.116Z",
-    "modified_date": "2025-12-10T15:50:56.081Z"
+    "label": "Projects Delivered",
+    "description": "Web, AI & data solutions",
+    "value": 30,
+    "icon": "bi bi-boxes",
+    "created_date": "2026-08-10T08:16:17.872Z",
+    "modified_date": "2026-08-10T08:16:17.872Z"
   }
 },
 {
   "model": "about.statistic",
-  "pk": 4,
+  "pk": 8,
   "fields": {
     "about": 1,
-    "label": "Expert Collaborators",
-    "description": "Passionate team driving excellence",
-    "value": 32,
-    "icon": "bi bi-people",
-    "created_date": "2025-12-10T15:52:14.035Z",
-    "modified_date": "2025-12-10T15:52:14.035Z"
+    "label": "Industries Served",
+    "description": "Engineering, energy, logistics, security & corporate",
+    "value": 5,
+    "icon": "bi bi-globe2",
+    "created_date": "2026-08-10T08:16:17.883Z",
+    "modified_date": "2026-08-10T08:16:17.883Z"
   }
 },
 {
@@ -231,99 +231,450 @@
   }
 },
 {
-  "model": "accounts.account",
+  "model": "resume.summary",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$1200000$MDw3tBALhnNbCBONJpSSAy$11PyKhpto6yfufKMYMZ1w/UjpnKyCHMuFG5Kb5lK2m4=",
-    "last_login": "2026-08-04T16:05:53.525Z",
-    "first_name": "kinggreatman",
-    "last_name": "spirit",
-    "username": "admin",
-    "email": "admin@kinggreatmanspirit.com",
-    "phone_number": "09014155705",
-    "date_joined": "2025-12-09T09:50:34.472Z",
-    "last_joined": "2025-12-09T09:50:34.472Z",
-    "is_active": true,
-    "is_staff": true,
-    "is_admin": true,
-    "is_superadmin": true
+    "about": 1,
+    "full_name": "GREATMAN JUSTUS UNYE-AWAJI",
+    "intro_text": "A highly versatile and results-driven Software Engineer, AI & ML Engineer, Data & Business Intelligence Analyst, and Technical Instructor with proven experience designing, developing, and deploying scalable web applications, intelligent systems, and data-driven solutions. Adept at building robust backend architectures, modern front-end interfaces, and AI-powered platforms that enhance operational efficiency, improve decision-making, and deliver measurable business value across industries.",
+    "description": "I build scalable web applications, intelligent AI systems, and data-driven solutions that help businesses work smarter and faster. I turn complex problems into actionable results using full-stack development, AI/ML, and data analytics.",
+    "address": "Nigeria",
+    "phone": "+234 (901) 415 5705",
+    "email": "spiritpydev@gmail.com",
+    "created_date": "2025-12-14T13:18:44.695Z",
+    "modified_date": "2026-08-10T10:19:05.531Z"
   }
 },
 {
-  "model": "contact.contactmessage",
-  "pk": 38,
-  "fields": {
-    "full_name": "John Doe",
-    "email": "john@example.com",
-    "phone_number": null,
-    "company_name": "",
-    "service": null,
-    "channel": "",
-    "referral": "Direct",
-    "message": "I need a website please",
-    "created_date": "2026-08-04T04:25:38.639Z",
-    "modified_date": "2026-08-04T04:25:38.639Z"
-  }
-},
-{
-  "model": "contact.socials",
+  "model": "resume.certification",
   "pk": 1,
   "fields": {
-    "platform": "My Socials",
-    "facebook": "https://www.facebook.com/FAMOUSGREATMAN/",
-    "twitter": "https://x.com/greatestmaneva",
-    "instagram": "https://www.instagram.com/king_greatman_spirit/",
-    "linkedin": "https://www.linkedin.com/in/greatman-pydev/",
-    "github": "https://github.com/King-Greatman-Spirit",
-    "youTube": "https://www.youtube.com/@greatestmaneva",
-    "telegram": "https://t.me/greatestmaneva",
-    "whatsapp": "https://wa.me/2349014155705",
-    "tiktok": "https://www.tiktok.com/@king_greatman_spirit",
-    "threads": "https://www.threads.com/@king_greatman_spirit",
-    "linktree": "https://linktr.ee/greatestmaneva",
-    "medium": null,
-    "substack": null,
-    "pinterest": "https://www.pinterest.com/greatestmaneva/"
+    "about": 1,
+    "title": "Web Development (Python)",
+    "issuer": "Django Masters",
+    "year": "",
+    "created_date": "2026-08-10T08:16:17.923Z",
+    "modified_date": "2026-08-10T08:16:17.923Z"
   }
 },
 {
-  "model": "payments.paymentrequest",
+  "model": "resume.certification",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "title": "Backend Web Development (PHP)",
+    "issuer": "AQskill",
+    "year": "",
+    "created_date": "2026-08-10T08:16:17.932Z",
+    "modified_date": "2026-08-10T08:16:17.932Z"
+  }
+},
+{
+  "model": "resume.certification",
   "pk": 3,
   "fields": {
-    "full_name": "Unye-Awaji Greatman Justus",
-    "email": "spiritpydev@gmail.com",
-    "phone_number": "09014155705",
-    "service": 3,
-    "description": "yES",
-    "amount": "500.00",
-    "currency": "USD",
-    "method": "binance",
-    "reference": "KGS-FBC71010674C432BB71C",
-    "status": "pending",
-    "gateway_ref": null,
-    "gateway_response": null,
-    "paid_date": null,
-    "created_date": "2026-08-04T16:30:30.159Z"
+    "about": 1,
+    "title": "Python Programming",
+    "issuer": "Techgyan",
+    "year": "",
+    "created_date": "2026-08-10T08:16:17.939Z",
+    "modified_date": "2026-08-10T08:16:17.939Z"
   }
 },
 {
-  "model": "payments.paymentrequest",
+  "model": "resume.certification",
   "pk": 4,
   "fields": {
-    "full_name": "Unye-Awaji Greatman Justus",
-    "email": "spiritpydev@gmail.com",
-    "phone_number": "09014155705",
-    "service": 3,
-    "description": "yES",
-    "amount": "500.00",
-    "currency": "USD",
-    "method": "paystack",
-    "reference": "KGS-849F5B13BAF448A096B8",
-    "status": "pending",
-    "gateway_ref": null,
-    "gateway_response": null,
-    "paid_date": null,
-    "created_date": "2026-08-04T16:31:04.268Z"
+    "about": 1,
+    "title": "Agile Project Management",
+    "issuer": "HP LIFE",
+    "year": "",
+    "created_date": "2026-08-10T08:16:17.947Z",
+    "modified_date": "2026-08-10T08:16:17.947Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "title": "Cloud Computing",
+    "issuer": "HP LIFE",
+    "year": "",
+    "created_date": "2026-08-10T08:16:17.955Z",
+    "modified_date": "2026-08-10T08:16:17.955Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "title": "Effective Leadership",
+    "issuer": "HP LIFE",
+    "year": "",
+    "created_date": "2026-08-10T08:16:17.964Z",
+    "modified_date": "2026-08-10T08:16:17.964Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "title": "The Psychology of Teamwork: Understanding Group Dynamics for Success",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.307Z",
+    "modified_date": "2026-08-10T11:03:52.307Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 8,
+  "fields": {
+    "about": 1,
+    "title": "Financial Literacy, Budgeting, and Investing Using Quantitative Skills",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.324Z",
+    "modified_date": "2026-08-10T11:03:52.324Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 9,
+  "fields": {
+    "about": 1,
+    "title": "Conflict Resolution in Teamwork: Strategies for Effective Communication",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.332Z",
+    "modified_date": "2026-08-10T11:03:52.332Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 10,
+  "fields": {
+    "about": 1,
+    "title": "Data-Driven Decision Making: Understanding Numbers in Everyday Life",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.347Z",
+    "modified_date": "2026-08-10T11:03:52.347Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 11,
+  "fields": {
+    "about": 1,
+    "title": "Promoting Equity and Social Justice in Online Work Environments",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.359Z",
+    "modified_date": "2026-08-10T11:03:52.359Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 12,
+  "fields": {
+    "about": 1,
+    "title": "Building Diverse and Effective Teams for Success in Business Careers",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.371Z",
+    "modified_date": "2026-08-10T11:03:52.371Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 13,
+  "fields": {
+    "about": 1,
+    "title": "Understanding Cultural Competence and Global Perspectives in Computer Science Careers",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.381Z",
+    "modified_date": "2026-08-10T11:03:52.381Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 14,
+  "fields": {
+    "about": 1,
+    "title": "Embracing Diversity: Building Inclusive Online Communities",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.394Z",
+    "modified_date": "2026-08-10T11:03:52.394Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 15,
+  "fields": {
+    "about": 1,
+    "title": "Cybersecurity Basics: Protecting Your Data in the Digital Age",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.409Z",
+    "modified_date": "2026-08-10T11:03:52.409Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 16,
+  "fields": {
+    "about": 1,
+    "title": "Bridging the Digital Divide: Essential Tech Skills for Career Success",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.421Z",
+    "modified_date": "2026-08-10T11:03:52.422Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 17,
+  "fields": {
+    "about": 1,
+    "title": "Building Strong Virtual Teams: Best Practices for Remote Collaboration",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.431Z",
+    "modified_date": "2026-08-10T11:03:52.431Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 18,
+  "fields": {
+    "about": 1,
+    "title": "AI and the Future of Work: Preparing for the AI-Driven Job Market in Computer Science",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.441Z",
+    "modified_date": "2026-08-10T11:03:52.441Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 19,
+  "fields": {
+    "about": 1,
+    "title": "Leveraging Digital Collaboration and Communication Tools for Career Advancement in Business",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.450Z",
+    "modified_date": "2026-08-10T11:03:52.450Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 20,
+  "fields": {
+    "about": 1,
+    "title": "Leveraging Social Media for Professional Development",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.462Z",
+    "modified_date": "2026-08-10T11:03:52.462Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 21,
+  "fields": {
+    "about": 1,
+    "title": "Navigating Effective Communication: Keys to Successful Interactions",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.474Z",
+    "modified_date": "2026-08-10T11:03:52.474Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 22,
+  "fields": {
+    "about": 1,
+    "title": "Professional Communication",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.483Z",
+    "modified_date": "2026-08-10T11:03:52.483Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 23,
+  "fields": {
+    "about": 1,
+    "title": "Embracing Diversity: Cultivating Multicultural Competencies for Equity and Social Justice",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.499Z",
+    "modified_date": "2026-08-10T11:03:52.499Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 24,
+  "fields": {
+    "about": 1,
+    "title": "Recognizing and Challenging Implicit Bias for Career Growth in Business",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.523Z",
+    "modified_date": "2026-08-10T11:03:52.523Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 25,
+  "fields": {
+    "about": 1,
+    "title": "Emerging Technologies and Their Impact on Future Careers in Business and Healthcare",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.534Z",
+    "modified_date": "2026-08-10T11:03:52.534Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 26,
+  "fields": {
+    "about": 1,
+    "title": "Inclusive Communication for Careers in Healthcare: Bridging Differences through Dialogue",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.550Z",
+    "modified_date": "2026-08-10T11:03:52.550Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 27,
+  "fields": {
+    "about": 1,
+    "title": "Financial Planning: Navigating Personal Finance in a Global Economy",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.567Z",
+    "modified_date": "2026-08-10T11:03:52.567Z"
+  }
+},
+{
+  "model": "resume.certification",
+  "pk": 28,
+  "fields": {
+    "about": 1,
+    "title": "Leveraging AI for Career Growth and Skill Enhancement in Business and Healthcare Fields",
+    "issuer": "Co-Curricular Programming Center",
+    "year": "",
+    "created_date": "2026-08-10T11:03:52.579Z",
+    "modified_date": "2026-08-10T11:03:52.579Z"
+  }
+},
+{
+  "model": "resume.achievement",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "label": "9+ Production Applications",
+    "description": "Built, deployed, and maintained production web platforms across engineering, energy, logistics, security, and corporate sectors.",
+    "icon": "bi bi-journal-code",
+    "created_date": "2026-08-10T08:16:17.972Z",
+    "modified_date": "2026-08-10T08:16:17.972Z"
+  }
+},
+{
+  "model": "resume.achievement",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "label": "30% Faster Backends",
+    "description": "Optimized SQL queries and backend architecture, cutting response times by approximately 30%.",
+    "icon": "bi bi-speedometer2",
+    "created_date": "2026-08-10T08:16:17.981Z",
+    "modified_date": "2026-08-10T08:16:17.981Z"
+  }
+},
+{
+  "model": "resume.achievement",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "label": "Secure Role-Based Dashboards",
+    "description": "Architected RBAC admin systems - including a 4-level platform - powering multiple live client websites.",
+    "icon": "bi bi-shield-lock",
+    "created_date": "2026-08-10T08:16:17.988Z",
+    "modified_date": "2026-08-10T08:16:17.989Z"
+  }
+},
+{
+  "model": "resume.achievement",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "label": "AI-Assisted Delivery",
+    "description": "Leverage ChatGPT, Cursor, Claude, GitHub Copilot, and Gemini to accelerate build, debug, and documentation.",
+    "icon": "bi bi-robot",
+    "created_date": "2026-08-10T08:16:17.997Z",
+    "modified_date": "2026-08-10T08:16:17.997Z"
+  }
+},
+{
+  "model": "resume.experience",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "title": "Python Developer & Data Analyst",
+    "year": "April 2021 – April 2024",
+    "company": "Webstacka IT Company",
+    "city": "Port Harcourt, Nigeria",
+    "desc_one": "Engineered scalable web applications using Django, focusing on clean architecture and optimized backend performance.",
+    "desc_two": "Designed and implemented RESTful APIs, integrating PostgreSQL and MySQL databases for robust data handling.",
+    "desc_three": "Supported scalable deployments using Docker and maintained version control with Git, improving development efficiency and reliability.",
+    "created_date": "2025-12-15T14:14:29.268Z",
+    "modified_date": "2026-08-10T08:16:17.901Z"
+  }
+},
+{
+  "model": "resume.experience",
+  "pk": 6,
+  "fields": {
+    "about": 1,
+    "title": "Full-Stack Web Developer | Instructor",
+    "year": "May 2024 – Sept 2024",
+    "company": "FlowCode Tech Hub",
+    "city": "Port Harcourt, Nigeria",
+    "desc_one": "Delivered hands-on training programs in HTML, CSS, JavaScript, PHP, Python, and MySQL, equipping students with job-ready full-stack skills.",
+    "desc_two": "Mentored learners through real-world projects, covering application design, development, deployment, and debugging.",
+    "desc_three": "Managed relational databases and optimized SQL queries, improving database performance by up to 30%.",
+    "created_date": "2025-12-15T14:17:16.042Z",
+    "modified_date": "2026-08-10T08:16:17.908Z"
+  }
+},
+{
+  "model": "resume.experience",
+  "pk": 7,
+  "fields": {
+    "about": 1,
+    "title": "Software Engineer",
+    "year": "Oct 2024 – Present",
+    "company": "B.G. Technical Limited",
+    "city": "Port Harcourt, Nigeria",
+    "desc_one": "Developed and maintained enterprise-grade web applications for engineering, logistics, and industrial clients using Python, Django, React, PostgreSQL, and JavaScript.",
+    "desc_two": "Architected RESTful APIs and secure role-based administrative dashboards supporting multiple production platforms, deployed on Linux VPS infrastructure with Docker, Gunicorn, and Nginx.",
+    "desc_three": "Optimized SQL queries and backend performance, reducing response times by approximately 30%, and integrated Firebase authentication and real-time services.",
+    "created_date": "2025-12-15T14:18:45.559Z",
+    "modified_date": "2026-08-10T08:16:17.916Z"
   }
 },
 {
@@ -385,13 +736,13 @@
     "service": 1,
     "title": "Pipeline Pigs and Accessories Limited",
     "slug": "pipeline-pigs-and-accessories-limited",
-    "project_scope": "Built an industrial-focused website designed to communicate complex pipeline and pigging solutions with clarity and precision. The project emphasized technical credibility, trust, and ease of understanding for decision-makers. Structured layouts and performance-optimized development were used to support lead generation, product visibility, and long-term brand authority within the industrial sector.",
+    "project_scope": "Built an industrial-focused website designed to communicate complex pipeline and pigging solutions with clarity and precision. The project emphasized technical credibility, trust, and ease of understanding for decision-makers. Structured layouts and performance-optimized development were used to support lead generation, product visibility, and long-term brand authority within the industrial sector.\n\nTech stack: PHP · JavaScript · Bootstrap - product catalog, responsive UI & inquiry forms.",
     "client": "PPA Limited",
     "industry": "Industrial & Pipeline Solutions",
     "project_url": "https://www.piggingproducts.com",
     "completion_date": "2025-11-03T12:00:00Z",
     "created_date": "2025-12-24T17:51:54.456Z",
-    "modified_date": "2025-12-26T09:21:46.577Z"
+    "modified_date": "2026-08-10T08:16:18.005Z"
   }
 },
 {
@@ -402,13 +753,13 @@
     "service": 1,
     "title": "Samben Security Corporate Website",
     "slug": "samben-security-corporate-website",
-    "project_scope": "Developed a professional corporate website that reflects reliability, safety, and operational excellence. The solution focused on clear service presentation, confidence-driven messaging, and responsive design to build trust with prospective clients. The platform positions Samben Security as a dependable and professional security provider capable of handling critical safety requirements.",
+    "project_scope": "Developed a professional corporate website that reflects reliability, safety, and operational excellence. The solution focused on clear service presentation, confidence-driven messaging, and responsive design to build trust with prospective clients. The platform positions Samben Security as a dependable and professional security provider capable of handling critical safety requirements.\n\nTech stack: Django · PostgreSQL - corporate website with service showcase.",
     "client": "Samben Security",
     "industry": "Security Services",
     "project_url": "https://sambensecurity.com",
     "completion_date": "2025-06-16T12:00:00Z",
     "created_date": "2025-12-24T17:55:12.132Z",
-    "modified_date": "2025-12-26T09:23:02.927Z"
+    "modified_date": "2026-08-10T08:16:18.015Z"
   }
 },
 {
@@ -436,13 +787,13 @@
     "service": 1,
     "title": "B. G. Technical Limited Website",
     "slug": "b-g-technical-limited-website",
-    "project_scope": "Designed and deployed a functional, scalable website that clearly presents technical and engineering services. The solution focused on clarity, professionalism, and adaptability—transforming business ideas into a structured digital platform that improves visibility, operational credibility, and client confidence.",
+    "project_scope": "A commanding corporate platform for B.G. Technical Limited - the ISO-certified oil & gas solutions provider founded in 1988, serving Shell since 1995, with 25+ years of excellence, 180+ successful projects and clients spanning NNPC, ExxonMobil, Chevron, TotalEnergies and Nigeria LNG. Presents eight service lines from pipeline & process services, pipeline construction, inline inspection and chemical & facility cleaning to pigs manufacture, production enhancement, wireline services and wellhead protection - alongside award & recognition galleries, client testimonials, case studies, careers and a quote-request engine engineered for conversion.\n\nTech stack: Django · PostgreSQL · Node.js - corporate platform with dynamic CMS.",
     "client": "BGT Limited",
     "industry": "Oil & Gas Engineering Services",
-    "project_url": "https://spiritual.pythonanywhere.com",
+    "project_url": "https://preview.bgtechnical.info/",
     "completion_date": "2025-09-08T06:00:00Z",
     "created_date": "2025-12-24T18:34:51.295Z",
-    "modified_date": "2025-12-26T09:18:54.116Z"
+    "modified_date": "2026-08-10T08:16:18.022Z"
   }
 },
 {
@@ -749,6 +1100,91 @@
     "completion_date": "2025-12-08T11:01:40Z",
     "created_date": "2026-01-05T11:05:54.813Z",
     "modified_date": "2026-01-05T11:05:54.813Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 27,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Three Heart Companionship Services Website",
+    "slug": "three-heart-companionship-services-website",
+    "project_scope": "A warm, heart-led corporate website for a UK companionship care provider supporting elderly individuals, adults living alone, and vulnerable people across London, Cambridgeshire, Essex, Hertfordshire, Northamptonshire and the West Midlands. Showcases six person-centred services - friendly companionship, shopping assistance, escort & social outings, errands & daily support, wellbeing visits and light domestic cleaning - with transparent from-25-pounds hourly pricing, DBS-checked carers, care stories blog, testimonials, FAQs and a free consultation booking journey designed to reassure families and restore confidence, dignity and independence.\n\nTech stack: Python · Django · PostgreSQL · JavaScript - full-stack CMS with service & pricing management.",
+    "client": "Three Heart Companionship Services",
+    "industry": "Care & Companionship Services",
+    "project_url": "https://threeheartcompanionshipservices.com/",
+    "completion_date": "2024-09-09T12:00:00Z",
+    "created_date": "2026-08-10T06:29:42.411Z",
+    "modified_date": "2026-08-10T08:16:18.031Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 28,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "PLAN - Pipeline Professionals' Association of Nigeria Website",
+    "slug": "plan-pipeline-professionals-association-of-nigeria-website",
+    "project_scope": "A powerful membership and events platform for the Pipeline Professionals' Association of Nigeria - the nation's foremost network of pipeline engineers, regulators and energy experts with 500+ members, four regional chapters, 61 member companies and 64+ events. Features individual & corporate membership registration, the NIPITECS 2026 conference hub (10th edition), events calendar, industry insights blog, gallery, partner showcase and newsletter - crowned with a built-in 'PLAN Assistant' chatbot that answers membership and event questions instantly.\n\nTech stack: Laravel · MySQL · Bootstrap - 4-level RBAC, CMS, events, newsletter & chatbot.",
+    "client": "Pipeline Professionals' Association of Nigeria (PLAN)",
+    "industry": "Oil & Gas Professional Association",
+    "project_url": "https://test.plan-ng.com/",
+    "completion_date": "2024-09-09T12:00:00Z",
+    "created_date": "2026-08-10T06:29:42.491Z",
+    "modified_date": "2026-08-10T08:16:18.039Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 29,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Dikaioo Engineering & Energy Corporate Website",
+    "slug": "dikaioo-engineering-energy-corporate-website",
+    "project_scope": "An authoritative corporate website for Dikaioo Engineering and Energy Ltd - a premier Nigerian EPC company delivering engineering, procurement, construction, installation, coating testing and quality assurance since 2000. Hero product: the Marine Thermo Simulator (ACCTU-001), a PLC-automated test rig that validates coating performance under four engineered stress conditions for FPSO, pipeline and offshore structures. Complete with mission & values storytelling, service showcases, team section and a smart enquiry form routing leads by service line.\n\nTech stack: JavaScript · Bootstrap - corporate website with SEO & lead generation.",
+    "client": "Dikaioo Engineering and Energy Ltd",
+    "industry": "Industrial Engineering & Energy",
+    "project_url": "http://dikaiooenergy.com/",
+    "completion_date": "2024-09-09T12:00:00Z",
+    "created_date": "2026-08-10T06:29:42.570Z",
+    "modified_date": "2026-08-10T08:16:18.048Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 30,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Sinacore Services Corporate Website",
+    "slug": "sinacore-services-corporate-website",
+    "project_scope": "A polished corporate platform for Sinacore Services Limited - a multidisciplinary Lagos-based company powering oil & gas, construction and industrial clients with four integrated pillars: Technology & IT Services, Engineering & Industrial Support, Renewable Energy Systems Design, and Procurement & Supply Chain. Backed by world-class partners (Victron Energy, GoodWe, Growatt, Deye, Schneider Electric, Jinko Solar, Canadian Solar, LONGi), an IMS-certified policy, expert team profiles and sector-spanning client testimonials - all wrapped in a clean, enterprise-grade design.",
+    "client": "Sinacore Services Limited",
+    "industry": "Technology, Engineering & Renewable Energy",
+    "project_url": "https://sinacoreservices.com/",
+    "completion_date": "2024-09-09T12:00:00Z",
+    "created_date": "2026-08-10T06:29:42.652Z",
+    "modified_date": "2026-08-10T06:29:42.652Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 31,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "title": "Zhehus Agric-Mechanics & Investments Website",
+    "slug": "zhehus-agric-mechanics-investments-website",
+    "project_scope": "A bold multi-sector corporate website for ZHEHUS Agric-Mechanics & Investments Ltd - 'Building Today for a Better Tomorrow.' Showcases ten business lines: agriculture & agro-mechanization, petroleum & energy, electrical engineering, transport & logistics, general contracting, import & export, manufacturing, real estate, hospitality, and ICT & telecommunications. Includes service detail pages, industry sectors, team & partner showcases (Sobaz, Nugo, Zenith and Kupon Oil & Gas), client testimonials and a full admin panel for managing services, partners and content.\n\nTech stack: PHP · MySQL · Vanilla JS - responsive corporate website.",
+    "client": "ZHEHUS Agric-Mechanics & Investments Ltd",
+    "industry": "Diversified Investments & Agriculture",
+    "project_url": "https://zhehusgroup.com/",
+    "completion_date": "2024-09-09T12:00:00Z",
+    "created_date": "2026-08-10T06:29:42.733Z",
+    "modified_date": "2026-08-10T08:16:18.056Z"
   }
 },
 {
@@ -1327,118 +1763,6 @@
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 43,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/8.png",
-    "name": "First",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.314Z",
-    "modified_date": "2025-12-26T09:18:54.123Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 44,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Second_4YyrPLo.png",
-    "name": "Second",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.327Z",
-    "modified_date": "2025-12-24T18:34:51.327Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 45,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Third_M6j2fEh.png",
-    "name": "Third",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.339Z",
-    "modified_date": "2025-12-24T18:34:51.339Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 46,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Fourth_NzLWG4m.png",
-    "name": "Fourth",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.350Z",
-    "modified_date": "2025-12-24T18:34:51.350Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 47,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Fifth_ZZ5Tj0L.png",
-    "name": "Fifth",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.361Z",
-    "modified_date": "2025-12-24T18:34:51.361Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 48,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Sixth_gXYJUWI.png",
-    "name": "Sixth",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.370Z",
-    "modified_date": "2025-12-24T18:34:51.370Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 49,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Seven_yWDVhl6.png",
-    "name": "Seventh",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.381Z",
-    "modified_date": "2025-12-24T18:34:51.381Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 50,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/Eight_BNLrr4J.png",
-    "name": "Eighth",
-    "description": "",
-    "created_date": "2025-12-24T18:34:51.390Z",
-    "modified_date": "2025-12-24T18:34:51.390Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
   "pk": 51,
   "fields": {
     "about": 1,
@@ -1897,20 +2221,6 @@
     "description": "",
     "created_date": "2025-12-26T09:15:07.617Z",
     "modified_date": "2025-12-26T09:15:07.617Z"
-  }
-},
-{
-  "model": "portfolio.projectimages",
-  "pk": 84,
-  "fields": {
-    "about": 1,
-    "service": 1,
-    "project": 7,
-    "image": "photos/project/FIRST_JkOrrCy.png",
-    "name": "Ninth",
-    "description": "",
-    "created_date": "2025-12-26T09:18:54.132Z",
-    "modified_date": "2025-12-26T09:18:54.132Z"
   }
 },
 {
@@ -2503,156 +2813,1010 @@
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 131,
+  "pk": 142,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/2_BujOo7d.png",
-    "name": "First",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.832Z",
-    "modified_date": "2026-01-05T11:05:54.832Z"
+    "project": 27,
+    "image": "photos\\project\\threeheart-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.427Z",
+    "modified_date": "2026-08-10T06:29:42.427Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 132,
+  "pk": 143,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/home_oNH3bkJ.png",
-    "name": "Second",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.849Z",
-    "modified_date": "2026-01-05T11:05:54.849Z"
+    "project": 27,
+    "image": "photos\\project\\threeheart-2.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.441Z",
+    "modified_date": "2026-08-10T06:29:42.441Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 133,
+  "pk": 144,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/about_wC43F8M.png",
-    "name": "Third",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.861Z",
-    "modified_date": "2026-01-05T11:05:54.861Z"
+    "project": 27,
+    "image": "photos\\project\\threeheart-3.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.451Z",
+    "modified_date": "2026-08-10T06:29:42.451Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 134,
+  "pk": 145,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/resume.png",
-    "name": "Fourth",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.873Z",
-    "modified_date": "2026-01-05T11:05:54.873Z"
+    "project": 27,
+    "image": "photos\\project\\threeheart-4.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.462Z",
+    "modified_date": "2026-08-10T06:29:42.462Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 135,
+  "pk": 146,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/services.png",
+    "project": 27,
+    "image": "photos\\project\\threeheart-5.png",
+    "name": "5",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.472Z",
+    "modified_date": "2026-08-10T06:29:42.472Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 147,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 27,
+    "image": "photos\\project\\threeheart-6.png",
+    "name": "6",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.483Z",
+    "modified_date": "2026-08-10T06:29:42.483Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 148,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.501Z",
+    "modified_date": "2026-08-10T06:29:42.501Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 149,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-2.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.512Z",
+    "modified_date": "2026-08-10T06:29:42.512Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 150,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-3.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.522Z",
+    "modified_date": "2026-08-10T06:29:42.522Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 151,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-4.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.532Z",
+    "modified_date": "2026-08-10T06:29:42.532Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 152,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-5.png",
+    "name": "5",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.541Z",
+    "modified_date": "2026-08-10T06:29:42.541Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 153,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-6.png",
+    "name": "6",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.551Z",
+    "modified_date": "2026-08-10T06:29:42.551Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 154,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 28,
+    "image": "photos\\project\\plan-7.png",
+    "name": "7",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.561Z",
+    "modified_date": "2026-08-10T06:29:42.561Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 155,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.581Z",
+    "modified_date": "2026-08-10T06:29:42.581Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 156,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-2.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.592Z",
+    "modified_date": "2026-08-10T06:29:42.592Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 157,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-3.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.601Z",
+    "modified_date": "2026-08-10T06:29:42.601Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 158,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-4.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.611Z",
+    "modified_date": "2026-08-10T06:29:42.611Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 159,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-5.png",
+    "name": "5",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.622Z",
+    "modified_date": "2026-08-10T06:29:42.622Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 160,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-6.png",
+    "name": "6",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.633Z",
+    "modified_date": "2026-08-10T06:29:42.634Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 161,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 29,
+    "image": "photos\\project\\dikaioo-7.png",
+    "name": "7",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.644Z",
+    "modified_date": "2026-08-10T06:29:42.644Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 162,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 30,
+    "image": "photos\\project\\sinacore-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.665Z",
+    "modified_date": "2026-08-10T06:29:42.665Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 163,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 30,
+    "image": "photos\\project\\sinacore-2.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.678Z",
+    "modified_date": "2026-08-10T06:29:42.678Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 164,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 30,
+    "image": "photos\\project\\sinacore-3.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.691Z",
+    "modified_date": "2026-08-10T06:29:42.691Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 165,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 30,
+    "image": "photos\\project\\sinacore-4.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.702Z",
+    "modified_date": "2026-08-10T06:29:42.702Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 166,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 30,
+    "image": "photos\\project\\sinacore-5.png",
+    "name": "5",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.713Z",
+    "modified_date": "2026-08-10T06:29:42.713Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 167,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 30,
+    "image": "photos\\project\\sinacore-6.png",
+    "name": "6",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.725Z",
+    "modified_date": "2026-08-10T06:29:42.725Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 168,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.745Z",
+    "modified_date": "2026-08-10T06:29:42.745Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 169,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-2.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.758Z",
+    "modified_date": "2026-08-10T06:29:42.758Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 170,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-3.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.770Z",
+    "modified_date": "2026-08-10T06:29:42.770Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 171,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-4.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.783Z",
+    "modified_date": "2026-08-10T06:29:42.783Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 172,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-5.png",
+    "name": "5",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.794Z",
+    "modified_date": "2026-08-10T06:29:42.794Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 173,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-6.png",
+    "name": "6",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.806Z",
+    "modified_date": "2026-08-10T06:29:42.806Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 174,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-7.png",
+    "name": "Admin 1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.818Z",
+    "modified_date": "2026-08-10T06:29:42.818Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 175,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-8.png",
+    "name": "Admin 2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.828Z",
+    "modified_date": "2026-08-10T06:29:42.828Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 176,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-9.png",
+    "name": "Admin 3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.840Z",
+    "modified_date": "2026-08-10T06:29:42.840Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 177,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 31,
+    "image": "photos\\project\\zhehus-10.png",
+    "name": "Admin 4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.851Z",
+    "modified_date": "2026-08-10T06:29:42.851Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 178,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.879Z",
+    "modified_date": "2026-08-10T06:29:42.879Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 179,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-2.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.891Z",
+    "modified_date": "2026-08-10T06:29:42.891Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 180,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-3.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.901Z",
+    "modified_date": "2026-08-10T06:29:42.901Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 181,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-4.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.912Z",
+    "modified_date": "2026-08-10T06:29:42.912Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 182,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-5.png",
+    "name": "admin 1",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.926Z",
+    "modified_date": "2026-08-10T06:29:42.926Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 183,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-6.png",
+    "name": "admin 2",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.937Z",
+    "modified_date": "2026-08-10T06:29:42.937Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 184,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-7.png",
+    "name": "Eight",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.949Z",
+    "modified_date": "2026-08-10T06:29:42.949Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 185,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-8.png",
     "name": "Fifth",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.888Z",
-    "modified_date": "2026-01-05T11:05:54.888Z"
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.962Z",
+    "modified_date": "2026-08-10T06:29:42.962Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 136,
+  "pk": 186,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/service-detail.png",
+    "project": 7,
+    "image": "photos\\project\\bgtnew-9.png",
+    "name": "FIRST",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.977Z",
+    "modified_date": "2026-08-10T06:29:42.977Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 187,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-10.png",
+    "name": "Fourth",
+    "description": null,
+    "created_date": "2026-08-10T06:29:42.990Z",
+    "modified_date": "2026-08-10T06:29:42.990Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 188,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-11.png",
+    "name": "Second",
+    "description": null,
+    "created_date": "2026-08-10T06:29:43.002Z",
+    "modified_date": "2026-08-10T06:29:43.002Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 189,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-12.png",
+    "name": "Seven",
+    "description": null,
+    "created_date": "2026-08-10T06:29:43.015Z",
+    "modified_date": "2026-08-10T06:29:43.015Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 190,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 7,
+    "image": "photos\\project\\bgtnew-13.png",
     "name": "Sixth",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.905Z",
-    "modified_date": "2026-01-05T11:05:54.905Z"
+    "description": null,
+    "created_date": "2026-08-10T06:29:43.025Z",
+    "modified_date": "2026-08-10T06:29:43.025Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 137,
+  "pk": 191,
   "fields": {
     "about": 1,
     "service": 1,
-    "project": 26,
-    "image": "photos/project/sidebar.png",
-    "name": "Seventh",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.924Z",
-    "modified_date": "2026-01-05T11:05:54.924Z"
+    "project": 7,
+    "image": "photos\\project\\bgtnew-14.png",
+    "name": "Third",
+    "description": null,
+    "created_date": "2026-08-10T06:29:43.040Z",
+    "modified_date": "2026-08-10T06:29:43.040Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 138,
+  "pk": 192,
   "fields": {
     "about": 1,
     "service": 1,
     "project": 26,
-    "image": "photos/project/portfolio.png",
-    "name": "Eighth",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.940Z",
-    "modified_date": "2026-01-05T11:05:54.940Z"
+    "image": "photos\\project\\kgsnew-1.png",
+    "name": "1",
+    "description": null,
+    "created_date": "2026-08-10T10:15:11.948Z",
+    "modified_date": "2026-08-10T10:15:11.948Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 139,
+  "pk": 193,
   "fields": {
     "about": 1,
     "service": 1,
     "project": 26,
-    "image": "photos/project/portfolio-detail.png",
-    "name": "Ninth",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.958Z",
-    "modified_date": "2026-01-05T11:05:54.959Z"
+    "image": "photos\\project\\kgsnew-2.png",
+    "name": "10",
+    "description": null,
+    "created_date": "2026-08-10T10:15:11.963Z",
+    "modified_date": "2026-08-10T10:15:11.963Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 140,
+  "pk": 194,
   "fields": {
     "about": 1,
     "service": 1,
     "project": 26,
-    "image": "photos/project/contact_svpC095.png",
-    "name": "Tenth",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.973Z",
-    "modified_date": "2026-01-05T11:05:54.973Z"
+    "image": "photos\\project\\kgsnew-3.png",
+    "name": "2",
+    "description": null,
+    "created_date": "2026-08-10T10:15:11.980Z",
+    "modified_date": "2026-08-10T10:15:11.980Z"
   }
 },
 {
   "model": "portfolio.projectimages",
-  "pk": 141,
+  "pk": 195,
   "fields": {
     "about": 1,
     "service": 1,
     "project": 26,
-    "image": "photos/project/footer_M6BNDCa.png",
-    "name": "Eleventh",
-    "description": "",
-    "created_date": "2026-01-05T11:05:54.988Z",
-    "modified_date": "2026-01-05T11:05:54.988Z"
+    "image": "photos\\project\\kgsnew-4.png",
+    "name": "3",
+    "description": null,
+    "created_date": "2026-08-10T10:15:11.995Z",
+    "modified_date": "2026-08-10T10:15:11.995Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 196,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-5.png",
+    "name": "4",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.011Z",
+    "modified_date": "2026-08-10T10:15:12.011Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 197,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-6.png",
+    "name": "5",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.025Z",
+    "modified_date": "2026-08-10T10:15:12.026Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 198,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-7.png",
+    "name": "6",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.036Z",
+    "modified_date": "2026-08-10T10:15:12.036Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 199,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-8.png",
+    "name": "7",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.051Z",
+    "modified_date": "2026-08-10T10:15:12.051Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 200,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-9.png",
+    "name": "8",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.065Z",
+    "modified_date": "2026-08-10T10:15:12.065Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 201,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-10.png",
+    "name": "9",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.078Z",
+    "modified_date": "2026-08-10T10:15:12.078Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 202,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-11.png",
+    "name": "about",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.092Z",
+    "modified_date": "2026-08-10T10:15:12.092Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 203,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-12.png",
+    "name": "Admin 1",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.103Z",
+    "modified_date": "2026-08-10T10:15:12.103Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 204,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-13.png",
+    "name": "Admin 2",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.120Z",
+    "modified_date": "2026-08-10T10:15:12.120Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 205,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-14.png",
+    "name": "contact",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.132Z",
+    "modified_date": "2026-08-10T10:15:12.132Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 206,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-15.png",
+    "name": "footer",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.144Z",
+    "modified_date": "2026-08-10T10:15:12.144Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 207,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-16.png",
+    "name": "home",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.160Z",
+    "modified_date": "2026-08-10T10:15:12.160Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 208,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-17.png",
+    "name": "portfolio-detail",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.171Z",
+    "modified_date": "2026-08-10T10:15:12.171Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 209,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-18.png",
+    "name": "portfolio",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.184Z",
+    "modified_date": "2026-08-10T10:15:12.184Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 210,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-19.png",
+    "name": "resume",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.197Z",
+    "modified_date": "2026-08-10T10:15:12.197Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 211,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-20.png",
+    "name": "service-detail",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.213Z",
+    "modified_date": "2026-08-10T10:15:12.213Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 212,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-21.png",
+    "name": "services",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.231Z",
+    "modified_date": "2026-08-10T10:15:12.231Z"
+  }
+},
+{
+  "model": "portfolio.projectimages",
+  "pk": 213,
+  "fields": {
+    "about": 1,
+    "service": 1,
+    "project": 26,
+    "image": "photos\\project\\kgsnew-22.png",
+    "name": "sidebar",
+    "description": null,
+    "created_date": "2026-08-10T10:15:12.248Z",
+    "modified_date": "2026-08-10T10:15:12.248Z"
   }
 },
 {
@@ -2758,108 +3922,6 @@
     "image": "testimonials/bgt_logo.png",
     "created_date": "2025-12-15T16:43:46.352Z",
     "modified_date": "2025-12-23T10:33:04.581Z"
-  }
-},
-{
-  "model": "resume.summary",
-  "pk": 1,
-  "fields": {
-    "about": 1,
-    "full_name": "GREATMAN JUSTUS UNYE-AWAJI",
-    "intro_text": "A highly versatile and results-driven Software Engineer, AI & Machine Learning Specialist, and Data Analyst with proven experience designing, developing, and deploying scalable web applications, intelligent systems, and data-driven solutions. Adept at building robust backend architectures, modern front-end interfaces, and AI-powered platforms that enhance operational efficiency, improve decision-making, and deliver measurable business value across industries.",
-    "description": "I build scalable web applications, intelligent AI systems, and data-driven solutions that help businesses work smarter and faster. I turn complex problems into actionable results using full-stack development, AI/ML, and data analytics.",
-    "address": "Nigeria",
-    "phone": "",
-    "email": "hello@kinggreatmanspirit.com",
-    "created_date": "2025-12-14T13:18:44.695Z",
-    "modified_date": "2026-08-04T16:47:06.230Z"
-  }
-},
-{
-  "model": "resume.education",
-  "pk": 1,
-  "fields": {
-    "about": 1,
-    "title": "B.Sc. Computer Science",
-    "year": "2024 - Present",
-    "institution": "University of the People, Pasadena, California",
-    "description": "Pursuing a degree focused on software engineering, algorithms, data structures, and AI applications.",
-    "created_date": "2025-12-14T13:44:38.910Z",
-    "modified_date": "2026-01-27T16:57:40.462Z"
-  }
-},
-{
-  "model": "resume.education",
-  "pk": 2,
-  "fields": {
-    "about": 1,
-    "title": "HND Computer Science",
-    "year": "2017 - 2022",
-    "institution": "Captain Elechi Amadi Polytechnic, Port Harcourt, Nigeria",
-    "description": "Completed core programming, databases, and system analysis coursework, building foundations for software and AI development.",
-    "created_date": "2025-12-14T13:50:58.318Z",
-    "modified_date": "2026-01-27T16:55:04.709Z"
-  }
-},
-{
-  "model": "resume.education",
-  "pk": 3,
-  "fields": {
-    "about": 1,
-    "title": "Freelancer — Data Scientist | Instructor",
-    "year": "(February 2024 – Present)",
-    "institution": "Delivered AI/ML solutions including predictive models, NLP apps, and deep learning systems.   Implemented LLM-powered applications using OpenAI GPT & Hugging Face models.",
-    "description": "Built AI-driven automation solutions, improving business efficiency by 30%. \r\n Conducted AI/ML consulting and training for clients and teams.",
-    "created_date": "2026-01-27T17:08:01.972Z",
-    "modified_date": "2026-01-27T17:08:47.628Z"
-  }
-},
-{
-  "model": "resume.experience",
-  "pk": 5,
-  "fields": {
-    "about": 1,
-    "title": "Python Developer & Data Analyst",
-    "year": "April 2021 – April 2024",
-    "company": "Webstacka IT Company  —",
-    "city": "Port Harcourt, Nigeria",
-    "desc_one": "Built scalable backend systems and RESTful APIs with Python, Django, PostgreSQL, and MySQL.",
-    "desc_two": "Automated ETL pipelines and performed data analysis to support business decisions.",
-    "desc_three": "Developed dashboards and applied statistical methods to optimize product performance. Managed deployments using Docker, Gunicorn, and Nginx.",
-    "created_date": "2025-12-15T14:14:29.268Z",
-    "modified_date": "2025-12-15T14:21:46.970Z"
-  }
-},
-{
-  "model": "resume.experience",
-  "pk": 6,
-  "fields": {
-    "about": 1,
-    "title": "Full-Stack Web Developer | Instructor",
-    "year": "May 2024 – Sept 2024",
-    "company": "FlowCode Tech Hub",
-    "city": "Port Harcourt, Nigeria",
-    "desc_one": "Delivered hands-on training programs in HTML, CSS, JavaScript, PHP, Python, and \r\nMySQL, equipping students with job-ready full-stack skills.",
-    "desc_two": "Mentored learners through real-world projects, covering application design, \r\ndevelopment, deployment, and debugging.",
-    "desc_three": "Managed relational databases and optimized SQL queries, improving database \r\nperformance by up to 30%",
-    "created_date": "2025-12-15T14:17:16.042Z",
-    "modified_date": "2026-01-27T17:02:15.902Z"
-  }
-},
-{
-  "model": "resume.experience",
-  "pk": 7,
-  "fields": {
-    "about": 1,
-    "title": "Software Engineer",
-    "year": "Oct 2024 – Present",
-    "company": "B.G. Technical Limited —",
-    "city": "Port Harcourt, Nigeria",
-    "desc_one": "Developed high-performance web applications using Python, PHP, Node.js, React, and Bootstrap.",
-    "desc_two": "Integrated Firebase for real-time tracking systems, reducing latency by 20%.",
-    "desc_three": "Built dynamic, responsive user interfaces, improving operational efficiency by 30%. Ensured code quality and maintainability using Git, Docker, and testing.",
-    "created_date": "2025-12-15T14:18:45.559Z",
-    "modified_date": "2025-12-15T14:21:19.754Z"
   }
 },
 {
@@ -3340,6 +4402,270 @@
     "image": "",
     "created_date": "2025-12-23T15:17:34.521Z",
     "modified_date": "2025-12-23T15:34:16.282Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 38,
+  "fields": {
+    "full_name": "John Doe",
+    "email": "john@example.com",
+    "phone_number": null,
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "referral": "Direct",
+    "message": "I need a website please",
+    "created_date": "2026-08-04T04:25:38.639Z",
+    "modified_date": "2026-08-04T04:25:38.639Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 39,
+  "fields": {
+    "full_name": "Michael Ugorji",
+    "email": "mike.u@bgtechnical.com",
+    "phone_number": "+2348033001281",
+    "company_name": "B.G. Technical Limited",
+    "service": 1,
+    "channel": "Referral",
+    "referral": "Direct",
+    "message": "I want to test if this form is working so well.",
+    "created_date": "2026-08-12T07:11:35.966Z",
+    "modified_date": "2026-08-12T07:11:35.967Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 40,
+  "fields": {
+    "full_name": "Test User",
+    "email": "test@example.com",
+    "phone_number": "08012345678",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "referral": "Direct",
+    "message": "This is a test message for verifying the contact form redirect behavior",
+    "created_date": "2026-08-12T07:21:08.735Z",
+    "modified_date": "2026-08-12T07:21:08.735Z"
+  }
+},
+{
+  "model": "contact.contactmessage",
+  "pk": 41,
+  "fields": {
+    "full_name": "Test User",
+    "email": "test@example.com",
+    "phone_number": "08012345678",
+    "company_name": "",
+    "service": null,
+    "channel": "",
+    "referral": "Direct",
+    "message": "This is a test message for verifying the contact form redirect behavior",
+    "created_date": "2026-08-12T07:24:23.599Z",
+    "modified_date": "2026-08-12T07:24:23.599Z"
+  }
+},
+{
+  "model": "contact.socials",
+  "pk": 1,
+  "fields": {
+    "platform": "My Socials",
+    "facebook": "https://www.facebook.com/FAMOUSGREATMAN/",
+    "twitter": "https://x.com/greatestmaneva",
+    "instagram": "https://www.instagram.com/king_greatman_spirit/",
+    "linkedin": "https://www.linkedin.com/in/greatman-pydev/",
+    "github": "https://github.com/King-Greatman-Spirit",
+    "youTube": "https://www.youtube.com/@greatestmaneva",
+    "telegram": "https://t.me/greatestmaneva",
+    "whatsapp": "https://wa.me/2349014155705",
+    "tiktok": "https://www.tiktok.com/@king_greatman_spirit",
+    "threads": "https://www.threads.com/@king_greatman_spirit",
+    "linktree": "https://linktr.ee/greatestmaneva",
+    "medium": null,
+    "substack": null,
+    "pinterest": "https://www.pinterest.com/greatestmaneva/"
+  }
+},
+{
+  "model": "contact.newslettersubscriber",
+  "pk": 6,
+  "fields": {
+    "email": "helperofthewar@gmail.com",
+    "is_active": true,
+    "source": "Footer",
+    "subscribed_at": "2026-08-11T16:55:29.094Z"
+  }
+},
+{
+  "model": "contact.newslettersubscriber",
+  "pk": 7,
+  "fields": {
+    "email": "spiritpydev@gmail.com",
+    "is_active": true,
+    "source": "Footer",
+    "subscribed_at": "2026-08-12T06:34:44.382Z"
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$MDw3tBALhnNbCBONJpSSAy$11PyKhpto6yfufKMYMZ1w/UjpnKyCHMuFG5Kb5lK2m4=",
+    "last_login": "2026-08-05T15:44:33.372Z",
+    "first_name": "kinggreatman",
+    "last_name": "spirit",
+    "username": "admin",
+    "email": "admin@kinggreatmanspirit.com",
+    "phone_number": "09014155705",
+    "date_joined": "2025-12-09T09:50:34.472Z",
+    "last_joined": "2025-12-09T09:50:34.472Z",
+    "is_active": true,
+    "is_staff": true,
+    "is_admin": true,
+    "is_superadmin": true
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 3,
+  "fields": {
+    "full_name": "Unye-Awaji Greatman Justus",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 3,
+    "description": "yES",
+    "amount": "500.00",
+    "currency": "USD",
+    "method": "binance",
+    "reference": "KGS-FBC71010674C432BB71C",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-04T16:30:30.159Z"
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 4,
+  "fields": {
+    "full_name": "Unye-Awaji Greatman Justus",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 3,
+    "description": "yES",
+    "amount": "500.00",
+    "currency": "USD",
+    "method": "paystack",
+    "reference": "KGS-849F5B13BAF448A096B8",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-04T16:31:04.268Z"
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 6,
+  "fields": {
+    "full_name": "Greatestmaneva",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 1,
+    "description": "Corporate Website",
+    "amount": "1000.00",
+    "currency": "NGN",
+    "method": "flutterwave",
+    "reference": "KGS-B3CDDBA8B6C24099B907",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-12T07:19:03.892Z"
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 7,
+  "fields": {
+    "full_name": "Greatestmaneva",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 1,
+    "description": "Corporate Website",
+    "amount": "100.00",
+    "currency": "NGN",
+    "method": "flutterwave",
+    "reference": "KGS-4E012877A1D44AFE926B",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-12T07:22:00.721Z"
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 8,
+  "fields": {
+    "full_name": "Greatestmaneva",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 1,
+    "description": "Corporate Website",
+    "amount": "100.00",
+    "currency": "NGN",
+    "method": "paystack",
+    "reference": "KGS-13CEB4E4E61D44AA8B33",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-12T07:30:12.175Z"
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 9,
+  "fields": {
+    "full_name": "Greatestmaneva",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 1,
+    "description": "Corporate Website",
+    "amount": "100.00",
+    "currency": "NGN",
+    "method": "flutterwave",
+    "reference": "KGS-0C65F795721F4F7AB852",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-12T07:34:54.127Z"
+  }
+},
+{
+  "model": "payments.paymentrequest",
+  "pk": 10,
+  "fields": {
+    "full_name": "Greatestmaneva",
+    "email": "spiritpydev@gmail.com",
+    "phone_number": "09014155705",
+    "service": 1,
+    "description": "Corporate Website",
+    "amount": "200.00",
+    "currency": "NGN",
+    "method": "binance",
+    "reference": "KGS-D526C4F5534F484E80EF",
+    "status": "pending",
+    "gateway_ref": null,
+    "gateway_response": null,
+    "paid_date": null,
+    "created_date": "2026-08-12T07:43:15.268Z"
   }
 }
 ]

@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-kgs_db}
+      POSTGRES_USER: ${DB_USER:-kgs_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-kgs_password}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-kgs_user} -d ${DB_NAME:-kgs_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_ENGINE: django.db.backends.postgresql
+      DB_NAME: ${DB_NAME:-kgs_db}
+      DB_USER: ${DB_USER:-kgs_user}
+      DB_PASSWORD: ${DB_PASSWORD:-kgs_password}
+      DB_HOST: db
+      DB_PORT: "5432"
+      DEBUG: "False"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - media_data:/app/media
+    ports:
+      - "8000:8000"
+
+volumes:
+  pgdata:
+  media_data:

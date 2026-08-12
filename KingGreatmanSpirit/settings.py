@@ -110,34 +110,29 @@ AUTH_USER_MODEL = 'accounts.Account'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# Sqlite Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': config('DB_ENGINE'),
-#         # 'NAME': BASE_DIR / config('DB_NAME'),
-#         'NAME': str(BASE_DIR / config('DB_NAME')),  # ✅ Convert to string
-#     }
-# }
+# Automatic: PostgreSQL when DB_ENGINE is set (Docker / VPS), SQLite otherwise
+# (local development with no extra setup). Set DB_ENGINE, DB_NAME, DB_USER,
+# DB_PASSWORD, DB_HOST, DB_PORT in .env for PostgreSQL.
+DB_ENGINE = config('DB_ENGINE', default='')
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Hardcoded for debugging
-        'NAME': str(BASE_DIR / 'db.sqlite3'),  # Ensure it's correctly referenced
+if DB_ENGINE == 'django.db.backends.postgresql':
+    DATABASES = {
+        'default': {
+            'ENGINE': DB_ENGINE,
+            'NAME': config('DB_NAME', default='kgs_db'),
+            'USER': config('DB_USER', default='kgs_user'),
+            'PASSWORD': config('DB_PASSWORD', default='kgs_password'),
+            'HOST': config('DB_HOST', default='db'),
+            'PORT': config('DB_PORT', default='5432'),
+        }
     }
-}
-
-
-# Postgresql Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': config('DB_ENGINE'),
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST'),
-#         'PORT': config('DB_PORT'),
-#     }
-# }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': str(BASE_DIR / 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -236,6 +231,9 @@ PAYSTACK_SECRET_KEY = config('PAYSTACK_SECRET_KEY', default='')
 
 BINANCE_API_KEY = config('BINANCE_API_KEY', default='')
 BINANCE_PRIVATE_KEY = config('BINANCE_PRIVATE_KEY', default='')
+BINANCE_MERCHANT_ID = config('BINANCE_MERCHANT_ID', default='')
+BINANCE_NGN_USDT_RATE = config('BINANCE_NGN_USDT_RATE', default='')
+BINANCE_ENABLED = config('BINANCE_ENABLED', default='False') == 'True'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # =============================================================

@@ -3,7 +3,7 @@ from pathlib import Path
 from django.conf import settings
 
 from .models import About
-from resume.models import Summary, Education, Experience
+from resume.models import Summary, Education, Experience, Certification, Achievement
 
 
 def spiritual_image_url():
@@ -30,6 +30,19 @@ def about_links(request):
     summaries = about.summaries.all() if about else []
     educations = about.educations.all() if about else []
     experiences = about.experiences.all() if about else []
+    # Credentials (badge grid in Resume) - alphabetically sorted for a tidy grid.
+    certifications = about.certifications.all().order_by('title') if about else []
+    # Split into two groups: 14 credentials shown by default (the 6 professional
+    # ones plus the first 8 co-curricular ones), and the remaining co-curricular
+    # ones hidden behind a "Show more" toggle so the Resume stays compact.
+    # Both groups keep the original alphabetical order.
+    cocurricular_issuer = 'Co-Curricular Programming Center'
+    professional_certs = [c for c in certifications if c.issuer != cocurricular_issuer]
+    co_curricular_certs = [c for c in certifications if c.issuer == cocurricular_issuer]
+    visible_certs = professional_certs + co_curricular_certs[:8]  # 14 shown
+    hidden_certs = co_curricular_certs[8:]                        # the rest (14)
+    # Impact milestone cards (Achievements section).
+    achievements = about.achievements.all() if about else []
 
     return {
         'about_links': about,       # About instance
@@ -38,6 +51,10 @@ def about_links(request):
         'summaries': summaries,     # Summary queryset
         'educations': educations,   # Education queryset
         'experiences': experiences, # Experience queryset
+        'certifications': certifications,  # Certification queryset (all)
+        'visible_certs': visible_certs,    # list (14 shown in the grid)
+        'hidden_certs': hidden_certs,      # list (14 behind the toggle)
+        'achievements': achievements,      # Achievement queryset
         'spiritual_image': spiritual_image_url(),
         'portrait_image': portrait_image_url(),
     }

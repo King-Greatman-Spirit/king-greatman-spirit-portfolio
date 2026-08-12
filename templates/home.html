@@ -165,15 +165,16 @@
               <img src="{{ about_links.profile_image.url }}" alt="{{ about_links.name }} — Developer Profile">
               <div class="hero-profile-name">
                 {{ about_links.name }}
-                <small>Software Engineer & AI Specialist</small>
+                <small>Python/Django Full-Stack Engineer</small>
               </div>
             </div>
 
+            <!-- Floating badge 1: real production-app count (replaced fake "125+ projects") -->
             <div class="hero-float-badge gold one">
-              <span class="fb-icon"><i class="bi bi-trophy"></i></span>
+              <span class="fb-icon"><i class="bi bi-journal-code"></i></span>
               <span>
-                <span class="fb-value">125+</span>
-                <span class="fb-label">Projects Delivered</span>
+                <span class="fb-value">9+</span>
+                <span class="fb-label">Production Apps</span>
               </span>
             </div>
 
@@ -213,8 +214,16 @@
             </div>
           {% endfor %}
           {% for site in client_sites %}
-            <div class="marquee-item">
-              <img src="https://www.google.com/s2/favicons?domain={{ site.domain }}&sz=64" alt="{{ site.name }} logo" loading="lazy">
+            <!-- Marquee logo: real local logo if we host one, else Google
+                 favicon (with monogram fallback if it fails to load), else
+                 a gold monogram badge when the site has no favicon at all. -->
+            <div class="marquee-item{% if site.no_favicon and not site.logo %} mono-only{% endif %}">
+              <span class="marquee-mono">{{ site.name|slice:":1"|upper }}</span>
+              {% if site.logo %}
+                <img src="/{{ site.logo }}" alt="{{ site.name }} logo" loading="lazy">
+              {% elif not site.no_favicon %}
+                <img src="https://www.google.com/s2/favicons?domain={{ site.domain }}&sz=64" alt="{{ site.name }} logo" loading="lazy" onerror="this.parentElement.classList.add('no-logo'); this.remove();">
+              {% endif %}
               {{ site.name }}
             </div>
           {% endfor %}
@@ -227,8 +236,14 @@
             </div>
           {% endfor %}
           {% for site in client_sites %}
-            <div class="marquee-item" aria-hidden="true">
-              <img src="https://www.google.com/s2/favicons?domain={{ site.domain }}&sz=64" alt="{{ site.name }} logo" loading="lazy">
+            <!-- Duplicate loop for the seamless scroll (hidden from screen readers) -->
+            <div class="marquee-item{% if site.no_favicon and not site.logo %} mono-only{% endif %}" aria-hidden="true">
+              <span class="marquee-mono">{{ site.name|slice:":1"|upper }}</span>
+              {% if site.logo %}
+                <img src="/{{ site.logo }}" alt="{{ site.name }} logo" loading="lazy">
+              {% elif not site.no_favicon %}
+                <img src="https://www.google.com/s2/favicons?domain={{ site.domain }}&sz=64" alt="{{ site.name }} logo" loading="lazy" onerror="this.parentElement.classList.add('no-logo'); this.remove();">
+              {% endif %}
               {{ site.name }}
             </div>
           {% endfor %}
@@ -260,7 +275,7 @@
 
         <div class="col-lg-7 content" data-aos="fade-up" data-aos-delay="200">
           <p class="about-roles">// About Me — Let me introduce myself</p>
-          <h2>Software Engineer • AI & ML Specialist • Data Analyst</h2>
+          <h2>Software Engineer • AI & ML Engineer • Data & BI Analyst • Technical Instructor</h2>
           <p class="lead">{{ about_links.intro_text }}</p>
 
           <ul class="info-grid">
@@ -335,6 +350,39 @@
 
   </section>
   <!-- /STATS SECTION -->
+
+  <!-- ==================== ACHIEVEMENTS SECTION ====================
+       Impact & Milestones - 4 icon cards fed from the Achievement model
+       (manageable from Django admin + the dashboard "Achievements" tab). -->
+  <section id="achievements" class="achievements section">
+
+    <div class="container section-title" data-aos="fade-up">
+      <span class="section-kicker">Impact & Milestones</span>
+      <h2>Achievements</h2>
+      <p>
+        Proof of work — measurable outcomes and production wins delivered for real
+        clients across engineering, energy, logistics, security, and corporate sectors.
+      </p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+
+        {% for ach in achievements %}
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:100 }}">
+          <div class="achievement-card">
+            <div class="achievement-icon"><i class="{{ ach.icon }}"></i></div>
+            <h3>{{ ach.label }}</h3>
+            <p>{{ ach.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </section>
+  <!-- /ACHIEVEMENTS SECTION -->
 
   <!-- ==================== SKILLS SECTION ==================== -->
   <section id="skills" class="skills section light-background">
@@ -421,7 +469,7 @@
 
     <div class="container section-title" data-aos="fade-up">
       <img src="{{ spiritual_image }}" class="resume-head-avatar" alt="{{ about_links.name }}" loading="lazy">
-      <span class="section-kicker">Career Path</span>
+      <span class="section-kicker">Career Growth</span>
       <h2>Resume</h2>
       {% for sum in summaries %}
       <p>{{ sum.intro_text }}</p>
@@ -432,9 +480,49 @@
 
       <div class="row">
 
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title"><i class="bi bi-person-badge"></i> Summary</h3>
+        <!-- ===== LEFT COLUMN: Certifications & Credentials only =====
+             Kept compact: the 6 professional credentials are shown,
+             and the 22 co-curricular ones sit behind a "Show more"
+             collapse so the Resume stays short and orderly. -->
+        <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title"><i class="bi bi-award"></i> Certifications & Credentials</h3>
 
+          <!-- Credentials grid (14 visible by default):
+               6 professional + first 8 co-curricular, alphabetical. -->
+          <div class="cert-grid">
+            {% for cert in visible_certs %}
+            <div class="cert-item">
+              <i class="bi bi-patch-check"></i>
+              <div>
+                <strong>{{ cert.title }}</strong>
+                <span>{{ cert.issuer }}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Remaining co-curricular credentials (hidden behind the toggle) -->
+          <button class="btn-outline cert-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cocurricularCerts" aria-expanded="false" aria-controls="cocurricularCerts">
+            <i class="bi bi-chevron-down"></i> Show {{ hidden_certs|length }} More Credentials
+          </button>
+          <div id="cocurricularCerts" class="collapse">
+            <div class="cert-grid mt-2">
+              {% for cert in hidden_certs %}
+              <div class="cert-item">
+                <i class="bi bi-patch-check"></i>
+                <div>
+                  <strong>{{ cert.title }}</strong>
+                  <span>{{ cert.issuer }}</span>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== RIGHT COLUMN: Summary + Professional Experience ===== -->
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="resume-title"><i class="bi bi-person-badge"></i> Summary</h3>
           <div class="resume-item pb-0">
             {% for sum in summaries %}
             <h4>{{ sum.full_name }}</h4>
@@ -443,31 +531,23 @@
               <li>{{ sum.address }}</li>
               <li>{{ sum.phone }}</li>
               <li>{{ sum.email }}</li>
+              <li><a href="{{ socials_links.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin.com/in/greatman-pydev</a></li>
+              <li><a href="{{ socials_links.github }}" target="_blank" rel="noopener noreferrer">github.com/King-Greatman-Spirit</a></li>
+              <!-- All social links in one place - value comes from the Socials model -->
+              <li><a href="{{ socials_links.linktree }}" target="_blank" rel="noopener noreferrer">linktr.ee/greatestmaneva</a></li>
             </ul>
             {% endfor %}
+
+            <div class="resume-actions">
+              <a href="/media/resume/Greatman_Justus_Unye-Awaji_Software_Engineer_Resume.pdf" class="btn-outline" target="_blank" rel="noopener">
+                <i class="bi bi-download"></i> Download CV
+              </a>
+              <a href="{{ socials_links.github }}" class="btn-outline" target="_blank" rel="noopener">
+                <i class="bi bi-github"></i> View GitHub
+              </a>
+            </div>
           </div>
 
-          <h3 class="resume-title"><i class="bi bi-mortarboard"></i> Education</h3>
-          <div class="resume-item">
-            {% for edu in educations %}
-            <h4>{{ edu.title }}</h4>
-            <h5>{{ edu.year }}</h5>
-            <p><b>{{ edu.institution }}</b></p>
-            <p class="pb-4">{{ edu.description }}</p>
-            {% endfor %}
-          </div>
-
-          <div class="resume-actions">
-            <a href="/media/resume/Greatman_Justus_Unye-Awaji_Data_Scientist_Resume.pdf" class="btn-outline" target="_blank" rel="noopener">
-              <i class="bi bi-download"></i> Data Scientist CV
-            </a>
-            <a href="/media/resume/Greatman_Justus_Unye-Awaji_Data_Analyst_Resume.pdf" class="btn-outline" target="_blank" rel="noopener">
-              <i class="bi bi-download"></i> Data Analyst CV
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
           <h3 class="resume-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
           <div class="resume-item">
             {% for exp in experiences %}
@@ -835,9 +915,9 @@
           <span class="spirit-kicker"><i class="bi bi-person-hearts"></i> The Man Behind the Work</span>
           <h2>King Greatman Spirit</h2>
           <p>
-            Software engineer, AI &amp; ML specialist, data analyst — and a builder who
-            treats every project like it's his own. When you work with me, you work with
-            the full spirit.
+            Software engineer, AI &amp; ML engineer, data &amp; BI analyst, technical
+            instructor — and a builder who treats every project like it's his own. When
+            you work with me, you work with the full spirit.
           </p>
           <a href="{% url 'home' %}#contact" class="btn-gold">
             <i class="bi bi-rocket-takeoff"></i> Let's build together
@@ -1014,7 +1094,7 @@
           {% include 'includes/alerts.html' %}
 
           <form method="post"
-                action="{% url 'contact' %}"
+                action="{% url 'contact' %}#contact"
                 class="php-email-form contactform"
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -1062,12 +1142,12 @@
               </div>
 
               <div class="col-md-6">
-                <label for="phone-field" class="pb-2">Phone Number</label>
+                <label for="phone-field" class="pb-2">Phone / WhatsApp Number</label>
                 <input type="text"
                       name="phone_number"
                       id="phone-field"
                       class="form-control"
-                      placeholder="Phone number"
+                      placeholder="Phone / WhatsApp number"
                       value="{{ form_data.phone_number|default:'' }}"
                       pattern="\+?[0-9]{7,15}"
                       maxlength="16"
@@ -1192,6 +1272,19 @@
 
   </section>
   <!-- /CONTACT SECTION -->
+
+  {% if autoscroll_contact %}
+  <script>
+    window.addEventListener('load', function () {
+      var el = document.getElementById('contact');
+      if (el) {
+        setTimeout(function () {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 250);
+      }
+    });
+  </script>
+  {% endif %}
 
 </main>
 

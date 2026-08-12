@@ -1,6 +1,6 @@
-/* ============================================================
-   KING GREATMAN SPIRIT — Premium Portfolio Design System
-   Deep-navy glassmorphism theme · Gold + Emerald brand accents
+﻿/* ============================================================
+   KING GREATMAN SPIRIT â€” Premium Portfolio Design System
+   Deep-navy glassmorphism theme Â· Gold + Emerald brand accents
    ============================================================ */
 
 /*--------------------------------------------------------------
@@ -990,8 +990,33 @@ section, .section {
   cursor: default;
 }
 .marquee-item img { height: 34px; width: auto; filter: grayscale(1) brightness(2.2); opacity: 0.75; }
+/* Monogram badge: gold initial on a surface chip. Shown only when a
+   client has no usable logo (broken/missing favicon) - see below. */
+.marquee-mono {
+  display: none;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: var(--surface);
+  border: 1px solid rgba(255, 216, 1, 0.35);
+  color: var(--gold);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+/* Clients without any logo online: show the monogram from the start.
+   Clients whose favicon failed to load: JS adds .no-logo, showing it. */
+.marquee-item.mono-only .marquee-mono,
+.marquee-item.no-logo .marquee-mono { display: inline-flex; }
 .marquee-item:hover { color: var(--gold); }
 .marquee-item:hover img { filter: none; opacity: 1; }
+.marquee-item.mono-only:hover .marquee-mono,
+.marquee-item.no-logo:hover .marquee-mono {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(255, 216, 1, 0.12);
+}
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -1141,6 +1166,120 @@ section, .section {
 }
 .stats .stats-item p { color: var(--text); font-weight: 600; margin: 10px 0 4px; font-size: 1rem; }
 .stats .stats-item p span { color: var(--muted); display: block; font-weight: 400; font-size: 0.85rem; margin-top: 4px; }
+
+/*--------------------------------------------------------------
+# Achievements Section
+# 4 impact-milestone cards (icon + headline + proof text).
+# Same design language as the Stats cards, but with text proof.
+--------------------------------------------------------------*/
+.achievements .achievement-card {
+  position: relative;
+  height: 100%;                      /* Equal-height cards in the grid row */
+  padding: 32px 24px;
+  border-radius: var(--radius);      /* Rounded corners from the theme */
+  background: var(--surface);        /* Theme surface colour (dark card) */
+  border: 1px solid var(--border);
+  transition: all 0.4s ease;
+}
+/* Lift the card + gold glow on hover (matches stats-item behaviour). */
+.achievements .achievement-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 216, 1, 0.45);
+  box-shadow: 0 25px 55px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 216, 1, 0.15);
+  background: var(--card-hover);
+}
+/* Gold gradient icon square, same as .stats-icon. */
+.achievements .achievement-card .achievement-icon {
+  width: 58px; height: 58px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: var(--gradient-gold);  /* Gold gradient badge */
+  color: #141000;                    /* Dark icon on gold = readable */
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-gold);    /* Soft gold glow behind the icon */
+}
+.achievements .achievement-card h3 {
+  font-family: var(--heading-font);  /* Headline font from the theme */
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.achievements .achievement-card p {
+  color: var(--muted);               /* Muted grey for the proof text */
+  font-size: 0.92rem;
+  line-height: 1.65;                 /* Comfortable line spacing */
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Certifications Grid
+# Compact 2-column badge grid for the credentials list.
+# Keeps 28 certifications tidy instead of one long vertical list.
+--------------------------------------------------------------*/
+.resume .cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 badges per row */
+  gap: 10px;
+}
+.resume .cert-item {
+  display: flex;
+  align-items: flex-start;           /* Icon on top-left of the text */
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.resume .cert-item:hover {
+  transform: translateY(-3px);       /* Small lift on hover */
+  border-color: rgba(255, 216, 1, 0.45);
+  box-shadow: 0 15px 30px -18px rgba(0, 0, 0, 0.7);
+}
+.resume .cert-item i {
+  font-size: 1.1rem;
+  color: var(--gold);                /* Gold checkmark = verified credential */
+  margin-top: 2px;
+  flex-shrink: 0;                    /* Icon never squashes */
+}
+.resume .cert-item strong {
+  display: block;                    /* Credential title on its own line */
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+.resume .cert-item span {
+  display: block;                    /* Issuer name under the title */
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+/* On phones, stack to a single column so titles stay readable. */
+@media (max-width: 575px) {
+  .resume .cert-grid { grid-template-columns: 1fr; }
+}
+
+/* "Show more" toggle for the hidden co-curricular credentials.
+   Outlined button that expands the collapse below it; the chevron
+   points down when closed and up once the collapse is open. */
+.resume .cert-toggle {
+  width: 100%;                       /* Full-width button under the grid */
+  margin-top: 14px;
+  justify-content: center;
+  font-size: 0.88rem;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+.resume .cert-toggle .bi-chevron-down {
+  transition: transform 0.3s ease;   /* Smooth chevron flip */
+}
+.resume .cert-toggle[aria-expanded="true"] .bi-chevron-down {
+  transform: rotate(180deg);         /* Up arrow when expanded */
+}
 
 /*--------------------------------------------------------------
 # Skills Section
@@ -1293,11 +1432,14 @@ section, .section {
   font-size: 0.93rem;
 }
 .resume .resume-item ul li::before {
-  content: "▹";
+  font-family: "bootstrap-icons";  /* Arrow-right glyph from the icon font */
+  content: "\F138";
   position: absolute;
   left: 0;
+  top: 2px;
   color: var(--gold);
   font-weight: 700;
+  font-size: 0.85rem;
 }
 .resume .resume-item ul li.pb-4 { margin-bottom: 0; }
 .resume .resume-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; }
@@ -2999,7 +3141,7 @@ PAYMENT RESULT PAGES
 }
 
 /*--------------------------------------------------------------
-# SERVICE DETAIL � ANIMATED HERO PANEL
+# SERVICE DETAIL ï¿½ ANIMATED HERO PANEL
 --------------------------------------------------------------*/
 .service-hero {
   border-radius: 18px;
@@ -3268,7 +3410,7 @@ PAYMENT RESULT PAGES
 }
 .sh-stage-label b { color: var(--gold); }
 
-/* web — typing code editor */
+/* web â€” typing code editor */
 .sh-code {
   width: 100%;
   font-family: "JetBrains Mono", "Courier New", monospace;
@@ -3298,7 +3440,7 @@ PAYMENT RESULT PAGES
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* ai — neural network */
+/* ai â€” neural network */
 .sh-neural { width: 100%; height: 100%; }
 .sh-neural-links line {
   stroke: rgba(255, 216, 1, 0.28);
@@ -3321,7 +3463,7 @@ PAYMENT RESULT PAGES
   50% { transform: scale(1.4); opacity: 1; }
 }
 
-/* strategy — target crosshair */
+/* strategy â€” target crosshair */
 .sh-target {
   position: relative;
   width: 118px;
@@ -3372,7 +3514,7 @@ PAYMENT RESULT PAGES
   50% { transform: translate(-50%, -50%) scale(1.4); }
 }
 
-/* design — color palette */
+/* design â€” color palette */
 .sh-palette { display: flex; gap: 14px; align-items: center; }
 .sh-swatch {
   width: 38px;
@@ -3388,7 +3530,7 @@ PAYMENT RESULT PAGES
   50% { transform: translateY(-10px) scale(1.12); }
 }
 
-/* training — module progress */
+/* training â€” module progress */
 .sh-training {
   display: flex;
   flex-direction: column;
@@ -3507,7 +3649,7 @@ PAYMENT RESULT PAGES
 }
 
 /*--------------------------------------------------------------
-# PAYMENT PAGE � CURRENCY STRIP
+# PAYMENT PAGE ï¿½ CURRENCY STRIP
 --------------------------------------------------------------*/
 .pay-currencies {
   display: flex;
@@ -3548,7 +3690,7 @@ PAYMENT RESULT PAGES
 .pc.crypto b { color: #f0b90b; }
 
 /*--------------------------------------------------------------
-# PORTFOLIO DETAIL � QUICK LINKS PANEL
+# PORTFOLIO DETAIL ï¿½ QUICK LINKS PANEL
 --------------------------------------------------------------*/
 .portfolio-quicklinks {
   margin-top: 20px;
@@ -3717,7 +3859,7 @@ PAYMENT RESULT PAGES
 }
 
 /* =============================================================
-PORTRAIT VARIETY — spiritual.png placements
+PORTRAIT VARIETY â€” spiritual.png placements
 --------------------------------------------------------------*/
 .resume-head-avatar {
   display: inline-block;
@@ -3837,7 +3979,7 @@ SPIRIT PHOTO BANNER
 }
 
 /* =============================================================
-FAQ SECTION — STYLISH ALIVE ACCORDION
+FAQ SECTION â€” STYLISH ALIVE ACCORDION
 --------------------------------------------------------------*/
 .faq-section { position: relative; overflow: hidden; }
 .faq-blob {
@@ -3970,3 +4112,4 @@ KING PORTRAIT BANNER (variant)
 @media (max-width: 576px) {
   .spirit-banner.king { min-height: 480px; }
 }
+

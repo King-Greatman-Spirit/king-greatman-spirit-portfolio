@@ -1,3 +1,4 @@
+import hashlib
 import os
 
 from django.conf import settings
@@ -65,6 +66,7 @@ def _base_context():
         "avatar_src": None,
         "cover_src": None,
         "profile_src": None,
+        "portrait_src": None,   # "The Man Behind the Work" portrait
     }
     if about:
         ctx.update(
@@ -105,6 +107,37 @@ def _attach_inline(email, field, cid):
         return _absolute_image(field.url)
 
 
+def _attach_file(email, path, cid, url):
+    """Attach a plain file (not a model field) as an inline image.
+
+    Used for the "King Greatman Spirit" portrait that the main website
+    shows in "The Man Behind the Work" — it lives in media/ directly,
+    not on a model, so it needs its own attachment path."""
+    if not path or not os.path.exists(path):
+        return None
+    try:
+        from email.mime.image import MIMEImage
+
+        with open(path, "rb") as f:
+            part = MIMEImage(f.read(), _subtype=_mimetype(path).split("/")[1])
+        part.add_header("Content-ID", f"<{cid}>")
+        part.add_header("Content-Disposition", "inline", filename=os.path.basename(path))
+        email.attach(part)
+        return f"cid:{cid}"
+    except (OSError, ValueError):
+        return url
+
+
+def _portrait_file():
+    """Locate the portrait used on the site: king-greatman-spirit.png,
+    falling back to spiritual.png."""
+    for name in ("king-greatman-spirit.png", "spiritual.png"):
+        candidate = os.path.join(settings.MEDIA_ROOT, "about_images", name)
+        if os.path.exists(candidate):
+            return candidate, f"{settings.MEDIA_URL}about_images/{name}"
+    return "", ""
+
+
 def send_html_email(subject, template_name, context, to_list, reply_to=None, base_url=None):
     """Render a Django template as HTML email with inline images and send it."""
     global BASE_URL
@@ -123,16 +156,32 @@ def send_html_email(subject, template_name, context, to_list, reply_to=None, bas
     )
 
     if about:
+        # Only the avatar and cover images are attached here — they are the
+        # header images every email displays. The about_image (kgs_profile)
+        # is NOT attached: no template uses it anymore, and an unused inline
+        # attachment shows up as a stray file (e.g. "yeah.jpg") in Gmail's
+        # attachment row next to "Scanned by Gmail".
         for cid, field_name in (
             ("kgs_avatar", "profile_image"),
             ("kgs_cover", "cover_image"),
-            ("kgs_profile", "about_image"),
         ):
             field = getattr(about, field_name, None)
             src = _attach_inline(email, field, cid)
             if src:
-                key = {"kgs_avatar": "avatar_src", "kgs_cover": "cover_src", "kgs_profile": "profile_src"}[cid]
+                key = {"kgs_avatar": "avatar_src", "kgs_cover": "cover_src"}[cid]
                 ctx[key] = src
+
+    # Attach the "The Man Behind the Work" portrait (the same image the
+    # main website shows) so newsletter emails can use it as their image.
+    portrait_path, portrait_url = _portrait_file()
+    # Unique Content-ID per file: Gmail caches inline images by Content-ID,
+    # so a static ID (e.g. kgs_portrait) would keep showing the OLD image
+    # even after the file changes. Hashing the path makes the ID change
+    # whenever the picture changes, forcing Gmail to re-fetch it.
+    portrait_cid = "kgs_portrait_" + hashlib.md5(portrait_path.encode()).hexdigest()[:10]
+    portrait_src = _attach_file(email, portrait_path, portrait_cid, BASE_URL + portrait_url)
+    if portrait_src:
+        ctx["portrait_src"] = portrait_src
 
     html_body = render_to_string(template_name, ctx)
     email.attach_alternative(html_body, "text/html")
@@ -154,7 +203,21 @@ def preview_context(base_url=None):
             ctx["cover_src"] = BASE_URL + about.cover_image.url
         if about.about_image:
             ctx["profile_src"] = BASE_URL + about.about_image.url
+    # Browser preview: same portrait as the live site, as a plain URL.
+    portrait_path, portrait_url = _portrait_file()
+    if portrait_path:
+        ctx["portrait_src"] = BASE_URL + portrait_url
     return ctx
+
+
+def _wa_number(phone):
+    """Digits-only WhatsApp number; Nigerian local formats (0xxx) -> international (234xxx)."""
+    if not phone:
+        return ""
+    digits = "".join(ch for ch in phone if ch.isdigit())
+    if digits.startswith("0"):
+        digits = "234" + digits[1:]
+    return digits
 
 
 def send_contact_notification(contact):
@@ -162,7 +225,10 @@ def send_contact_notification(contact):
     send_html_email(
         subject=f"New Lead: {contact.full_name or 'Visitor'} — {contact.email or 'no email'}",
         template_name="emails/contact_notification_email.html",
-        context={"contact": contact},
+        context={
+            "contact": contact,
+            "wa_phone": _wa_number(contact.phone_number),
+        },
         to_list=[settings.EMAIL_HOST_USER],
         reply_to=[contact.email] if contact.email else None,
     )

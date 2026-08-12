@@ -55,13 +55,27 @@
 
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;">
     <tr>
+      {% if wa_phone %}
       <td style="border-radius:999px; background:linear-gradient(90deg,#ffd801,#ff9f1c);">
-        <a href="https://wa.me/2349014155705" style="display:inline-block; padding:12px 24px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#0a1120;">
+        <a href="https://wa.me/{{ wa_phone }}?text=Hello%20{{ contact.full_name|default:'there'|urlencode }}%2C%20I%20received%20your%20message%20on%20kinggreatmanspirit.com" style="display:inline-block; padding:12px 24px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#0a1120;">
           &#128172; Reply on WhatsApp
         </a>
       </td>
+      {% else %}
+      <td style="border-radius:999px; background:linear-gradient(90deg,#2dd4bf,#14b8a6);">
+        <a href="mailto:{{ contact.email }}?subject=Re:%20{{ contact.full_name|default:'your message'|urlencode }}" style="display:inline-block; padding:12px 24px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:800; text-decoration:none; color:#03231d;">
+          &#128231; Reply by Email
+        </a>
+      </td>
+      {% endif %}
     </tr>
   </table>
+
+  {% if wa_phone %}
+  <p style="margin:14px 0 0 0; color:#97a2bd; font-size:11px;">
+    Or tap here to start the chat on WhatsApp: <a href="https://wa.me/{{ wa_phone }}" style="color:#2dd4bf; text-decoration:none;">wa.me/{{ wa_phone }}</a>
+  </p>
+  {% endif %}
 
 {% endblock %}
 

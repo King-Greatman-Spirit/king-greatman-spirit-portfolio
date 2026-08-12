@@ -19,3 +19,11 @@ systemctl restart kinggreatmanspirit
 systemctl reload nginx
 
 chown -R www-data:www-data /var/www/kinggreatmanspirit
+
+the magic of thinking big
+
+the alchemist
+
+The richest man in babylon
+
+The secret of the millioniare mind

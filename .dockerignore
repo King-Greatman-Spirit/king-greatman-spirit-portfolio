@@ -1,0 +1,14 @@
+# Copy session only — never send these to the build context
+.git
+venv/
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+!.env.example
+db.sqlite3
+KGS_Deploy_Bundle/
+KGS_Deploy_Bundle.zip
+.vscode/
+.idea/

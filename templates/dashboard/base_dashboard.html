@@ -62,6 +62,12 @@
       <a href="{% url 'dashboard:crud_list' key='summaries' %}" class="dash-nav-link {% if key == 'summaries' %}active{% endif %}">
         <i class="bi bi-person-vcard"></i> Resume Summary
       </a>
+      <a href="{% url 'dashboard:crud_list' key='achievements' %}" class="dash-nav-link {% if key == 'achievements' %}active{% endif %}">
+        <i class="bi bi-trophy"></i> Achievements
+      </a>
+      <a href="{% url 'dashboard:crud_list' key='certifications' %}" class="dash-nav-link {% if key == 'certifications' %}active{% endif %}">
+        <i class="bi bi-award"></i> Certifications
+      </a>
       <a href="{% url 'dashboard:crud_list' key='educations' %}" class="dash-nav-link {% if key == 'educations' %}active{% endif %}">
         <i class="bi bi-mortarboard"></i> Education
       </a>

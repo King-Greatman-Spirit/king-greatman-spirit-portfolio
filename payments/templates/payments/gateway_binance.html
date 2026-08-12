@@ -33,6 +33,11 @@
               {{ payment.currency }} {{ payment.amount }}
             </div>
 
+            <div id="usdt-detail" style="display:none; margin: -6px 0 14px; font-size: 0.85rem; color: var(--gold);">
+              You'll pay <strong id="usdt-amount"></strong> USDT
+              (<span id="usdt-original"></span>)
+            </div>
+
             <div id="binance-qr-area" style="margin: 24px 0;">
               <div class="binance-loading"><i class="bi bi-arrow-repeat"></i> Creating your payment QR…</div>
             </div>
@@ -60,6 +65,11 @@
         const area = document.getElementById("binance-qr-area");
         if (data && data.ok) {
           area.innerHTML = '<img src="' + data.qr + '" alt="Binance Pay QR code" style="max-width: 240px; border-radius: 16px; background: #fff; padding: 12px;">';
+          if (data.usdt) {
+            document.getElementById("usdt-amount").textContent = data.usdt;
+            document.getElementById("usdt-original").textContent = "≈ " + data.original_amount + " " + data.original_currency;
+            document.getElementById("usdt-detail").style.display = "block";
+          }
         } else {
           area.innerHTML = '<div style="border:1px dashed var(--border-strong); border-radius:14px; padding:18px; color: var(--muted); font-size: 0.9rem;">' +
             (data && data.error ? 'Binance Pay: ' + data.error : 'Binance Pay is not configured yet.') +
