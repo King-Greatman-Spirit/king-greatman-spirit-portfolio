@@ -1,57 +1,92 @@
 #ffd801 - Vivid Yellow
 #194e42 - Deep Teal
 
-Future Deployment Workflow
-cd /var/www/kinggreatmanspirit
+====================================================================
+KGS DEPLOYMENT GUIDE - Docker + PostgreSQL (VPS)
+Domain: kinggreatmanspirit.com  |  App dir: /var/www/kinggreatmanspirit
+====================================================================
 
-cd /var/www/kinggreatmanspirit
-git pull
+== A. FIRST-TIME DEPLOY (fresh VPS) ==
 
-# 1. Stop the OLD service so it doesn't conflict with Docker's port 8000
-sudo systemctl stop kinggreatmanspirit
-sudo systemctl disable kinggreatmanspirit
+1. Install Docker Engine + Compose:
+   curl -fsSL https://get.docker.com | sh
 
-# 2. Create .env (it's NOT in git!) — Postgres settings + NEW secret key
-nano .env
-#    DB_ENGINE=django.db.backends.postgresql
-#    DB_NAME=kgs_db
-#    DB_USER=kgs_user
-#    DB_PASSWORD=kgs_password
-#    DB_HOST=db
-#    DB_PORT=5432
-#    SECRET_KEY=<new key from your local .env>
+2. Get the code:
+   git config --global --add safe.directory /var/www/kinggreatmanspirit
+   cd /var/www/kinggreatmanspirit
+   git clone https://github.com/King-Greatman-Spirit/king-greatman-spirit-portfolio.git .
 
-# 3. Build & start — this ONE command does everything:
-#    pip install (inside image), migrate, load KGS.json, collectstatic, gunicorn
-sudo docker compose up -d --build
+3. Create .env (NOT in git - copy from your local PC):
+   nano .env
+   REQUIRED values:
+     SECRET_KEY=-XSNr2Wj4Nr7GjJe87srjMU6YPkMvHNHJli5saoZ2F9yBTfO6mEgBFM3j7XeEJwFgtA
+     DEBUG=False
+     ALLOWED_HOSTS=kinggreatmanspirit.com,www.kinggreatmanspirit.com,127.0.0.1,localhost
+     CSRF_TRUSTED_ORIGINS=https://kinggreatmanspirit.com,https://www.kinggreatmanspirit.com
+     DB_ENGINE=django.db.backends.postgresql
+     DB_NAME=kgs_db
+     DB_USER=kgs_user
+     DB_PASSWORD=kgs_password
+     DB_HOST=db
+     DB_PORT=5432
+     + all EMAIL / PAYSTACK / FLUTTERWAVE / BINANCE / TWILIO keys from your PC .env
+   RULES: SECRET_KEY must NOT contain $ or # or spaces
+   (they break docker-compose parsing - creates the "jole" warning).
+   BACKUP .env somewhere safe - a lost .env means lost payment keys.
 
-# 4. Check the JSON loaded (should say "Installed 331 object(s)")
-sudo docker compose logs web | grep -i fixture
+4. Build & start (does EVERYTHING automatically:
+   pip install -> migrate -> load KGS.json -> collectstatic -> gunicorn):
+   sudo docker compose up -d --build
+   (First boot: DB is empty -> "Installed 331 object(s) from 1 fixture(s)")
 
-# 5. nginx reload (it keeps proxying to localhost:8000, which Docker now serves)
-sudo nginx -t && sudo systemctl reload nginx
+5. Nginx - one-time setup:
+   Site config: /etc/nginx/sites-available/kinggreatmanspirit
+   In "location /" change to:
+       proxy_pass http://127.0.0.1:8000;   (NOT the old unix socket!)
+   sudo nginx -t && sudo systemctl reload nginx
 
-# 1. Fix git ownership, then pull the current code
-git config --global --add safe.directory /var/www/kinggreatmanspirit
-git pull
+6. Verify:
+   curl -sI https://kinggreatmanspirit.com | head -3        -> 200 OK
+   for p in / /about/ /contact/contact/ /payment/ /accounts/login/ /dashboard/ /robots.txt; do
+     printf "%s " "$p"; curl -s -o /dev/null -w "%{http_code}\n" "https://kinggreatmanspirit.com$p"; done
+   sudo docker compose logs web | grep -i installed        -> 331 objects
 
-# 2. Install Docker Engine + compose plugin (official script)
-curl -fsSL https://get.docker.com | sh
+====================================================================
+== B. UPDATE DEPLOY (every time you push to GitHub) ==
+====================================================================
 
-# 3. Verify docker works
-docker --version && docker compose version
+   AUTO:  cd /var/www/kinggreatmanspirit && bash deploy.sh
+   MANUAL: cd /var/www/kinggreatmanspirit && git pull && sudo docker compose up -d --build
+   (Data is NOT wiped - fixture only loads when the DB is empty)
 
-# 4. Confirm .env was actually saved (should show DB settings + SECRET_KEY)
-cat /var/www/kinggreatmanspirit/.env
+   One-liner to fetch & run the auto script from GitHub:
+   curl -fsSL https://raw.githubusercontent.com/King-Greatman-Spirit/king-greatman-spirit-portfolio/main/deploy.sh -o deploy.sh && bash deploy.sh
 
-# 5. Build & start (only AFTER .env exists)
-sudo docker compose up -d --build
+====================================================================
+== C. USEFUL COMMANDS ==
+====================================================================
 
-# 6. Verify the JSON loaded
-sudo docker compose logs web | grep -i fixture
+   Logs:          sudo docker compose logs -f web
+   Restart:       sudo docker compose restart
+   Down/up:       sudo docker compose down && sudo docker compose up -d
+   Wipe ALL data: sudo docker compose down -v     (WARNING - deletes database!)
+   DB data check: sudo docker compose exec -T db psql -U kgs_user -d kgs_db -c "SELECT count(*) FROM accounts_account;"
+   Backup DB:     sudo docker compose exec -T db pg_dump -U kgs_user kgs_db > kgs_backup_$(date +%F).sql
 
-# 7. Bring the site back on nginx
-sudo nginx -t && sudo systemctl reload nginx
+====================================================================
+== D. WARNINGS / LESSONS LEARNED ==
+====================================================================
+
+   1. Never run: sed -i 's|SECRET_KEY=.*|...' (unaltered) - it ALSO
+      rewrites FLUTTERWAVE_SECRET_KEY and PAYSTACK_SECRET_KEY.
+      Always anchor: s|^SECRET_KEY=.*|
+   2. Old systemd service must be disabled BEFORE docker (port/socket conflict -> 502).
+   3. Nginx /static/ and /media/ aliases point to /var/www/... open dirs -
+      new uploads go to Docker's volume instead. If uploads 404 later,
+      remove those two location blocks from the nginx site config.
+   4. If you see "The jole variable is not set": your SECRET_KEY has $ in it - fix it.
+   5. Never run migrate/collectstatic/loaddata manually - entrypoint handles them.
+====================================================================
 
 ssh root@88.223.94.33
 ?xFOdA+MK#CLxR4;VFg7
