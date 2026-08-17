@@ -10,7 +10,7 @@ echo "[entrypoint] applying migrations..."
 python manage.py migrate --noinput
 
 echo "[entrypoint] checking whether the database needs the KGS.json fixture..."
-python - <<'PY'
+if python - <<'PY'
 import os, sys
 import django
 
@@ -25,9 +25,11 @@ if Account.objects.count() == 0:
 print("[entrypoint] database already has data -> skipping fixture load")
 sys.exit(1)
 PY
-
-if [ $? -eq 0 ]; then
+then
+  echo "[entrypoint] loading KGS.json fixture..."
   python manage.py loaddata KGS.json --traceback
+else
+  echo "[entrypoint] fixture load not needed."
 fi
 
 echo "[entrypoint] collecting static files..."

@@ -9,3 +9,5 @@ python-decouple
 gunicorn
 psycopg2-binary
 whitenoise
+requests
+cryptography

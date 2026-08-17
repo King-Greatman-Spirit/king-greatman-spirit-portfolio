@@ -1,4 +1,4 @@
-{% extends 'base_dashboard.html' %}
+﻿{% extends 'dashboard/base_dashboard.html' %}
 {% load static %}
 
 {% block content %}
@@ -52,7 +52,6 @@
 
               	<div class="container section">
                   <div class="row">
-                    <a href="{% url 'forgotPassword' %}" style="float: left;">Forgot password?</a>
                     <label class="switch" style="float: right;">
                         <input type="checkbox" name="remember" id="remember" checked>
                         <span class="switch-label" for="remember" data-on="YES" data-off="NO"></span>

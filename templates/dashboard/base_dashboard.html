@@ -127,8 +127,8 @@
         <img src="{{ about_links.profile_image.url }}" alt="Owner">
         {% endif %}
         <div>
-          <strong>{{ request.user.first_name|default:request.user.email }}</strong>
-          <span>Owner &middot; {{ request.user.email }}</span>
+          <strong>{{ request.user.first_name|default:"Guest" }}</strong>
+          <span>Owner &middot; {{ request.user.email|default:"Guest" }}</span>
         </div>
       </div>
     </div>
