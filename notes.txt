@@ -4,21 +4,54 @@
 Future Deployment Workflow
 cd /var/www/kinggreatmanspirit
 
-source venv/bin/activate
-
+cd /var/www/kinggreatmanspirit
 git pull
 
-pip install -r requirements.txt
+# 1. Stop the OLD service so it doesn't conflict with Docker's port 8000
+sudo systemctl stop kinggreatmanspirit
+sudo systemctl disable kinggreatmanspirit
 
-python manage.py migrate
+# 2. Create .env (it's NOT in git!) — Postgres settings + NEW secret key
+nano .env
+#    DB_ENGINE=django.db.backends.postgresql
+#    DB_NAME=kgs_db
+#    DB_USER=kgs_user
+#    DB_PASSWORD=kgs_password
+#    DB_HOST=db
+#    DB_PORT=5432
+#    SECRET_KEY=<new key from your local .env>
 
-python manage.py collectstatic --noinput
+# 3. Build & start — this ONE command does everything:
+#    pip install (inside image), migrate, load KGS.json, collectstatic, gunicorn
+sudo docker compose up -d --build
 
-systemctl restart kinggreatmanspirit
+# 4. Check the JSON loaded (should say "Installed 331 object(s)")
+sudo docker compose logs web | grep -i fixture
 
-systemctl reload nginx
+# 5. nginx reload (it keeps proxying to localhost:8000, which Docker now serves)
+sudo nginx -t && sudo systemctl reload nginx
 
-chown -R www-data:www-data /var/www/kinggreatmanspirit
+# 1. Fix git ownership, then pull the current code
+git config --global --add safe.directory /var/www/kinggreatmanspirit
+git pull
+
+# 2. Install Docker Engine + compose plugin (official script)
+curl -fsSL https://get.docker.com | sh
+
+# 3. Verify docker works
+docker --version && docker compose version
+
+# 4. Confirm .env was actually saved (should show DB settings + SECRET_KEY)
+cat /var/www/kinggreatmanspirit/.env
+
+# 5. Build & start (only AFTER .env exists)
+sudo docker compose up -d --build
+
+# 6. Verify the JSON loaded
+sudo docker compose logs web | grep -i fixture
+
+# 7. Bring the site back on nginx
+sudo nginx -t && sudo systemctl reload nginx
 
 ssh root@88.223.94.33
 ?xFOdA+MK#CLxR4;VFg7
