@@ -20,6 +20,9 @@ systemctl reload nginx
 
 chown -R www-data:www-data /var/www/kinggreatmanspirit
 
+ssh root@88.223.94.33
+?xFOdA+MK#CLxR4;VFg7
+
 the magic of thinking big
 
 the alchemist
